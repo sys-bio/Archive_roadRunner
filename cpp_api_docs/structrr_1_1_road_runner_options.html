@@ -89,6 +89,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="structrr_1_1_road_runner_options-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -104,10 +105,17 @@ Public Types</h2></td></tr>
  }</td></tr>
 <tr class="separator:a835c7d4848b4611885e41029261ef2db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a8942b03083aa37387d0fd666c0d5878a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrr_1_1_road_runner_options.html#a8942b03083aa37387d0fd666c0d5878a">RoadRunnerOptions</a> ()</td></tr>
+<tr class="separator:a8942b03083aa37387d0fd666c0d5878a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a8ee2e8f6c5c3214f59de5cf773163702"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrr_1_1_road_runner_options.html#a8ee2e8f6c5c3214f59de5cf773163702">flags</a></td></tr>
 <tr class="separator:a8ee2e8f6c5c3214f59de5cf773163702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d2fb9efd9f69c0ab754bba73e3f8a1c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrr_1_1_road_runner_options.html#a2d2fb9efd9f69c0ab754bba73e3f8a1c">jacobianStepSize</a></td></tr>
+<tr class="separator:a2d2fb9efd9f69c0ab754bba73e3f8a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A set of options that determine how the top level <a class="el" href="classrr_1_1_road_runner.html">RoadRunner</a> class should behave. </p>
@@ -129,6 +137,23 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a8942b03083aa37387d0fd666c0d5878a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rr::RoadRunnerOptions::RoadRunnerOptions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>load default valued from config. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="a8ee2e8f6c5c3214f59de5cf773163702"></a>
 <div class="memitem">
@@ -143,13 +168,27 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<a class="anchor" id="a2d2fb9efd9f69c0ab754bba73e3f8a1c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rr::RoadRunnerOptions::jacobianStepSize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>step size used for numeric Jacobian calculations. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following files:<ul>
 <li><a class="el" href="rr_road_runner_options_8h_source.html">rrRoadRunnerOptions.h</a></li>
+<li>rrRoadRunnerOptions.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2014 10:44:16 for libRoadRunner C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jul 22 2014 22:08:27 for libRoadRunner C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

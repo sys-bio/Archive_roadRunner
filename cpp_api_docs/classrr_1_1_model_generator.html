@@ -90,13 +90,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classrr_1_1_model_generator-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">rr::ModelGenerator Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="rr_model_generator_8h_source.html">rrModelGenerator.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_model_generator_8h_source.html">ModelGenerator.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -133,6 +134,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a073e238ec9912aca3c4345967a651815"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af73bfda91e966b534901a135815149e7"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_model_generator.html#af73bfda91e966b534901a135815149e7">~ModelGenerator</a> ()</td></tr>
 <tr class="separator:af73bfda91e966b534901a135815149e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:abdd21898bbc274c218f6d8904efaa5cb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classrr_1_1_model_generator.html">ModelGenerator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_model_generator.html#abdd21898bbc274c218f6d8904efaa5cb">New</a> (const std::string &amp;compiler, const std::string &amp;tmpDir=&quot;&quot;, const std::string &amp;supportCodeDir=&quot;&quot;)</td></tr>
+<tr class="separator:abdd21898bbc274c218f6d8904efaa5cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The interface which generates executable models from sbml source. This can have different concrete implementations such as compiler based generators, JIT'ed or interpreter based ones. </p>
@@ -309,6 +315,56 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="abdd21898bbc274c218f6d8904efaa5cb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classrr_1_1_model_generator.html">ModelGenerator</a> * rr::ModelGenerator::New </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>compiler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>tmpDir</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>supportCodeDir</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Factory method to create a model generator. Eventauly we will have another static method that returns the names of the available model generators and their descriptions. Currently we only support CModelGenerator, although this is ignored and this will always return a CModelGenerator.</p>
+<p>The created object is owned by the caller and must be deleted accordingly.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">compiler,:</td><td>the textual name of the compiler. If this is "llvm", then then the LLVM <a class="el" href="classrr_1_1_model_generator.html">ModelGenerator</a> is created, otherwise, A C based model generator is created.</td></tr>
+    <tr><td class="paramname">tmpDir</td><td>The C version stores all the generated temporary C files and objects here, not used for LLVM.</td></tr>
+    <tr><td class="paramname">supportCodeDir</td><td>Location where roadrunner include files are, not used in LLVM. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a073e238ec9912aca3c4345967a651815"></a>
 <div class="memitem">
 <div class="memproto">
@@ -359,13 +415,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="rr_model_generator_8h_source.html">rrModelGenerator.h</a></li>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="_model_generator_8h_source.html">ModelGenerator.h</a></li>
+<li>ModelGenerator.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2014 10:44:16 for libRoadRunner C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jul 22 2014 22:08:27 for libRoadRunner C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

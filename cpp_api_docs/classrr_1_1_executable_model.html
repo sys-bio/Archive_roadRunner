@@ -165,6 +165,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a86fe96598b06cee5ca9a28dfdfd9d437"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a230b955ef99e7616fb8d12c068b01f7b"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_executable_model.html#a230b955ef99e7616fb8d12c068b01f7b">getReactionId</a> (int index)=0</td></tr>
 <tr class="separator:a230b955ef99e7616fb8d12c068b01f7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac814c5322dfcd876d0ffdcaa4eb88388"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_executable_model.html#ac814c5322dfcd876d0ffdcaa4eb88388">getReactionRates</a> (int len, int const *indx, double *values)=0</td></tr>
+<tr class="separator:ac814c5322dfcd876d0ffdcaa4eb88388"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8372872ec5858e91adc81080ad763c84"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_executable_model.html#a8372872ec5858e91adc81080ad763c84">getRateRuleValues</a> (double *rateRuleValues)=0</td></tr>
 <tr class="separator:a8372872ec5858e91adc81080ad763c84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33aa26c54bd1c0978ad24e2210d001fc"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_executable_model.html#a33aa26c54bd1c0978ad24e2210d001fc">getStateVectorId</a> (int index)=0</td></tr>
@@ -199,6 +201,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5e0e14f373b101b044559ec2c06a2a39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9b3e5baef45072822f9ccaf9d13ffa8"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_executable_model.html#ae9b3e5baef45072822f9ccaf9d13ffa8">getEventIndex</a> (const std::string &amp;eid)=0</td></tr>
 <tr class="separator:ae9b3e5baef45072822f9ccaf9d13ffa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64cba13c5999ada91d41cba9f552058a"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_executable_model.html#a64cba13c5999ada91d41cba9f552058a">getFloatingSpeciesAmountRate</a> (int index, const double *reactionRates)=0</td></tr>
+<tr class="separator:a64cba13c5999ada91d41cba9f552058a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="classrr_1_1_executable_model.html">ExecutableModel</a> interface provides a way to access an sbml model that was compiled, JIT'd or interpreted as executable (runnable) module.</p>
@@ -250,7 +254,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated:</a></b></dt><dd></dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd></dd></dl>
 
 </div>
 </div>
@@ -274,7 +278,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>compatability with C backend, does nothing anymore. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>compatability with C backend, does nothing anymore. </dd></dl>
 
 </div>
 </div>
@@ -298,7 +302,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">Deprecated:</a></b></dt><dd>The old C backend had state variables for everything, here only for compatability, does nothing in LLVM.</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd>The old C backend had state variables for everything, here only for compatability, does nothing in LLVM.</dd></dl>
 <p>Only for floating species. </p>
 
 </div>
@@ -323,7 +327,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd></dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated:</a></b></dt><dd></dd></dl>
 
 </div>
 </div>
@@ -347,10 +351,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>evaluate the initial conditions specified in the sbml, this entails evaluating all InitialAssigments, AssigmentRules, initial values, etc...</p>
-<p>Sets the the concentrations and ammounts to the values specified by the initial conditions, ModelData::floatingSpeciesInitConcentrations, i.e. the ModelData::floatingSpeciesAmounts[:] are set to ModelData::floatingSpeciesInitConcentrations[:] * compartment volume, and ModelData::y[:] is set to ModelData::floatingSpeciesInitConcentrations[:].</p>
-<p>This sets the concentrations and ammounts to either initialAmount or initialConcentration (which ever exists) or 0 if they are missing. A later call to evalInitialAssignments will apply any initialAssigments to update the concentations and ammounts.</p>
-<p>The the model state is fully set. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd></dd></dl>
+<p>The model object knows how to reset itself with <a class="el" href="classrr_1_1_executable_model.html#a217c61819d9b029c5928ace53b805e89">reset()</a>. </p>
 
 </div>
 </div>
@@ -374,7 +376,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd></dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated:</a></b></dt><dd></dd></dl>
 
 </div>
 </div>
@@ -586,7 +588,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>did something with the old C backend, obsolete now. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>did something with the old C backend, obsolete now. </dd></dl>
 
 </div>
 </div>
@@ -705,6 +707,50 @@ Public Member Functions</h2></td></tr>
 <p>get the event status, false if the even is not triggered, true if it is.</p>
 <p>The reason this returns an unsigned char instead of a bool array is this array is typically stuffed into an std::vector, and std::vector&lt;bool&gt; is well, weird as it's actually implemented as a bitfield, and can not be used as a C array.</p>
 <p>So, on every modern system I'm aware of, bool is an unsigned char, so use that data type here. </p>
+
+</div>
+</div>
+<a class="anchor" id="a64cba13c5999ada91d41cba9f552058a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double rr::ExecutableModel::getFloatingSpeciesAmountRate </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double *&#160;</td>
+          <td class="paramname"><em>reactionRates</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the amount rate of change for the i'th floating species given a reaction rates vector.</p>
+<p>TODO: This should be merged with getFloatingSpeciesAmountRates, but that will break inteface, will do in next point release.</p>
+<p>TODO: If the conversion factor changes in between getting the reaction rates vector via getReactionRates</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index,:</td><td>index of the desired floating speceis rate. </td></tr>
+    <tr><td class="paramname">reactionRates,:</td><td>pointer to buffer of reaction rates. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1274,6 +1320,55 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ac814c5322dfcd876d0ffdcaa4eb88388"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int rr::ExecutableModel::getReactionRates </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int const *&#160;</td>
+          <td class="paramname"><em>indx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>values</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>get the vector of reaction rates.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">len,:</td><td>the length of the suplied buffer, must be &gt;= reaction rates size. </td></tr>
+    <tr><td class="paramname">indx,:</td><td>pointer to index array. If NULL, then it is ignored and the reaction rates are copied directly into the suplied buffer. </td></tr>
+    <tr><td class="paramname">values,:</td><td>pointer to user suplied buffer where rates will be stored. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a75b6f37ac538d2d2a0709fe4080b0570"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1656,7 +1751,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>did something with old C backend, here for compatility. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">Deprecated:</a></b></dt><dd>did something with old C backend, here for compatility. </dd></dl>
 
 </div>
 </div>
@@ -1882,7 +1977,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated:</a></b></dt><dd></dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated:</a></b></dt><dd></dd></dl>
 
 </div>
 </div>
@@ -1892,7 +1987,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2014 10:44:16 for libRoadRunner C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jul 22 2014 22:08:27 for libRoadRunner C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

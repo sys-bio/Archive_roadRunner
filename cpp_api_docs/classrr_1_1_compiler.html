@@ -88,6 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classrr_1_1_compiler-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">rr::Compiler Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -95,16 +96,127 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="rr_compiler_8h_source.html">rrCompiler.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a244cefa6a995aeb5d2793ff893f1893b"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_compiler.html#a244cefa6a995aeb5d2793ff893f1893b">getDefaultTargetTriple</a> ()=0</td></tr>
+<tr class="separator:a244cefa6a995aeb5d2793ff893f1893b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe24151183f7db59208bfe86da2b3c79"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_compiler.html#afe24151183f7db59208bfe86da2b3c79">getProcessTriple</a> ()=0</td></tr>
+<tr class="separator:afe24151183f7db59208bfe86da2b3c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1718efebfe7936512a299c2f32e8c800"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_compiler.html#a1718efebfe7936512a299c2f32e8c800">getHostCPUName</a> ()=0</td></tr>
+<tr class="separator:a1718efebfe7936512a299c2f32e8c800"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace56af18a4bc2cd882bdf4685e18fb33"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_compiler.html#ace56af18a4bc2cd882bdf4685e18fb33">getVersion</a> ()=0</td></tr>
+<tr class="separator:ace56af18a4bc2cd882bdf4685e18fb33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>interface to manipulate 'compiler' settings.</p>
 <p>In the C generating model sytem, an external C compiler is used to compile generated C code. However, in the LLVM system, there is no code generation nor compilation, so this interface is not really usefull, but is implemented for compatiblity with the C system. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a244cefa6a995aeb5d2793ff893f1893b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string rr::Compiler::getDefaultTargetTriple </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="classrr_1_1_compiler.html#a244cefa6a995aeb5d2793ff893f1893b">getDefaultTargetTriple()</a> - Return the default target triple the compiler has been configured to produce code for.</p>
+<p>The target triple is a string in the format of: CPU_TYPE-VENDOR-OPERATING_SYSTEM or CPU_TYPE-VENDOR-KERNEL-OPERATING_SYSTEM </p>
+
+</div>
+</div>
+<a class="anchor" id="a1718efebfe7936512a299c2f32e8c800"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string rr::Compiler::getHostCPUName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>getHostCPUName - Get the LLVM name for the host CPU. The particular format of the name is target dependent, and suitable for passing as -mcpu to the target which matches the host.</p>
+<dl class="section return"><dt>Returns</dt><dd>- The host CPU name, or empty if the CPU could not be determined. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afe24151183f7db59208bfe86da2b3c79"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string rr::Compiler::getProcessTriple </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="classrr_1_1_compiler.html#afe24151183f7db59208bfe86da2b3c79">getProcessTriple()</a> - Return an appropriate target triple for generating code to be loaded into the current process, e.g. when using the JIT. </p>
+
+</div>
+</div>
+<a class="anchor" id="ace56af18a4bc2cd882bdf4685e18fb33"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string rr::Compiler::getVersion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>get the version of the compiler. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="rr_compiler_8h_source.html">rrCompiler.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2014 10:44:16 for libRoadRunner C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jul 22 2014 22:08:27 for libRoadRunner C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>
