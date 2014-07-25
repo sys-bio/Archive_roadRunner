@@ -389,21 +389,9 @@ RoadRunner::RoadRunner(const std::string& uriOrSBML,
             impl(new RoadRunnerImpl(uriOrSBML, options))
 {
 
-#if defined(BUILD_LLVM)
-    string compiler =  "LLVM" ;
-#else
-    string compiler = gDefaultCompiler;
-#endif
+    impl->mModelGenerator = ModelGenerator::New(Compiler::getDefaultCompiler(), "", "");
 
-    // for now, dump out who we are
-    Log(Logger::LOG_DEBUG) << __FUNC__ << "compiler: " << compiler <<
-            ", tempDir:" << gDefaultTempFolder << ", supportCodeDir: " <<
-            gDefaultSupportCodeFolder;
-
-    impl->mModelGenerator = ModelGenerator::New(compiler,
-            gDefaultTempFolder, gDefaultSupportCodeFolder);
-
-    setTempDir(gDefaultTempFolder);
+    setTempDir(getTempDir());
 
     if (!uriOrSBML.empty()) {
         load(uriOrSBML, options);
@@ -416,20 +404,13 @@ RoadRunner::RoadRunner(const std::string& uriOrSBML,
 
 
 RoadRunner::RoadRunner(const string& _compiler, const string& _tempDir,
-        const string& _supportCodeDir) :
-        impl(new RoadRunnerImpl(_compiler, _tempDir, _supportCodeDir))
+        const string& supportCodeDir) :
+        impl(new RoadRunnerImpl(_compiler, _tempDir, supportCodeDir))
 {
+    string compiler = _compiler.empty()
+            ? Compiler::getDefaultCompiler() : _compiler;
 
-
-#if defined(BUILD_LLVM)
-    string compiler = _compiler.empty() ? "LLVM" : _compiler;
-#else
-    string compiler = _compiler.empty() ? gDefaultCompiler : _compiler;
-#endif
-
-    string tempDir = _tempDir.empty() ? gDefaultTempFolder : _tempDir;
-    string supportCodeDir = _supportCodeDir.empty() ?
-            gDefaultSupportCodeFolder : _supportCodeDir;
+    string tempDir = _tempDir.empty() ? getTempDir() : _tempDir;
 
     // for now, dump out who we are
     Log(Logger::LOG_DEBUG) << __FUNC__ << "compiler: " << compiler <<
@@ -1845,6 +1826,8 @@ static void setSBMLValue(libsbml::Model* model, const string& id, double value)
 
 string RoadRunner::getCurrentSBML()
 {
+    check_model();
+
     libsbml::SBMLReader reader;
     std::stringstream stream;
     libsbml::SBMLDocument *doc = 0;
@@ -1892,7 +1875,7 @@ string RoadRunner::getCurrentSBML()
     catch(std::exception& e) {
         delete doc;
         doc = 0;
-        throw(e);
+        throw; // re-throw exception.
     }
 
     delete doc;
