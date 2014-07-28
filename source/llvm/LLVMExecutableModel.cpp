@@ -187,7 +187,8 @@ LLVMExecutableModel::LLVMExecutableModel() :
     getCompartmentInitVolumesPtr(0),
     setCompartmentInitVolumesPtr(0),
     getGlobalParameterInitValuePtr(0),
-    setGlobalParameterInitValuePtr(0)
+    setGlobalParameterInitValuePtr(0),
+    dirty(0)
 {
     std::srand((unsigned)std::time(0));
 }
@@ -228,7 +229,8 @@ LLVMExecutableModel::LLVMExecutableModel(
     setCompartmentInitVolumesPtr(rc->setCompartmentInitVolumesPtr),
     getGlobalParameterInitValuePtr(rc->getGlobalParameterInitValuePtr),
     setGlobalParameterInitValuePtr(rc->setGlobalParameterInitValuePtr),
-    eventListeners(modelData->numEvents, EventListenerPtr()) // init eventHandlers vector
+    eventListeners(modelData->numEvents, EventListenerPtr()), // init eventHandlers vector
+    dirty(0)
 {
 
     modelData->time = -1.0; // time is initially before simulation starts
@@ -686,38 +688,66 @@ void LLVMExecutableModel::reset()
             Log(Logger::LOG_INFORMATION) << "opt & SelectionRecord::CONSREVED_MOIETY)";
         }
 
+        // were we forced to reset cms.
+        bool reset_cm = false;
+
+        // did someone change a cm, note: setGlobalParameterValues sets this bit,
+        // so we have to save it before changing any GPs in reset.
+        const bool dirty_cm = dirty & DIRTY_CONSERVED_MOIETIES;
+        const bool dirty_init = dirty & DIRTY_INIT_SPECIES;
+
         // needed because conserved moiety global parameters depend on
         // float species init conditions.
         for (int gid = 0; gid < modelData->numIndGlobalParameters; ++gid)
         {
-            if ((opt & SelectionRecord::GLOBAL_PARAMETER) ||
-                    ((opt & SelectionRecord::CONSREVED_MOIETY) &&
-                            symbols->isConservedMoietyParameter(gid)))
+            bool cm = symbols->isConservedMoietyParameter(gid);
+
+            // reset gp if options say so
+            if ((opt & SelectionRecord::GLOBAL_PARAMETER)
+                    // or if opt say to reset cms and its a cm
+                    || ((opt & SelectionRecord::CONSREVED_MOIETY) && cm)
+                    // or if init conds have changes and its a cm (cm depends on init cond)
+                    || (dirty_init && cm))
             {
+                reset_cm |= (dirty_init && cm);
                 getGlobalParameterInitValues(1, &gid, buffer);
                 setGlobalParameterValues(1, &gid, buffer);
             }
+        }
+
+        if (reset_cm)
+        {
+            // warn if we were forced to reset CMs
+            if (dirty_cm)
+            {
+                Log(Logger::LOG_WARNING) << "Both initial conditions and "
+                        "conserved moieties were user modified. As conserved moieties "
+                        "are defined in terms of initial conditions, the conserved "
+                        "moiety values were forcibly reset in terms of the species "
+                        "initial conditions.";
+            }
+
+            // we've reset CMs. clear the dirty bit.
+            dirty &= ~DIRTY_CONSERVED_MOIETIES;
+
+            // the DIRTY_INIT_SPECIES bit is alwasy cleared at the
+            // end of this func.
         }
 
         if(opt & SelectionRecord::RATE)
         {
             Log(Logger::LOG_INFORMATION) << "resetting rate rule values";
 
-            //if (opt & SelectionRecord::GLOBAL_PARAMETER)
-            //{
-                for (int gid = modelData->numIndGlobalParameters;
-                        gid < symbols->getGlobalParametersSize(); ++gid)
+            for (int gid = modelData->numIndGlobalParameters;
+                    gid < symbols->getGlobalParametersSize(); ++gid)
+            {
+                if(symbols->isRateRuleGlobalParameter(gid))
                 {
-                    if(symbols->isRateRuleGlobalParameter(gid))
-                    {
-                        getGlobalParameterInitValues(1, &gid, buffer);
-                        setGlobalParameterValues(1, &gid, buffer);
-                    }
+                    getGlobalParameterInitValues(1, &gid, buffer);
+                    setGlobalParameterValues(1, &gid, buffer);
                 }
-
-            //}
+            }
         }
-
 
         delete[] buffer;
     }
@@ -729,6 +759,9 @@ void LLVMExecutableModel::reset()
     // this sets up the event system to pull the initial value
     // before the simulation starts.
     setTime(-1.0);
+
+    // we've reset the species to their init values.
+    dirty &= ~DIRTY_INIT_SPECIES;
 
     Log(Logger::LOG_DEBUG) << __FUNC__ << *modelData;
 }
@@ -1280,8 +1313,55 @@ void LLVMExecutableModel::setValue(const std::string& id, double value)
 int LLVMExecutableModel::getFloatingSpeciesConcentrationRates(int len,
         const int* indx, double* values)
 {
-    throw LLVMException(string(__FUNC__) + " not implemented");
-    return 0;
+    double* dydt = 0;
+    // buffer for volumes
+    double* volumes = 0;
+
+    try
+    {
+        uint dydtSize = modelData->numRateRules + modelData->numIndFloatingSpecies;
+        uint ncomp = getNumCompartments();
+
+        dydt = (double*)calloc(dydtSize, sizeof(double));
+        volumes = (double*)calloc(ncomp, sizeof(double));
+
+        getCompartmentVolumes(ncomp, 0, volumes);
+
+        // state vector is packed such that first numRateRules are the rate rule rates,
+        // and the last numIndFloatingSpecies are the number of independent species.
+        getStateVectorRate(this->getTime(), 0, dydt);
+
+        double* amountRates = dydt + modelData->numRateRules;
+
+        for (uint i = 0; i < len; ++i)
+        {
+            uint j = indx ? indx[i] : i;
+            if (j >= modelData->numIndFloatingSpecies)
+            {
+                throw std::out_of_range(std::string("index out of range in ")
+                                        + __FUNC__);
+            }
+
+            Log(Logger::LOG_DEBUG) << "i: " << i << ", j: " << j
+                    << ", comp index: "
+                    << symbols->getCompartmentIndexForFloatingSpecies(j)
+                    << ", vol: "
+                    << volumes[symbols->getCompartmentIndexForFloatingSpecies(j)]
+                    << endl;
+            values[i] = amountRates[j] /
+                    volumes[symbols->getCompartmentIndexForFloatingSpecies(j)];
+        }
+    }
+    catch(...)
+    {
+        free(dydt);
+        free(volumes);
+        throw;
+    }
+
+    free(dydt);
+    free(volumes);
+    return len;
 }
 
 int LLVMExecutableModel::setBoundarySpeciesAmounts(int len, const int* indx,
@@ -1431,6 +1511,15 @@ int LLVMExecutableModel::setGlobalParameterValues(int len, const int* indx,
     {
         result = setValues(setGlobalParameterPtr,
                 &LLVMExecutableModel::getGlobalParameterId, len, indx, values);
+
+        for (int i = 0; i < len; ++i)
+        {
+            int j = indx ? indx[i] : i;
+            if (symbols->isConservedMoietyParameter(j))
+            {
+                dirty |= DIRTY_CONSERVED_MOIETIES;
+            }
+        }
     }
     return result;
 }
@@ -1513,8 +1602,14 @@ int LLVMExecutableModel::getConservedMoietyValues(int len, const int* indx,
 int LLVMExecutableModel::setConservedMoietyValues(int len, const int* indx,
         const double* values)
 {
-    throw_llvm_exception("conserved moieties are read only");
-    return -1;
+    int result = 0;
+    for(int i = 0; i < len; ++i)
+    {
+        int j = indx ? indx[i] : i;
+        int gpIndex = symbols->getConservedMoietyGlobalParameterIndex(j);
+        result += setGlobalParameterValues(1, &gpIndex, &values[i]);
+    }
+    return result;
 }
 
 int LLVMExecutableModel::getFloatingSpeciesAmountRates(int len,
@@ -1533,7 +1628,11 @@ int LLVMExecutableModel::getFloatingSpeciesAmountRates(int len,
     for (uint i = 0; i < len; ++i)
     {
         uint j = indx ? indx[i] : i;
-        assert(j < modelData->numIndFloatingSpecies && "index out of range");
+        if (j >= modelData->numIndFloatingSpecies)
+        {
+            free(dydt);
+            throw std::out_of_range(std::string("index out of range in") + __FUNC__);
+        }
         values[i] = amountRates[j];
     }
 
@@ -1868,6 +1967,8 @@ int LLVMExecutableModel::setFloatingSpeciesInitConcentrations(int len,
                 &LLVMExecutableModel::getFloatingSpeciesId, len, indx, values);
     }
 
+    dirty |= DIRTY_INIT_SPECIES;
+
     // as a convienice to users, this resets the amounts and whatever depends
     // on them.
     reset();
@@ -1894,6 +1995,8 @@ int LLVMExecutableModel::setFloatingSpeciesInitAmounts(int len, int const *indx,
         result = setValues(setFloatingSpeciesInitAmountsPtr,
                 &LLVMExecutableModel::getFloatingSpeciesId, len, indx, values);
     }
+
+    dirty |= DIRTY_INIT_SPECIES;
 
     // as a convienice to users, this resets the amounts and whatever depends
     // on them.
