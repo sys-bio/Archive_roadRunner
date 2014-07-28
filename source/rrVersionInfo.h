@@ -10,7 +10,7 @@ namespace rr {
 #define RR_VERSION_MAJOR 1
 #define RR_VERSION_MINOR 2
 #define RR_VERSION_PATCH 3
-#define RR_VERSION_STR "1.2.4_beta2"
+#define RR_VERSION_STR "1.2.4_beta5"
 
 #define RR_STRINGIZE2(s) #s
 #define RR_STRINGIZE(s) RR_STRINGIZE2(s)
@@ -75,7 +75,17 @@ enum VersionStrOptions
      */
     VERSIONSTR_LIBSBML                = (0x1 << 3),
 
-    VERSIONSTR_JITCOMPILER            = (0x1 << 4)
+    VERSIONSTR_JITCOMPILER            = (0x1 << 4),
+
+    /**
+     * what git branch we are on.
+     */
+    VERSIONSTR_GIT_BRANCH             = (0x1 << 5),
+
+    /**
+     * the last commit.
+     */
+    VERSIONSTR_GIT_COMMIT             = (0x1 << 6)
 };
 
 /**
