@@ -126,5 +126,15 @@ RR_DECLSPEC string          getWINAPIError(DWORD errorCode, LPTSTR lpszFunction)
 #undef CreateFile
 RR_DECLSPEC bool            createFile(const string& fName, std::ios_base::openmode mode = std::ios::trunc );
 
+
+
+/**
+ * Returns the timestamp expressed in microseconds since the Unix epoch, midnight, January 1, 1970.
+ *
+ * Note, this is a *PRIVATE* function, only reason why it is exported is so that 
+ * the test suite can verify that it is increasing.
+ */
+RR_DECLSPEC double getMicroSeconds();
+
 } // rr Namespace
 #endif
