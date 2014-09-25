@@ -13,8 +13,9 @@
 #include "ModelGeneratorContext.h"
 #include "LLVMIncludes.h"
 #include "ModelResources.h"
-#include "rrUtils.h"
+#include "Random.h"
 #include <rrLogger.h>
+#include <rrUtils.h>
 #include <Poco/Mutex.h>
 
 using rr::Logger;
@@ -147,7 +148,7 @@ ExecutableModel* LLVMModelGenerator::createModel(const std::string& sbml,
         if (sp)
         {
             Log(Logger::LOG_DEBUG) << "found a cached model for " << md5;
-            return new LLVMExecutableModel(sp, createModelData(*sp->symbols));
+            return new LLVMExecutableModel(sp, createModelData(*sp->symbols, sp->random));
         }
         else
         {
@@ -286,7 +287,8 @@ ExecutableModel* LLVMModelGenerator::createModel(const std::string& sbml,
     // Now that everything that could have thrown would have thrown, we
     // can now create the model and set its fields.
 
-    LLVMModelData *modelData = createModelData(context.getModelDataSymbols());
+    LLVMModelData *modelData = createModelData(context.getModelDataSymbols(),
+            context.getRandom());
 
     uint llvmsize = ModelDataIRBuilder::getModelDataSize(context.getModule(),
             &context.getExecutionEngine());
@@ -307,7 +309,8 @@ ExecutableModel* LLVMModelGenerator::createModel(const std::string& sbml,
 
     // * MOVE * the bits over from the context to the exe model.
     context.stealThePeach(&rc->symbols, &rc->context,
-            &rc->executionEngine, &rc->errStr);
+            &rc->executionEngine, &rc->random, &rc->errStr);
+
 
     if (!forceReCompile)
     {
@@ -375,13 +378,13 @@ std::string to_string(const llvm::Value *value)
     return str;
 }
 
-LLVMModelData *createModelData(const rrllvm::LLVMModelDataSymbols &symbols)
+LLVMModelData *createModelData(const rrllvm::LLVMModelDataSymbols &symbols,
+        const Random *random)
 {
     uint modelDataBaseSize = sizeof(LLVMModelData);
 
     uint numIndCompartments = symbols.getIndependentCompartmentSize();
     uint numIndFloatingSpecies = symbols.getIndependentFloatingSpeciesSize();
-    uint numConservedSpecies = symbols.getConservedSpeciesSize();
     uint numIndBoundarySpecies = symbols.getIndependentBoundarySpeciesSize();
     uint numIndGlobalParameters = symbols.getIndependentGlobalParameterSize();
 
@@ -399,7 +402,6 @@ LLVMModelData *createModelData(const rrllvm::LLVMModelDataSymbols &symbols)
             numIndCompartments +
             numInitCompartments +
             numInitFloatingSpecies +
-            numConservedSpecies +
             numIndBoundarySpecies +
             numInitBoundarySpecies +
             numIndGlobalParameters +
@@ -416,7 +418,6 @@ LLVMModelData *createModelData(const rrllvm::LLVMModelDataSymbols &symbols)
     modelData->numIndCompartments = numIndCompartments;
     modelData->numIndFloatingSpecies = numIndFloatingSpecies;
     modelData->numIndBoundarySpecies = numIndBoundarySpecies;
-    modelData->numConservedSpecies = numConservedSpecies;
     modelData->numIndGlobalParameters = numIndGlobalParameters;
 
     modelData->numInitCompartments = numInitCompartments;
@@ -439,9 +440,6 @@ LLVMModelData *createModelData(const rrllvm::LLVMModelDataSymbols &symbols)
 
     modelData->initFloatingSpeciesAmountsAlias = &modelData->data[offset];
     offset += numInitFloatingSpecies;
-
-    modelData->initConservedSpeciesAmountsAlias = &modelData->data[offset];
-    offset += numConservedSpecies;
 
     modelData->boundarySpeciesAmountsAlias = &modelData->data[offset];
     offset += numIndBoundarySpecies;
@@ -474,6 +472,9 @@ LLVMModelData *createModelData(const rrllvm::LLVMModelDataSymbols &symbols)
 
     modelData->stoichiometry = rr::csr_matrix_new(numIndFloatingSpecies, numReactions,
             stoichRowIndx, stoichColIndx, stoichValues);
+
+    // make a copy of the random object
+    modelData->random = random ? new Random(*random) : 0;
 
     return modelData;
 }
