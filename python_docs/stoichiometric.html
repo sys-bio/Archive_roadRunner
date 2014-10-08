@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Stoichiometric Analysis &mdash; libRoadRunner 1.2.2 documentation</title>
+    <title>Stoichiometric Analysis &mdash; libRoadRunner 1.2.7 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.2.2',
+        VERSION:     '1.2.7',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="libRoadRunner 1.2.2 documentation" href="index.html" />
+    <link rel="top" title="libRoadRunner 1.2.7 documentation" href="index.html" />
     <link rel="next" title="Metabolic Control Analysis" href="metabolic.html" />
     <link rel="prev" title="Steady State Analysis" href="steady_state.html" /> 
   </head>
@@ -43,7 +43,7 @@
         <li class="right" >
           <a href="steady_state.html" title="Steady State Analysis"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">libRoadRunner 1.2.2 documentation</a> &raquo;</li> 
+        <li><a href="index.html">libRoadRunner 1.2.7 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -91,31 +91,34 @@ matrix.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#roadrunner.ExecutableModel.getStoichiometryMatrix" title="roadrunner.ExecutableModel.getStoichiometryMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.getStoichiometryMatrix</span></tt></a>()</td>
-<td>Returns the current stoichiometry matrix, a <img class="math" src="_images/math/bed4cafeded4bdf622cee8198b01a198f5d635f6.png" alt="n \times m"/> matrix where <img class="math" src="_images/math/174fadd07fd54c9afe288e96558c92e0c1da733a.png" alt="n"/> is the number of species which take place in reactions (floating species) and <img class="math" src="_images/math/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png" alt="m"/> is the number of reactions.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.getLinkMatrix" title="roadrunner.RoadRunner.getLinkMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getLinkMatrix</span></tt></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.getLinkMatrix" title="roadrunner.RoadRunner.getLinkMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getLinkMatrix</span></tt></a>()</td>
 <td>Returns the full link matrix, L for the current model. The Link matrix is an m by r matrix where m</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.getNrMatrix" title="roadrunner.RoadRunner.getNrMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getNrMatrix</span></tt></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.getNrMatrix" title="roadrunner.RoadRunner.getNrMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getNrMatrix</span></tt></a>()</td>
 <td>Returns the reduced stoichiometry matrix, <img class="math" src="_images/math/9ea520289972d82fa3dd03be522ffbe21abce96e.png" alt="N_R"/>, which will have only r rows where r is the rank of</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.getConservationMatrix" title="roadrunner.RoadRunner.getConservationMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getConservationMatrix</span></tt></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.getConservationMatrix" title="roadrunner.RoadRunner.getConservationMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getConservationMatrix</span></tt></a>()</td>
 <td>Returns a conservation matrix <img class="math" src="_images/math/913e49ea63c6c130bb8d9d1c3556b052ecc404f8.png" alt="\Gamma"/> which is a <img class="math" src="_images/math/69466761ddad22006793cf7d2699b82f5d0e1d21.png" alt="c \times m"/> matrix</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.getL0Matrix" title="roadrunner.RoadRunner.getL0Matrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getL0Matrix</span></tt></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.getL0Matrix" title="roadrunner.RoadRunner.getL0Matrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getL0Matrix</span></tt></a>()</td>
 <td>Returns the L0 matrix for the current model. The L0 matrix is an (m-r) by r matrix that expresses</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="api_reference.html#roadrunner.ExecutableModel.getNumConservedMoieties" title="roadrunner.ExecutableModel.getNumConservedMoieties"><tt class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.getNumConservedMoieties</span></tt></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.getFullStoichiometryMatrix" title="roadrunner.RoadRunner.getFullStoichiometryMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getFullStoichiometryMatrix</span></tt></a>()</td>
+<td>Get the stoichiometry matrix that coresponds to the full model, even it</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.getReducedStoichiometryMatrix" title="roadrunner.RoadRunner.getReducedStoichiometryMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getReducedStoichiometryMatrix</span></tt></a>()</td>
+<td>get the reduced stochiometry matrix. If conservation conversion is enabled,</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#roadrunner.ExecutableModel.getNumConservedMoieties" title="roadrunner.ExecutableModel.getNumConservedMoieties"><tt class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.getNumConservedMoieties</span></tt></a>()</td>
 <td>Returns the number of conserved moieties in the model.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#roadrunner.ExecutableModel.getConservedMoietyIds" title="roadrunner.ExecutableModel.getConservedMoietyIds"><tt class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.getConservedMoietyIds</span></tt></a>([index])</td>
+<tr class="row-even"><td><a class="reference internal" href="api_reference.html#roadrunner.ExecutableModel.getConservedMoietyIds" title="roadrunner.ExecutableModel.getConservedMoietyIds"><tt class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.getConservedMoietyIds</span></tt></a>([index])</td>
 <td>Returns a vector of conserved moiety identifier symbols.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="api_reference.html#roadrunner.ExecutableModel.getConservedMoietyValues" title="roadrunner.ExecutableModel.getConservedMoietyValues"><tt class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.getConservedMoietyValues</span></tt></a>([index])</td>
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#roadrunner.ExecutableModel.getConservedMoietyValues" title="roadrunner.ExecutableModel.getConservedMoietyValues"><tt class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.getConservedMoietyValues</span></tt></a>([index])</td>
 <td>Returns a vector of conserved moiety volumes.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#roadrunner.ExecutableModel.setConservedMoietyValues" title="roadrunner.ExecutableModel.setConservedMoietyValues"><tt class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.setConservedMoietyValues</span></tt></a>(...)</td>
+<tr class="row-even"><td><a class="reference internal" href="api_reference.html#roadrunner.ExecutableModel.setConservedMoietyValues" title="roadrunner.ExecutableModel.setConservedMoietyValues"><tt class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.setConservedMoietyValues</span></tt></a>(...)</td>
 <td>Sets a vector of conserved moiety values.</td>
 </tr>
 </tbody>
@@ -184,7 +187,7 @@ matrix.</p>
         <li class="right" >
           <a href="steady_state.html" title="Steady State Analysis"
              >previous</a> |</li>
-        <li><a href="index.html">libRoadRunner 1.2.2 documentation</a> &raquo;</li> 
+        <li><a href="index.html">libRoadRunner 1.2.7 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

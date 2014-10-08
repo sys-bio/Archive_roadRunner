@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>RoadRunner API Reference &mdash; libRoadRunner 1.2.2 documentation</title>
+    <title>RoadRunner API Reference &mdash; libRoadRunner 1.2.7 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.2.2',
+        VERSION:     '1.2.7',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="libRoadRunner 1.2.2 documentation" href="index.html" />
+    <link rel="top" title="libRoadRunner 1.2.7 documentation" href="index.html" />
     <link rel="prev" title="Utility Functions" href="utility_functions.html" /> 
   </head>
   <body>
@@ -39,7 +39,7 @@
         <li class="right" >
           <a href="utility_functions.html" title="Utility Functions"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">libRoadRunner 1.2.2 documentation</a> &raquo;</li> 
+        <li><a href="index.html">libRoadRunner 1.2.7 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -143,28 +143,6 @@ need to use a double back slash, &#8220;\\&#8221;.</p>
 <em class="property">static </em><tt class="descclassname">Config.</tt><tt class="descname">writeConfigFile</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#roadrunner.Config.writeConfigFile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write all of the current configuration values to a file. This could be written to one of the
 default locations, or to any other location, and re-loaded at a later time.</p>
-</dd></dl>
-
-<dl class="staticmethod">
-<dt id="roadrunner.Config.getString">
-<em class="property">static </em><tt class="descclassname">Config.</tt><tt class="descname">getString</tt><big>(</big><em>key</em><big>)</big><a class="headerlink" href="#roadrunner.Config.getString" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the value of the key as a string. This is mostly used internally in RoadRunner. As RoadRunner
-is written in C++ which is a statically rather than a dynamically typed language, it requires
-values to be returned with a concrete type, i.e. string, integer, double, etc...</p>
-<p>The getString, getInt, getDouble methods may be useful in python to see what the current value of
-a parameter is.</p>
-</dd></dl>
-
-<dl class="staticmethod">
-<dt id="roadrunner.Config.getInt">
-<em class="property">static </em><tt class="descclassname">Config.</tt><tt class="descname">getInt</tt><big>(</big><em>key</em><big>)</big><a class="headerlink" href="#roadrunner.Config.getInt" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the value of a key as an integer.</p>
-</dd></dl>
-
-<dl class="staticmethod">
-<dt id="roadrunner.Config.getDouble">
-<em class="property">static </em><tt class="descclassname">Config.</tt><tt class="descname">getDouble</tt><big>(</big><em>key</em><big>)</big><a class="headerlink" href="#roadrunner.Config.getDouble" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the value of the key as a double.</p>
 </dd></dl>
 
 </div>
@@ -353,13 +331,6 @@ Will Use. Uses Integrator Estimated Value If &lt;= 0.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="roadrunner.Config.SIMULATEOPTIONS_MAXIMUM_TIMSETEP">
-<tt class="descclassname">Config.</tt><tt class="descname">SIMULATEOPTIONS_MAXIMUM_TIMSETEP</tt><em class="property"> double</em><a class="headerlink" href="#roadrunner.Config.SIMULATEOPTIONS_MAXIMUM_TIMSETEP" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specify The Maximum Time Step Size That The Internal Integrator
-Will Use. Uses Integrator Estimated Value If &lt;= 0.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="roadrunner.Config.SIMULATEOPTIONS_MAXIMUM_NUM_STEPS">
 <tt class="descclassname">Config.</tt><tt class="descname">SIMULATEOPTIONS_MAXIMUM_NUM_STEPS</tt><em class="property"> int</em><a class="headerlink" href="#roadrunner.Config.SIMULATEOPTIONS_MAXIMUM_NUM_STEPS" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify The Maximum Number Of Steps The Internal Integrator Will Use
@@ -430,9 +401,38 @@ SBML document should be loaded</li>
 </dd></dl>
 
 <dl class="method">
-<dt id="roadrunner.RoadRunner.createSelection">
-<tt class="descclassname">RoadRunner.</tt><tt class="descname">createSelection</tt><big>(</big><em>str</em><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.createSelection" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a new SelectionRecord for the given selection string.</p>
+<dt id="roadrunner.RoadRunner.load">
+<tt class="descclassname">RoadRunner.</tt><tt class="descname">load</tt><big>(</big><em>uriOrDocument</em><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads an SBML document, given a string for file path, URI, or contents.</p>
+<p>This method also accepts HTTP URI for remote files, however this feature is currently limited
+to the Mac version, plan on enabling HTTP loading of SBML documents on Windows and Linux
+shortly.</p>
+<p>Some examples of loading files on Mac or Linux:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s">&quot;myfile.xml&quot;</span><span class="p">)</span>                               <span class="c"># load a file from the current directory</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s">&quot;/Users/Fred/myfile.xml&quot;</span><span class="p">)</span>                   <span class="c"># absolute path</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s">&quot;http://sbml.org/example_system.xml&quot;</span><span class="p">)</span>       <span class="c"># remote file</span>
+</pre></div>
+</div>
+<p>Or on Windows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s">&quot;myfile.xml&quot;</span><span class="p">)</span>                                  <span class="c"># load a file from the current directory</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s">&quot;file://localhost/c:/Users/Fred/myfile.xml&quot;</span><span class="p">)</span>   <span class="c"># using a URI</span>
+</pre></div>
+</div>
+<p>One may also load the contents of a document:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">myfile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&quot;myfile.xml, &quot;r&quot;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">contents</span> <span class="o">=</span> <span class="nb">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In future version, we will also support loading directly from a libSBML Document object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>uriOrDocument</strong> &#8211; A string which may be a local path, URI or contents of an SBML document.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -452,22 +452,9 @@ into a single xml document which is returned as a string.</p>
 </dd></dl>
 
 <dl class="staticmethod">
-<dt id="roadrunner.RoadRunner.getCopyright">
-<em class="property">static </em><tt class="descclassname">RoadRunner.</tt><tt class="descname">getCopyright</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.getCopyright" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the copyright string</p>
-</dd></dl>
-
-<dl class="staticmethod">
 <dt id="roadrunner.RoadRunner.getExtendedVersionInfo">
 <em class="property">static </em><tt class="descclassname">RoadRunner.</tt><tt class="descname">getExtendedVersionInfo</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.getExtendedVersionInfo" title="Permalink to this definition">¶</a></dt>
 <dd><p>getVersion plus info about dependent libs versions.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="roadrunner.RoadRunner.getFloatingSpeciesAmountIds">
-<tt class="descclassname">RoadRunner.</tt><tt class="descname">getFloatingSpeciesAmountIds</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.getFloatingSpeciesAmountIds" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a list of the floating species Ids, but with the Ids surrounded
-by square brackets, i.e. &#8216;S1&#8217; -&gt; &#8216;[S1]&#8217;</p>
 </dd></dl>
 
 <dl class="method">
@@ -501,6 +488,12 @@ by square brackets, i.e. &#8216;S1&#8217; -&gt; &#8216;[S1]&#8217;</p>
 <tt class="descclassname">RoadRunner.</tt><tt class="descname">getIntegrator</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.getIntegrator" title="Permalink to this definition">¶</a></dt>
 <dd><p>get the integrator which is currently being used to
 time evolve the system.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="roadrunner.RoadRunner.getAvailableIntegrators">
+<tt class="descclassname">RoadRunner.</tt><tt class="descname">getAvailableIntegrators</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.getAvailableIntegrators" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of available integrator names.</p>
 </dd></dl>
 
 <dl class="staticmethod">
@@ -550,6 +543,22 @@ original SBML that was loaded into RoadRunner.</p>
 </table>
 </dd></dl>
 
+<div class="section" id="selections">
+<h3>Selections<a class="headerlink" href="#selections" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="roadrunner.RoadRunner.getIds">
+<tt class="descclassname">RoadRunner.</tt><tt class="descname">getIds</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.getIds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of selection ids that this object can select on.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="method">
 <dt id="roadrunner.RoadRunner.getValue">
 <tt class="descclassname">RoadRunner.</tt><tt class="descname">getValue</tt><big>(</big><em>sel</em><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.getValue" title="Permalink to this definition">¶</a></dt>
@@ -579,28 +588,15 @@ obtained from createSelection</td>
 </table>
 </dd></dl>
 
-<dl class="method">
-<dt id="roadrunner.RoadRunner.getSimulationResult">
-<tt class="descclassname">RoadRunner.</tt><tt class="descname">getSimulationResult</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.getSimulationResult" title="Permalink to this definition">¶</a></dt>
-<dd><p>get the simulation result in case one forgot to hold on to the simulate return value.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="roadrunner.RoadRunner.selections">
 <tt class="descclassname">RoadRunner.</tt><tt class="descname">selections</tt><a class="headerlink" href="#roadrunner.RoadRunner.selections" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Get or set the list of current selections used for the simulation result columns.</p>
+</dd></dl>
 
 <dl class="method">
-<dt>
-<tt class="descclassname">RoadRunner.</tt><tt class="descname">createSelection</tt><big>(</big><em>sel</em><big>)</big></dt>
+<dt id="roadrunner.RoadRunner.createSelection">
+<tt class="descclassname">RoadRunner.</tt><tt class="descname">createSelection</tt><big>(</big><em>sel</em><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.createSelection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a new selection based on a selection string</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -612,63 +608,25 @@ obtained from createSelection</td>
 </table>
 </dd></dl>
 
-<dl class="staticmethod">
-<dt id="roadrunner.RoadRunner.__version__">
-<em class="property">static </em><tt class="descclassname">RoadRunner.</tt><tt class="descname">__version__</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.__version__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the current version of the RoadRunner library.</p>
-</dd></dl>
-
-<dl class="staticmethod">
-<dt id="roadrunner.RoadRunner.getlibSBMLVersion">
-<em class="property">static </em><tt class="descclassname">RoadRunner.</tt><tt class="descname">getlibSBMLVersion</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.getlibSBMLVersion" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the version of the libSBML library that is currently being used.</p>
-</dd></dl>
-
+</div>
+<div class="section" id="model-access">
+<h3>Model Access<a class="headerlink" href="#model-access" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
 <dt id="roadrunner.RoadRunner.isModelLoaded">
 <tt class="descclassname">RoadRunner.</tt><tt class="descname">isModelLoaded</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.isModelLoaded" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return True if model was loaded; False otherwise</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="roadrunner.RoadRunner.load">
-<tt class="descclassname">RoadRunner.</tt><tt class="descname">load</tt><big>(</big><em>uriOrDocument</em><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.load" title="Permalink to this definition">¶</a></dt>
-<dd><p>Loads an SBML document, given a string for file path, URI, or contents.</p>
-<p>This method also accepts HTTP URI for remote files, however this feature is currently limited
-to the Mac version, plan on enabling HTTP loading of SBML documents on Windows and Linux
-shortly.</p>
-<p>Some examples of loading files on Mac or Linux:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s">&quot;myfile.xml&quot;</span><span class="p">)</span>                               <span class="c"># load a file from the current directory</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s">&quot;/Users/Fred/myfile.xml&quot;</span><span class="p">)</span>                   <span class="c"># absolute path</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s">&quot;http://sbml.org/example_system.xml&quot;</span><span class="p">)</span>       <span class="c"># remote file</span>
-</pre></div>
-</div>
-<p>Or on Windows:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s">&quot;myfile.xml&quot;</span><span class="p">)</span>                                  <span class="c"># load a file from the current directory</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s">&quot;file://localhost/c:/Users/Fred/myfile.xml&quot;</span><span class="p">)</span>   <span class="c"># using a URI</span>
-</pre></div>
-</div>
-<p>One may also load the contents of a document:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">myfile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&quot;myfile.xml, &quot;r&quot;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">contents</span> <span class="o">=</span> <span class="nb">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>In future version, we will also support loading directly from a libSBML Document object.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>uriOrDocument</strong> &#8211; A string which may be a local path, URI or contents of an SBML document.</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="roadrunner.RoadRunner.model">
 <tt class="descclassname">RoadRunner.</tt><tt class="descname">model</tt><em class="property"> None</em><a class="headerlink" href="#roadrunner.RoadRunner.model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the currently loaded model. The model object contains the entire state of the SBML model.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="roadrunner.RoadRunner.getModel">
+<tt class="descclassname">RoadRunner.</tt><tt class="descname">getModel</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.getModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function form of the RoadRunner.model property, identical to model.</p>
 </dd></dl>
 
 <dl class="method">
@@ -714,6 +672,7 @@ species are replaced with assignment rules and a new set of conserved moiety
 parameters are introduced.</p>
 </dd></dl>
 
+</div>
 <div class="section" id="simulation">
 <h3>Simulation<a class="headerlink" href="#simulation" title="Permalink to this headline">¶</a></h3>
 <p>Fast and easy time series simulations is one of the main objectives of the RoadRunner project.</p>
@@ -873,21 +832,6 @@ to be global parameters.</p>
 </table>
 </dd></dl>
 
-<dl class="method">
-<dt id="roadrunner.RoadRunner.evalModel">
-<tt class="descclassname">RoadRunner.</tt><tt class="descname">evalModel</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.evalModel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Evaluates the current model, that is it updates the rates of change and any assignments in the model.
-It does <em>not</em> carry out an integration step.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Returns true if successful</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 </div>
 <div class="section" id="steady-state-sections">
 <h3>Steady State Sections<a class="headerlink" href="#steady-state-sections" title="Permalink to this headline">¶</a></h3>
@@ -1031,19 +975,35 @@ species</li>
 </dd></dl>
 
 <dl class="method">
-<dt id="roadrunner.RoadRunner.getEigenvalueIds">
-<tt class="descclassname">RoadRunner.</tt><tt class="descname">getEigenvalueIds</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.getEigenvalueIds" title="Permalink to this definition">¶</a></dt>
+<dt id="roadrunner.RoadRunner.getEigenValueIds">
+<tt class="descclassname">RoadRunner.</tt><tt class="descname">getEigenValueIds</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.getEigenValueIds" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns a list of selection symbols for the eigenvalues of the floating species. The eigen value
 selection symbol is <tt class="docutils literal"><span class="pre">eigen(XX)</span></tt>, where <tt class="docutils literal"><span class="pre">XX</span></tt> is the floating species name.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="roadrunner.RoadRunner.getEigenvalues">
-<tt class="descclassname">RoadRunner.</tt><tt class="descname">getEigenvalues</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.getEigenvalues" title="Permalink to this definition">¶</a></dt>
-<dd><p>Calculates the eigen values of the Jacobian as a real matrix, first column real part, second
+<dt id="roadrunner.RoadRunner.getFullEigenValues">
+<tt class="descclassname">RoadRunner.</tt><tt class="descname">getFullEigenValues</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.getFullEigenValues" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the eigen values of the Full Jacobian as a real matrix, first column real part, second
 column imaginary part.</p>
-<p>If moiety conservation is enables, the reduced Jacobian is used, otherwise the full Jacobian is
-used.</p>
+<p>Note, only valid for pure reaction kinetics models (no rate rules, no floating species rules and
+time invariant stoichiometry).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="roadrunner.RoadRunner.getReducedEigenValues">
+<tt class="descclassname">RoadRunner.</tt><tt class="descname">getReducedEigenValues</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.getReducedEigenValues" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the eigen values of the Reduced Jacobian as a real matrix, first column real part, second
+column imaginary part.</p>
+<p>Only valid if moiety conversion is enabled.</p>
 <p>Note, only valid for pure reaction kinetics models (no rate rules, no floating species rules and
 time invariant stoichiometry).</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1061,14 +1021,6 @@ time invariant stoichiometry).</p>
 <tt class="descclassname">RoadRunner.</tt><tt class="descname">getFullJacobian</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.getFullJacobian" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the full Jacobian at the current operating point.</p>
 <p>This is the Jacobian of ONLY the floating species.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="roadrunner.RoadRunner.getFullyReorderedStoichiometryMatrix">
-<tt class="descclassname">RoadRunner.</tt><tt class="descname">getFullyReorderedStoichiometryMatrix</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.getFullyReorderedStoichiometryMatrix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the full reordered stoichiometry matrix for the currently loaded model.
-The rows will corresponds to the order of species in the call to getFloatinSpeciesIds(),
-the columns will corresponds to the order of reactions in the call to getReactionIds().</p>
 </dd></dl>
 
 <dl class="method">
@@ -1112,6 +1064,29 @@ of floating species and n the number of reactions.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>reactionId</strong> (<em>str</em>) &#8211; the SBML id of a reaction.</li>
 <li><strong>speciesId</strong> (<em>str</em>) &#8211; the SBML id of a species.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">double</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="roadrunner.RoadRunner.getUnscaledParameterElasticity">
+<tt class="descclassname">RoadRunner.</tt><tt class="descname">getUnscaledParameterElasticity</tt><big>(</big><em>reactionId</em>, <em>parameterId</em><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.getUnscaledParameterElasticity" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>Returns the unscaled elasticity for a named reaction with respect to a
+named parameter</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>reactionId</strong> (<em>str</em>) &#8211; the SBML id of a reaction.</li>
+<li><strong>parameterId</strong> (<em>str</em>) &#8211; the SBML id of a parameter.</li>
 </ul>
 </td>
 </tr>
@@ -1186,19 +1161,22 @@ of floating species and n the number of reactions.</p>
 </table>
 </dd></dl>
 
+</div>
+<div class="section" id="stochiometric-analysis">
+<h3>Stochiometric Analysis<a class="headerlink" href="#stochiometric-analysis" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
-<dt id="roadrunner.RoadRunner.getReorderedStoichiometryMatrix">
-<tt class="descclassname">RoadRunner.</tt><tt class="descname">getReorderedStoichiometryMatrix</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.getReorderedStoichiometryMatrix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the reordered stoichiometry matrix where the tops rows represent the independent species of
-which there will be rank (N) and the bottom rows the dependent species.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
-</tr>
-</tbody>
-</table>
+<dt id="roadrunner.RoadRunner.getFullStoichiometryMatrix">
+<tt class="descclassname">RoadRunner.</tt><tt class="descname">getFullStoichiometryMatrix</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.getFullStoichiometryMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the stoichiometry matrix that coresponds to the full model, even it
+it was converted via conservation conversion.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="roadrunner.RoadRunner.getReducedStoichiometryMatrix">
+<tt class="descclassname">RoadRunner.</tt><tt class="descname">getReducedStoichiometryMatrix</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.getReducedStoichiometryMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>get the reduced stochiometry matrix. If conservation conversion is enabled,
+this is the matrix that coresponds to the independent species.</p>
+<p>A synonym for getNrMatrix().</p>
 </dd></dl>
 
 <dl class="method">
@@ -1244,6 +1222,23 @@ is the number of floating species and r the rank of the stoichiometric matrix, N
 <tt class="descclassname">RoadRunner.</tt><tt class="descname">getNrMatrix</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.getNrMatrix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the reduced stoichiometry matrix, <img class="math" src="_images/math/9ea520289972d82fa3dd03be522ffbe21abce96e.png" alt="N_R"/>, which will have only r rows where r is the rank of
 the full stoichiometry matrix. The matrix will be reordered such that the rows of <img class="math" src="_images/math/9ea520289972d82fa3dd03be522ffbe21abce96e.png" alt="N_R"/> are independent.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="analysis">
+<h3>Analysis<a class="headerlink" href="#analysis" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="roadrunner.RoadRunner.getFrequencyResponse">
+<tt class="descclassname">RoadRunner.</tt><tt class="descname">getFrequencyResponse</tt><big>(</big><em>startFrequency</em>, <em>numberOfDecades</em>, <em>numberOfPoints</em>, <em>parameterName</em>, <em>variableName</em>, <em>useDB</em>, <em>useHz</em><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.getFrequencyResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the frequency response</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2067,27 +2062,6 @@ large and only a single coefficient is needed.</p>
 </table>
 </dd></dl>
 
-<dl class="method">
-<dt id="roadrunner.ExecutableModel.getStoichiometryMatrix">
-<tt class="descclassname">ExecutableModel.</tt><tt class="descname">getStoichiometryMatrix</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.ExecutableModel.getStoichiometryMatrix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the current stoichiometry matrix, a <img class="math" src="_images/math/bed4cafeded4bdf622cee8198b01a198f5d635f6.png" alt="n \times m"/> matrix where <img class="math" src="_images/math/174fadd07fd54c9afe288e96558c92e0c1da733a.png" alt="n"/> is the
-number of species which take place in reactions (floating species) and <img class="math" src="_images/math/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png" alt="m"/> is the number of
-reactions.</p>
-<p>When the LLVM back end is used (default) this always returns the current state of the
-stochiometric coefficients, so if any of these are determined by any rule, this will return the
-current value.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">an n by m numpy ndarray of the stoichiometric coefficients.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 </div>
 <div class="section" id="state-vector">
 <h3>State Vector<a class="headerlink" href="#state-vector" title="Permalink to this headline">¶</a></h3>
@@ -2256,12 +2230,6 @@ array of all the  values to set.</li>
 <div class="section" id="misc">
 <h3>Misc<a class="headerlink" href="#misc" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
-<dt id="roadrunner.ExecutableModel.evalInitialConditions">
-<tt class="descclassname">ExecutableModel.</tt><tt class="descname">evalInitialConditions</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.ExecutableModel.evalInitialConditions" title="Permalink to this definition">¶</a></dt>
-<dd><p>calculate and apply the initial conditions specified in the model.</p>
-</dd></dl>
-
-<dl class="method">
 <dt id="roadrunner.ExecutableModel.getInfo">
 <tt class="descclassname">ExecutableModel.</tt><tt class="descname">getInfo</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.ExecutableModel.getInfo" title="Permalink to this definition">¶</a></dt>
 <dd><p>get various info about the model.</p>
@@ -2271,24 +2239,6 @@ array of all the  values to set.</li>
 <dt id="roadrunner.ExecutableModel.getModelName">
 <tt class="descclassname">ExecutableModel.</tt><tt class="descname">getModelName</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.ExecutableModel.getModelName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the model name specified in the SBML.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="roadrunner.ExecutableModel.getNumDependentSpecies">
-<tt class="descclassname">ExecutableModel.</tt><tt class="descname">getNumDependentSpecies</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.ExecutableModel.getNumDependentSpecies" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the number of dependent floating species in the model.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="roadrunner.ExecutableModel.getNumIndependentSpecies">
-<tt class="descclassname">ExecutableModel.</tt><tt class="descname">getNumIndependentSpecies</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.ExecutableModel.getNumIndependentSpecies" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the number of independent floating species in the model.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="roadrunner.ExecutableModel.getNumRules">
-<tt class="descclassname">ExecutableModel.</tt><tt class="descname">getNumRules</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.ExecutableModel.getNumRules" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the number of rules in the SBML model.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2832,9 +2782,13 @@ target which matches the host.</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#the-main-roadrunner-class">The Main RoadRunner Class</a><ul>
+<li><a class="reference internal" href="#selections">Selections</a></li>
+<li><a class="reference internal" href="#model-access">Model Access</a></li>
 <li><a class="reference internal" href="#simulation">Simulation</a></li>
 <li><a class="reference internal" href="#steady-state-sections">Steady State Sections</a></li>
 <li><a class="reference internal" href="#metabolic-control-analysis">Metabolic control analysis</a></li>
+<li><a class="reference internal" href="#stochiometric-analysis">Stochiometric Analysis</a></li>
+<li><a class="reference internal" href="#analysis">Analysis</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#controlling-simulation-settings">Controlling Simulation Settings</a></li>
@@ -2899,7 +2853,7 @@ target which matches the host.</p>
         <li class="right" >
           <a href="utility_functions.html" title="Utility Functions"
              >previous</a> |</li>
-        <li><a href="index.html">libRoadRunner 1.2.2 documentation</a> &raquo;</li> 
+        <li><a href="index.html">libRoadRunner 1.2.7 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
