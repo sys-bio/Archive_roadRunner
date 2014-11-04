@@ -53,6 +53,7 @@ The following methods are related to the analysis of the stoichiometric matrix.
 
    RoadRunner.getLinkMatrix
    RoadRunner.getNrMatrix
+   RoadRunner.getKMatrix
    RoadRunner.getConservationMatrix
    RoadRunner.getL0Matrix
    RoadRunner.getFullStoichiometryMatrix

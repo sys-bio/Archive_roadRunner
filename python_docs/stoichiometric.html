@@ -97,28 +97,31 @@ matrix.</p>
 <tr class="row-even"><td><a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.getNrMatrix" title="roadrunner.RoadRunner.getNrMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getNrMatrix</span></tt></a>()</td>
 <td>Returns the reduced stoichiometry matrix, <img class="math" src="_images/math/9ea520289972d82fa3dd03be522ffbe21abce96e.png" alt="N_R"/>, which will have only r rows where r is the rank of</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.getConservationMatrix" title="roadrunner.RoadRunner.getConservationMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getConservationMatrix</span></tt></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.getKMatrix" title="roadrunner.RoadRunner.getKMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getKMatrix</span></tt></a>()</td>
+<td>Returns the K matrix, <img class="math" src="_images/math/33036c8a804dc70e1d1040c6a7fea780b0a68495.png" alt="ker(N_R)"/>, (right nullspace of Nr)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.getConservationMatrix" title="roadrunner.RoadRunner.getConservationMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getConservationMatrix</span></tt></a>()</td>
 <td>Returns a conservation matrix <img class="math" src="_images/math/913e49ea63c6c130bb8d9d1c3556b052ecc404f8.png" alt="\Gamma"/> which is a <img class="math" src="_images/math/69466761ddad22006793cf7d2699b82f5d0e1d21.png" alt="c \times m"/> matrix</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.getL0Matrix" title="roadrunner.RoadRunner.getL0Matrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getL0Matrix</span></tt></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.getL0Matrix" title="roadrunner.RoadRunner.getL0Matrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getL0Matrix</span></tt></a>()</td>
 <td>Returns the L0 matrix for the current model. The L0 matrix is an (m-r) by r matrix that expresses</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.getFullStoichiometryMatrix" title="roadrunner.RoadRunner.getFullStoichiometryMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getFullStoichiometryMatrix</span></tt></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.getFullStoichiometryMatrix" title="roadrunner.RoadRunner.getFullStoichiometryMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getFullStoichiometryMatrix</span></tt></a>()</td>
 <td>Get the stoichiometry matrix that coresponds to the full model, even it</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.getReducedStoichiometryMatrix" title="roadrunner.RoadRunner.getReducedStoichiometryMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getReducedStoichiometryMatrix</span></tt></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.getReducedStoichiometryMatrix" title="roadrunner.RoadRunner.getReducedStoichiometryMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getReducedStoichiometryMatrix</span></tt></a>()</td>
 <td>get the reduced stochiometry matrix. If conservation conversion is enabled,</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#roadrunner.ExecutableModel.getNumConservedMoieties" title="roadrunner.ExecutableModel.getNumConservedMoieties"><tt class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.getNumConservedMoieties</span></tt></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="api_reference.html#roadrunner.ExecutableModel.getNumConservedMoieties" title="roadrunner.ExecutableModel.getNumConservedMoieties"><tt class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.getNumConservedMoieties</span></tt></a>()</td>
 <td>Returns the number of conserved moieties in the model.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="api_reference.html#roadrunner.ExecutableModel.getConservedMoietyIds" title="roadrunner.ExecutableModel.getConservedMoietyIds"><tt class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.getConservedMoietyIds</span></tt></a>([index])</td>
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#roadrunner.ExecutableModel.getConservedMoietyIds" title="roadrunner.ExecutableModel.getConservedMoietyIds"><tt class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.getConservedMoietyIds</span></tt></a>([index])</td>
 <td>Returns a vector of conserved moiety identifier symbols.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#roadrunner.ExecutableModel.getConservedMoietyValues" title="roadrunner.ExecutableModel.getConservedMoietyValues"><tt class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.getConservedMoietyValues</span></tt></a>([index])</td>
+<tr class="row-even"><td><a class="reference internal" href="api_reference.html#roadrunner.ExecutableModel.getConservedMoietyValues" title="roadrunner.ExecutableModel.getConservedMoietyValues"><tt class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.getConservedMoietyValues</span></tt></a>([index])</td>
 <td>Returns a vector of conserved moiety volumes.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="api_reference.html#roadrunner.ExecutableModel.setConservedMoietyValues" title="roadrunner.ExecutableModel.setConservedMoietyValues"><tt class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.setConservedMoietyValues</span></tt></a>(...)</td>
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#roadrunner.ExecutableModel.setConservedMoietyValues" title="roadrunner.ExecutableModel.setConservedMoietyValues"><tt class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.setConservedMoietyValues</span></tt></a>(...)</td>
 <td>Sets a vector of conserved moiety values.</td>
 </tr>
 </tbody>
