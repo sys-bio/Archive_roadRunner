@@ -1,21 +1,13 @@
 var searchData=
 [
-  ['sbml_5fapplicablevalidators',['SBML_APPLICABLEVALIDATORS',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053a043cd743124d745fe19797e0992d4078',1,'rr::Config']]],
-  ['simulateoptions_5fabsolute',['SIMULATEOPTIONS_ABSOLUTE',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053a7c765d39c39d0550c170fce10099664f',1,'rr::Config']]],
-  ['simulateoptions_5fcopy_5fresult',['SIMULATEOPTIONS_COPY_RESULT',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053a2380bee401835d67027fcf0b6fca3c20',1,'rr::Config']]],
-  ['simulateoptions_5fdeterministic_5fvariable_5fstep',['SIMULATEOPTIONS_DETERMINISTIC_VARIABLE_STEP',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053a68f2e9ea81eb79e0d138a3834ab2b33b',1,'rr::Config']]],
-  ['simulateoptions_5fduration',['SIMULATEOPTIONS_DURATION',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053aac781f4e67d50493b57896166839aabf',1,'rr::Config']]],
-  ['simulateoptions_5finitial_5ftimestep',['SIMULATEOPTIONS_INITIAL_TIMESTEP',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053a0d32622a3edeabd8cb3b36a310a073e7',1,'rr::Config']]],
-  ['simulateoptions_5fintegrator',['SIMULATEOPTIONS_INTEGRATOR',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053af04f063962a4036311b2e11f07519c7c',1,'rr::Config']]],
-  ['simulateoptions_5fmaximum_5fnum_5fsteps',['SIMULATEOPTIONS_MAXIMUM_NUM_STEPS',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053a195516f962434b4aeb314ae39d2a2814',1,'rr::Config']]],
-  ['simulateoptions_5fmaximum_5ftimestep',['SIMULATEOPTIONS_MAXIMUM_TIMESTEP',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053a571e2ca6736089faed9659cc2301968d',1,'rr::Config']]],
-  ['simulateoptions_5fminimum_5ftimestep',['SIMULATEOPTIONS_MINIMUM_TIMESTEP',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053aa4e33c84e600b5f29620af10fa601425',1,'rr::Config']]],
-  ['simulateoptions_5fmulti_5fstep',['SIMULATEOPTIONS_MULTI_STEP',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053a65faed9584635abaaf631baa90ff342f',1,'rr::Config']]],
-  ['simulateoptions_5frelative',['SIMULATEOPTIONS_RELATIVE',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053a048be3a9dac65ffeb9a85e89abd26229',1,'rr::Config']]],
-  ['simulateoptions_5fsteps',['SIMULATEOPTIONS_STEPS',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053ae5bc2b4a1d1183c5a941d65368f81ff5',1,'rr::Config']]],
-  ['simulateoptions_5fstiff',['SIMULATEOPTIONS_STIFF',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053a27968dd97e68c82d7773b4ac5b695823',1,'rr::Config']]],
-  ['simulateoptions_5fstochastic_5fvariable_5fstep',['SIMULATEOPTIONS_STOCHASTIC_VARIABLE_STEP',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053a50309d6c373f32953b6956760f800e23',1,'rr::Config']]],
-  ['simulateoptions_5fstructured_5fresult',['SIMULATEOPTIONS_STRUCTURED_RESULT',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053a38f882c1ea3fc2c5844d1c80bfdbbbd4',1,'rr::Config']]],
-  ['stiff',['STIFF',['../classrr_1_1_simulate_options.html#ab099177903df12af015dc3890e82a11ba53c1b2cf78d611a4de81c1fdce77e6f2',1,'rr::SimulateOptions']]],
-  ['structured_5fresult',['STRUCTURED_RESULT',['../classrr_1_1_simulate_options.html#a4bc2a6d4d8f9da649e8e2a507192c8faa7b968bcaea07518eb5b2bd1cfbbaa4bf',1,'rr::SimulateOptions']]]
+  ['random_5fseed',['RANDOM_SEED',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053a0777390cc6ead1e5864aa0e319fc4159',1,'rr::Config']]],
+  ['reaction_5frate',['REACTION_RATE',['../classrr_1_1_selection_record.html#a898963ab24a6ba614913715c981d8394a474f33e2264e1732ec7dd131f840083b',1,'rr::SelectionRecord']]],
+  ['read_5fonly',['READ_ONLY',['../classrr_1_1_model_generator.html#a4f280529e0531ec3132c80ffda967767ad1a0e6dd23138fe588091eda7e258f30',1,'rr::ModelGenerator::READ_ONLY()'],['../structrr_1_1_load_s_b_m_l_options.html#a7b6ca6fc32892dbe782f3eb718762ad6a8058d91b0aebc14e1045b721a5162d60',1,'rr::LoadSBMLOptions::READ_ONLY()']]],
+  ['recompile',['RECOMPILE',['../classrr_1_1_model_generator.html#a4f280529e0531ec3132c80ffda967767a691332aed1a7e18a21a931b29ce69b01',1,'rr::ModelGenerator::RECOMPILE()'],['../structrr_1_1_load_s_b_m_l_options.html#a7b6ca6fc32892dbe782f3eb718762ad6a9dcbd508a994cd5a803e231e0054ff3d',1,'rr::LoadSBMLOptions::RECOMPILE()']]],
+  ['reset_5fmodel',['RESET_MODEL',['../classrr_1_1_simulate_options.html#a4bc2a6d4d8f9da649e8e2a507192c8faa0f7e24d751df0cc6b9316ce2713bdd0c',1,'rr::SimulateOptions']]],
+  ['rk4',['RK4',['../classrr_1_1_simulate_options.html#a9161fd2b138ff28e97491611dce61a52a90a16146090a06c7d3c27abaaef1ebcb',1,'rr::SimulateOptions']]],
+  ['roadrunner_5fdisable_5fpython_5fdynamic_5fproperties',['ROADRUNNER_DISABLE_PYTHON_DYNAMIC_PROPERTIES',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053ae4eee9ff55c8ff33111fd63dd4427d18',1,'rr::Config']]],
+  ['roadrunner_5fdisable_5fwarnings',['ROADRUNNER_DISABLE_WARNINGS',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053a2ac32a86236319b70d5078dddd44f23b',1,'rr::Config']]],
+  ['roadrunner_5fjacobian_5fmode',['ROADRUNNER_JACOBIAN_MODE',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053a3d5469371f6dc9aa2402d5e075b64f92',1,'rr::Config']]],
+  ['roadrunner_5fjacobian_5fstep_5fsize',['ROADRUNNER_JACOBIAN_STEP_SIZE',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053ae778bfdbfb15c7391f52a3363c01c41c',1,'rr::Config']]]
 ];
