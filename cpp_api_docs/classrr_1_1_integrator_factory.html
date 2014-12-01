@@ -114,7 +114,27 @@ Static Public Member Functions</h2></td></tr>
 <p>This class also has a number of static method which return the list of available integrators, and methods to return dictionaries of the available options each <a class="el" href="classrr_1_1_integrator.html">Integrator</a> supports.</p>
 <p>The <a class="el" href="classrr_1_1_dictionary.html">Dictionary</a> references that are returned are borrowed references, if one wants to modify them, a new SimululateOptions or <a class="el" href="classrr_1_1_dictionary_impl.html">DictionaryImpl</a> may be created using their copy constructors.</p>
 <p>When a new mutable dictionary is created, it may be used as the argument to <a class="el" href="classrr_1_1_road_runner.html#a196e38611d37cd1a79bce8373ceb12da">RoadRunner::simulate()</a>;</p>
-<p>The integrator dictionary contain a set of descriptor keys / values, these are the standard key names, but have a ".description" or ".hint" suffix. </p>
+<p>The integrator dictionary contain a set of descriptor keys / values, these are the standard key names, but have a ".description" or ".hint" suffix.</p>
+<p>For example, to iterate through all of the available integrator options, and display them to the console, one would: </p><div class="fragment"><div class="line">  <span class="comment">// get a list of all of the integrator options</span></div>
+<div class="line">vector&lt;const Dictionary*&gt; opts =</div>
+<div class="line">        <a class="code" href="classrr_1_1_integrator_factory.html#ac82f5094d8f5f37ea00dcbeb98907d87">IntegratorFactory::getIntegratorOptions</a>();</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// iterate through the integrator options</span></div>
+<div class="line"><span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; opts.size(); ++i) {</div>
+<div class="line">    <span class="comment">// each dictionary will contain all the keys that</span></div>
+<div class="line">    <span class="comment">// are valid for a particular integrator.</span></div>
+<div class="line">    <span class="keyword">const</span> Dictionary &amp;d = *opts[i];</div>
+<div class="line">    vector&lt;string&gt; keys = d.getKeys();</div>
+<div class="line">    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; keys.size(); ++j) {</div>
+<div class="line">        <span class="keywordtype">string</span> key = keys[i];</div>
+<div class="line">        <span class="keywordtype">string</span> item = d.getItem(key);</div>
+<div class="line">        cout &lt;&lt; <span class="stringliteral">&quot;key: &quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot;, value: &quot;</span> &lt;&lt; item &lt;&lt; std::endl;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Notice here, the line, <code>string item = d.getItem(key)</code>, this implicitly calls the conversion operator to automatically convert the contents of the <a class="el" href="classrr_1_1_variant.html">Variant</a> to a string. Any type that is stored in a <a class="el" href="classrr_1_1_variant.html">Variant</a> can be converted to a string.</p>
+<p>Each <a class="el" href="classrr_1_1_dictionary.html">Dictionary</a> object will contain a "integrator" key, this identifies the integrator. It will also contain a "integrator.description" and an "integrator.hint" keys, these provide a full description and a hint for that particular integrator.</p>
+<p>One may also get a list of all the available integrators via the <a class="el" href="classrr_1_1_integrator_factory.html#a6c906b43ab66a3f1040d15370f86e7ce">getIntegratorNames()</a> method, and use this integrator name to get the list of options available for a particular integrator.</p>
+<p>The values in each integrator options dictionary are those of the current default values. The default values may be modified via the <a class="el" href="classrr_1_1_config.html">Config</a> class. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a6c906b43ab66a3f1040d15370f86e7ce"></a>
 <div class="memitem">
@@ -230,7 +250,15 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>create a new integrator based on the settings in the options class.</p>
-<p>The new integrator borrows a reference to an <a class="el" href="classrr_1_1_executable_model.html">ExecutableModel</a> object. </p>
+<p>The new integrator borrows a reference to an <a class="el" href="classrr_1_1_executable_model.html">ExecutableModel</a> object.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">opt</td><td>a pointer to a <a class="el" href="classrr_1_1_dictionary.html">Dictionary</a> object whose values will be used to construct a new <a class="el" href="classrr_1_1_integrator.html">Integrator</a>. </td></tr>
+    <tr><td class="paramname">m</td><td>a borrowed reference to an <a class="el" href="classrr_1_1_executable_model.html">ExecutableModel</a> object, the new <a class="el" href="classrr_1_1_integrator.html">Integrator</a> will be attached to this object. This value may also be NULL, in which the new <a class="el" href="classrr_1_1_integrator.html">Integrator</a> is not attached to any model. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a newly created <a class="el" href="classrr_1_1_integrator.html">Integrator</a>. The caller is responsible for deleting this object. </dd></dl>
 
 </div>
 </div>
@@ -241,7 +269,7 @@ Static Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 1 2014 15:20:57 for libRoadRunner C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 1 2014 16:49:50 for libRoadRunner C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

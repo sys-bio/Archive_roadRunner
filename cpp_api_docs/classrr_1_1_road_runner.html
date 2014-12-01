@@ -1623,7 +1623,13 @@ Static Public Member Functions</h2></td></tr>
 <div class="line">opt.setItem(<span class="stringliteral">&quot;seed&quot;</span>, 12345);</div>
 <div class="line"><span class="keyword">const</span> DoubleMatrix *result = r.simulate(&amp;opt);</div>
 </div><!-- fragment --><p> Here, the "integrator" specifies the integrator to use. The "stiff" key is only used by the deterministic solvers, and it is safely ignored by the stochastic solvers. Also, the "seed" sets the random seed that the integrator uses. For more information about all of the avaialble options for each integrator, </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classrr_1_1_integrator_factory.html#ac82f5094d8f5f37ea00dcbeb98907d87">IntegratorFactory::getIntegratorOptions</a>".</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>a RoadRunnerData object which is owned by the the <a class="el" href="classrr_1_1_road_runner.html">RoadRunner</a> object if successfull, 0 on failure. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">an</td><td>std::exception if any options are invalid. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a borrowed reference to a DoubleMatrix object if successfull. </dd></dl>
 
 </div>
 </div>
@@ -1649,7 +1655,7 @@ Static Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 1 2014 15:20:57 for libRoadRunner C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 1 2014 16:49:50 for libRoadRunner C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
