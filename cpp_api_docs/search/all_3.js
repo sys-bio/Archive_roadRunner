@@ -21,7 +21,7 @@ var searchData=
   ['createmodel',['createModel',['../classrr_1_1_model_generator.html#a7e30f93976e5f39ee274968690ca59b7',1,'rr::ModelGenerator']]],
   ['createparameternode',['createParameterNode',['../classrr_1_1_configurable.html#ab4b9e1d503929f9852c193a3109f4fd1',1,'rr::Configurable::createParameterNode(const std::string &amp;name, const std::string &amp;hint, const std::string &amp;value)'],['../classrr_1_1_configurable.html#a98ac3ed5609f816743b4001eab12a15e',1,'rr::Configurable::createParameterNode(const std::string &amp;name, const std::string &amp;hint, int value)'],['../classrr_1_1_configurable.html#a9549b987e35cebb539e06fe05c7bdedb',1,'rr::Configurable::createParameterNode(const std::string &amp;name, const std::string &amp;hint, double value)']]],
   ['createselection',['createSelection',['../classrr_1_1_road_runner.html#a432d705efcbc910f1867311112f845dc',1,'rr::RoadRunner']]],
-  ['cvode',['CVODE',['../classrr_1_1_simulate_options.html#a9161fd2b138ff28e97491611dce61a52ac12e06336ddd6079b65b16202957c84d',1,'rr::SimulateOptions']]],
+  ['cvode',['CVODE',['../classrr_1_1_integrator.html#ae61db0bdde94a0f310e33a93c451720ba21028ab45c3bc0cb471c302340478b34',1,'rr::Integrator']]],
   ['cvode_5fmin_5fabsolute',['CVODE_MIN_ABSOLUTE',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053a0c3075c04786354a026c56410edb47be',1,'rr::Config']]],
   ['cvode_5fmin_5frelative',['CVODE_MIN_RELATIVE',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053a4fba6c43b4d137bab9f42ee9c4cb1e6b',1,'rr::Config']]]
 ];

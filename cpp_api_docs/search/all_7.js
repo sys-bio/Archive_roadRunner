@@ -36,12 +36,9 @@ var searchData=
   ['getinstancecount',['getInstanceCount',['../classrr_1_1_road_runner.html#a4860f41d8552118f3c8c5d5fb6d999f6',1,'rr::RoadRunner']]],
   ['getinstanceid',['getInstanceID',['../classrr_1_1_road_runner.html#a6cc53f3668f94b3d88764e14b24bc87e',1,'rr::RoadRunner']]],
   ['getint',['getInt',['../classrr_1_1_config.html#aa585d61a6f2d921a7223db8d2a64e7ab',1,'rr::Config']]],
-  ['getintegrator',['getIntegrator',['../classrr_1_1_road_runner.html#aa8d325270272188e71862fd7c62c9d82',1,'rr::RoadRunner::getIntegrator()'],['../classrr_1_1_road_runner.html#acf61cd409b41fe5584676c4311ee0c9d',1,'rr::RoadRunner::getIntegrator(SimulateOptions::Integrator intg)']]],
-  ['getintegratoridfromname',['getIntegratorIdFromName',['../classrr_1_1_simulate_options.html#a012f2167b4d35025879dfcad7eaae800',1,'rr::SimulateOptions']]],
-  ['getintegratornamefromid',['getIntegratorNameFromId',['../classrr_1_1_simulate_options.html#ab2e4c586010c341e433c9c95f0460f5f',1,'rr::SimulateOptions']]],
+  ['getintegrator',['getIntegrator',['../classrr_1_1_road_runner.html#aa8d325270272188e71862fd7c62c9d82',1,'rr::RoadRunner::getIntegrator()'],['../classrr_1_1_road_runner.html#a55374476e38c0600180472e6dbeb9008',1,'rr::RoadRunner::getIntegrator(Integrator::IntegratorId intg)']]],
   ['getintegratornames',['getIntegratorNames',['../classrr_1_1_integrator_factory.html#a6c906b43ab66a3f1040d15370f86e7ce',1,'rr::IntegratorFactory']]],
   ['getintegratoroptions',['getIntegratorOptions',['../classrr_1_1_integrator_factory.html#ac82f5094d8f5f37ea00dcbeb98907d87',1,'rr::IntegratorFactory::getIntegratorOptions()'],['../classrr_1_1_integrator_factory.html#ab6e740dacfcb8abc8c0b96fe5eff2d5c',1,'rr::IntegratorFactory::getIntegratorOptions(const std::string &amp;intName)']]],
-  ['getintegratortype',['getIntegratorType',['../classrr_1_1_simulate_options.html#a50ff086381c9f75fdd0eb56657646867',1,'rr::SimulateOptions']]],
   ['getitem',['getItem',['../classrr_1_1_dictionary.html#a53cb5eee283727168630f6b1b918bdb0',1,'rr::Dictionary::getItem()'],['../classrr_1_1_dictionary_impl.html#ae3cd3daf0c230691cab0bb3c19bfdec7',1,'rr::DictionaryImpl::getItem()'],['../classrr_1_1_simulate_options.html#a7321f5d690686a2b5e8a6010657d862f',1,'rr::SimulateOptions::getItem()']]],
   ['getkeys',['getKeys',['../classrr_1_1_dictionary.html#ae8e4240deda5ee2dc7d472476bd92b47',1,'rr::Dictionary::getKeys()'],['../classrr_1_1_dictionary_impl.html#a592957af6294381805b80f126bfdf1af',1,'rr::DictionaryImpl::getKeys()'],['../classrr_1_1_simulate_options.html#a3ae49e7e0da5d8238f345c250b658a5d',1,'rr::SimulateOptions::getKeys()']]],
   ['getkmatrix',['getKMatrix',['../classrr_1_1_road_runner.html#a24ba9e58efcfc856cb27c92f469fbdc6',1,'rr::RoadRunner']]],
@@ -97,6 +94,6 @@ var searchData=
   ['getunscaledspecieselasticity',['getUnscaledSpeciesElasticity',['../classrr_1_1_road_runner.html#a5856b94d04fadfb190b407b126382503',1,'rr::RoadRunner']]],
   ['getvalue',['getValue',['../classrr_1_1_executable_model.html#aebaced13ef2afd070d7a1c35eec8d9f2',1,'rr::ExecutableModel::getValue()'],['../classrr_1_1_road_runner.html#aa030bd78fd18af9737b6798e246dd4cb',1,'rr::RoadRunner::getValue()']]],
   ['getversion',['getVersion',['../classrr_1_1_compiler.html#ace56af18a4bc2cd882bdf4685e18fb33',1,'rr::Compiler']]],
-  ['gillespie',['GILLESPIE',['../classrr_1_1_simulate_options.html#a9161fd2b138ff28e97491611dce61a52a10dd4f834a15704464e5a43372671652',1,'rr::SimulateOptions']]],
+  ['gillespie',['GILLESPIE',['../classrr_1_1_integrator.html#ae61db0bdde94a0f310e33a93c451720bac2126997f88a748f228b6e70ddcb9a21',1,'rr::Integrator']]],
   ['global_5fparameter',['GLOBAL_PARAMETER',['../classrr_1_1_selection_record.html#a898963ab24a6ba614913715c981d8394a928fc146c94a09862bd41bac7707c678',1,'rr::SelectionRecord']]]
 ];

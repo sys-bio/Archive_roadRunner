@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['variable_5fstep',['VARIABLE_STEP',['../classrr_1_1_simulate_options.html#ab099177903df12af015dc3890e82a11ba522ebf4ee963d0b8a8a84e310d83b129',1,'rr::SimulateOptions']]]
+  ['variable_5fstep',['VARIABLE_STEP',['../classrr_1_1_integrator.html#a09e1fd0c86b6274b7e6667b501628fcfa3a3fd1ecae218b822423c4150adb9089',1,'rr::Integrator']]]
 ];

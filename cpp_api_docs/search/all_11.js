@@ -10,7 +10,7 @@ var searchData=
   ['reset',['reset',['../classrr_1_1_executable_model.html#a217c61819d9b029c5928ace53b805e89',1,'rr::ExecutableModel::reset()=0'],['../classrr_1_1_executable_model.html#ac87e7f485678d07d7567398dea63c512',1,'rr::ExecutableModel::reset(int options)=0'],['../classrr_1_1_road_runner.html#ae4b0eaa39fd37737e5f5fd7f7741e06c',1,'rr::RoadRunner::reset()'],['../classrr_1_1_road_runner.html#a807cbac5ca760b0f3ff033851cf5276b',1,'rr::RoadRunner::reset(int options)']]],
   ['reset_5fmodel',['RESET_MODEL',['../classrr_1_1_simulate_options.html#a4bc2a6d4d8f9da649e8e2a507192c8faa0f7e24d751df0cc6b9316ce2713bdd0c',1,'rr::SimulateOptions']]],
   ['restart',['restart',['../classrr_1_1_integrator.html#a5469efaa4c234b7e59d82d98930fa5b9',1,'rr::Integrator']]],
-  ['rk4',['RK4',['../classrr_1_1_simulate_options.html#a9161fd2b138ff28e97491611dce61a52a90a16146090a06c7d3c27abaaef1ebcb',1,'rr::SimulateOptions']]],
+  ['rk4',['RK4',['../classrr_1_1_integrator.html#ae61db0bdde94a0f310e33a93c451720babf60b3386c821eb561c04df2f2a357ed',1,'rr::Integrator']]],
   ['roadrunner',['RoadRunner',['../classrr_1_1_road_runner.html#a2532ed02dbbc2b625bf291240d3f1e3e',1,'rr::RoadRunner::RoadRunner(const std::string &amp;uriOrSBML=&quot;&quot;, const LoadSBMLOptions *options=0)'],['../classrr_1_1_road_runner.html#a3e326546550b3f4533dd7d6b3f2f4250',1,'rr::RoadRunner::RoadRunner(const std::string &amp;compiler, const std::string &amp;tempDir, const std::string &amp;supportCodeDir)']]],
   ['roadrunner',['RoadRunner',['../classrr_1_1_road_runner.html',1,'rr']]],
   ['roadrunner_5fdisable_5fpython_5fdynamic_5fproperties',['ROADRUNNER_DISABLE_PYTHON_DYNAMIC_PROPERTIES',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053ae4eee9ff55c8ff33111fd63dd4427d18',1,'rr::Config']]],

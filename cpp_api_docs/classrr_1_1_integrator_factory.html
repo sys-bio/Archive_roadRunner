@@ -126,7 +126,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="line">    <span class="keyword">const</span> Dictionary &amp;d = *opts[i];</div>
 <div class="line">    vector&lt;string&gt; keys = d.getKeys();</div>
 <div class="line">    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; keys.size(); ++j) {</div>
-<div class="line">        <span class="keywordtype">string</span> key = keys[i];</div>
+<div class="line">        <span class="keywordtype">string</span> key = keys[j];</div>
 <div class="line">        <span class="keywordtype">string</span> item = d.getItem(key);</div>
 <div class="line">        cout &lt;&lt; <span class="stringliteral">&quot;key: &quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot;, value: &quot;</span> &lt;&lt; item &lt;&lt; std::endl;</div>
 <div class="line">    }</div>
@@ -207,14 +207,20 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get a dictionary populated with the default options for a specific integrator.</p>
+<p>Get a dictionary of options for a specific integrator.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">intName</td><td>a name of an integrator. </td></tr>
+    <tr><td class="paramname">intName</td><td>the name of a valid integrator </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a borrowed reference to a <a class="el" href="classrr_1_1_dictionary.html">Dictionary</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a borrowed reference to a <a class="el" href="classrr_1_1_dictionary.html">Dictionary</a> </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the argument is not a valid integrator. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -269,7 +275,7 @@ Static Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 1 2014 16:49:50 for libRoadRunner C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 2 2014 15:15:37 for libRoadRunner C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

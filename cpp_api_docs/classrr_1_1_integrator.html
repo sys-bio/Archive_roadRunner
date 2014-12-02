@@ -88,6 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classrr_1_1_integrator-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -106,6 +107,24 @@ Inheritance diagram for rr::Integrator:</div>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ae61db0bdde94a0f310e33a93c451720b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_integrator.html#ae61db0bdde94a0f310e33a93c451720b">IntegratorId</a> { <a class="el" href="classrr_1_1_integrator.html#ae61db0bdde94a0f310e33a93c451720ba21028ab45c3bc0cb471c302340478b34">CVODE</a> = 0, 
+<a class="el" href="classrr_1_1_integrator.html#ae61db0bdde94a0f310e33a93c451720bac2126997f88a748f228b6e70ddcb9a21">GILLESPIE</a>, 
+<a class="el" href="classrr_1_1_integrator.html#ae61db0bdde94a0f310e33a93c451720babf60b3386c821eb561c04df2f2a357ed">RK4</a>, 
+<a class="el" href="classrr_1_1_integrator.html#ae61db0bdde94a0f310e33a93c451720baa962bd370d0abdf69134b7c2de03f33d">INTEGRATOR_END</a>
+ }</td></tr>
+<tr class="separator:ae61db0bdde94a0f310e33a93c451720b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c5c1e6b152884b4ad9048dc06ff28bb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_integrator.html#a6c5c1e6b152884b4ad9048dc06ff28bb">IntegratorType</a> { <a class="el" href="classrr_1_1_integrator.html#a6c5c1e6b152884b4ad9048dc06ff28bbaed493a704b38f6d18315a3ea808b836a">DETERMINISTIC</a>, 
+<a class="el" href="classrr_1_1_integrator.html#a6c5c1e6b152884b4ad9048dc06ff28bba66daefe7a176bfb4954177df353d7219">STOCHASTIC</a>
+ }</td></tr>
+<tr class="separator:a6c5c1e6b152884b4ad9048dc06ff28bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09e1fd0c86b6274b7e6667b501628fcf"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_integrator.html#a09e1fd0c86b6274b7e6667b501628fcf">IntegratorFlags</a> { <a class="el" href="classrr_1_1_integrator.html#a09e1fd0c86b6274b7e6667b501628fcfa920bdc1189c1310354c3ddfbef115a8d">STIFF</a> = (0x1 &lt;&lt; 0), 
+<a class="el" href="classrr_1_1_integrator.html#a09e1fd0c86b6274b7e6667b501628fcfada7eac115d6e33271bfafe8a33386baf">MULTI_STEP</a> = (0x1 &lt;&lt; 1), 
+<a class="el" href="classrr_1_1_integrator.html#a09e1fd0c86b6274b7e6667b501628fcfa3a3fd1ecae218b822423c4150adb9089">VARIABLE_STEP</a> = (0x1 &lt;&lt; 2)
+ }</td></tr>
+<tr class="separator:a09e1fd0c86b6274b7e6667b501628fcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac1fa1ad5df380215b40bb1ab268621fa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_integrator.html#ac1fa1ad5df380215b40bb1ab268621fa">setSimulateOptions</a> (const <a class="el" href="classrr_1_1_simulate_options.html">SimulateOptions</a> *options)=0</td></tr>
@@ -143,7 +162,84 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface to a class which advances a model forward in time.</p>
 <p>The <a class="el" href="classrr_1_1_integrator.html">Integrator</a> is only valid if attached to a model. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="a09e1fd0c86b6274b7e6667b501628fcf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classrr_1_1_integrator.html#a09e1fd0c86b6274b7e6667b501628fcf">rr::Integrator::IntegratorFlags</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A set of flags that are common to all integrators. The <a class="el" href="classrr_1_1_simulate_options.html#a5c405766e5d91026b9c503f88893570a">SimulateOptions::integratorFlags</a> field is a bitmask that contains these values. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a09e1fd0c86b6274b7e6667b501628fcfa920bdc1189c1310354c3ddfbef115a8d"></a>STIFF&#160;</td><td class="fielddoc">
+<p>Is the model a stiff system? setting this to stiff causes <a class="el" href="classrr_1_1_road_runner.html">RoadRunner</a> to load a stiff solver which could potentially be extremly slow </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a09e1fd0c86b6274b7e6667b501628fcfada7eac115d6e33271bfafe8a33386baf"></a>MULTI_STEP&#160;</td><td class="fielddoc">
+<p>The MULTI_STEP option tells the solver to take a series of internal steps and then return the solution at the point reached by that step.</p>
+<p>In simulate, this option will likely be slower than normal mode, but may be useful to monitor solutions as they are integrated.</p>
+<p>This is intended to be used in combination with the <a class="el" href="classrr_1_1_integrator_listener.html">IntegratorListener</a>. It this option is set, and there is a <a class="el" href="classrr_1_1_integrator_listener.html">IntegratorListener</a> set, <a class="el" href="classrr_1_1_road_runner.html#a64be64be76fd37d8b0dd8beddafb8bb4">RoadRunner::integrate</a> will run the integrator in a series of internal steps, and the listner will by notified at each step.</p>
+<p>Highly Experimental!!! </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a09e1fd0c86b6274b7e6667b501628fcfa3a3fd1ecae218b822423c4150adb9089"></a>VARIABLE_STEP&#160;</td><td class="fielddoc">
+<p>Perform a variable time step simulation. This will allow the integrator to best choose an adaptive time step and the resulting matrix will have a non-uniform time column </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="ae61db0bdde94a0f310e33a93c451720b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classrr_1_1_integrator.html#ae61db0bdde94a0f310e33a93c451720b">rr::Integrator::IntegratorId</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>the list of ODE solvers <a class="el" href="classrr_1_1_road_runner.html">RoadRunner</a> currently supports.</p>
+<p>The last item, INTEGRATOR_END needs to always be the last item it is not a valid integrator, just used to indicate how many we have. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ae61db0bdde94a0f310e33a93c451720ba21028ab45c3bc0cb471c302340478b34"></a>CVODE&#160;</td><td class="fielddoc">
+<p>The default CVODE integrator from the Sundials package. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae61db0bdde94a0f310e33a93c451720bac2126997f88a748f228b6e70ddcb9a21"></a>GILLESPIE&#160;</td><td class="fielddoc">
+<p>Basic Gillespie stochastic integrator. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae61db0bdde94a0f310e33a93c451720babf60b3386c821eb561c04df2f2a357ed"></a>RK4&#160;</td><td class="fielddoc">
+<p>Basic Runge-Kutta fourth order integrator. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae61db0bdde94a0f310e33a93c451720baa962bd370d0abdf69134b7c2de03f33d"></a>INTEGRATOR_END&#160;</td><td class="fielddoc">
+<p>Always has to be at the end, this way, this value indicates how many integrators we have. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="a6c5c1e6b152884b4ad9048dc06ff28bb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classrr_1_1_integrator.html#a6c5c1e6b152884b4ad9048dc06ff28bb">rr::Integrator::IntegratorType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Integrators may be either deterministic or stochastic </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a6c5c1e6b152884b4ad9048dc06ff28bbaed493a704b38f6d18315a3ea808b836a"></a>DETERMINISTIC&#160;</td><td class="fielddoc">
+<p>Every set of variable states is uniquely determined by parameters in the model and by sets of previous states of these variables. Therefore, deterministic integrators perform the same way for a given set of initial conditions </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a6c5c1e6b152884b4ad9048dc06ff28bba66daefe7a176bfb4954177df353d7219"></a>STOCHASTIC&#160;</td><td class="fielddoc">
+<p>Randomness is present, and variable states are not described by unique values, but rather by probability distributions. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a35f0f55f14d225c1da02300f3f1c37b5"></a>
 <div class="memitem">
 <div class="memproto">
@@ -382,7 +478,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 1 2014 16:49:50 for libRoadRunner C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 2 2014 15:15:37 for libRoadRunner C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

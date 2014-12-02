@@ -117,19 +117,6 @@ Public Types</h2></td></tr>
 <a class="el" href="classrr_1_1_simulate_options.html#a4bc2a6d4d8f9da649e8e2a507192c8faa49909a0cf92bab1d423cbbe27234813c">COPY_RESULT</a> = (0x1 &lt;&lt; 2)
  }</td></tr>
 <tr class="separator:a4bc2a6d4d8f9da649e8e2a507192c8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9161fd2b138ff28e97491611dce61a52"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_simulate_options.html#a9161fd2b138ff28e97491611dce61a52">Integrator</a> { <a class="el" href="classrr_1_1_simulate_options.html#a9161fd2b138ff28e97491611dce61a52ac12e06336ddd6079b65b16202957c84d">CVODE</a> = 0, 
-<a class="el" href="classrr_1_1_simulate_options.html#a9161fd2b138ff28e97491611dce61a52a10dd4f834a15704464e5a43372671652">GILLESPIE</a>, 
-<a class="el" href="classrr_1_1_simulate_options.html#a9161fd2b138ff28e97491611dce61a52a90a16146090a06c7d3c27abaaef1ebcb">RK4</a>, 
-<a class="el" href="classrr_1_1_simulate_options.html#a9161fd2b138ff28e97491611dce61a52a99e647ab02fcdb624fb615d864a14a46">INTEGRATOR_END</a>
- }</td></tr>
-<tr class="separator:a9161fd2b138ff28e97491611dce61a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a090f37fd0a44d94ff6d0289b2efef8dd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_simulate_options.html#a090f37fd0a44d94ff6d0289b2efef8dd">IntegratorType</a> </td></tr>
-<tr class="separator:a090f37fd0a44d94ff6d0289b2efef8dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab099177903df12af015dc3890e82a11b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_simulate_options.html#ab099177903df12af015dc3890e82a11b">IntegratorFlags</a> { <a class="el" href="classrr_1_1_simulate_options.html#ab099177903df12af015dc3890e82a11ba53c1b2cf78d611a4de81c1fdce77e6f2">STIFF</a> = (0x1 &lt;&lt; 0), 
-<a class="el" href="classrr_1_1_simulate_options.html#ab099177903df12af015dc3890e82a11ba8f9435697dafbc826fe487e9a459aef5">MULTI_STEP</a> = (0x1 &lt;&lt; 1), 
-<a class="el" href="classrr_1_1_simulate_options.html#ab099177903df12af015dc3890e82a11ba522ebf4ee963d0b8a8a84e310d83b129">VARIABLE_STEP</a> = (0x1 &lt;&lt; 2)
- }</td></tr>
-<tr class="separator:ab099177903df12af015dc3890e82a11b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -139,15 +126,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3244666e11e38f1affe43fd165b9a5e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1c5c3be7cd0a77a9bf646ebf6eef7e4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_simulate_options.html#aa1c5c3be7cd0a77a9bf646ebf6eef7e4">SimulateOptions</a> (const <a class="el" href="classrr_1_1_dictionary.html">Dictionary</a> *)</td></tr>
 <tr class="separator:aa1c5c3be7cd0a77a9bf646ebf6eef7e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae864e702c9a40669ac9088731ff49884"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_simulate_options.html#ae864e702c9a40669ac9088731ff49884">setItem</a> (const std::string &amp;key, const <a class="el" href="classrr_1_1_variant.html">rr::Variant</a> &amp;value)</td></tr>
+<tr class="memitem:ae864e702c9a40669ac9088731ff49884"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_simulate_options.html#ae864e702c9a40669ac9088731ff49884">setItem</a> (const std::string &amp;key, const <a class="el" href="classrr_1_1_variant.html">rr::Variant</a> &amp;value)</td></tr>
 <tr class="separator:ae864e702c9a40669ac9088731ff49884"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7321f5d690686a2b5e8a6010657d862f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classrr_1_1_variant.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_simulate_options.html#a7321f5d690686a2b5e8a6010657d862f">getItem</a> (const std::string &amp;key) const </td></tr>
+<tr class="memitem:a7321f5d690686a2b5e8a6010657d862f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classrr_1_1_variant.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_simulate_options.html#a7321f5d690686a2b5e8a6010657d862f">getItem</a> (const std::string &amp;key) const </td></tr>
 <tr class="separator:a7321f5d690686a2b5e8a6010657d862f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaccab85e117de1f2b73c6613d6c7c237"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_simulate_options.html#aaccab85e117de1f2b73c6613d6c7c237">hasKey</a> (const std::string &amp;key) const </td></tr>
+<tr class="memitem:aaccab85e117de1f2b73c6613d6c7c237"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_simulate_options.html#aaccab85e117de1f2b73c6613d6c7c237">hasKey</a> (const std::string &amp;key) const </td></tr>
 <tr class="separator:aaccab85e117de1f2b73c6613d6c7c237"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b74c39dc38357fc0ce9b1b52c374730"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_simulate_options.html#a1b74c39dc38357fc0ce9b1b52c374730">deleteItem</a> (const std::string &amp;key)</td></tr>
+<tr class="memitem:a1b74c39dc38357fc0ce9b1b52c374730"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_simulate_options.html#a1b74c39dc38357fc0ce9b1b52c374730">deleteItem</a> (const std::string &amp;key)</td></tr>
 <tr class="separator:a1b74c39dc38357fc0ce9b1b52c374730"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ae49e7e0da5d8238f345c250b658a5d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_simulate_options.html#a3ae49e7e0da5d8238f345c250b658a5d">getKeys</a> () const </td></tr>
+<tr class="memitem:a3ae49e7e0da5d8238f345c250b658a5d"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_simulate_options.html#a3ae49e7e0da5d8238f345c250b658a5d">getKeys</a> () const </td></tr>
 <tr class="separator:a3ae49e7e0da5d8238f345c250b658a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfe78a1b664e127974d153fc57c5f39e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_simulate_options.html#adfe78a1b664e127974d153fc57c5f39e">toString</a> () const </td></tr>
 <tr class="separator:adfe78a1b664e127974d153fc57c5f39e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,8 +142,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afa07ec4804b0b22f1a56c8274f305c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea50b29e9d578d99e038821e48fddfd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_simulate_options.html#aea50b29e9d578d99e038821e48fddfd8">tweakTolerances</a> ()</td></tr>
 <tr class="separator:aea50b29e9d578d99e038821e48fddfd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cf0202a7aa5459a6478a8573662fe88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_simulate_options.html#a4cf0202a7aa5459a6478a8573662fe88">setIntegrator</a> (<a class="el" href="classrr_1_1_simulate_options.html#a9161fd2b138ff28e97491611dce61a52">Integrator</a> value)</td></tr>
-<tr class="separator:a4cf0202a7aa5459a6478a8573662fe88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48506632c3973ad44990a9a55f15d347"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_simulate_options.html#a48506632c3973ad44990a9a55f15d347">setIntegrator</a> (<a class="el" href="classrr_1_1_integrator.html#ae61db0bdde94a0f310e33a93c451720b">Integrator::IntegratorId</a> value)</td></tr>
+<tr class="separator:a48506632c3973ad44990a9a55f15d347"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classrr_1_1_dictionary_impl"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classrr_1_1_dictionary_impl')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classrr_1_1_dictionary_impl.html">rr::DictionaryImpl</a></td></tr>
 <tr class="memitem:aada618f336409e180b8cb9e48014aafb inherit pub_methods_classrr_1_1_dictionary_impl"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_dictionary_impl.html#aada618f336409e180b8cb9e48014aafb">~DictionaryImpl</a> ()</td></tr>
 <tr class="separator:aada618f336409e180b8cb9e48014aafb inherit pub_methods_classrr_1_1_dictionary_impl"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,12 +153,6 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a50ff086381c9f75fdd0eb56657646867"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classrr_1_1_simulate_options.html#a090f37fd0a44d94ff6d0289b2efef8dd">IntegratorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_simulate_options.html#a50ff086381c9f75fdd0eb56657646867">getIntegratorType</a> (<a class="el" href="classrr_1_1_simulate_options.html#a9161fd2b138ff28e97491611dce61a52">Integrator</a> i)</td></tr>
-<tr class="separator:a50ff086381c9f75fdd0eb56657646867"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2e4c586010c341e433c9c95f0460f5f"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_simulate_options.html#ab2e4c586010c341e433c9c95f0460f5f">getIntegratorNameFromId</a> (<a class="el" href="classrr_1_1_simulate_options.html#a9161fd2b138ff28e97491611dce61a52">Integrator</a>)</td></tr>
-<tr class="separator:ab2e4c586010c341e433c9c95f0460f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a012f2167b4d35025879dfcad7eaae800"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classrr_1_1_simulate_options.html#a9161fd2b138ff28e97491611dce61a52">Integrator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_simulate_options.html#a012f2167b4d35025879dfcad7eaae800">getIntegratorIdFromName</a> (const std::string &amp;name)</td></tr>
-<tr class="separator:a012f2167b4d35025879dfcad7eaae800"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a188d15abf25609d17beb768c55a30c6f"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_simulate_options.html#a188d15abf25609d17beb768c55a30c6f">getSimulateOptionsKeys</a> ()</td></tr>
 <tr class="separator:a188d15abf25609d17beb768c55a30c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -179,8 +160,8 @@ Static Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a3dfd51256f939804a2c8d7f2c72b1bbb"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_simulate_options.html#a3dfd51256f939804a2c8d7f2c72b1bbb">flags</a></td></tr>
 <tr class="separator:a3dfd51256f939804a2c8d7f2c72b1bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21700122b4ef3ef310eed72c39a4804c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classrr_1_1_simulate_options.html#a9161fd2b138ff28e97491611dce61a52">Integrator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_simulate_options.html#a21700122b4ef3ef310eed72c39a4804c">integrator</a></td></tr>
-<tr class="separator:a21700122b4ef3ef310eed72c39a4804c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fa5e39386855a34ff0bf464aae6c334"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classrr_1_1_integrator.html#ae61db0bdde94a0f310e33a93c451720b">Integrator::IntegratorId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_simulate_options.html#a1fa5e39386855a34ff0bf464aae6c334">integrator</a></td></tr>
+<tr class="separator:a1fa5e39386855a34ff0bf464aae6c334"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c405766e5d91026b9c503f88893570a"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_simulate_options.html#a5c405766e5d91026b9c503f88893570a">integratorFlags</a></td></tr>
 <tr class="separator:a5c405766e5d91026b9c503f88893570a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20008b16d84ef52a564648671d0c544b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_simulate_options.html#a20008b16d84ef52a564648671d0c544b">steps</a></td></tr>
@@ -213,73 +194,6 @@ Public Attributes</h2></td></tr>
 <p>This is the full set of options that determines how <a class="el" href="classrr_1_1_road_runner.html">RoadRunner</a> performs a simulation of an sbml model.</p>
 <p>This is a superset of the values stored in a sbml test suite settings file, the documentation of the fields which correspond to an sbml test suite settings was taken from <a href="http://sbml.org">http://sbml.org</a> </p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
-<a class="anchor" id="a9161fd2b138ff28e97491611dce61a52"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="classrr_1_1_simulate_options.html#a9161fd2b138ff28e97491611dce61a52">rr::SimulateOptions::Integrator</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>the list of ODE solvers <a class="el" href="classrr_1_1_road_runner.html">RoadRunner</a> currently supports.</p>
-<p>The last item, INTEGRATOR_END needs to always be the last item it is not a valid integrator, just used to indicate how many we have. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a9161fd2b138ff28e97491611dce61a52ac12e06336ddd6079b65b16202957c84d"></a>CVODE&#160;</td><td class="fielddoc">
-<p>The default CVODE integrator from the Sundials package. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a9161fd2b138ff28e97491611dce61a52a10dd4f834a15704464e5a43372671652"></a>GILLESPIE&#160;</td><td class="fielddoc">
-<p>Basic Gillespie stochastic integrator. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a9161fd2b138ff28e97491611dce61a52a90a16146090a06c7d3c27abaaef1ebcb"></a>RK4&#160;</td><td class="fielddoc">
-<p>Basic Runge-Kutta fourth order integrator. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a9161fd2b138ff28e97491611dce61a52a99e647ab02fcdb624fb615d864a14a46"></a>INTEGRATOR_END&#160;</td><td class="fielddoc">
-<p>Always has to be at the end, this way, this value indicates how many integrators we have. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-<a class="anchor" id="ab099177903df12af015dc3890e82a11b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="classrr_1_1_simulate_options.html#ab099177903df12af015dc3890e82a11b">rr::SimulateOptions::IntegratorFlags</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ab099177903df12af015dc3890e82a11ba53c1b2cf78d611a4de81c1fdce77e6f2"></a>STIFF&#160;</td><td class="fielddoc">
-<p>Is the model a stiff system? setting this to stiff causes <a class="el" href="classrr_1_1_road_runner.html">RoadRunner</a> to load a stiff solver which could potentially be extremly slow </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ab099177903df12af015dc3890e82a11ba8f9435697dafbc826fe487e9a459aef5"></a>MULTI_STEP&#160;</td><td class="fielddoc">
-<p>The MULTI_STEP option tells the solver to take a series of internal steps and then return the solution at the point reached by that step.</p>
-<p>In simulate, this option will likely be slower than normal mode, but may be useful to monitor solutions as they are integrated.</p>
-<p>This is intended to be used in combination with the <a class="el" href="classrr_1_1_integrator_listener.html">IntegratorListener</a>. It this option is set, and there is a <a class="el" href="classrr_1_1_integrator_listener.html">IntegratorListener</a> set, <a class="el" href="classrr_1_1_road_runner.html#a64be64be76fd37d8b0dd8beddafb8bb4">RoadRunner::integrate</a> will run the integrator in a series of internal steps, and the listner will by notified at each step.</p>
-<p>Highly Experimental!!! </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ab099177903df12af015dc3890e82a11ba522ebf4ee963d0b8a8a84e310d83b129"></a>VARIABLE_STEP&#160;</td><td class="fielddoc">
-<p>Perform a variable time step simulation. This will allow the integrator to best choose an adaptive time step and the resulting matrix will have a non-uniform time column </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-<a class="anchor" id="a090f37fd0a44d94ff6d0289b2efef8dd"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="classrr_1_1_simulate_options.html#a090f37fd0a44d94ff6d0289b2efef8dd">rr::SimulateOptions::IntegratorType</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>the kind of integrator </p>
-
-</div>
-</div>
 <a class="anchor" id="a4bc2a6d4d8f9da649e8e2a507192c8fa"></a>
 <div class="memitem">
 <div class="memproto">
@@ -380,81 +294,6 @@ Public Attributes</h2></td></tr>
 <p>remove a value </p>
 
 <p>Reimplemented from <a class="el" href="classrr_1_1_dictionary_impl.html#a2cfc433442920fe817da58d3db5085d9">rr::DictionaryImpl</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a012f2167b4d35025879dfcad7eaae800"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classrr_1_1_simulate_options.html#a9161fd2b138ff28e97491611dce61a52">SimulateOptions::Integrator</a> rr::SimulateOptions::getIntegratorIdFromName </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>mape the textual name of an integrator to its enumerated id. </p>
-
-</div>
-</div>
-<a class="anchor" id="ab2e4c586010c341e433c9c95f0460f5f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string rr::SimulateOptions::getIntegratorNameFromId </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classrr_1_1_simulate_options.html#a9161fd2b138ff28e97491611dce61a52">Integrator</a>&#160;</td>
-          <td class="paramname"><em>integrator</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>get the textual name of the integrator. </p>
-
-</div>
-</div>
-<a class="anchor" id="a50ff086381c9f75fdd0eb56657646867"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classrr_1_1_simulate_options.html#a090f37fd0a44d94ff6d0289b2efef8dd">SimulateOptions::IntegratorType</a> rr::SimulateOptions::getIntegratorType </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classrr_1_1_simulate_options.html#a9161fd2b138ff28e97491611dce61a52">Integrator</a>&#160;</td>
-          <td class="paramname"><em>i</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>get the type of integrator. </p>
 
 </div>
 </div>
@@ -563,14 +402,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4cf0202a7aa5459a6478a8573662fe88"></a>
+<a class="anchor" id="a48506632c3973ad44990a9a55f15d347"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void rr::SimulateOptions::setIntegrator </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classrr_1_1_simulate_options.html#a9161fd2b138ff28e97491611dce61a52">Integrator</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classrr_1_1_integrator.html#ae61db0bdde94a0f310e33a93c451720b">Integrator::IntegratorId</a>&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
@@ -746,12 +585,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a21700122b4ef3ef310eed72c39a4804c"></a>
+<a class="anchor" id="a1fa5e39386855a34ff0bf464aae6c334"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classrr_1_1_simulate_options.html#a9161fd2b138ff28e97491611dce61a52">Integrator</a> rr::SimulateOptions::integrator</td>
+          <td class="memname"><a class="el" href="classrr_1_1_integrator.html#ae61db0bdde94a0f310e33a93c451720b">Integrator::IntegratorId</a> rr::SimulateOptions::integrator</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -873,7 +712,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 1 2014 16:49:50 for libRoadRunner C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 2 2014 15:15:37 for libRoadRunner C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

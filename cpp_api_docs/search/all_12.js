@@ -13,7 +13,7 @@ var searchData=
   ['setfloatingspeciesconcentrations',['setFloatingSpeciesConcentrations',['../classrr_1_1_executable_model.html#a42853a01cc2fae3b4a064d820ebacfaf',1,'rr::ExecutableModel']]],
   ['setfloatingspeciesinitamounts',['setFloatingSpeciesInitAmounts',['../classrr_1_1_executable_model.html#a22b49930af87baede11e4f8512ffed97',1,'rr::ExecutableModel']]],
   ['setfloatingspeciesinitconcentrations',['setFloatingSpeciesInitConcentrations',['../classrr_1_1_executable_model.html#a3a0b495144524d230defee08e58a5150',1,'rr::ExecutableModel']]],
-  ['setintegrator',['setIntegrator',['../classrr_1_1_simulate_options.html#a4cf0202a7aa5459a6478a8573662fe88',1,'rr::SimulateOptions']]],
+  ['setintegrator',['setIntegrator',['../classrr_1_1_simulate_options.html#a48506632c3973ad44990a9a55f15d347',1,'rr::SimulateOptions']]],
   ['setitem',['setItem',['../classrr_1_1_dictionary.html#a6bb53c3bfeee7e3ee2bfcf9da8212949',1,'rr::Dictionary::setItem()'],['../classrr_1_1_dictionary_impl.html#a2e6c2f271912d324ac3778fdddbc39fc',1,'rr::DictionaryImpl::setItem()'],['../classrr_1_1_simulate_options.html#ae864e702c9a40669ac9088731ff49884',1,'rr::SimulateOptions::setItem()']]],
   ['setlistener',['setListener',['../classrr_1_1_integrator.html#ad4ebded6e6b2d28755a649f402962ba7',1,'rr::Integrator']]],
   ['setrandomseed',['setRandomSeed',['../classrr_1_1_executable_model.html#aa5b4c23527fab27a54ac279de045c735',1,'rr::ExecutableModel']]],
@@ -44,6 +44,7 @@ var searchData=
   ['start',['start',['../classrr_1_1_simulate_options.html#ae25c38171cedd08bf0cc43932c07822e',1,'rr::SimulateOptions']]],
   ['steadystate',['steadyState',['../classrr_1_1_road_runner.html#a53b8b7426d67ec2c15ed2b19785253e4',1,'rr::RoadRunner']]],
   ['steps',['steps',['../classrr_1_1_simulate_options.html#a20008b16d84ef52a564648671d0c544b',1,'rr::SimulateOptions']]],
-  ['stiff',['STIFF',['../classrr_1_1_simulate_options.html#ab099177903df12af015dc3890e82a11ba53c1b2cf78d611a4de81c1fdce77e6f2',1,'rr::SimulateOptions']]],
+  ['stiff',['STIFF',['../classrr_1_1_integrator.html#a09e1fd0c86b6274b7e6667b501628fcfa920bdc1189c1310354c3ddfbef115a8d',1,'rr::Integrator']]],
+  ['stochastic',['STOCHASTIC',['../classrr_1_1_integrator.html#a6c5c1e6b152884b4ad9048dc06ff28bba66daefe7a176bfb4954177df353d7219',1,'rr::Integrator']]],
   ['structured_5fresult',['STRUCTURED_RESULT',['../classrr_1_1_simulate_options.html#a4bc2a6d4d8f9da649e8e2a507192c8faa7b968bcaea07518eb5b2bd1cfbbaa4bf',1,'rr::SimulateOptions']]]
 ];
