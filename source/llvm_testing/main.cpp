@@ -171,6 +171,7 @@ int jacobian_test(int argc, char* argv[])
         if (argc < 3)
         {
             cout << "usage: llvm_testing jacobian fname";
+            return -1;
         }
 
         RoadRunner r(argv[2]);
