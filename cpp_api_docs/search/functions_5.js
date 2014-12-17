@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['haskey',['hasKey',['../classrr_1_1_dictionary.html#a7ec0accc7149a403ee5eeeb9457059ed',1,'rr::Dictionary::hasKey()'],['../classrr_1_1_dictionary_impl.html#a7d8ba3defb4eaa2158f3e164ed2de4af',1,'rr::DictionaryImpl::hasKey()'],['../classrr_1_1_simulate_options.html#aaccab85e117de1f2b73c6613d6c7c237',1,'rr::SimulateOptions::hasKey()']]]
+  ['load',['load',['../classrr_1_1_road_runner.html#a9d1e7a6e9b2fff7561bd59d2e8475d6e',1,'rr::RoadRunner']]],
+  ['loadsbmloptions',['LoadSBMLOptions',['../classrr_1_1_load_s_b_m_l_options.html#aa95998812baf41557f365fa6a6118db3',1,'rr::LoadSBMLOptions::LoadSBMLOptions()'],['../classrr_1_1_load_s_b_m_l_options.html#a16a0bc21e030a836579b2c1b9231b29a',1,'rr::LoadSBMLOptions::LoadSBMLOptions(const Dictionary *dict)']]]
 ];
