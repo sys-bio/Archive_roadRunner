@@ -182,7 +182,9 @@ Telling RoadRunner about the new Integrator</h2>
 <div class="line">        <a class="code" href="classrr_1_1_euler_integrator.html#a601356d923b1dcd513952bdf43ac114d">EulerIntegrator::getIntegratorOptions</a>()</div>
 <div class="line">};</div>
 </div><!-- fragment --><p>Once the <a class="el" href="classrr_1_1_integrator_factory.html">IntegratorFactory</a> is made aware of your new integrator, it is available for full introspection and can be used by just adding the <code>integrator="myNewIntegrator"</code> argument whenever the <a class="el" href="classrr_1_1_road_runner.html#a196e38611d37cd1a79bce8373ceb12da">RoadRunner.simulate</a> method is called. The <a class="el" href="classrr_1_1_euler_integrator.html">EulerIntegrator</a> was created as an example of how to create and add a new integrator, have a look at it.</p>
-<div class="fragment"></div><!-- fragment --><p> An example of using the <a class="el" href="classrr_1_1_euler_integrator.html">EulerIntegrator</a> and setting a parameter in Python via the keyword arguments to simulate is</p>
+<h2><a class="anchor" id="sec_euler"></a>
+A complete example of creating an integrator.</h2>
+<p>This section includes the complete Euler integrator as an example of creating a new integrator. This class has two demo paramters which may be set via the keyword arguments to <a class="el" href="classrr_1_1_road_runner.html#a196e38611d37cd1a79bce8373ceb12da">RoadRunner.simulate</a> in Python, or set via the <a class="el" href="classrr_1_1_dictionary.html#a6bb53c3bfeee7e3ee2bfcf9da8212949">Dictionary::setItem</a> method on the dictionary that is given to the <a class="el" href="classrr_1_1_road_runner.html#a196e38611d37cd1a79bce8373ceb12da">RoadRunner::simulate</a> method in C++. In Python, this would be</p>
 <div class="fragment"><div class="line">r.simulate(integrator=<span class="stringliteral">&#39;euler&#39;</span>, exampleParameter1=123456, exampleParameter2=<span class="stringliteral">&#39;some value&#39;</span>);</div>
 <div class="line"></div>
 <div class="line">print(r.integrator)</div>
@@ -191,10 +193,11 @@ Telling RoadRunner about the new Integrator</h2>
 <div class="line">  <span class="stringliteral">&#39;exampleParameter1&#39;</span> : 123456</div>
 <div class="line">  <span class="stringliteral">&#39;exampleParameter2&#39;</span> : some value</div>
 <div class="line">}&gt;</div>
-</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- fragment --><p>The <a class="el" href="_euler_integrator_8h_source.html">EulerIntegrator.h</a> file serves as a complete example of creating an new integrator. This example was written entierly in the header file for clarity, but a real integrator should separate the code and header files. </p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 18 2014 10:58:11 for libRoadRunner C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 18 2014 12:43:45 for libRoadRunner C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
