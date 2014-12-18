@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['roadrunner_20c_2b_2b_20library',['RoadRunner C++ Library',['../index.html',1,'']]],
   ['random_5fseed',['RANDOM_SEED',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053a0777390cc6ead1e5864aa0e319fc4159',1,'rr::Config']]],
   ['reaction_5frate',['REACTION_RATE',['../classrr_1_1_selection_record.html#a898963ab24a6ba614913715c981d8394a474f33e2264e1732ec7dd131f840083b',1,'rr::SelectionRecord']]],
   ['read_5fonly',['READ_ONLY',['../classrr_1_1_load_s_b_m_l_options.html#a7b6ca6fc32892dbe782f3eb718762ad6a8058d91b0aebc14e1045b721a5162d60',1,'rr::LoadSBMLOptions']]],
@@ -12,6 +11,7 @@ var searchData=
   ['restart',['restart',['../classrr_1_1_integrator.html#a5469efaa4c234b7e59d82d98930fa5b9',1,'rr::Integrator::restart()'],['../classrr_1_1_r_k4_integrator.html#a75ca0574917ed21f598fb93b1837cec3',1,'rr::RK4Integrator::restart()']]],
   ['rk4',['RK4',['../classrr_1_1_integrator.html#ae61db0bdde94a0f310e33a93c451720babf60b3386c821eb561c04df2f2a357ed',1,'rr::Integrator']]],
   ['rk4integrator',['RK4Integrator',['../classrr_1_1_r_k4_integrator.html',1,'rr']]],
+  ['rk4integrator',['RK4Integrator',['../classrr_1_1_r_k4_integrator.html#a69f5facbfa497cd6273d6a9167a5e2a8',1,'rr::RK4Integrator']]],
   ['roadrunner',['RoadRunner',['../classrr_1_1_road_runner.html',1,'rr']]],
   ['roadrunner',['RoadRunner',['../classrr_1_1_road_runner.html#a52d67f80d5c556199b8b4131d9364e43',1,'rr::RoadRunner::RoadRunner()'],['../classrr_1_1_road_runner.html#ad66240360fee4ccad50097e4b4c8460b',1,'rr::RoadRunner::RoadRunner(const std::string &amp;uriOrSBML, const Dictionary *options=0)'],['../classrr_1_1_road_runner.html#a3e326546550b3f4533dd7d6b3f2f4250',1,'rr::RoadRunner::RoadRunner(const std::string &amp;compiler, const std::string &amp;tempDir, const std::string &amp;supportCodeDir)']]],
   ['roadrunner_5fdisable_5fpython_5fdynamic_5fproperties',['ROADRUNNER_DISABLE_PYTHON_DYNAMIC_PROPERTIES',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053ae4eee9ff55c8ff33111fd63dd4427d18',1,'rr::Config']]],

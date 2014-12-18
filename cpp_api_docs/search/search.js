@@ -13,7 +13,7 @@ var indexSectionsWithContent =
   3: "acdfijmprsv",
   4: "eiklmost",
   5: "_bcdefgilmnoprstuv",
-  6: "dr"
+  6: "dt"
 };
 
 var indexSectionNames =
