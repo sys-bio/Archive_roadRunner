@@ -8,7 +8,7 @@ var searchData=
   ['relative',['relative',['../classrr_1_1_simulate_options.html#ae51c0dd98194faf552b19dd3e3e39768',1,'rr::SimulateOptions']]],
   ['reset',['reset',['../classrr_1_1_executable_model.html#a217c61819d9b029c5928ace53b805e89',1,'rr::ExecutableModel::reset()=0'],['../classrr_1_1_executable_model.html#ac87e7f485678d07d7567398dea63c512',1,'rr::ExecutableModel::reset(int options)=0'],['../classrr_1_1_road_runner.html#ae4b0eaa39fd37737e5f5fd7f7741e06c',1,'rr::RoadRunner::reset()'],['../classrr_1_1_road_runner.html#a807cbac5ca760b0f3ff033851cf5276b',1,'rr::RoadRunner::reset(int options)']]],
   ['reset_5fmodel',['RESET_MODEL',['../classrr_1_1_simulate_options.html#a4bc2a6d4d8f9da649e8e2a507192c8faa0f7e24d751df0cc6b9316ce2713bdd0c',1,'rr::SimulateOptions']]],
-  ['restart',['restart',['../classrr_1_1_integrator.html#a5469efaa4c234b7e59d82d98930fa5b9',1,'rr::Integrator::restart()'],['../classrr_1_1_r_k4_integrator.html#a75ca0574917ed21f598fb93b1837cec3',1,'rr::RK4Integrator::restart()']]],
+  ['restart',['restart',['../classrr_1_1_euler_integrator.html#a08903e998cf527552442f8fa930772c8',1,'rr::EulerIntegrator::restart()'],['../classrr_1_1_integrator.html#a5469efaa4c234b7e59d82d98930fa5b9',1,'rr::Integrator::restart()'],['../classrr_1_1_r_k4_integrator.html#a75ca0574917ed21f598fb93b1837cec3',1,'rr::RK4Integrator::restart()']]],
   ['rk4',['RK4',['../classrr_1_1_integrator.html#ae61db0bdde94a0f310e33a93c451720babf60b3386c821eb561c04df2f2a357ed',1,'rr::Integrator']]],
   ['rk4integrator',['RK4Integrator',['../classrr_1_1_r_k4_integrator.html',1,'rr']]],
   ['rk4integrator',['RK4Integrator',['../classrr_1_1_r_k4_integrator.html#a69f5facbfa497cd6273d6a9167a5e2a8',1,'rr::RK4Integrator']]],

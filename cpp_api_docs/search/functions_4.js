@@ -1,10 +1,4 @@
 var searchData=
 [
-  ['integrate',['integrate',['../classrr_1_1_integrator.html#aa29aac9228f7834cfb92d04f823e5ddf',1,'rr::Integrator::integrate()'],['../classrr_1_1_r_k4_integrator.html#af1e35f90daed9607d6536ca75734e51a',1,'rr::RK4Integrator::integrate()'],['../classrr_1_1_road_runner.html#a64be64be76fd37d8b0dd8beddafb8bb4',1,'rr::RoadRunner::integrate()']]],
-  ['isbool',['isBool',['../classrr_1_1_variant.html#a37590caf9e24c17aea7fcb750e5724ff',1,'rr::Variant']]],
-  ['isempty',['isEmpty',['../classrr_1_1_variant.html#a1af261fbef3608170e4948d0caa0e54c',1,'rr::Variant']]],
-  ['isinteger',['isInteger',['../classrr_1_1_variant.html#a02f615ebaca6fdaba811d152cd637394',1,'rr::Variant']]],
-  ['isnumeric',['isNumeric',['../classrr_1_1_variant.html#a3e1cc4229de8b05ab5fc87418de50bd3',1,'rr::Variant']]],
-  ['issigned',['isSigned',['../classrr_1_1_variant.html#ae15fe1bdaf589163cbbcc617fa16ba71',1,'rr::Variant']]],
-  ['isstring',['isString',['../classrr_1_1_variant.html#a7b18f9bd2c3e45926a14006c0e403228',1,'rr::Variant']]]
+  ['haskey',['hasKey',['../classrr_1_1_dictionary.html#a7ec0accc7149a403ee5eeeb9457059ed',1,'rr::Dictionary::hasKey()'],['../classrr_1_1_basic_dictionary.html#a1d1e8ab7feb50469133f04b6f0b85db6',1,'rr::BasicDictionary::hasKey()'],['../classrr_1_1_euler_integrator.html#a75f4ce7e25763bebd99201427a4f1dfd',1,'rr::EulerIntegrator::hasKey()'],['../classrr_1_1_r_k4_integrator.html#a81b2af8b233909af2e809ab299316735',1,'rr::RK4Integrator::hasKey()'],['../classrr_1_1_load_s_b_m_l_options.html#af28a592102bcd5c968ece751db0c5076',1,'rr::LoadSBMLOptions::hasKey()'],['../classrr_1_1_simulate_options.html#aaccab85e117de1f2b73c6613d6c7c237',1,'rr::SimulateOptions::hasKey()']]]
 ];

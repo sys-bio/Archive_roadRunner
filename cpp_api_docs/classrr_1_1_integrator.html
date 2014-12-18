@@ -103,17 +103,22 @@ Inheritance diagram for rr::Integrator:</div>
  <div class="center">
   <img src="classrr_1_1_integrator.png" usemap="#rr::Integrator_map" alt=""/>
   <map id="rr::Integrator_map" name="rr::Integrator_map">
-<area href="classrr_1_1_dictionary.html" alt="rr::Dictionary" shape="rect" coords="0,0,105,24"/>
-<area href="classrr_1_1_r_k4_integrator.html" alt="rr::RK4Integrator" shape="rect" coords="0,112,105,136"/>
+<area href="classrr_1_1_dictionary.html" alt="rr::Dictionary" shape="rect" coords="61,0,173,24"/>
+<area href="classrr_1_1_euler_integrator.html" alt="rr::EulerIntegrator" shape="rect" coords="0,112,112,136"/>
+<area href="classrr_1_1_r_k4_integrator.html" alt="rr::RK4Integrator" shape="rect" coords="122,112,234,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ae61db0bdde94a0f310e33a93c451720b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_integrator.html#ae61db0bdde94a0f310e33a93c451720b">IntegratorId</a> { <a class="el" href="classrr_1_1_integrator.html#ae61db0bdde94a0f310e33a93c451720ba21028ab45c3bc0cb471c302340478b34">CVODE</a> = 0, 
+<tr class="memitem:ae61db0bdde94a0f310e33a93c451720b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_integrator.html#ae61db0bdde94a0f310e33a93c451720b">IntegratorId</a> { <br />
+&#160;&#160;<a class="el" href="classrr_1_1_integrator.html#ae61db0bdde94a0f310e33a93c451720ba21028ab45c3bc0cb471c302340478b34">CVODE</a> = 0, 
 <a class="el" href="classrr_1_1_integrator.html#ae61db0bdde94a0f310e33a93c451720bac2126997f88a748f228b6e70ddcb9a21">GILLESPIE</a>, 
 <a class="el" href="classrr_1_1_integrator.html#ae61db0bdde94a0f310e33a93c451720babf60b3386c821eb561c04df2f2a357ed">RK4</a>, 
-<a class="el" href="classrr_1_1_integrator.html#ae61db0bdde94a0f310e33a93c451720baa962bd370d0abdf69134b7c2de03f33d">INTEGRATOR_END</a>
+<a class="el" href="classrr_1_1_integrator.html#ae61db0bdde94a0f310e33a93c451720bad13f63587776e3cbf9d2c944514111d3">EULER</a>, 
+<br />
+&#160;&#160;<a class="el" href="classrr_1_1_integrator.html#ae61db0bdde94a0f310e33a93c451720baa962bd370d0abdf69134b7c2de03f33d">INTEGRATOR_END</a>
+<br />
  }</td></tr>
 <tr class="separator:ae61db0bdde94a0f310e33a93c451720b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c5c1e6b152884b4ad9048dc06ff28bb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_integrator.html#a6c5c1e6b152884b4ad9048dc06ff28bb">IntegratorType</a> { <a class="el" href="classrr_1_1_integrator.html#a6c5c1e6b152884b4ad9048dc06ff28bbaed493a704b38f6d18315a3ea808b836a">DETERMINISTIC</a>, 
@@ -212,6 +217,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="fieldname"><a class="anchor" id="ae61db0bdde94a0f310e33a93c451720babf60b3386c821eb561c04df2f2a357ed"></a>RK4&#160;</td><td class="fielddoc">
 <p>Basic Runge-Kutta fourth order integrator. </p>
 </td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae61db0bdde94a0f310e33a93c451720bad13f63587776e3cbf9d2c944514111d3"></a>EULER&#160;</td><td class="fielddoc">
+<p>Simple forward Euler integrator to demonstrate creating an integrator. </p>
+</td></tr>
 <tr><td class="fieldname"><a class="anchor" id="ae61db0bdde94a0f310e33a93c451720baa962bd370d0abdf69134b7c2de03f33d"></a>INTEGRATOR_END&#160;</td><td class="fielddoc">
 <p>Always has to be at the end, this way, this value indicates how many integrators we have. </p>
 </td></tr>
@@ -288,7 +296,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>get the integrator listener </p>
 
-<p>Implemented in <a class="el" href="classrr_1_1_r_k4_integrator.html#a11d4c8c5a4f0b807af86254d9005577d">rr::RK4Integrator</a>.</p>
+<p>Implemented in <a class="el" href="classrr_1_1_euler_integrator.html#a9ec7df905cdffbeb14e4f764ae0c2ac0">rr::EulerIntegrator</a>, and <a class="el" href="classrr_1_1_r_k4_integrator.html#a11d4c8c5a4f0b807af86254d9005577d">rr::RK4Integrator</a>.</p>
 
 </div>
 </div>
@@ -314,7 +322,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>get the name of this integrator </p>
 
-<p>Implemented in <a class="el" href="classrr_1_1_r_k4_integrator.html#a22fa93f092edb663adf830ca70e28f93">rr::RK4Integrator</a>.</p>
+<p>Implemented in <a class="el" href="classrr_1_1_euler_integrator.html#ab0bb5eb40c72e84baba1463c5f82deea">rr::EulerIntegrator</a>, and <a class="el" href="classrr_1_1_r_k4_integrator.html#a22fa93f092edb663adf830ca70e28f93">rr::RK4Integrator</a>.</p>
 
 </div>
 </div>
@@ -352,7 +360,7 @@ Public Member Functions</h2></td></tr>
 <p>integrates the model from t0 to t0 + hstep</p>
 <dl class="section return"><dt>Returns</dt><dd>the final time value. This is typically very close to t0 + hstep, but may be different if variableStep is used. </dd></dl>
 
-<p>Implemented in <a class="el" href="classrr_1_1_r_k4_integrator.html#af1e35f90daed9607d6536ca75734e51a">rr::RK4Integrator</a>.</p>
+<p>Implemented in <a class="el" href="classrr_1_1_euler_integrator.html#ab65a96963262cce17a56c2605da5416f">rr::EulerIntegrator</a>, and <a class="el" href="classrr_1_1_r_k4_integrator.html#af1e35f90daed9607d6536ca75734e51a">rr::RK4Integrator</a>.</p>
 
 </div>
 </div>
@@ -379,7 +387,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>copies the state vector out of the model and into cvode vector, re-initializes cvode. </p>
 
-<p>Implemented in <a class="el" href="classrr_1_1_r_k4_integrator.html#a75ca0574917ed21f598fb93b1837cec3">rr::RK4Integrator</a>.</p>
+<p>Implemented in <a class="el" href="classrr_1_1_euler_integrator.html#a08903e998cf527552442f8fa930772c8">rr::EulerIntegrator</a>, and <a class="el" href="classrr_1_1_r_k4_integrator.html#a75ca0574917ed21f598fb93b1837cec3">rr::RK4Integrator</a>.</p>
 
 </div>
 </div>
@@ -406,7 +414,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>the integrator can hold a single listener. If clients require multicast, they can create a multi-cast listener. </p>
 
-<p>Implemented in <a class="el" href="classrr_1_1_r_k4_integrator.html#af5bc29a4b5af9536ef312cb88e9f3b30">rr::RK4Integrator</a>.</p>
+<p>Implemented in <a class="el" href="classrr_1_1_euler_integrator.html#acb23167cc7463d67301f00608131eb4c">rr::EulerIntegrator</a>, and <a class="el" href="classrr_1_1_r_k4_integrator.html#af5bc29a4b5af9536ef312cb88e9f3b30">rr::RK4Integrator</a>.</p>
 
 </div>
 </div>
@@ -434,7 +442,7 @@ Public Member Functions</h2></td></tr>
 <p>Whenever the simulation parameters are changed via calls to the <a class="el" href="classrr_1_1_road_runner.html#a196e38611d37cd1a79bce8373ceb12da">RoadRunner::simulate</a> method, the setSimulateOptions method is called by <a class="el" href="classrr_1_1_road_runner.html">RoadRunner</a>.</p>
 <p>This method should be used to read any updated tuning parameters. </p>
 
-<p>Implemented in <a class="el" href="classrr_1_1_r_k4_integrator.html#ac52c5cf97d85ee542277abfe88a75136">rr::RK4Integrator</a>.</p>
+<p>Implemented in <a class="el" href="classrr_1_1_euler_integrator.html#ae8940584fccb82e515c48a9544cdcb6e">rr::EulerIntegrator</a>, and <a class="el" href="classrr_1_1_r_k4_integrator.html#ac52c5cf97d85ee542277abfe88a75136">rr::RK4Integrator</a>.</p>
 
 </div>
 </div>
@@ -460,7 +468,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>get a short descriptions of this object, compatable with python <b>repr</b>. </p>
 
-<p>Implemented in <a class="el" href="classrr_1_1_r_k4_integrator.html#a6ad3f1b9abd0189bb3c94070f996ae99">rr::RK4Integrator</a>.</p>
+<p>Implemented in <a class="el" href="classrr_1_1_euler_integrator.html#aff2be8f667370e79321c07037ccc2843">rr::EulerIntegrator</a>, and <a class="el" href="classrr_1_1_r_k4_integrator.html#a6ad3f1b9abd0189bb3c94070f996ae99">rr::RK4Integrator</a>.</p>
 
 </div>
 </div>
@@ -486,7 +494,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>get a description of this object, compatable with python <b>str</b> </p>
 
-<p>Implemented in <a class="el" href="classrr_1_1_r_k4_integrator.html#aa363d2318f90f07ab9e97f2ba04aa208">rr::RK4Integrator</a>.</p>
+<p>Implemented in <a class="el" href="classrr_1_1_euler_integrator.html#a8f693f807e07aad2aed2d1aaac9023d3">rr::EulerIntegrator</a>, and <a class="el" href="classrr_1_1_r_k4_integrator.html#aa363d2318f90f07ab9e97f2ba04aa208">rr::RK4Integrator</a>.</p>
 
 </div>
 </div>
@@ -496,7 +504,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 17 2014 19:03:15 for libRoadRunner C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 18 2014 10:58:11 for libRoadRunner C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
