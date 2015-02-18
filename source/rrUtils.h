@@ -138,4 +138,15 @@ RR_DECLSPEC bool            createFile(const string& fName, std::ios_base::openm
 RR_DECLSPEC int64_t getMicroSeconds();
 
 } // rr Namespace
+
+// temporary macro to get vector data, this will be replaced with standard
+// c++ 11 .data method in a few months.
+#if 1
+
+#define vecdata(vec) (vec.size() > 0 ? &(vec)[0] : NULL)
+
+#else
+#endif
+
+
 #endif

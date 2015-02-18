@@ -191,12 +191,12 @@ double NLEQInterface::solve(const vector<double>& yin)
     {
         callbackModel = model;
         vector<double> stateVector(n);
-        model->getStateVector(&stateVector[0]);
+        model->getStateVector(vecdata(stateVector));
 
         NLEQ1(  &n,
                 &ModelFunction,
                 NULL,
-                &stateVector[0],
+                vecdata(stateVector),
                 XScal,
                 &tmpTol,
                 iopt,
@@ -436,7 +436,7 @@ double NLEQInterface::computeSumsOfSquares()
 {
     double sum = 0;
     vector<double> rates(model->getStateVector(0));
-    model->getStateVectorRate(0, 0, &rates[0]);
+    model->getStateVectorRate(0, 0, vecdata(rates));
 
     for (int i = 0; i < n; i++)
     {

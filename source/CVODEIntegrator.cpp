@@ -233,7 +233,7 @@ double CVODEIntegrator::integrate(double timeStart, double hstep)
         }
 
         // event status before time step
-        mModel->getEventTriggers(eventStatus.size(), 0, &eventStatus[0]);
+        mModel->getEventTriggers(eventStatus.size(), 0, vecdata(eventStatus));
 
         // time step
         int nResult = CVode(mCVODE_Memory, nextTargetEndTime,  mStateVector, &timeEnd, itask);
@@ -289,10 +289,10 @@ double CVODEIntegrator::integrate(double timeStart, double hstep)
             if((options.integratorFlags & VARIABLE_STEP)
                     && (timeEnd - timeStart > 2. * epsilon)) {
                 // event status before time step
-                mModel->getEventTriggers(eventStatus.size(), 0, &eventStatus[0]);
+                mModel->getEventTriggers(eventStatus.size(), 0, vecdata(eventStatus));
                 // apply events and write state to variableStepPostEventState
                 // model state is updated by events.
-                int handled = mModel->applyEvents(timeEnd, &eventStatus[0],
+                int handled = mModel->applyEvents(timeEnd, vecdata(eventStatus),
                         NULL, variableStepPostEventState);
                 if(handled > 0) {
                     // write original state back to model
@@ -459,7 +459,7 @@ void CVODEIntegrator::createCVode()
 void CVODEIntegrator::testRootsAtInitialTime()
 {
     vector<unsigned char> initialEventStatus(mModel->getEventTriggers(0, 0, 0), false);
-    mModel->getEventTriggers(initialEventStatus.size(), 0, &initialEventStatus[0]);
+    mModel->getEventTriggers(initialEventStatus.size(), 0, vecdata(initialEventStatus));
     applyEvents(0, initialEventStatus);
 }
 
@@ -467,7 +467,7 @@ void CVODEIntegrator::testRootsAtInitialTime()
 void CVODEIntegrator::applyEvents(double timeEnd, vector<unsigned char> &previousEventStatus)
 {
     double *stateVector = mStateVector ? NV_DATA_S(mStateVector) : 0;
-    mModel->applyEvents(timeEnd, &previousEventStatus[0], stateVector, stateVector);
+    mModel->applyEvents(timeEnd, vecdata(previousEventStatus), stateVector, stateVector);
 
     if(timeEnd > 0.0) {
         mModel->setTime(timeEnd);
@@ -488,8 +488,8 @@ void CVODEIntegrator::applyPendingEvents(double timeEnd)
 {
     if(mModel) {
          // get current event triggered state
-        mModel->getEventTriggers(eventStatus.size(), 0, &eventStatus[0]);
-        int handled = mModel->applyEvents(timeEnd, &eventStatus[0], NULL, NULL);
+        mModel->getEventTriggers(eventStatus.size(), 0, vecdata(eventStatus));
+        int handled = mModel->applyEvents(timeEnd, vecdata(eventStatus), NULL, NULL);
         if (handled > 0)
         {
             Log(Logger::LOG_DEBUG) << __FUNC__;

@@ -9,6 +9,7 @@
 #include "rrSparse.h"
 #include "rrLogger.h"
 #include "rrExecutableModel.h"
+#include "rrUtils.h"
 #include <stdlib.h>
 #include <string.h>
 #include <stdexcept>
@@ -114,9 +115,9 @@ csr_matrix* csr_matrix_new(unsigned m, unsigned n,
     mat->colidx = (unsigned*)calloc(nnz, sizeof(unsigned));
     mat->values = (double*)calloc(nnz, sizeof(double));
 
-    memcpy(mat->rowptr, &mrowptr[0], (mat->m+1)*sizeof(unsigned));
-    memcpy(mat->colidx, &mcolidx[0], nnz*sizeof(unsigned));
-    memcpy(mat->values, &mvalues[0], nnz*sizeof(double));
+    memcpy(mat->rowptr, vecdata(mrowptr), (mat->m+1)*sizeof(unsigned));
+    memcpy(mat->colidx, vecdata(mcolidx), nnz*sizeof(unsigned));
+    memcpy(mat->values, vecdata(mvalues), nnz*sizeof(double));
 
     return mat;
 }

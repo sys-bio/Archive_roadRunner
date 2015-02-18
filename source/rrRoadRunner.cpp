@@ -983,7 +983,7 @@ double RoadRunner::steadyState(const Dictionary* dict)
 
     //Get a std vector for the solver
     vector<double> someAmounts(impl->model->getNumIndFloatingSpecies(), 0);
-    impl->model->getFloatingSpeciesAmounts(someAmounts.size(), 0, &someAmounts[0]);
+    impl->model->getFloatingSpeciesAmounts(someAmounts.size(), 0, vecdata(someAmounts));
 
     double ss = steadyStateSolver->solve(someAmounts);
     if(ss < 0)
@@ -1525,8 +1525,8 @@ DoubleMatrix RoadRunner::getReducedJacobian(double h)
     std::vector<double> dy0v(nIndSpecies);
     std::vector<double> dy1v(nIndSpecies);
 
-    double* dy0 = &dy0v[0];
-    double* dy1 = &dy1v[0];
+    double* dy0 = vecdata(dy0v);
+    double* dy1 = vecdata(dy1v);
 
     // function pointers to the model get values and get init values based on
     // if we are doing amounts or concentrations.
@@ -2017,7 +2017,7 @@ vector<double> RoadRunner::getBoundarySpeciesConcentrations()
     }
 
     vector<double> result(impl->model->getNumBoundarySpecies(), 0);
-    impl->model->getBoundarySpeciesConcentrations(result.size(), 0, &result[0]);
+    impl->model->getBoundarySpeciesConcentrations(result.size(), 0, vecdata(result));
     return result;
 }
 
@@ -2101,7 +2101,7 @@ vector<double> RoadRunner::getFloatingSpeciesConcentrations()
 
 
     vector<double> result(impl->model->getNumFloatingSpecies(), 0);
-    impl->model->getFloatingSpeciesConcentrations(result.size(), 0, &result[0]);
+    impl->model->getFloatingSpeciesConcentrations(result.size(), 0, vecdata(result));
     return result;
 }
 
@@ -2113,7 +2113,7 @@ vector<double> RoadRunner::getFloatingSpeciesInitialConcentrations()
         throw CoreException(gEmptyModelMessage);
     }
     vector<double> initYs(impl->model->getNumFloatingSpecies());
-    impl->model->getFloatingSpeciesInitConcentrations(initYs.size(), 0, &initYs[0]);
+    impl->model->getFloatingSpeciesInitConcentrations(initYs.size(), 0, vecdata(initYs));
     return initYs;
 }
 
@@ -2125,8 +2125,8 @@ void RoadRunner::setFloatingSpeciesInitialConcentrations(const vector<double>& v
         throw CoreException(gEmptyModelMessage);
     }
 
-    impl->model->setFloatingSpeciesConcentrations(values.size(), 0, &values[0]);
-    impl->model->setFloatingSpeciesInitConcentrations(values.size(), 0, &values[0]);
+    impl->model->setFloatingSpeciesConcentrations(values.size(), 0, vecdata(values));
+    impl->model->setFloatingSpeciesInitConcentrations(values.size(), 0, vecdata(values));
 
     reset();
 }
@@ -2139,7 +2139,7 @@ void RoadRunner::setFloatingSpeciesConcentrations(const vector<double>& values)
         throw CoreException(gEmptyModelMessage);
     }
 
-    impl->model->setFloatingSpeciesConcentrations(values.size(), 0, &values[0]);
+    impl->model->setFloatingSpeciesConcentrations(values.size(), 0, vecdata(values));
 }
 
 // Help("Set the concentrations for all floating species in the model")
@@ -2150,7 +2150,7 @@ void RoadRunner::setBoundarySpeciesConcentrations(const vector<double>& values)
         throw CoreException(gEmptyModelMessage);
     }
 
-    impl->model->setBoundarySpeciesConcentrations(values.size(), 0, &values[0]);
+    impl->model->setBoundarySpeciesConcentrations(values.size(), 0, vecdata(values));
 }
 
 
@@ -2215,7 +2215,7 @@ vector<double> RoadRunner::getGlobalParameterValues()
                 impl->model->getNumDepFloatingSpecies());
 
         impl->model->getGlobalParameterValues(
-                impl->model->getNumGlobalParameters(), 0, &result[0]);
+                impl->model->getNumGlobalParameters(), 0, vecdata(result));
 
         impl->model->getConservedMoietyValues(
                 impl->model->getNumDepFloatingSpecies(), 0,
@@ -2225,7 +2225,7 @@ vector<double> RoadRunner::getGlobalParameterValues()
     }
 
     vector<double> result(impl->model->getNumGlobalParameters());
-    impl->model->getGlobalParameterValues(result.size(), 0, &result[0]);
+    impl->model->getGlobalParameterValues(result.size(), 0, vecdata(result));
     return result;
 }
 
@@ -2439,11 +2439,11 @@ double RoadRunner::getUnscaledSpeciesElasticity(int reactionId, int speciesIndex
     // this causes a reset, so need to save the current amounts to set them back
     // as init conditions.
     std::vector<double> conc(self.model->getNumFloatingSpecies());
-    (self.model->*getValuePtr)(conc.size(), 0, &conc[0]);
+    (self.model->*getValuePtr)(conc.size(), 0, vecdata(conc));
 
     // save the original init values
     std::vector<double> initConc(self.model->getNumFloatingSpecies());
-    (self.model->*getInitValuePtr)(initConc.size(), 0, &initConc[0]);
+    (self.model->*getInitValuePtr)(initConc.size(), 0, vecdata(initConc));
 
     // get the original value
     (self.model->*getValuePtr)(1, &speciesIndex, &originalConc);
@@ -2453,7 +2453,7 @@ double RoadRunner::getUnscaledSpeciesElasticity(int reactionId, int speciesIndex
     {
         // set init amounts to current amounts, restore them later.
         // have to do this as this is only way to set conserved moiety values
-        (self.model->*setInitValuePtr)(conc.size(), 0, &conc[0]);
+        (self.model->*setInitValuePtr)(conc.size(), 0, vecdata(conc));
 
         // sanity check
         assert_similar(originalConc, conc[speciesIndex]);
@@ -2504,11 +2504,11 @@ double RoadRunner::getUnscaledSpeciesElasticity(int reactionId, int speciesIndex
     {
         // What ever happens, make sure we restore the species level
         (self.model->*setInitValuePtr)(
-                initConc.size(), 0, &initConc[0]);
+                initConc.size(), 0, vecdata(initConc));
 
         // only set the indep species, setting dep species is not permitted.
         (self.model->*setValuePtr)(
-                self.model->getNumIndFloatingSpecies(), 0, &conc[0]);
+                self.model->getNumIndFloatingSpecies(), 0, vecdata(conc));
 
         // re-throw the exception.
         throw;
@@ -2516,11 +2516,11 @@ double RoadRunner::getUnscaledSpeciesElasticity(int reactionId, int speciesIndex
 
     // What ever happens, make sure we restore the species level
     (self.model->*setInitValuePtr)(
-            initConc.size(), 0, &initConc[0]);
+            initConc.size(), 0, vecdata(initConc));
 
     // only set the indep species, setting dep species is not permitted.
     (self.model->*setValuePtr)(
-            self.model->getNumIndFloatingSpecies(), 0, &conc[0]);
+            self.model->getNumIndFloatingSpecies(), 0, vecdata(conc));
 
     return result;
 }
@@ -2562,7 +2562,7 @@ DoubleMatrix RoadRunner::getScaledElasticityMatrix()
     result.setRowNames(uelast.getRowNames());
 
     vector<double> rates(self.model->getNumReactions());
-    self.model->getReactionRates(rates.size(), 0, &rates[0]);
+    self.model->getReactionRates(rates.size(), 0, vecdata(rates));
 
     if (uelast.RSize() != rates.size())
     {
@@ -2895,8 +2895,8 @@ void RoadRunner::changeInitialConditions(const vector<double>& ic)
         throw CoreException(gEmptyModelMessage);
     }
 
-    impl->model->setFloatingSpeciesConcentrations(ic.size(), 0, &ic[0]);
-    impl->model->setFloatingSpeciesInitConcentrations(ic.size(), 0, &ic[0]);
+    impl->model->setFloatingSpeciesConcentrations(ic.size(), 0, vecdata(ic));
+    impl->model->setFloatingSpeciesInitConcentrations(ic.size(), 0, vecdata(ic));
 }
 
 // Help("Returns the current vector of reactions rates")
@@ -2908,7 +2908,7 @@ vector<double> RoadRunner::getReactionRates()
     }
 
     vector<double> rates(impl->model->getNumReactions());
-    impl->model->getReactionRates(rates.size(), 0, &rates[0]);
+    impl->model->getReactionRates(rates.size(), 0, vecdata(rates));
     return rates;
 }
 

@@ -14,6 +14,7 @@
 #include "rrException.h"
 #include "LLVMException.h"
 #include "rrStringUtils.h"
+#include "rrUtils.h"
 #include "rrConfig.h"
 #include <iomanip>
 #include <cstdlib>
@@ -1878,8 +1879,8 @@ int LLVMExecutableModel::applyEvents(double timeEnd,
 
         vector<unsigned char> currEventStatus(modelData->numEvents);
 
-        unsigned char *p1 = &prevEventState[0];
-        unsigned char *p2 = &currEventStatus[0];
+        unsigned char *p1 = vecdata(prevEventState);
+        unsigned char *p2 = vecdata(currEventStatus);
 
         pendingEvents.eraseExpiredEvents();
 
