@@ -55,10 +55,10 @@
 (c) 2009-2014 Endre Somogyi and Herbert Sauro</p>
 <div class="section" id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
-<p>Many of RoadRunner classes use a number of configuration parameters. Most of these can be set using
-the Config class. The values stored in the Config class only determine the <em>default</em> values of
-parameters. Most methods let specify explicit values for parameters. For example, if one ran a time
-series simulation, they could specify various parameter via the optional SimulateOptions object:</p>
+<p>Many RoadRunner classes use a number of configuration parameters. Most of these can be set using
+the Config class. The values stored in the Config class only determines the default values of
+parameters. Most methods let users specify explicit values for parameters. For example, if one ran
+a time series simulation, users could specify various parameter via the optional SimulateOptions object:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">roadrunner</span>
 <span class="n">opt</span> <span class="o">=</span> <span class="n">roadrunner</span><span class="o">.</span><span class="n">SimulateOptions</span><span class="p">()</span>
 <span class="n">opt</span><span class="o">.</span><span class="n">relative</span> <span class="o">=</span> <span class="mf">1.3e-5</span>
