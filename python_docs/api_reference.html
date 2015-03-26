@@ -75,21 +75,26 @@ the first config file it finds. If it does not find a config file in one of the 
 a default set of configuration parameters are used. The search locations of the config file are:</p>
 <p>#1: the ROADRUNNER_CONFIG environment variable</p>
 <p>#2: try the user&#8217;s home directory for roadrunner.conf, i.e.:</p>
-<div class="highlight-python"><pre>/Users/andy/roadrunner.conf</pre>
+<div class="highlight-python"><div class="highlight"><pre>/Users/andy/roadrunner.conf
+</pre></div>
 </div>
 <p>#3: try the user&#8217;s home directory for .roadrunner.conf, i.e.:</p>
-<div class="highlight-python"><pre>/Users/andy/.roadrunner.conf</pre>
+<div class="highlight-python"><div class="highlight"><pre>/Users/andy/.roadrunner.conf
+</pre></div>
 </div>
 <p>#4: try the same directory as the roadrunner shared library, this will be the same directory as the python _roadrunner.pyd
 python extension module, i.e.:</p>
-<div class="highlight-python"><pre>/Users/andy/local/lib/roadrunner.conf</pre>
+<div class="highlight-python"><div class="highlight"><pre>/Users/andy/local/lib/roadrunner.conf
+</pre></div>
 </div>
 <p>#5: try one directory up from the where the shared library or program is at, i.e.:</p>
-<div class="highlight-python"><pre>/Users/andy/local/roadrunner.conf</pre>
+<div class="highlight-python"><div class="highlight"><pre>/Users/andy/local/roadrunner.conf
+</pre></div>
 </div>
 <p>The conf file is just a plain text file of where each line may be key / value pair separated by a
 &#8221;:&#8221;, i.e.</p>
-<div class="highlight-python"><pre>KEY_NAME : Value</pre>
+<div class="highlight-python"><div class="highlight"><pre>KEY_NAME : Value
+</pre></div>
 </div>
 <p>Any line that does not match this format is ignored, and keys that are not found are also
 ignored. Therefore, any line that does not start with a word character is considered a comment.</p>
@@ -1182,8 +1187,8 @@ this is the matrix that coresponds to the independent species.</p>
 <dl class="method">
 <dt id="roadrunner.RoadRunner.getConservationMatrix">
 <tt class="descclassname">RoadRunner.</tt><tt class="descname">getConservationMatrix</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.getConservationMatrix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a conservation matrix <img class="math" src="_images/math/913e49ea63c6c130bb8d9d1c3556b052ecc404f8.png" alt="\Gamma"/> which is a <img class="math" src="_images/math/69466761ddad22006793cf7d2699b82f5d0e1d21.png" alt="c \times m"/> matrix
-where <img class="math" src="_images/math/3372c1cb6d68cf97c2d231acc0b47b95a9ed04cc.png" alt="c"/> is the number of conservation laws and <img class="math" src="_images/math/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png" alt="m"/> the number of species.</p>
+<dd><p>Returns a conservation matrix <img class="math" src="_images/math/85011adca50d3725af2e048eeb9ec7b02ccdd401.png" alt="\Gamma"/> which is a <img class="math" src="_images/math/899394bc09563c0caeb9849cccaf60dc760d8953.png" alt="c \times m"/> matrix
+where <img class="math" src="_images/math/65868d23a5bfe5b3b2d819386b19c14fa36af134.png" alt="c"/> is the number of conservation laws and <img class="math" src="_images/math/c4bb40dd65eae6c11b325989b14e0b8d35e4e3ef.png" alt="m"/> the number of species.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1220,8 +1225,8 @@ is the number of floating species and r the rank of the stoichiometric matrix, N
 <dl class="method">
 <dt id="roadrunner.RoadRunner.getNrMatrix">
 <tt class="descclassname">RoadRunner.</tt><tt class="descname">getNrMatrix</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.getNrMatrix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the reduced stoichiometry matrix, <img class="math" src="_images/math/9ea520289972d82fa3dd03be522ffbe21abce96e.png" alt="N_R"/>, which will have only r rows where r is the rank of
-the full stoichiometry matrix. The matrix will be reordered such that the rows of <img class="math" src="_images/math/9ea520289972d82fa3dd03be522ffbe21abce96e.png" alt="N_R"/> are independent.</p>
+<dd><p>Returns the reduced stoichiometry matrix, <img class="math" src="_images/math/a94842bc091199fc1bf55c34aeb61a59beff6c5c.png" alt="N_R"/>, which will have only r rows where r is the rank of
+the full stoichiometry matrix. The matrix will be reordered such that the rows of <img class="math" src="_images/math/a94842bc091199fc1bf55c34aeb61a59beff6c5c.png" alt="N_R"/> are independent.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1235,8 +1240,8 @@ the full stoichiometry matrix. The matrix will be reordered such that the rows o
 <dl class="method">
 <dt id="roadrunner.RoadRunner.getKMatrix">
 <tt class="descclassname">RoadRunner.</tt><tt class="descname">getKMatrix</tt><big>(</big><big>)</big><a class="headerlink" href="#roadrunner.RoadRunner.getKMatrix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the K matrix, <img class="math" src="_images/math/33036c8a804dc70e1d1040c6a7fea780b0a68495.png" alt="ker(N_R)"/>, (right nullspace of Nr)
-The K matrix has the structure, <img class="math" src="_images/math/4f268af24d3e8b15d8d9f7d2fa35438eb6c3ca17.png" alt="[I K0]'"/></p>
+<dd><p>Returns the K matrix, <img class="math" src="_images/math/bbc628dd521bc46347ddb533db3a9a7134ac40bd.png" alt="ker(N_R)"/>, (right nullspace of Nr)
+The K matrix has the structure, <img class="math" src="_images/math/54bd9cc427b50123a0a394a406005e4db2ff64d8.png" alt="[I K0]'"/></p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1629,7 +1634,7 @@ would use [3,0] for the index array.</td>
 
 <dl class="method">
 <dt id="roadrunner.ExecutableModel.setFloatingSpeciesAmounts">
-<tt class="descclassname">ExecutableModel.</tt><tt class="descname">setFloatingSpeciesAmounts</tt><big>(</big><span class="optional">[</span><em>index</em><span class="optional">]</span>, <em>values</em><big>)</big><a class="headerlink" href="#roadrunner.ExecutableModel.setFloatingSpeciesAmounts" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">ExecutableModel.</tt><tt class="descname">setFloatingSpeciesAmounts</tt><big>(</big><span class="optional">[</span><em>index</em>, <span class="optional">]</span><em>values</em><big>)</big><a class="headerlink" href="#roadrunner.ExecutableModel.setFloatingSpeciesAmounts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this to set the entire set of floating species amounts in one call.
 The order of species is given by the order of Ids returned by getFloatingSpeciesIds()</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1650,7 +1655,7 @@ an array of all the values to set.</li>
 
 <dl class="method">
 <dt id="roadrunner.ExecutableModel.setFloatingSpeciesConcentrations">
-<tt class="descclassname">ExecutableModel.</tt><tt class="descname">setFloatingSpeciesConcentrations</tt><big>(</big><span class="optional">[</span><em>index</em><span class="optional">]</span>, <em>values</em><big>)</big><a class="headerlink" href="#roadrunner.ExecutableModel.setFloatingSpeciesConcentrations" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">ExecutableModel.</tt><tt class="descname">setFloatingSpeciesConcentrations</tt><big>(</big><span class="optional">[</span><em>index</em>, <span class="optional">]</span><em>values</em><big>)</big><a class="headerlink" href="#roadrunner.ExecutableModel.setFloatingSpeciesConcentrations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this to set the entire set of floating species concentrations in one call.
 The order of species is given by the order of Ids returned by getFloatingSpeciesIds()</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1729,7 +1734,7 @@ given by the order of Ids returned by getFloatingSpeciesInitialConcentrationIds(
 
 <dl class="method">
 <dt id="roadrunner.ExecutableModel.setFloatingSpeciesInitConcentrations">
-<tt class="descclassname">ExecutableModel.</tt><tt class="descname">setFloatingSpeciesInitConcentrations</tt><big>(</big><span class="optional">[</span><em>index</em><span class="optional">]</span>, <em>values</em><big>)</big><a class="headerlink" href="#roadrunner.ExecutableModel.setFloatingSpeciesInitConcentrations" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">ExecutableModel.</tt><tt class="descname">setFloatingSpeciesInitConcentrations</tt><big>(</big><span class="optional">[</span><em>index</em>, <span class="optional">]</span><em>values</em><big>)</big><a class="headerlink" href="#roadrunner.ExecutableModel.setFloatingSpeciesInitConcentrations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set a vector of floating species initial concentrations. The order of species is
 given by the order of Ids returned by getFloatingSpeciesInitialAmountIds()</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1763,7 +1768,7 @@ given by the order of Ids returned by getFloatingSpeciesInitialConcentrationIds(
 
 <dl class="method">
 <dt id="roadrunner.ExecutableModel.setFloatingSpeciesInitAmounts">
-<tt class="descclassname">ExecutableModel.</tt><tt class="descname">setFloatingSpeciesInitAmounts</tt><big>(</big><span class="optional">[</span><em>index</em><span class="optional">]</span>, <em>values</em><big>)</big><a class="headerlink" href="#roadrunner.ExecutableModel.setFloatingSpeciesInitAmounts" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">ExecutableModel.</tt><tt class="descname">setFloatingSpeciesInitAmounts</tt><big>(</big><span class="optional">[</span><em>index</em>, <span class="optional">]</span><em>values</em><big>)</big><a class="headerlink" href="#roadrunner.ExecutableModel.setFloatingSpeciesInitAmounts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set a vector of floating species initial amounts. The order of species is
 given by the order of Ids returned by getFloatingSpeciesInitialAmountIds()</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1867,7 +1872,7 @@ given by the order of Ids returned by getBoundarySpeciesIds()</p>
 
 <dl class="method">
 <dt id="roadrunner.ExecutableModel.setBoundarySpeciesConcentrations">
-<tt class="descclassname">ExecutableModel.</tt><tt class="descname">setBoundarySpeciesConcentrations</tt><big>(</big><span class="optional">[</span><em>index</em><span class="optional">]</span>, <em>values</em><big>)</big><a class="headerlink" href="#roadrunner.ExecutableModel.setBoundarySpeciesConcentrations" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">ExecutableModel.</tt><tt class="descname">setBoundarySpeciesConcentrations</tt><big>(</big><span class="optional">[</span><em>index</em>, <span class="optional">]</span><em>values</em><big>)</big><a class="headerlink" href="#roadrunner.ExecutableModel.setBoundarySpeciesConcentrations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this to set the entire set of boundary species concentrations in one call.
 The order of species is given by the order of Ids returned by getBoundarySpeciesIds()</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1940,7 +1945,7 @@ given by the order of Ids returned by getCompartmentIds()</p>
 
 <dl class="method">
 <dt id="roadrunner.ExecutableModel.setCompartmentVolumes">
-<tt class="descclassname">ExecutableModel.</tt><tt class="descname">setCompartmentVolumes</tt><big>(</big><span class="optional">[</span><em>index</em><span class="optional">]</span>, <em>values</em><big>)</big><a class="headerlink" href="#roadrunner.ExecutableModel.setCompartmentVolumes" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">ExecutableModel.</tt><tt class="descname">setCompartmentVolumes</tt><big>(</big><span class="optional">[</span><em>index</em>, <span class="optional">]</span><em>values</em><big>)</big><a class="headerlink" href="#roadrunner.ExecutableModel.setCompartmentVolumes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets a vector of compartment volumes.</p>
 <p>If the index vector is not give, then the values vector treated as a vector of all
 compartment volumes to set. If index is given, then  values should have the same
@@ -1991,7 +1996,7 @@ given by the order of Ids returned by getGlobalParameterIds()</p>
 
 <dl class="method">
 <dt id="roadrunner.ExecutableModel.setGlobalParameterValues">
-<tt class="descclassname">ExecutableModel.</tt><tt class="descname">setGlobalParameterValues</tt><big>(</big><span class="optional">[</span><em>index</em><span class="optional">]</span>, <em>values</em><big>)</big><a class="headerlink" href="#roadrunner.ExecutableModel.setGlobalParameterValues" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">ExecutableModel.</tt><tt class="descname">setGlobalParameterValues</tt><big>(</big><span class="optional">[</span><em>index</em>, <span class="optional">]</span><em>values</em><big>)</big><a class="headerlink" href="#roadrunner.ExecutableModel.setGlobalParameterValues" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this to set the entire set of global parameters in one call.
 The order of parameters is given by the order of Ids returned by getGlobalParameterIds()</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -2218,7 +2223,7 @@ given by the order of Ids returned by getConservedMoietyIds()</p>
 
 <dl class="method">
 <dt id="roadrunner.ExecutableModel.setConservedMoietyValues">
-<tt class="descclassname">ExecutableModel.</tt><tt class="descname">setConservedMoietyValues</tt><big>(</big><span class="optional">[</span><em>index</em><span class="optional">]</span>, <em>values</em><big>)</big><a class="headerlink" href="#roadrunner.ExecutableModel.setConservedMoietyValues" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">ExecutableModel.</tt><tt class="descname">setConservedMoietyValues</tt><big>(</big><span class="optional">[</span><em>index</em>, <span class="optional">]</span><em>values</em><big>)</big><a class="headerlink" href="#roadrunner.ExecutableModel.setConservedMoietyValues" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets a vector of conserved moiety values.</p>
 <p><em>Note</em> This method currently only updates the conserved moiety values, it does
 not update the initial species condition from which the values were calculated.</p>
@@ -2873,7 +2878,7 @@ target which matches the host.</p>
     </div>
     <div class="footer">
         &copy; Copyright 2013-2014, Andy Somogyi, Herbert Suaro.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b2.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
     </div>
   </body>
 </html>

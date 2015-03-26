@@ -80,7 +80,7 @@ characters inside a pair of squared brackets, <tt class="docutils literal"><span
 examples are <tt class="docutils literal"><span class="pre">[S1]</span></tt>, <tt class="docutils literal"><span class="pre">[S2</span> <span class="pre">]</span></tt> and so forth. The identifer must be a valid sbml species,
 othersiwe an exception is raised.</dd>
 <dt>Rates of Change</dt>
-<dd>These represent the rate of change, <img class="math" src="_images/math/12690bfc20529fcf7065454b8c2b91bccad2e18a.png" alt="\frac{dy}{dt}"/> of a species amount. Rates of change
+<dd>These represent the rate of change, <img class="math" src="_images/math/47e98dabc95e999a83ace05db69490657c77fa31.png" alt="\frac{dy}{dt}"/> of a species amount. Rates of change
 selections follow generally accepted mathematical convention of using the single quote, <tt class="docutils literal"><span class="pre">'</span></tt>
 to represent a time derivative. A rate of change selection is any identifier followed by a
 single quote. Some examples are <tt class="docutils literal"><span class="pre">S1'</span></tt>, <tt class="docutils literal"><span class="pre">S2'</span></tt>, <tt class="docutils literal"><span class="pre">MyParameter'</span></tt>. A rates of change selection
@@ -167,10 +167,10 @@ wanted to plot the elasticity of a particular reaction:</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#roadrunner.ExecutableModel.__getitem__" title="roadrunner.ExecutableModel.__getitem__"><tt class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.__getitem__</span></tt></a>(*args)</td>
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#roadrunner.ExecutableModel.__getitem__" title="roadrunner.ExecutableModel.__getitem__"><tt class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.__getitem__</span></tt></a>(id)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="api_reference.html#roadrunner.ExecutableModel.__setitem__" title="roadrunner.ExecutableModel.__setitem__"><tt class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.__setitem__</span></tt></a>(*args)</td>
+<tr class="row-even"><td><a class="reference internal" href="api_reference.html#roadrunner.ExecutableModel.__setitem__" title="roadrunner.ExecutableModel.__setitem__"><tt class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.__setitem__</span></tt></a>(id,&nbsp;value)</td>
 <td></td>
 </tr>
 </tbody>
@@ -248,7 +248,7 @@ wanted to plot the elasticity of a particular reaction:</p>
     </div>
     <div class="footer">
         &copy; Copyright 2013-2014, Andy Somogyi, Herbert Suaro.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b2.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
     </div>
   </body>
 </html>
