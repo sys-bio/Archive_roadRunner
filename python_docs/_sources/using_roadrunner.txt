@@ -77,7 +77,7 @@ will be output in intervals of 0.1.
 
 The simulate method also accepts a number of keyword arguments. These may be uses like::
 
-  result = rr.simulate(0, 10, 100, reset=True, stiff=True)
+  result = rr.simulate(0, 10, 100, reset=True, stiff=True, relative=1E-6)
 
 For more details of the simulate method see :meth:`RoadRunner.simulate()`
 The follow table summarizes the various options.
@@ -88,7 +88,7 @@ The follow table summarizes the various options.
 start             Start time for simulation
 end               End time for simulation. Setting 'end' will automatically change 'duration'
 duration          Duration of the simulation. Setting 'duration' will automatically change 'end'
-steps             Number of steps to generate
+steps             Number of points to generate
 absolute          Absolute tolerance for the CVODE integrator
 relative          Relative tolerance for the CVODE integrator
 stiff             Tells the integrator to use the fully implicit backward difference stiff solver
@@ -111,6 +111,13 @@ with slightly different parameters values. To do this we must reset the initial 
 the original values. To do that we run the command reset::
 
    rr.reset()
+
+Simulation options can also be set outside of the call to simulate. The new values will apply to
+future calls to simulate::
+
+   roadrunner.SimulateOptions().relative = 1E-6
+
+.. seealso:: More details on :doc:`api_reference`
 
 Changing Parameters
 -------------------
