@@ -1,10 +1,10 @@
 Configuration
 _____________
 
-Many of RoadRunner classes use a number of configuration parameters. Most of these can be set using
-the Config class. The values stored in the Config class only determine the *default* values of
-parameters. Most methods let specify explicit values for parameters. For example, if one ran a time
-series simulation, they could specify various parameter via the optional SimulateOptions object::
+Many RoadRunner classes use a number of configuration parameters. Most of these can be set using
+the Config class. The values stored in the Config class only determines the default values of
+parameters. Most methods let users specify explicit values for parameters. For example, if one ran
+a time series simulation, users could specify various parameter via the optional SimulateOptions object::
 
   import roadrunner
   opt = roadrunner.SimulateOptions()
