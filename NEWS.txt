@@ -1,3 +1,8 @@
+-- Version 1.3.1
+* Fix issue #91: bail for negative species amounts in Gillespie
+
+* Fix #92: internal bug in Python wrapper (wrong object referenced)
+
 -- Version 1.3
 * New Python ND array type which inherits from the numpy ndarray, contains row/column name info, and
   prints the row/col names in nicely formatted output. 
