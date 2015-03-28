@@ -25,7 +25,7 @@ Loading Models
 --------------
 
 RoadRunner reads models using the SBML format. If you have a SBML model stored on your hard drive, it is
-possible to load that model either by giving he document contents or path to the Roadrunner
+possible to load that model either by giving the document contents or path to the Roadrunner
 constructor, or later by using the method, :meth:`~RoadRunner.load()`. Let's assume you have a model called
 mymodel.xml in ``C:\MyModels``. To load this model in **Windows** we would use the command::
 
