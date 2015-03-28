@@ -7,8 +7,8 @@ Metabolic Control Analysis
 Preliminaries
 -------------
 
-Metabolic control analysis is the study of how sensitive the system is to pertubrations in parameters and how those perturbations
-progagate through the network. Two kinds of sensitivity are defined, system and local. The local sensitivities are
+Metabolic control analysis is the study of how sensitive a system is to pertubrations in parameters and how those perturbations
+propagate through the network. Two kinds of sensitivity are defined, system and local. The local sensitivities are
 described by the elasticities. These are defined as follows:
 
 .. math::
@@ -16,13 +16,13 @@ described by the elasticities. These are defined as follows:
    \varepsilon^v_S = \frac{\partial v}{\partial S} \frac{S}{v} = \frac{\partial \ln v}{\partial \ln S}
 
 Given a reaction rate :math:`v_i`, the elasticity describes how a given effector of the reaction step affects
-the reaction rate. Because the definition is in terms of partial deriviatives, any effector that is perturbed assumes
+the reaction rate. Because the definition is in terms of partial derivatives, any effector that is perturbed assumes
 that all other potential effectors are unchanged.
 
 The system sensitivities are described by the control and response coefficients. These come in two forms, flux
-and concentration. The flux control coefficients measures how senstive a given flux is to a perturbation in the
+and concentration. The flux control coefficients measure how sensitive a given flux is to a perturbation in the
 local rate of a reaction step. Often the local rate is perturbed by changing the enzyme concentration at the step. 
-In this siutation the flux control coefficicent with respect to enzyme :math:`E_i` is defined as follow:
+In this situation the flux control coefficient with respect to enzyme :math:`E_i` is defined as follow:
 
 .. math::
 
