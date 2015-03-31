@@ -30,7 +30,9 @@ set(llvm_testing_src
     src/TestVariant
     )
 
-set_source_files_properties(${llvm_testing_src} PROPERTIES COMPILE_FLAGS ${LLVM_FLAGS})
+foreach(file ${llvm_testing_src})
+  set_source_files_properties(${file} PROPERTIES COMPILE_FLAGS ${LLVM_FLAGS})
+endforeach()
 
 add_executable( ${target} ${llvm_testing_src} )
 

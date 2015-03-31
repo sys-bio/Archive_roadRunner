@@ -134,7 +134,9 @@ if(BUILD_LLVM)
         )
 
     # set up appropriate flags for using LLVM
-    set_source_files_properties(${rrLLVMSources} PROPERTIES COMPILE_FLAGS ${LLVM_FLAGS})
+    foreach(file ${rrLLVMSources})
+      set_source_files_properties(${file} PROPERTIES COMPILE_FLAGS ${LLVM_FLAGS})
+    endforeach()
     # add LLVM-based model sources to list
     set(rrSources ${rrSources} ${rrLLVMSources})
 endif(BUILD_LLVM)
