@@ -65,7 +65,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Modules</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -149,26 +149,26 @@ Functions</h2></td></tr>
 
 <p>Get the simulator's capabilities. </p>
 <p>Example:</p>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; &lt;caps name=&quot;RoadRunner&quot; description=&quot;Settings For RoadRunner&quot;&gt;</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;  &lt;section name=&quot;integration&quot; method=&quot;CVODE&quot; description=&quot;CVODE Integrator&quot;&gt;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    &lt;cap name=&quot;BDFOrder&quot; value=&quot;5&quot; hint=&quot;Maximum order for BDF Method&quot; type=&quot;integer&quot; /&gt;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    &lt;cap name=&quot;AdamsOrder&quot; value=&quot;12&quot; hint=&quot;Maximum order for Adams Method&quot; type=&quot;integer&quot; /&gt;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    &lt;cap name=&quot;rtol&quot; value=&quot;1E-06&quot; hint=&quot;Relative Tolerance&quot; type=&quot;double&quot; /&gt;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    &lt;cap name=&quot;atol&quot; value=&quot;1E-12&quot; hint=&quot;Absolute Tolerance&quot; type=&quot;double&quot; /&gt;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    &lt;cap name=&quot;maxsteps&quot; value=&quot;10000&quot; hint=&quot;Maximum number of internal stepsc&quot; type=&quot;integer&quot; /&gt;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    &lt;cap name=&quot;initstep&quot; value=&quot;0&quot; hint=&quot;the initial step size&quot; type=&quot;double&quot; /&gt;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    &lt;cap name=&quot;minstep&quot; value=&quot;0&quot; hint=&quot;specifies a lower bound on the magnitude of the step size.&quot; type=&quot;double&quot; /&gt;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    &lt;cap name=&quot;maxstep&quot; value=&quot;0&quot; hint=&quot;specifies an upper bound on the magnitude of the step size.&quot; type=&quot;double&quot; /&gt;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    &lt;cap name=&quot;conservation&quot; value=&quot;1&quot; hint=&quot;enables (=1) or disables (=0) the conservation analysis of models for timecourse simulations.&quot; type=&quot;int&quot; /&gt;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    &lt;cap name=&quot;allowRandom&quot; value=&quot;1&quot; hint=&quot;if enabled (=1), reinterprets certain function definitions as distributions and draws random numbers for it.&quot; type=&quot;int&quot; /&gt;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    &lt;cap name=&quot;usekinsol&quot; value=&quot;0&quot; hint=&quot;Is KinSol used as steady state integrator&quot; type=&quot;int&quot; /&gt;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  &lt;/section&gt;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  &lt;section name=&quot;SteadyState&quot; method=&quot;NLEQ2&quot; description=&quot;NLEQ2 Steady State Solver&quot;&gt;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    &lt;cap name=&quot;MaxIterations&quot; value=&quot;100&quot; hint=&quot;Maximum number of newton iterations&quot; type=&quot;integer&quot; /&gt;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    &lt;cap name=&quot;relativeTolerance&quot; value=&quot;0.0001&quot; hint=&quot;Relative precision of solution components&quot; type=&quot;double&quot; /&gt;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  &lt;/section&gt;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;&lt;/caps&gt;</div>
+<div class="fragment"><div class="line"> &lt;caps name=<span class="stringliteral">&quot;RoadRunner&quot;</span> description=<span class="stringliteral">&quot;Settings For RoadRunner&quot;</span>&gt;</div>
+<div class="line">  &lt;section name=<span class="stringliteral">&quot;integration&quot;</span> method=<span class="stringliteral">&quot;CVODE&quot;</span> description=<span class="stringliteral">&quot;CVODE Integrator&quot;</span>&gt;</div>
+<div class="line">    &lt;cap name=<span class="stringliteral">&quot;BDFOrder&quot;</span> value=<span class="stringliteral">&quot;5&quot;</span> hint=<span class="stringliteral">&quot;Maximum order for BDF Method&quot;</span> type=<span class="stringliteral">&quot;integer&quot;</span> /&gt;</div>
+<div class="line">    &lt;cap name=<span class="stringliteral">&quot;AdamsOrder&quot;</span> value=<span class="stringliteral">&quot;12&quot;</span> hint=<span class="stringliteral">&quot;Maximum order for Adams Method&quot;</span> type=<span class="stringliteral">&quot;integer&quot;</span> /&gt;</div>
+<div class="line">    &lt;cap name=<span class="stringliteral">&quot;rtol&quot;</span> value=<span class="stringliteral">&quot;1E-06&quot;</span> hint=<span class="stringliteral">&quot;Relative Tolerance&quot;</span> type=<span class="stringliteral">&quot;double&quot;</span> /&gt;</div>
+<div class="line">    &lt;cap name=<span class="stringliteral">&quot;atol&quot;</span> value=<span class="stringliteral">&quot;1E-12&quot;</span> hint=<span class="stringliteral">&quot;Absolute Tolerance&quot;</span> type=<span class="stringliteral">&quot;double&quot;</span> /&gt;</div>
+<div class="line">    &lt;cap name=<span class="stringliteral">&quot;maxsteps&quot;</span> value=<span class="stringliteral">&quot;10000&quot;</span> hint=<span class="stringliteral">&quot;Maximum number of internal stepsc&quot;</span> type=<span class="stringliteral">&quot;integer&quot;</span> /&gt;</div>
+<div class="line">    &lt;cap name=<span class="stringliteral">&quot;initstep&quot;</span> value=<span class="stringliteral">&quot;0&quot;</span> hint=<span class="stringliteral">&quot;the initial step size&quot;</span> type=<span class="stringliteral">&quot;double&quot;</span> /&gt;</div>
+<div class="line">    &lt;cap name=<span class="stringliteral">&quot;minstep&quot;</span> value=<span class="stringliteral">&quot;0&quot;</span> hint=<span class="stringliteral">&quot;specifies a lower bound on the magnitude of the step size.&quot;</span> type=<span class="stringliteral">&quot;double&quot;</span> /&gt;</div>
+<div class="line">    &lt;cap name=<span class="stringliteral">&quot;maxstep&quot;</span> value=<span class="stringliteral">&quot;0&quot;</span> hint=<span class="stringliteral">&quot;specifies an upper bound on the magnitude of the step size.&quot;</span> type=<span class="stringliteral">&quot;double&quot;</span> /&gt;</div>
+<div class="line">    &lt;cap name=<span class="stringliteral">&quot;conservation&quot;</span> value=<span class="stringliteral">&quot;1&quot;</span> hint=<span class="stringliteral">&quot;enables (=1) or disables (=0) the conservation analysis of models for timecourse simulations.&quot;</span> type=<span class="stringliteral">&quot;int&quot;</span> /&gt;</div>
+<div class="line">    &lt;cap name=<span class="stringliteral">&quot;allowRandom&quot;</span> value=<span class="stringliteral">&quot;1&quot;</span> hint=<span class="stringliteral">&quot;if enabled (=1), reinterprets certain function definitions as distributions and draws random numbers for it.&quot;</span> type=<span class="stringliteral">&quot;int&quot;</span> /&gt;</div>
+<div class="line">    &lt;cap name=<span class="stringliteral">&quot;usekinsol&quot;</span> value=<span class="stringliteral">&quot;0&quot;</span> hint=<span class="stringliteral">&quot;Is KinSol used as steady state integrator&quot;</span> type=<span class="stringliteral">&quot;int&quot;</span> /&gt;</div>
+<div class="line">  &lt;/section&gt;</div>
+<div class="line"></div>
+<div class="line">  &lt;section name=<span class="stringliteral">&quot;SteadyState&quot;</span> method=<span class="stringliteral">&quot;NLEQ2&quot;</span> description=<span class="stringliteral">&quot;NLEQ2 Steady State Solver&quot;</span>&gt;</div>
+<div class="line">    &lt;cap name=<span class="stringliteral">&quot;MaxIterations&quot;</span> value=<span class="stringliteral">&quot;100&quot;</span> hint=<span class="stringliteral">&quot;Maximum number of newton iterations&quot;</span> type=<span class="stringliteral">&quot;integer&quot;</span> /&gt;</div>
+<div class="line">    &lt;cap name=<span class="stringliteral">&quot;relativeTolerance&quot;</span> value=<span class="stringliteral">&quot;0.0001&quot;</span> hint=<span class="stringliteral">&quot;Relative precision of solution components&quot;</span> type=<span class="stringliteral">&quot;double&quot;</span> /&gt;</div>
+<div class="line">  &lt;/section&gt;</div>
+<div class="line">&lt;/caps&gt;</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Handle to a RoadRunner instance </td></tr>
@@ -204,7 +204,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the value of the current number of points. </p>
-<p>Example:</p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;status = getNumPoints (rrHandle, &amp;numberOfPoints); </div>
+<p>Example:</p><div class="fragment"><div class="line">status = <a class="code" href="group__simulation.html#ga3e14da4bd986a908e4f6bcfc42c20717">getNumPoints</a> (rrHandle, &amp;numberOfPoints); </div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Handle to a RoadRunner instance </td></tr>
@@ -291,7 +291,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the value of the current time end. </p>
-<p>Example:</p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;status = getTimeEnd (rrHandle, &amp;timeEnd); </div>
+<p>Example:</p><div class="fragment"><div class="line">status = <a class="code" href="group__simulation.html#ga1130df59dce620b619e3e58874025e57">getTimeEnd</a> (rrHandle, &amp;timeEnd); </div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Handle to a RoadRunner instance </td></tr>
@@ -328,7 +328,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the value of the current time start. </p>
-<p>Example:</p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;status = getTimeStart (rrHandle, &amp;timeStart); </div>
+<p>Example:</p><div class="fragment"><div class="line">status = <a class="code" href="group__simulation.html#gaf302d02e9f0d57dd05995a7a211e5236">getTimeStart</a> (rrHandle, &amp;timeStart); </div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Handle to a RoadRunner instance </td></tr>
@@ -377,7 +377,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Carry out a one step integration of the model. </p>
-<p>Example:</p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;status = OneStep (rrHandle, currentTime, timeStep, newTimeStep); </div>
+<p>Example:</p><div class="fragment"><div class="line">status = OneStep (rrHandle, currentTime, timeStep, newTimeStep); </div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Handle to a RoadRunner instance </td></tr>
@@ -489,7 +489,7 @@ Functions</h2></td></tr>
 
 <p>Set the selection list for output from simulate(void) or simulateEx(void) </p>
 <p>Use getAvailableTimeCourseSymbols(void) to retrieve the list of all possible symbols.</p>
-<p>Example:</p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;setTimeCourseSelectionList (&quot;Time, S1, J1, J2&quot;); </div>
+<p>Example:</p><div class="fragment"><div class="line"><a class="code" href="group__simulation.html#gabc78e3202e85470f1c0e380a8988fc9e">setTimeCourseSelectionList</a> (<span class="stringliteral">&quot;Time, S1, J1, J2&quot;</span>); </div>
 </div><!-- fragment --><p>or</p>
 <p>setTimeCourseSelectionList ("Time S1 J1 J2")</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -637,13 +637,13 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Carry out a time-course simulation based on the given arguments, time start, time end and number of points. </p>
-<p>Example: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;RRCDataPtr m;</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;double timeStart = 0.0;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;double timeEnd = 25;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;int numberOfPoints = 200;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;m = simulateEx (rrHandle, timeStart, timeEnd, numberOfPoints);</div>
+<p>Example: </p><div class="fragment"><div class="line"><a class="code" href="struct_r_r_c_data.html">RRCDataPtr</a> m;</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">double</span> timeStart = 0.0;</div>
+<div class="line"><span class="keywordtype">double</span> timeEnd = 25;</div>
+<div class="line"><span class="keywordtype">int</span> numberOfPoints = 200;</div>
+<div class="line"></div>
+<div class="line">m = <a class="code" href="group__simulation.html#gaa568722adbce33e145ce8c4a78146465">simulateEx</a> (rrHandle, timeStart, timeEnd, numberOfPoints);</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Handle to a RoadRunner instance </td></tr>
@@ -660,7 +660,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 22 2015 13:41:22 for libRoadRunner C API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 22 2015 14:10:14 for libRoadRunner C API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

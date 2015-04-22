@@ -65,7 +65,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Modules</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -171,9 +171,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 </div><div class="memdoc">
 
 <p>Add a list item to a list and return index to the added item. </p>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;x = createRRList(RRHandle handle);</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;item1 = createIntegerItem (4);</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;add (x, item1);</div>
+<div class="fragment"><div class="line">x = <a class="code" href="group__list.html#gab6b39b0c87e8b3c9d416c99223d98bb5">createRRList</a>(<a class="code" href="rrc__types_8h.html#a1d68f0592372208fa5a5f2799ea4b3ae">RRHandle</a> handle);</div>
+<div class="line">item1 = <a class="code" href="group__list.html#ga1e385c28b44b23310db9811df2ba65ca">createIntegerItem</a> (4);</div>
+<div class="line">add (x, item1);</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">list</td><td>The list to store the item in </td></tr>
@@ -277,19 +277,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 <p>Create a new list. </p>
 <p>A list is a container for storing list items. List items can represent integers, double, strings and lists. To populate a list, create list items of the appropriate type and add them to the list</p>
 <p>Example, build the list [123, [3.1415926]]</p>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;l = createRRList(RRHandle handle);</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;item = createIntegerItem (123);</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;addItem (l, item);</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;item1 = createListItem(RRHandle handle);</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;item2 = createDoubleItem (3.1415926);</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;addItem (item1, item2);</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;addItem (l, item1);</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;item = getListItem (l, 0);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;printf (&quot;item = %d\n&quot;, item-&gt;data.iValue);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;printf (listToString (l));</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;freeRRList (l);</div>
+<div class="fragment"><div class="line">l = <a class="code" href="group__list.html#gab6b39b0c87e8b3c9d416c99223d98bb5">createRRList</a>(<a class="code" href="rrc__types_8h.html#a1d68f0592372208fa5a5f2799ea4b3ae">RRHandle</a> handle);</div>
+<div class="line">item = <a class="code" href="group__list.html#ga1e385c28b44b23310db9811df2ba65ca">createIntegerItem</a> (123);</div>
+<div class="line"><a class="code" href="group__list.html#ga62b890cf2f2b2eccb767e86f9c302e61">addItem</a> (l, item);</div>
+<div class="line">item1 = <a class="code" href="group__list.html#ga829d2f599093a059c771dc49b0034ac1">createListItem</a>(<a class="code" href="rrc__types_8h.html#a1d68f0592372208fa5a5f2799ea4b3ae">RRHandle</a> handle);</div>
+<div class="line">item2 = <a class="code" href="group__list.html#gaa61ed635b56855236a98505603f0f555">createDoubleItem</a> (3.1415926);</div>
+<div class="line"><a class="code" href="group__list.html#ga62b890cf2f2b2eccb767e86f9c302e61">addItem</a> (item1, item2);</div>
+<div class="line"><a class="code" href="group__list.html#ga62b890cf2f2b2eccb767e86f9c302e61">addItem</a> (l, item1);</div>
+<div class="line"></div>
+<div class="line">item = <a class="code" href="group__list.html#gaf1f33d11323825ab94f9318ba8b55de2">getListItem</a> (l, 0);</div>
+<div class="line">printf (<span class="stringliteral">&quot;item = %d\n&quot;</span>, item-&gt;data.iValue);</div>
+<div class="line"></div>
+<div class="line">printf (<a class="code" href="group__to_string.html#gaf528aa5b0788d4b8c65d717da48a5839">listToString</a> (l));</div>
+<div class="line"><a class="code" href="group__list.html#ga1382c85efff1e5ef2c45a28321da99a6">freeRRList</a> (l);</div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>Returns null if fails, otherwise returns a pointer to a new list structure </dd></dl>
 
 </div>
@@ -641,7 +641,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 22 2015 13:41:22 for libRoadRunner C API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 22 2015 14:10:14 for libRoadRunner C API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

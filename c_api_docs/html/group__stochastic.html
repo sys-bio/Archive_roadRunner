@@ -65,7 +65,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Modules</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -213,12 +213,12 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Carry out a time-course simulation using the Gillespie algorithm based on the given arguments, time start, time end and number of points. </p>
-<p>Example: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;RRCDataPtr m;</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;double timeStart = 0.0;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;double timeEnd = 25;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;m = gillespieEx (rrHandle, timeStart, timeEnd);</div>
+<p>Example: </p><div class="fragment"><div class="line"><a class="code" href="struct_r_r_c_data.html">RRCDataPtr</a> m;</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">double</span> timeStart = 0.0;</div>
+<div class="line"><span class="keywordtype">double</span> timeEnd = 25;</div>
+<div class="line"></div>
+<div class="line">m = <a class="code" href="group__stochastic.html#ga4d5211689f620321e9fa934adad6490f">gillespieEx</a> (rrHandle, timeStart, timeEnd);</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Handle to a RoadRunner instance </td></tr>
@@ -310,14 +310,14 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Carry out a series of time-course simulations using the Gillespie algorithm with fixed step size, then return the average of the simulations. Based on the given arguments, time start, time end, and number of points. </p>
-<p>Example: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;RRCDataPtr m;</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;double timeStart = 0.0;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;double timeEnd = 25;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;int numberOfPoints = 200;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;int numberOfSimulations = 10;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;m = gillespieMeanOnGridEx (rrHandle, timeStart, timeEnd, numberOfPoints, numberOfSimulations);</div>
+<p>Example: </p><div class="fragment"><div class="line"><a class="code" href="struct_r_r_c_data.html">RRCDataPtr</a> m;</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">double</span> timeStart = 0.0;</div>
+<div class="line"><span class="keywordtype">double</span> timeEnd = 25;</div>
+<div class="line"><span class="keywordtype">int</span> numberOfPoints = 200;</div>
+<div class="line"><span class="keywordtype">int</span> numberOfSimulations = 10;</div>
+<div class="line"></div>
+<div class="line">m = <a class="code" href="group__stochastic.html#ga36f575b021017cbcac1e14ca839e5944">gillespieMeanOnGridEx</a> (rrHandle, timeStart, timeEnd, numberOfPoints, numberOfSimulations);</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Handle to a RoadRunner instance </td></tr>
@@ -411,14 +411,14 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Carry out a series of time-course simulations using the Gillespie algorithm with fixed step size, then return the average and standard deviation of the simulations. Based on the given arguments, time start, time end, number of points, and number of simulations. </p>
-<p>Example: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;RRCDataPtr m;</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;double timeStart = 0.0;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;double timeEnd = 25;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;int numberOfPoints = 200;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;int numberOfSimulations = 10;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;m = gillespieMeanSDOnGridEx (rrHandle, timeStart, timeEnd, numberOfPoints, numberOfSimulations);</div>
+<p>Example: </p><div class="fragment"><div class="line"><a class="code" href="struct_r_r_c_data.html">RRCDataPtr</a> m;</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">double</span> timeStart = 0.0;</div>
+<div class="line"><span class="keywordtype">double</span> timeEnd = 25;</div>
+<div class="line"><span class="keywordtype">int</span> numberOfPoints = 200;</div>
+<div class="line"><span class="keywordtype">int</span> numberOfSimulations = 10;</div>
+<div class="line"></div>
+<div class="line">m = <a class="code" href="group__stochastic.html#ga451494155afde700a3bb7934f1bda0fe">gillespieMeanSDOnGridEx</a> (rrHandle, timeStart, timeEnd, numberOfPoints, numberOfSimulations);</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Handle to a RoadRunner instance </td></tr>
@@ -495,13 +495,13 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Carry out a time-course simulation using the Gillespie algorithm with fixed step size based on the given arguments, time start, time end, and number of points. </p>
-<p>Example: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;RRCDataPtr m;</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;double timeStart = 0.0;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;double timeEnd = 25;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;int numberOfPoints = 200;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;m = gillespieOnGridEx (rrHandle, timeStart, timeEnd, numberOfPoints);</div>
+<p>Example: </p><div class="fragment"><div class="line"><a class="code" href="struct_r_r_c_data.html">RRCDataPtr</a> m;</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">double</span> timeStart = 0.0;</div>
+<div class="line"><span class="keywordtype">double</span> timeEnd = 25;</div>
+<div class="line"><span class="keywordtype">int</span> numberOfPoints = 200;</div>
+<div class="line"></div>
+<div class="line">m = <a class="code" href="group__stochastic.html#gae6789000f5ea8712c594150b27ce8d87">gillespieOnGridEx</a> (rrHandle, timeStart, timeEnd, numberOfPoints);</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Handle to a RoadRunner instance </td></tr>
@@ -554,7 +554,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 22 2015 13:41:22 for libRoadRunner C API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 22 2015 14:10:14 for libRoadRunner C API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

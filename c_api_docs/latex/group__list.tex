@@ -68,9 +68,9 @@ Add a list item to a list and return index to the added item.
 
 
 \begin{DoxyCode}
-1 x = createRRList(RRHandle handle);
-2 item1 = createIntegerItem (4);
-3 add (x, item1);
+x = \hyperlink{group__list_gab6b39b0c87e8b3c9d416c99223d98bb5}{createRRList}(\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{RRHandle} handle);
+item1 = \hyperlink{group__list_ga1e385c28b44b23310db9811df2ba65ca}{createIntegerItem} (4);
+add (x, item1);
 \end{DoxyCode}
 
 
@@ -158,19 +158,19 @@ Example, build the list \mbox{[}123, \mbox{[}3.\+1415926\mbox{]}\mbox{]}
 
 
 \begin{DoxyCode}
-1 l = createRRList(RRHandle handle);
-2 item = createIntegerItem (123);
-3 addItem (l, item);
-4 item1 = createListItem(RRHandle handle);
-5 item2 = createDoubleItem (3.1415926);
-6 addItem (item1, item2);
-7 addItem (l, item1);
-8 
-9 item = getListItem (l, 0);
-10 printf ("item = %d\(\backslash\)n", item->data.iValue);
-11 
-12 printf (listToString (l));
-13 freeRRList (l);
+l = \hyperlink{group__list_gab6b39b0c87e8b3c9d416c99223d98bb5}{createRRList}(\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{RRHandle} handle);
+item = \hyperlink{group__list_ga1e385c28b44b23310db9811df2ba65ca}{createIntegerItem} (123);
+\hyperlink{group__list_ga62b890cf2f2b2eccb767e86f9c302e61}{addItem} (l, item);
+item1 = \hyperlink{group__list_ga829d2f599093a059c771dc49b0034ac1}{createListItem}(\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{RRHandle} handle);
+item2 = \hyperlink{group__list_gaa61ed635b56855236a98505603f0f555}{createDoubleItem} (3.1415926);
+\hyperlink{group__list_ga62b890cf2f2b2eccb767e86f9c302e61}{addItem} (item1, item2);
+\hyperlink{group__list_ga62b890cf2f2b2eccb767e86f9c302e61}{addItem} (l, item1);
+
+item = \hyperlink{group__list_gaf1f33d11323825ab94f9318ba8b55de2}{getListItem} (l, 0);
+printf (\textcolor{stringliteral}{"item = %d\(\backslash\)n"}, item->data.iValue);
+
+printf (\hyperlink{group__to_string_gaf528aa5b0788d4b8c65d717da48a5839}{listToString} (l));
+\hyperlink{group__list_ga1382c85efff1e5ef2c45a28321da99a6}{freeRRList} (l);
 \end{DoxyCode}
 
 

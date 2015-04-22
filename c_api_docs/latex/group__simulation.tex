@@ -60,31 +60,31 @@ Example\+:
 
 
 \begin{DoxyCode}
-1  <caps name="RoadRunner" description="Settings For RoadRunner">
-2   <section name="integration" method="CVODE" description="CVODE Integrator">
-3     <cap name="BDFOrder" value="5" hint="Maximum order for BDF Method" type="integer" />
-4     <cap name="AdamsOrder" value="12" hint="Maximum order for Adams Method" type="integer" />
-5     <cap name="rtol" value="1E-06" hint="Relative Tolerance" type="double" />
-6     <cap name="atol" value="1E-12" hint="Absolute Tolerance" type="double" />
-7     <cap name="maxsteps" value="10000" hint="Maximum number of internal stepsc" type="integer" />
-8     <cap name="initstep" value="0" hint="the initial step size" type="double" />
-9     <cap name="minstep" value="0" hint="specifies a lower bound on the magnitude of the step size."
-       type="double" />
-10     <cap name="maxstep" value="0" hint="specifies an upper bound on the magnitude of the step size."
-       type="double" />
-11     <cap name="conservation" value="1" hint="enables (=1) or disables (=0) the conservation analysis of
-       models for timecourse simulations." type="int" />
-12     <cap name="allowRandom" value="1" hint="if enabled (=1), reinterprets certain function definitions as
-       distributions and draws random numbers for it." type="int" />
-13     <cap name="usekinsol" value="0" hint="Is KinSol used as steady state integrator" type="int" />
-14   </section>
-15 
-16   <section name="SteadyState" method="NLEQ2" description="NLEQ2 Steady State Solver">
-17     <cap name="MaxIterations" value="100" hint="Maximum number of newton iterations" type="integer" />
-18     <cap name="relativeTolerance" value="0.0001" hint="Relative precision of solution components"
-       type="double" />
-19   </section>
-20 </caps>
+ <caps name=\textcolor{stringliteral}{"RoadRunner"} description=\textcolor{stringliteral}{"Settings For RoadRunner"}>
+  <section name=\textcolor{stringliteral}{"integration"} method=\textcolor{stringliteral}{"CVODE"} description=\textcolor{stringliteral}{"CVODE Integrator"}>
+    <cap name=\textcolor{stringliteral}{"BDFOrder"} value=\textcolor{stringliteral}{"5"} hint=\textcolor{stringliteral}{"Maximum order for BDF Method"} type=\textcolor{stringliteral}{"integer"} />
+    <cap name=\textcolor{stringliteral}{"AdamsOrder"} value=\textcolor{stringliteral}{"12"} hint=\textcolor{stringliteral}{"Maximum order for Adams Method"} type=\textcolor{stringliteral}{"integer"} />
+    <cap name=\textcolor{stringliteral}{"rtol"} value=\textcolor{stringliteral}{"1E-06"} hint=\textcolor{stringliteral}{"Relative Tolerance"} type=\textcolor{stringliteral}{"double"} />
+    <cap name=\textcolor{stringliteral}{"atol"} value=\textcolor{stringliteral}{"1E-12"} hint=\textcolor{stringliteral}{"Absolute Tolerance"} type=\textcolor{stringliteral}{"double"} />
+    <cap name=\textcolor{stringliteral}{"maxsteps"} value=\textcolor{stringliteral}{"10000"} hint=\textcolor{stringliteral}{"Maximum number of internal stepsc"} type=\textcolor{stringliteral}{"integer"} />
+    <cap name=\textcolor{stringliteral}{"initstep"} value=\textcolor{stringliteral}{"0"} hint=\textcolor{stringliteral}{"the initial step size"} type=\textcolor{stringliteral}{"double"} />
+    <cap name=\textcolor{stringliteral}{"minstep"} value=\textcolor{stringliteral}{"0"} hint=\textcolor{stringliteral}{"specifies a lower bound on the magnitude of the step size."} type=\textcolor{stringliteral}{"
+      double"} />
+    <cap name=\textcolor{stringliteral}{"maxstep"} value=\textcolor{stringliteral}{"0"} hint=\textcolor{stringliteral}{"specifies an upper bound on the magnitude of the step size."} type=\textcolor{stringliteral}{"
+      double"} />
+    <cap name=\textcolor{stringliteral}{"conservation"} value=\textcolor{stringliteral}{"1"} hint=\textcolor{stringliteral}{"enables (=1) or disables (=0) the conservation analysis of
+       models for timecourse simulations."} type=\textcolor{stringliteral}{"int"} />
+    <cap name=\textcolor{stringliteral}{"allowRandom"} value=\textcolor{stringliteral}{"1"} hint=\textcolor{stringliteral}{"if enabled (=1), reinterprets certain function definitions as
+       distributions and draws random numbers for it."} type=\textcolor{stringliteral}{"int"} />
+    <cap name=\textcolor{stringliteral}{"usekinsol"} value=\textcolor{stringliteral}{"0"} hint=\textcolor{stringliteral}{"Is KinSol used as steady state integrator"} type=\textcolor{stringliteral}{"int"} />
+  </section>
+
+  <section name=\textcolor{stringliteral}{"SteadyState"} method=\textcolor{stringliteral}{"NLEQ2"} description=\textcolor{stringliteral}{"NLEQ2 Steady State Solver"}>
+    <cap name=\textcolor{stringliteral}{"MaxIterations"} value=\textcolor{stringliteral}{"100"} hint=\textcolor{stringliteral}{"Maximum number of newton iterations"} type=\textcolor{stringliteral}{"integer"} />
+    <cap name=\textcolor{stringliteral}{"relativeTolerance"} value=\textcolor{stringliteral}{"0.0001"} hint=\textcolor{stringliteral}{"Relative precision of solution components"} type=\textcolor{stringliteral}{"
+      double"} />
+  </section>
+</caps>
 \end{DoxyCode}
 
 
@@ -110,7 +110,7 @@ Get the value of the current number of points.
 
 Example\+:
 \begin{DoxyCode}
-1 status = getNumPoints (rrHandle, &numberOfPoints); 
+status = \hyperlink{group__simulation_ga3e14da4bd986a908e4f6bcfc42c20717}{getNumPoints} (rrHandle, &numberOfPoints); 
 \end{DoxyCode}
 
 
@@ -176,7 +176,7 @@ Get the value of the current time end.
 
 Example\+:
 \begin{DoxyCode}
-1 status = getTimeEnd (rrHandle, &timeEnd); 
+status = \hyperlink{group__simulation_ga1130df59dce620b619e3e58874025e57}{getTimeEnd} (rrHandle, &timeEnd); 
 \end{DoxyCode}
 
 
@@ -204,7 +204,7 @@ Get the value of the current time start.
 
 Example\+:
 \begin{DoxyCode}
-1 status = getTimeStart (rrHandle, &timeStart); 
+status = \hyperlink{group__simulation_gaf302d02e9f0d57dd05995a7a211e5236}{getTimeStart} (rrHandle, &timeStart); 
 \end{DoxyCode}
 
 
@@ -234,7 +234,7 @@ Carry out a one step integration of the model.
 
 Example\+:
 \begin{DoxyCode}
-1 status = OneStep (rrHandle, currentTime, timeStep, newTimeStep); 
+status = OneStep (rrHandle, currentTime, timeStep, newTimeStep); 
 \end{DoxyCode}
 
 
@@ -312,7 +312,7 @@ Use get\+Available\+Time\+Course\+Symbols(void) to retrieve the list of all poss
 
 Example\+:
 \begin{DoxyCode}
-1 setTimeCourseSelectionList ("Time, S1, J1, J2"); 
+\hyperlink{group__simulation_gabc78e3202e85470f1c0e380a8988fc9e}{setTimeCourseSelectionList} (\textcolor{stringliteral}{"Time, S1, J1, J2"}); 
 \end{DoxyCode}
 
 
@@ -409,13 +409,13 @@ Carry out a time-\/course simulation based on the given arguments, time start, t
 
 Example\+: 
 \begin{DoxyCode}
-1 RRCDataPtr m;
-2 
-3 double timeStart = 0.0;
-4 double timeEnd = 25;
-5 int numberOfPoints = 200;
-6 
-7 m = simulateEx (rrHandle, timeStart, timeEnd, numberOfPoints);
+\hyperlink{struct_r_r_c_data}{RRCDataPtr} m;
+
+\textcolor{keywordtype}{double} timeStart = 0.0;
+\textcolor{keywordtype}{double} timeEnd = 25;
+\textcolor{keywordtype}{int} numberOfPoints = 200;
+
+m = \hyperlink{group__simulation_gaa568722adbce33e145ce8c4a78146465}{simulateEx} (rrHandle, timeStart, timeEnd, numberOfPoints);
 \end{DoxyCode}
 
 

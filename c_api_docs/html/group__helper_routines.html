@@ -65,7 +65,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Modules</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -204,7 +204,7 @@ Functions</h2></td></tr>
 
 <p>Create an empty matrix of size r by c. </p>
 <p>Matrices are indexed from zero</p>
-<p>Example:</p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;m = createRRMatrix (2, 3); </div>
+<p>Example:</p><div class="fragment"><div class="line">m = <a class="code" href="group__helper_routines.html#gaf462e87fffe618001f9a090db897b014">createRRMatrix</a> (2, 3); </div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">r,c</td><td>Row and column sizes </td></tr>
@@ -231,7 +231,7 @@ Functions</h2></td></tr>
 
 <p>Create a new vector with a given size. </p>
 <p>Vectors are indexed from zero</p>
-<p>Example:</p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;myVector = createVector (10); </div>
+<p>Example:</p><div class="fragment"><div class="line">myVector = <a class="code" href="group__helper_routines.html#gac903628f96b1bf2308fa4a79b189cc1c">createVector</a> (10); </div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">size</td><td>The number of element in the new vector </td></tr>
@@ -280,7 +280,7 @@ Functions</h2></td></tr>
 
 <p>Retrieve an element at a given row and column from a complex matrix type variable. </p>
 <p>Matrices are indexed from zero</p>
-<p>Example: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;status = getComplexMatrixElement (m, 2, 4, &amp;value);</div>
+<p>Example: </p><div class="fragment"><div class="line">status = <a class="code" href="group__helper_routines.html#ga881e667ad97b6c4461bf54c3a265f395">getComplexMatrixElement</a> (m, 2, 4, &amp;value);</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>A pointer to a complex matrix type variable </td></tr>
@@ -332,7 +332,7 @@ Functions</h2></td></tr>
 
 <p>Retrieve an element at a given row and column from a matrix type variable. </p>
 <p>Matrices are indexed from zero</p>
-<p>Example: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;status = getMatrixElement (m, 2, 4, &amp;value);</div>
+<p>Example: </p><div class="fragment"><div class="line">status = <a class="code" href="group__helper_routines.html#gaaaeee435626a35220ef9329964633356">getMatrixElement</a> (m, 2, 4, &amp;value);</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>A pointer to a matrix type variable </td></tr>
@@ -362,7 +362,7 @@ Functions</h2></td></tr>
 
 <p>Retrieve the number of columns in the given matrix. </p>
 <p>Matrices are indexed from zero</p>
-<p>Example:</p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;nRows = getMatrixNumCols (m); </div>
+<p>Example:</p><div class="fragment"><div class="line">nRows = <a class="code" href="group__helper_routines.html#ga48c14f12ed0903649369318daa595c16">getMatrixNumCols</a> (m); </div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">m</td><td>A pointer to a matrix type variable </td></tr>
@@ -389,7 +389,7 @@ Functions</h2></td></tr>
 
 <p>Retrieve the number of rows in the given matrix. </p>
 <p>Matrices are indexed from zero</p>
-<p>Example:</p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;nRows = getMatrixNumRows (m); </div>
+<p>Example:</p><div class="fragment"><div class="line">nRows = <a class="code" href="group__helper_routines.html#gace79da82f227142b2b12203eb90b39c2">getMatrixNumRows</a> (m); </div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">m</td><td>A pointer to a matrix type variable </td></tr>
@@ -438,7 +438,7 @@ Functions</h2></td></tr>
 
 <p>Retrieves an element at a given row and column from a RoadRunner data type variable. </p>
 <p>RoadRunner numerical data are indexed from zero</p>
-<p>Example:</p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;status = getRRCDataElement (rrData, 2, 4, *value); </div>
+<p>Example:</p><div class="fragment"><div class="line">status = <a class="code" href="group__helper_routines.html#gaf9a9af778156ea40a6eafe602ba09259">getRRCDataElement</a> (rrData, 2, 4, *value); </div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">rrData</td><td>A pointer to a rrData type variable </td></tr>
@@ -478,7 +478,7 @@ Functions</h2></td></tr>
 
 <p>Retrieves a label for a given column in a rrData type variable. </p>
 <p>Result data are indexed from zero</p>
-<p>Example:</p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;str = getResultColumnLabel (rrData, 2, 4); </div>
+<p>Example:</p><div class="fragment"><div class="line">str = getResultColumnLabel (rrData, 2, 4); </div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">rrData</td><td>A pointer to a rrData type variable </td></tr>
@@ -505,7 +505,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Retrieve the number of columns in the given rrData data (returned form <a class="el" href="group__simulation.html#ga55c9ef1913377542f61d1d622911cc7b" title="Carry out a time-course simulation. setTimeStart, setTimeEnd, setNumPoints, etc are used to set the s...">simulate(RRHandle handle)</a>) </p>
-<p>Example:</p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;nRows = getResultNumCols (rrData); </div>
+<p>Example:</p><div class="fragment"><div class="line">nRows = getResultNumCols (rrData); </div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">rrData</td><td>A pointer to a rrData type variable </td></tr>
@@ -531,7 +531,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Retrieve the number of rows in the given RoadRunner numerical data (returned from <a class="el" href="group__simulation.html#ga55c9ef1913377542f61d1d622911cc7b" title="Carry out a time-course simulation. setTimeStart, setTimeEnd, setNumPoints, etc are used to set the s...">simulate(RRHandle handle)</a>) </p>
-<p>Example:</p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;nRows = getRRDataNumRows (result); </div>
+<p>Example:</p><div class="fragment"><div class="line">nRows = <a class="code" href="group__helper_routines.html#ga0309b51e111e53ee0131d88c118eb260">getRRDataNumRows</a> (result); </div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">rrData</td><td>A pointer to a RoadRunner numerical data type variable </td></tr>
@@ -574,7 +574,7 @@ Functions</h2></td></tr>
 
 <p>Get a particular element from a vector. </p>
 <p>Vectors are indexed from zero</p>
-<p>Example:</p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;status = getVectorElement (myVector, 10, *value); </div>
+<p>Example:</p><div class="fragment"><div class="line">status = <a class="code" href="group__helper_routines.html#ga10140bb46cc906a75e575c81022a9f2a">getVectorElement</a> (myVector, 10, *value); </div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vector</td><td>A pointer to the vector variable type </td></tr>
@@ -603,7 +603,7 @@ Functions</h2></td></tr>
 
 <p>Get the number of elements in a vector type. </p>
 <p>Vectors are indexed from zero</p>
-<p>Example:</p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;count = getVectorLength (myVector); </div>
+<p>Example:</p><div class="fragment"><div class="line">count = <a class="code" href="group__helper_routines.html#ga36649ac03ad15ad8242f03ff9d28b0a9">getVectorLength</a> (myVector); </div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vector</td><td>A pointer to the vector variable type </td></tr>
@@ -652,7 +652,7 @@ Functions</h2></td></tr>
 
 <p>Set an element at a given row and column with a given value in a complex matrix type variable. </p>
 <p>Matrices are indexed from zero</p>
-<p>Example: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;status = setComplexMatrixElement (m, 2, 4, value);</div>
+<p>Example: </p><div class="fragment"><div class="line">status = <a class="code" href="group__helper_routines.html#gacbdd712d1e5d677c3849ea2d6dec4001">setComplexMatrixElement</a> (m, 2, 4, value);</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>A pointer to a complex matrix type variable </td></tr>
@@ -704,7 +704,7 @@ Functions</h2></td></tr>
 
 <p>Set an element at a given row and column with a given value in a matrix type variable. </p>
 <p>Matrices are indexed from zero</p>
-<p>Example: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;status = setMatrixElement (m, 2, 4, value);</div>
+<p>Example: </p><div class="fragment"><div class="line">status = <a class="code" href="group__helper_routines.html#gab8c7891563c13c1e59fc65251d4a19d7">setMatrixElement</a> (m, 2, 4, value);</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>A pointer to a matrix type variable </td></tr>
@@ -750,7 +750,7 @@ Functions</h2></td></tr>
 
 <p>Set a particular element in a vector. </p>
 <p>Vectors are indexed from zero</p>
-<p>Example:</p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;status = setVectorElement (myVector, 10, 3.1415); </div>
+<p>Example:</p><div class="fragment"><div class="line">status = <a class="code" href="group__helper_routines.html#gaca70bc807a455ec497b7d8e8a2affe45">setVectorElement</a> (myVector, 10, 3.1415); </div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vector</td><td>A pointer to the vector variable type </td></tr>
@@ -802,7 +802,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 22 2015 13:41:22 for libRoadRunner C API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 22 2015 14:10:14 for libRoadRunner C API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

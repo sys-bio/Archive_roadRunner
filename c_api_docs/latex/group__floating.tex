@@ -75,7 +75,7 @@ Retrieve in a vector the concentrations for all the floating species.
 
 Example\+:
 \begin{DoxyCode}
-1 RRVectorPtr values = getFloatingSpeciesConcentrations (void); 
+\hyperlink{struct_r_r_vector}{RRVectorPtr} values = \hyperlink{group__floating_ga68e7a5d2a51820bdfe9eb96a0e67c53c}{getFloatingSpeciesConcentrations} (\textcolor{keywordtype}{void}); 
 \end{DoxyCode}
 
 
@@ -220,11 +220,12 @@ Example\+:
 
 
 \begin{DoxyCode}
-1 myVector = createVector (getNumberOfFloatingSpecies(RRHandle handle));
-2 setVectorElement (myVector, 0, 1.2);
-3 setVectorElement (myVector, 1, 5.7);
-4 setVectorElement (myVector, 2, 3.4);
-5 setFloatingSpeciesConcentrations(myVector);
+myVector = \hyperlink{group__helper_routines_gac903628f96b1bf2308fa4a79b189cc1c}{createVector} (\hyperlink{group__floating_ga71c45e94c31e5632a3c4815da05bec9a}{getNumberOfFloatingSpecies}(
+      \hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{RRHandle} handle));
+\hyperlink{group__helper_routines_gaca70bc807a455ec497b7d8e8a2affe45}{setVectorElement} (myVector, 0, 1.2);
+\hyperlink{group__helper_routines_gaca70bc807a455ec497b7d8e8a2affe45}{setVectorElement} (myVector, 1, 5.7);
+\hyperlink{group__helper_routines_gaca70bc807a455ec497b7d8e8a2affe45}{setVectorElement} (myVector, 2, 3.4);
+\hyperlink{group__floating_gaf0efd671999c1689be3614e4af162bc2}{setFloatingSpeciesConcentrations}(myVector);
 \end{DoxyCode}
 
 
