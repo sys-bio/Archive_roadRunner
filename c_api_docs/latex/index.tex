@@ -1,0 +1,131 @@
+\hypertarget{index_intro_sec}{}\section{Introduction}\label{index_intro_sec}
+Road\+Runner is a S\+B\+M\+L compliant high performance and portable simulation engine for systems and synthetic biology. To run a simple S\+B\+M\+L model and generate time series data we would write the following code\+:
+
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#undef \_\_cplusplus}
+\textcolor{preprocessor}{#define STATIC\_RRC}
+\textcolor{preprocessor}{#include <stdio.h>}
+\textcolor{preprocessor}{#include <stdlib.h>}
+\textcolor{preprocessor}{#include "\hyperlink{rrc__api_8h}{rrc\_api.h}"}
+\textcolor{preprocessor}{#include "\hyperlink{rrc__types_8h}{rrc\_types.h}"}
+\textcolor{preprocessor}{#include "\hyperlink{rrc__utilities_8h}{rrc\_utilities.h}"}
+\textcolor{keywordtype}{int} main (\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} *argv[]) \{
+    \hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{RRHandle} rrHandle;
+    \hyperlink{struct_r_r_c_data}{RRCDataPtr} result;
+
+    printf (\textcolor{stringliteral}{"Starting Test Program %s\(\backslash\)n"}, argv[0]);
+    rrHandle = \hyperlink{group__initialization_gac5b4dbf9108edb1ea6e315379e5576e0}{createRRInstance}();
+    \textcolor{keywordflow}{if} (!\hyperlink{group__loadsave_ga275b8f8d7350505c383fdc9634713041}{loadSBMLFromFile} (rrHandle, \textcolor{stringliteral}{"feedback.xml"})) \{
+        printf (\textcolor{stringliteral}{"Failed to load model: %s\(\backslash\)n"}, \hyperlink{group__errorfunctions_ga79375e9d9f82fa4f07ed0e9486133f0f}{getLastError} ());
+        getchar ();
+        exit (0);
+    \}
+    result = \hyperlink{group__simulation_gaa568722adbce33e145ce8c4a78146465}{simulateEx} (rrHandle, 0, 10, 100);
+    printf (\hyperlink{group__to_string_ga505aeb10e21f0ef93770f7723aa12514}{rrCDataToString} (result));
+    \hyperlink{group__free_routines_ga96317bb0c9ad3daee01c9665cc14b223}{freeRRCData}(result);
+
+    getchar ();
+    exit (0);
+\}
+\end{DoxyCode}
+
+
+More complex example, using C A\+P\+I\+: 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#undef \_\_cplusplus}
+\textcolor{preprocessor}{#define STATIC\_RRC}
+\textcolor{preprocessor}{#include <stdio.h>}
+\textcolor{preprocessor}{#include <stdlib.h>}
+\textcolor{preprocessor}{#include "\hyperlink{rrc__api_8h}{rrc\_api.h}"}
+\textcolor{preprocessor}{#include "\hyperlink{rrc__types_8h}{rrc\_types.h}"}
+\textcolor{preprocessor}{#include "\hyperlink{rrc__utilities_8h}{rrc\_utilities.h}"}
+\textcolor{keywordtype}{int} main (\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} *argv[]) \{
+   \hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{RRHandle} rrHandle;
+   \hyperlink{struct_r_r_c_data}{RRCDataPtr} result;
+   \textcolor{keywordtype}{int} index;
+   \textcolor{keywordtype}{int} col;
+   \textcolor{keywordtype}{int} row;
+   printf (\textcolor{stringliteral}{"Starting Test Program %s\(\backslash\)n"}, argv[0]);
+   rrHandle = \hyperlink{group__initialization_gac5b4dbf9108edb1ea6e315379e5576e0}{createRRInstance}();
+   \textcolor{keywordflow}{if} (!\hyperlink{group__loadsave_gafb3515fd8472da389f5f24530017f037}{loadSBML} (rrHandle, \textcolor{stringliteral}{"feedback.xml"})) \{
+      printf (\textcolor{stringliteral}{"Error while loading SBML file\(\backslash\)n"});
+      printf (\textcolor{stringliteral}{"Error message: %s\(\backslash\)n"}, \hyperlink{group__errorfunctions_ga79375e9d9f82fa4f07ed0e9486133f0f}{getLastError}());
+      getchar ();
+      exit (0);
+   \}
+   result = \hyperlink{group__simulation_gaa568722adbce33e145ce8c4a78146465}{simulateEx} (rrHandle, 0, 10, 10);  \textcolor{comment}{// start time, end time, and number of points}
+   index = 0;
+   \textcolor{comment}{// Print out column headers... typically time and species.}
+   \textcolor{keywordflow}{for} (col = 0; col < result->\hyperlink{struct_r_r_c_data_a17c9a5894aa9cb3789346dcaa9c370bb}{CSize}; col++)
+   \{
+      printf (\textcolor{stringliteral}{"%10s"}, result->\hyperlink{struct_r_r_c_data_ab339159e5604808f92fe793f4f43da03}{ColumnHeaders}[index++]);
+      \textcolor{keywordflow}{if} (col < result->CSize - 1)
+      \{
+         printf (\textcolor{stringliteral}{"\(\backslash\)t"});
+      \}
+   \}
+   printf (\textcolor{stringliteral}{"\(\backslash\)n"});
+   index = 0;
+   \textcolor{comment}{// Print out the data}
+   \textcolor{keywordflow}{for} (row = 0; row < result->\hyperlink{struct_r_r_c_data_a4d8512c879223c0e0d1522dae38e7819}{RSize}; row++)
+   \{
+      \textcolor{keywordflow}{for} (col = 0; col < result->\hyperlink{struct_r_r_c_data_a17c9a5894aa9cb3789346dcaa9c370bb}{CSize}; col++)
+      \{
+         printf (\textcolor{stringliteral}{"%10f"}, result->\hyperlink{struct_r_r_c_data_a7c5cbda3aa940f4b0d6e8a1679307dfc}{Data}[index++]);
+         \textcolor{keywordflow}{if} (col < result->CSize -1)
+         \{
+            printf (\textcolor{stringliteral}{"\(\backslash\)t"});
+         \}
+      \}
+   printf (\textcolor{stringliteral}{"\(\backslash\)n"});
+   \}
+   \textcolor{comment}{//Cleanup}
+   \hyperlink{group__free_routines_ga96317bb0c9ad3daee01c9665cc14b223}{freeRRCData} (result);
+   \hyperlink{group__initialization_gaa085b3245183be2ee16a94dfe0de1751}{freeRRInstance} (rrHandle);
+   getchar ();
+   exit (0);
+\}
+\end{DoxyCode}
+
+
+Would create output as shown below\+:
+
+
+\begin{DoxyCode}
+Starting Test Program: <File path Here>
+     time            [S1]            [S2]            [S3]            [S4]
+ 0.000000        0.000000        0.000000        0.000000        0.000000
+ 1.111111        3.295975        1.677255        1.121418        1.074708
+ 2.222222        0.971810        1.658970        1.841065        2.192728
+ 3.333333        0.137340        0.501854        1.295138        2.444883
+ 4.444445        0.141470        0.200937        0.549172        1.505662
+ 5.555556        1.831017        1.317792        1.129982        1.351300
+ 6.666667        0.306310        0.775477        1.304950        1.952076
+ 7.777778        0.193459        0.268986        0.628542        1.483161
+ 8.888889        1.566864        1.219950        1.105718        1.370199
+10.000000        0.269437        0.678127        1.199353        1.868247
+\end{DoxyCode}
+ \hypertarget{index_install_sec}{}\section{Installation}\label{index_install_sec}
+Installation documentation is provided at lib\+Road\+Runner.\+org.\hypertarget{index_license_sec}{}\section{License}\label{index_license_sec}
+Copyright (C) 2012-\/2015 University of Washington, Seattle, W\+A, U\+S\+A
+
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \begin{DoxyVerb}http://www.apache.org/licenses/LICENSE-2.0
+\end{DoxyVerb}
+
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+I\+S, W\+I\+T\+H\+O\+U\+T W\+A\+R\+R\+A\+N\+T\+I\+E\+S O\+R C\+O\+N\+D\+I\+T\+I\+O\+N\+S O\+F A\+N\+Y K\+I\+N\+D, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+In plain english this means\+:
+
+You C\+A\+N freely download and use this software, in whole or in part, for personal, company internal, or commercial purposes;
+
+You C\+A\+N use the software in packages or distributions that you create.
+
+You S\+H\+O\+U\+L\+D include a copy of the license in any redistribution you may make;
+
+You are N\+O\+T required include the source of software, or of any modifications you may have made to it, in any redistribution you may assemble that includes it.
+
+Y\+O\+U C\+A\+N\+N\+O\+T\+:
+
+redistribute any piece of this software without proper attribution; 
