@@ -22,6 +22,7 @@ public:
     double                          StartTime;          //option s
     double                          Duration;
     double                          EndTime;            //option e
+    long                            RNGSeed;                //option q
     int                             Steps;              //option z
     string                          SelectionList;      //option l:
     bool variableStep;

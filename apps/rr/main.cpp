@@ -103,7 +103,7 @@ void ProcessCommandLineArguments(int argc, char* argv[], Args& args)
 {
     char c;
 
-    while ((c = GetOptions(argc, argv, (const char*) ("xcpuo:v:n:d:t:l:m:s:e:z:"))) != -1)
+    while ((c = GetOptions(argc, argv, (const char*) ("xcpuo:v:n:d:t:l:m:s:e:z:q:"))) != -1)
     {
         switch (c)
         {
@@ -130,6 +130,12 @@ void ProcessCommandLineArguments(int argc, char* argv[], Args& args)
             case ('e'): args.EndTime                        = toDouble(rrOptArg);                  break;
             case ('z'): args.Steps                          = toInt(rrOptArg);                     break;
             case ('o'): args.OutputFileName                 = rrOptArg;                            break;
+            case ('q'): {
+              std::stringstream ss;
+              ss << rrOptArg;
+              ss >> args.RNGSeed;
+              break;
+            }
             case ('?'):
             {
                     cout<<Usage(argv[0])<<endl;
