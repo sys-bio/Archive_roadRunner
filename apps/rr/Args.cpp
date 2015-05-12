@@ -19,6 +19,7 @@ TempDataFolder("."),
 StartTime(0),
 Duration(5),
 EndTime(StartTime + Duration),
+RNGSeed(0),
 Steps(50),
 SelectionList("")
 {}
@@ -42,6 +43,7 @@ string Usage(const string& prg)
     usage<<setw(25)<<"-s<#>"                        <<" Set the start time for simulation. Default: 0\n";
     usage<<setw(25)<<"-e<#>"                        <<" Set the end time for simulation. Default: 5\n";
     usage<<setw(25)<<"-z<#>"                        <<" Set number of steps in the simulation. Default: 50\n";
+    usage<<setw(25)<<"-q<#>"                        <<" Set the seed for random number generation.\n";
     usage<<setw(25)<<"-l<List>"                     <<" Set selection list. Separate variables using ',' or space\n";
     usage<<setw(25)<<"-version"                     <<" Prints the current version.\n\n";
     usage<<setw(25)<<"-? "                          <<" Shows the help screen.\n\n";
