@@ -22,6 +22,8 @@ using namespace std;
 #undef max
 #undef min
 
+unsigned long gillespie_seed = 0;
+
 namespace rr
 {
 

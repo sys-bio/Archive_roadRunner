@@ -19,7 +19,7 @@
 #include <direct.h>
 #endif
 
-
+extern unsigned long gillespie_seed;
 
 using namespace std;
 using namespace rr;
@@ -205,6 +205,7 @@ void ProcessCommandLineArguments(int argc, char* argv[], Args& args)
               std::stringstream ss;
               ss << rrOptArg;
               ss >> args.RNGSeed;
+              gillespie_seed = args.RNGSeed;
               break;
             }
             case ('?'):

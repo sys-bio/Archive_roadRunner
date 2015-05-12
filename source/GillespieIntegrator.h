@@ -29,6 +29,8 @@
 namespace rr
 {
 
+extern unsigned long gillespie_seed;
+
 class ExecutableModel;
 
 class GillespieIntegrator: public Integrator
