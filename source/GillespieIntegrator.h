@@ -25,11 +25,11 @@
     #include <sys/time.h>
 #endif
 
+extern unsigned long gillespie_seed;
+
 
 namespace rr
 {
-
-extern unsigned long gillespie_seed;
 
 class ExecutableModel;
 
