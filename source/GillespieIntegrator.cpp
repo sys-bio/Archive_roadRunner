@@ -35,7 +35,7 @@ GillespieIntegrator::GillespieIntegrator(ExecutableModel* m,
         stoichRows(0),
         stoichCols(0),
         stoichData(0),
-        seed(5489UL) // default value for mersene twister
+        seed(gillespie_seed) // default value for mersene twister
 {
     if (o)
     {
