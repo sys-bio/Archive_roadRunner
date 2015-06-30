@@ -2682,6 +2682,8 @@ DoubleMatrix RoadRunner::getScaledConcentrationControlCoefficientMatrix()
 
     DoubleMatrix ucc = getUnscaledConcentrationControlCoefficientMatrix();
 
+    std::cerr << "RoadRunner::getScaledConcentrationControlCoefficientMatrix: unscaled ucc:\n" << ucc << "\n\n\n";
+
     if (ucc.size() > 0 )
     {
         for (int i = 0; i < ucc.RSize(); i++)
@@ -2693,10 +2695,16 @@ DoubleMatrix RoadRunner::getScaledConcentrationControlCoefficientMatrix()
 
                 double rate = 0;
                 self.model->getReactionRates(1, &j, &rate);
+                std::cerr << "  i,j = " << i << "," << j << ", conc,rate = " << conc << "," << rate << ",  ucc * rate / conc = " << ucc[i][j] << " * " << rate << " / " <<  conc << " = ";
                 ucc[i][j] = ucc[i][j] * rate / conc;
+
+                std::cerr << ucc[i][j] << "\n";
             }
         }
     }
+
+    std::cerr << "RoadRunner::getScaledConcentrationControlCoefficientMatrix: final ucc:\n" << ucc << "\n";
+
     return ucc;
 }
 

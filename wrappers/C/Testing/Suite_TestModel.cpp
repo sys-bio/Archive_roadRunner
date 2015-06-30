@@ -118,6 +118,8 @@ void compareMatrices(const ls::DoubleMatrix& ref, RRDoubleMatrixPtr calc)
     clog<<"Reference Matrix:\n";
     clog<<ref<<endl;
 
+    clog << "orig calc mat:\n" << calc->Data[0] << " " << calc->Data[1] << " " << calc->Data[2] << "\n" << calc->Data[3] << " " << calc->Data[4] << " " << calc->Data[5] << "\n";
+
     clog<<"Calculated Matrix:";
     clog<<matrixToString(calc);
 
@@ -902,12 +904,15 @@ SUITE(TEST_MODEL)
         IniSection* aSection = iniFile.GetSection("Scaled Concentration Control Matrix");
         if(!aSection || !gRR)
         {
+            clog << "early return";
             return;
         }
-        clog<<"\n==== SCALED_CONCENTRATION_CONTROL_MATRIX ====\n\n";
+        clog<<"\n==== SCALED_CONCENTRATION_CONTROL_MATRIX! ====\n\n";
         aSection->mIsUsed = true;
 
         ls::DoubleMatrix     ref         = getDoubleMatrixFromString(aSection->GetNonKeysAsString());
+
+        clog << "*** SCALED_CONCENTRATION_CONTROL_MATRIX ref :\n" << ref << "\n";
 
         RRDoubleMatrixPtr matrix = getScaledConcentrationControlCoefficientMatrix(gRR);
         compareMatrices(ref, matrix);
