@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['haserror',['hasError',['../group__errorfunctions.html#ga97333a9e820160be2bfbece76043662c',1,'rrc::hasError()'],['../group__errorfunctions.html#ga97333a9e820160be2bfbece76043662c',1,'hasError():&#160;rrc_api.cpp']]]
+  ['haserror',['hasError',['../group__errorfunctions.html#ga5ff7d55f1f52b72f5f17a687c0c361fd',1,'rrc::hasError()'],['../group__errorfunctions.html#ga5ff7d55f1f52b72f5f17a687c0c361fd',1,'hasError():&#160;_rrc_api.cpp']]]
 ];

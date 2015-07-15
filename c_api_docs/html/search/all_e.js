@@ -3,11 +3,11 @@ var searchData=
   ['roadrunner_20c_20api_20library',['RoadRunner C API Library',['../index.html',1,'']]],
   ['read_20and_20write_20models',['Read and write models',['../group__loadsave.html',1,'']]],
   ['rates_20of_20change_20group',['Rates of change group',['../group__rate_of_change.html',1,'']]],
-  ['re',['re',['../struct_r_r_complex.html#a5a6fce2fc5cae153945fea2c45beeb4f',1,'RRComplex']]],
+  ['re',['re',['../struct_r_r_complex.html#a0579715e217fe445879e93003ff90117',1,'RRComplex']]],
   ['reaction_20group',['Reaction group',['../group__reaction.html',1,'']]],
-  ['reset',['reset',['../group__reset.html#gaeaf9374c9a0cad0898f5e0a37bc387c5',1,'rrc::reset()'],['../group__reset.html#gaeaf9374c9a0cad0898f5e0a37bc387c5',1,'reset(RRHandle handle):&#160;rrc_api.cpp'],['../group__reset.html',1,'(Global Namespace)']]],
-  ['resetall',['resetAll',['../group__reset.html#ga0fdde5a5cdd90408a0e2050d8e4243ec',1,'rrc::resetAll()'],['../group__reset.html#ga0fdde5a5cdd90408a0e2050d8e4243ec',1,'resetAll():&#160;rrc_api.cpp']]],
-  ['resettoorigin',['resetToOrigin',['../group__reset.html#ga30ad9eec8febc573febf1ad8b40c99ad',1,'rrc::resetToOrigin()'],['../group__reset.html#ga30ad9eec8febc573febf1ad8b40c99ad',1,'resetToOrigin():&#160;rrc_api.cpp']]],
+  ['reset',['reset',['../group__reset.html#gabde768cf80e67fe8f2811a28843e41f4',1,'rrc::reset()'],['../group__reset.html#gabde768cf80e67fe8f2811a28843e41f4',1,'reset(RRHandle handle):&#160;_rrc_api.cpp'],['../group__reset.html',1,'(Global Namespace)']]],
+  ['resetall',['resetAll',['../group__reset.html#ga50d3ec99c57ba89550a4deef3129e19f',1,'rrc::resetAll()'],['../group__reset.html#ga50d3ec99c57ba89550a4deef3129e19f',1,'resetAll():&#160;_rrc_api.cpp']]],
+  ['resettoorigin',['resetToOrigin',['../group__reset.html#ga24d6b0810b8cbf5a7e9b4da38908b6f7',1,'rrc::resetToOrigin()'],['../group__reset.html#ga24d6b0810b8cbf5a7e9b4da38908b6f7',1,'resetToOrigin():&#160;_rrc_api.cpp']]],
   ['rr_5fmax_5fpath',['RR_MAX_PATH',['../rrc__api_8cpp.html#af3b54520e40857c14ac49a364ba094a8',1,'rrc_api.cpp']]],
   ['rrc_5fapi_2ecpp',['rrc_api.cpp',['../rrc__api_8cpp.html',1,'']]],
   ['rrc_5fapi_2eh',['rrc_api.h',['../rrc__api_8h.html',1,'']]],
@@ -21,7 +21,7 @@ var searchData=
   ['rrc_5futilities_2eh',['rrc_utilities.h',['../rrc__utilities_8h.html',1,'']]],
   ['rrcdata',['RRCData',['../struct_r_r_c_data.html',1,'']]],
   ['rrcdataptr',['RRCDataPtr',['../rrc__types_8h.html#a9da8b124eb9c3c0045f8926c6a420b4a',1,'rrc_types.h']]],
-  ['rrcdatatostring',['rrCDataToString',['../group__to_string.html#ga505aeb10e21f0ef93770f7723aa12514',1,'rrc::rrCDataToString()'],['../group__to_string.html#ga505aeb10e21f0ef93770f7723aa12514',1,'rrCDataToString():&#160;rrc_utilities.cpp']]],
+  ['rrcdatatostring',['rrCDataToString',['../group__to_string.html#ga9ecd62cd0fd10a179bd2fe5e55f69929',1,'rrc::rrCDataToString()'],['../group__to_string.html#ga9ecd62cd0fd10a179bd2fe5e55f69929',1,'rrCDataToString():&#160;rrc_utilities.cpp']]],
   ['rrcomplex',['RRComplex',['../struct_r_r_complex.html',1,'']]],
   ['rrcomplexmatrix',['RRComplexMatrix',['../struct_r_r_complex_matrix.html',1,'']]],
   ['rrcomplexmatrixptr',['RRComplexMatrixPtr',['../rrc__types_8h.html#a8cf9e865d8541d100f153800adbb7c3f',1,'rrc_types.h']]],
@@ -40,5 +40,5 @@ var searchData=
   ['rrstringarrayptr',['RRStringArrayPtr',['../rrc__types_8h.html#a7c9475df6c7337d99482b13a365e7596',1,'rrc_types.h']]],
   ['rrvector',['RRVector',['../struct_r_r_vector.html',1,'']]],
   ['rrvectorptr',['RRVectorPtr',['../rrc__types_8h.html#a3be72d6006034fd349f753d2bf441bf7',1,'rrc_types.h']]],
-  ['rsize',['RSize',['../struct_r_r_double_matrix.html#a4d8512c879223c0e0d1522dae38e7819',1,'RRDoubleMatrix::RSize()'],['../struct_r_r_complex_matrix.html#a4d8512c879223c0e0d1522dae38e7819',1,'RRComplexMatrix::RSize()'],['../struct_r_r_c_data.html#a4d8512c879223c0e0d1522dae38e7819',1,'RRCData::RSize()']]]
+  ['rsize',['RSize',['../struct_r_r_double_matrix.html#a674431f97c6ce4a6ef05248a67ea1c54',1,'RRDoubleMatrix::RSize()'],['../struct_r_r_complex_matrix.html#ad576272aa8a6bbd752dc3628307f512a',1,'RRComplexMatrix::RSize()'],['../struct_r_r_c_data.html#aaebd12e68638f3572eea166c7dd0af69',1,'RRCData::RSize()']]]
 ];

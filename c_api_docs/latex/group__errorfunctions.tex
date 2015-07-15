@@ -1,6 +1,5 @@
-\hypertarget{group__errorfunctions}{\section{Error handling functions}
+\hypertarget{group__errorfunctions}{}\section{Error handling functions}
 \label{group__errorfunctions}\index{Error handling functions@{Error handling functions}}
-}
 
 
 Error handling routines.  
@@ -9,9 +8,9 @@ Error handling routines.
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \hyperlink{group__errorfunctions_ga97333a9e820160be2bfbece76043662c}{has\+Error} (void)
+C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__errorfunctions_ga5ff7d55f1f52b72f5f17a687c0c361fd}{has\+Error} (void)
 \begin{DoxyCompactList}\small\item\em Check if there is an error string to retrieve. \end{DoxyCompactList}\item 
-char $\ast$ \hyperlink{group__errorfunctions_ga79375e9d9f82fa4f07ed0e9486133f0f}{get\+Last\+Error} (void)
+C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__errorfunctions_ga0a0d2c042920c6fc648bcb4ce8091ede}{get\+Last\+Error} (void)
 \begin{DoxyCompactList}\small\item\em Retrieve the current error string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -21,33 +20,33 @@ Error handling routines.
 
 
 \subsection{Function Documentation}
-\hypertarget{group__errorfunctions_ga79375e9d9f82fa4f07ed0e9486133f0f}{\index{Error handling functions@{Error handling functions}!get\+Last\+Error@{get\+Last\+Error}}
+\hypertarget{group__errorfunctions_ga0a0d2c042920c6fc648bcb4ce8091ede}{}\index{Error handling functions@{Error handling functions}!get\+Last\+Error@{get\+Last\+Error}}
 \index{get\+Last\+Error@{get\+Last\+Error}!Error handling functions@{Error handling functions}}
-\subsubsection[{get\+Last\+Error}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Last\+Error (
+\subsubsection[{get\+Last\+Error(void)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv get\+Last\+Error (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
-)}}\label{group__errorfunctions_ga79375e9d9f82fa4f07ed0e9486133f0f}
+)}\label{group__errorfunctions_ga0a0d2c042920c6fc648bcb4ce8091ede}
 
 
 Retrieve the current error string. 
 
 Example\+:
 \begin{DoxyCode}
-str = \hyperlink{group__errorfunctions_ga79375e9d9f82fa4f07ed0e9486133f0f}{getLastError} (\textcolor{keywordtype}{void}); 
+1 str = getLastError (void); 
 \end{DoxyCode}
 
 
 \begin{DoxyReturn}{Returns}
 Return null if fails, otherwise returns a pointer to the error string 
 \end{DoxyReturn}
-\hypertarget{group__errorfunctions_ga97333a9e820160be2bfbece76043662c}{\index{Error handling functions@{Error handling functions}!has\+Error@{has\+Error}}
+\hypertarget{group__errorfunctions_ga5ff7d55f1f52b72f5f17a687c0c361fd}{}\index{Error handling functions@{Error handling functions}!has\+Error@{has\+Error}}
 \index{has\+Error@{has\+Error}!Error handling functions@{Error handling functions}}
-\subsubsection[{has\+Error}]{\setlength{\rightskip}{0pt plus 5cm}bool has\+Error (
+\subsubsection[{has\+Error(void)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv has\+Error (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
-)}}\label{group__errorfunctions_ga97333a9e820160be2bfbece76043662c}
+)}\label{group__errorfunctions_ga5ff7d55f1f52b72f5f17a687c0c361fd}
 
 
 Check if there is an error string to retrieve. 
