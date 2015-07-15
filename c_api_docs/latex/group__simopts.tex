@@ -1,0 +1,427 @@
+\hypertarget{group__simopts}{}\section{Simulator options}
+\label{group__simopts}\index{Simulator options@{Simulator options}}
+
+
+Methods for setting and getting simulator options.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{group__simopts_ga0e60dc15106edf34142fa7b2160f4684}{get\+Number\+Of\+Integrators} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\begin{DoxyCompactList}\small\item\em Get the number of implemented integrators. \end{DoxyCompactList}\item 
+C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{group__simopts_gaea74da31e6dcaa4833bb6773d964aab4}{set\+Integrator} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$name\+Of\+Integrator)
+\begin{DoxyCompactList}\small\item\em Specify the current integrator to be used for simulation. \end{DoxyCompactList}\item 
+C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__simopts_ga2049931879007c6df1bdb5dbb508b5fa}{get\+Integrator\+Description} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\begin{DoxyCompactList}\small\item\em Obtain a description of the current integrator. \end{DoxyCompactList}\item 
+C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__simopts_ga8bd6ff2828f0d12e911f713dfbba930b}{get\+Integrator\+Hint} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\begin{DoxyCompactList}\small\item\em Obtain a short hint for the current integrator. \end{DoxyCompactList}\item 
+C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{group__simopts_ga551b3fc29362907cd6f69f23ac7bf7cc}{get\+Number\+Of\+Integrator\+Parameters} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\begin{DoxyCompactList}\small\item\em Get the number of adjustable settings for the current integrator. \end{DoxyCompactList}\item 
+C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} rrc\+Call\+Conv \hyperlink{group__simopts_gaabaab4b46d128a4686f7b710368a5f97}{get\+List\+Of\+Integrator\+Parameter\+Names} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\begin{DoxyCompactList}\small\item\em Get the names of adjustable settings for the current integrator. \end{DoxyCompactList}\item 
+C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__simopts_ga4e1bff8961e09923c786dbaaf108e903}{get\+Integrator\+Parameter\+Description} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+\begin{DoxyCompactList}\small\item\em Get the description for a specific integrator setting. \end{DoxyCompactList}\item 
+C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__simopts_gad4109215ad180a0fd8da0b6aa4f7e6c4}{get\+Integrator\+Parameter\+Hint} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+\begin{DoxyCompactList}\small\item\em Get the hint for a specific integrator setting. \end{DoxyCompactList}\item 
+C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{group__simopts_gafb51cd6e56a7b09b3958b00a42f5035f}{get\+Integrator\+Parameter\+Type} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+\begin{DoxyCompactList}\small\item\em Get the return type for a specific integrator setting. \end{DoxyCompactList}\item 
+C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{group__simopts_ga45805f74ab551df53520a8ea03c499cd}{get\+Integrator\+Parameter\+Int} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+\begin{DoxyCompactList}\small\item\em Get the integer value for a specific integrator setting. \end{DoxyCompactList}\item 
+C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{group__simopts_gaf5ce794bca9b6b8a60bb15e9b64bdaf1}{set\+Integrator\+Parameter\+Int} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, int value)
+\begin{DoxyCompactList}\small\item\em Set the integer value for a specific integrator setting. \end{DoxyCompactList}\item 
+C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C double rrc\+Call\+Conv \hyperlink{group__simopts_ga5d1a97952f28e70d92d5b6ba71eafd29}{get\+Integrator\+Parameter\+Double} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+\begin{DoxyCompactList}\small\item\em Get the double value for a specific integrator setting. \end{DoxyCompactList}\item 
+C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{group__simopts_ga48a56b47335553c84f2f5132adaeb9d3}{set\+Integrator\+Parameter\+Double} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, double value)
+\begin{DoxyCompactList}\small\item\em Set the double value for a specific integrator setting. \end{DoxyCompactList}\item 
+C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__simopts_ga2f175aab11a88d4c1939aaecb11f7848}{get\+Integrator\+Parameter\+String} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+\begin{DoxyCompactList}\small\item\em Get the string value for a specific integrator setting. \end{DoxyCompactList}\item 
+C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{group__simopts_gae3cbb90c964c48a7f312ff7022a3b4c1}{set\+Integrator\+Parameter\+String} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, char $\ast$value)
+\begin{DoxyCompactList}\small\item\em Set the string value for a specific integrator setting. \end{DoxyCompactList}\item 
+C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{group__simopts_gacf16504048ed0e308c8d8f2a7512efd7}{get\+Integrator\+Parameter\+Boolean} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+\begin{DoxyCompactList}\small\item\em Get the boolean value for a specific integrator setting. \end{DoxyCompactList}\item 
+C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{group__simopts_gac14fbd2a118994706d711650bce86967}{set\+Integrator\+Parameter\+Boolean} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, int value)
+\begin{DoxyCompactList}\small\item\em Set the boolean value for a specific integrator setting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Methods for setting and getting simulator options. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{group__simopts_ga2049931879007c6df1bdb5dbb508b5fa}{}\index{Simulator options@{Simulator options}!get\+Integrator\+Description@{get\+Integrator\+Description}}
+\index{get\+Integrator\+Description@{get\+Integrator\+Description}!Simulator options@{Simulator options}}
+\subsubsection[{get\+Integrator\+Description(\+R\+R\+Handle handle)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char$\ast$ rrc\+Call\+Conv get\+Integrator\+Description (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle}
+\end{DoxyParamCaption}
+)}\label{group__simopts_ga2049931879007c6df1bdb5dbb508b5fa}
+
+
+Obtain a description of the current integrator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em name\+Of\+Integrator} & Name of the integrator to be used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a description of the current integrator. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_ga8bd6ff2828f0d12e911f713dfbba930b}{}\index{Simulator options@{Simulator options}!get\+Integrator\+Hint@{get\+Integrator\+Hint}}
+\index{get\+Integrator\+Hint@{get\+Integrator\+Hint}!Simulator options@{Simulator options}}
+\subsubsection[{get\+Integrator\+Hint(\+R\+R\+Handle handle)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char$\ast$ rrc\+Call\+Conv get\+Integrator\+Hint (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle}
+\end{DoxyParamCaption}
+)}\label{group__simopts_ga8bd6ff2828f0d12e911f713dfbba930b}
+
+
+Obtain a short hint for the current integrator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em name\+Of\+Integrator} & Name of the integrator to be used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a short hint of the current integrator. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_gacf16504048ed0e308c8d8f2a7512efd7}{}\index{Simulator options@{Simulator options}!get\+Integrator\+Parameter\+Boolean@{get\+Integrator\+Parameter\+Boolean}}
+\index{get\+Integrator\+Parameter\+Boolean@{get\+Integrator\+Parameter\+Boolean}!Simulator options@{Simulator options}}
+\subsubsection[{get\+Integrator\+Parameter\+Boolean(\+R\+R\+Handle handle, char $\ast$parameter\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv get\+Integrator\+Parameter\+Boolean (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name}
+\end{DoxyParamCaption}
+)}\label{group__simopts_gacf16504048ed0e308c8d8f2a7512efd7}
+
+
+Get the boolean value for a specific integrator setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the integrator setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a boolean value for the integrator setting. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_ga4e1bff8961e09923c786dbaaf108e903}{}\index{Simulator options@{Simulator options}!get\+Integrator\+Parameter\+Description@{get\+Integrator\+Parameter\+Description}}
+\index{get\+Integrator\+Parameter\+Description@{get\+Integrator\+Parameter\+Description}!Simulator options@{Simulator options}}
+\subsubsection[{get\+Integrator\+Parameter\+Description(\+R\+R\+Handle handle, char $\ast$parameter\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char$\ast$ rrc\+Call\+Conv get\+Integrator\+Parameter\+Description (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name}
+\end{DoxyParamCaption}
+)}\label{group__simopts_ga4e1bff8961e09923c786dbaaf108e903}
+
+
+Get the description for a specific integrator setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the integrator setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a description for the integrator setting. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_ga5d1a97952f28e70d92d5b6ba71eafd29}{}\index{Simulator options@{Simulator options}!get\+Integrator\+Parameter\+Double@{get\+Integrator\+Parameter\+Double}}
+\index{get\+Integrator\+Parameter\+Double@{get\+Integrator\+Parameter\+Double}!Simulator options@{Simulator options}}
+\subsubsection[{get\+Integrator\+Parameter\+Double(\+R\+R\+Handle handle, char $\ast$parameter\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C double rrc\+Call\+Conv get\+Integrator\+Parameter\+Double (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name}
+\end{DoxyParamCaption}
+)}\label{group__simopts_ga5d1a97952f28e70d92d5b6ba71eafd29}
+
+
+Get the double value for a specific integrator setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the integrator setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a double value for the integrator setting. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_gad4109215ad180a0fd8da0b6aa4f7e6c4}{}\index{Simulator options@{Simulator options}!get\+Integrator\+Parameter\+Hint@{get\+Integrator\+Parameter\+Hint}}
+\index{get\+Integrator\+Parameter\+Hint@{get\+Integrator\+Parameter\+Hint}!Simulator options@{Simulator options}}
+\subsubsection[{get\+Integrator\+Parameter\+Hint(\+R\+R\+Handle handle, char $\ast$parameter\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char$\ast$ rrc\+Call\+Conv get\+Integrator\+Parameter\+Hint (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name}
+\end{DoxyParamCaption}
+)}\label{group__simopts_gad4109215ad180a0fd8da0b6aa4f7e6c4}
+
+
+Get the hint for a specific integrator setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the integrator setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a hint for the integrator setting. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_ga45805f74ab551df53520a8ea03c499cd}{}\index{Simulator options@{Simulator options}!get\+Integrator\+Parameter\+Int@{get\+Integrator\+Parameter\+Int}}
+\index{get\+Integrator\+Parameter\+Int@{get\+Integrator\+Parameter\+Int}!Simulator options@{Simulator options}}
+\subsubsection[{get\+Integrator\+Parameter\+Int(\+R\+R\+Handle handle, char $\ast$parameter\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv get\+Integrator\+Parameter\+Int (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name}
+\end{DoxyParamCaption}
+)}\label{group__simopts_ga45805f74ab551df53520a8ea03c499cd}
+
+
+Get the integer value for a specific integrator setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the integrator setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns an integer value for the integrator setting. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_ga2f175aab11a88d4c1939aaecb11f7848}{}\index{Simulator options@{Simulator options}!get\+Integrator\+Parameter\+String@{get\+Integrator\+Parameter\+String}}
+\index{get\+Integrator\+Parameter\+String@{get\+Integrator\+Parameter\+String}!Simulator options@{Simulator options}}
+\subsubsection[{get\+Integrator\+Parameter\+String(\+R\+R\+Handle handle, char $\ast$parameter\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char$\ast$ rrc\+Call\+Conv get\+Integrator\+Parameter\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name}
+\end{DoxyParamCaption}
+)}\label{group__simopts_ga2f175aab11a88d4c1939aaecb11f7848}
+
+
+Get the string value for a specific integrator setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the integrator setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a string value for the integrator setting. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_gafb51cd6e56a7b09b3958b00a42f5035f}{}\index{Simulator options@{Simulator options}!get\+Integrator\+Parameter\+Type@{get\+Integrator\+Parameter\+Type}}
+\index{get\+Integrator\+Parameter\+Type@{get\+Integrator\+Parameter\+Type}!Simulator options@{Simulator options}}
+\subsubsection[{get\+Integrator\+Parameter\+Type(\+R\+R\+Handle handle, char $\ast$parameter\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv get\+Integrator\+Parameter\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name}
+\end{DoxyParamCaption}
+)}\label{group__simopts_gafb51cd6e56a7b09b3958b00a42f5035f}
+
+
+Get the return type for a specific integrator setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the integrator setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a integer that indicates the return type for the integrator setting. 0-\/\+S\+T\+R\+I\+N\+G, 1-\/\+B\+O\+O\+L, 2-\/\+I\+N\+T32, 3-\/\+U\+I\+N\+T32, 4-\/\+I\+N\+T64, 5-\/\+U\+I\+N\+T64, 6-\/\+F\+L\+O\+A\+T, 7-\/\+D\+O\+U\+B\+L\+E, 8-\/\+C\+H\+A\+R, 9-\/\+U\+C\+H\+A\+R, 10-\/\+E\+M\+P\+T\+Y 
+\end{DoxyReturn}
+\hypertarget{group__simopts_gaabaab4b46d128a4686f7b710368a5f97}{}\index{Simulator options@{Simulator options}!get\+List\+Of\+Integrator\+Parameter\+Names@{get\+List\+Of\+Integrator\+Parameter\+Names}}
+\index{get\+List\+Of\+Integrator\+Parameter\+Names@{get\+List\+Of\+Integrator\+Parameter\+Names}!Simulator options@{Simulator options}}
+\subsubsection[{get\+List\+Of\+Integrator\+Parameter\+Names(\+R\+R\+Handle handle)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C {\bf R\+R\+String\+Array\+Ptr} rrc\+Call\+Conv get\+List\+Of\+Integrator\+Parameter\+Names (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle}
+\end{DoxyParamCaption}
+)}\label{group__simopts_gaabaab4b46d128a4686f7b710368a5f97}
+
+
+Get the names of adjustable settings for the current integrator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a list that contains the names of adjustable integrator settings. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_ga551b3fc29362907cd6f69f23ac7bf7cc}{}\index{Simulator options@{Simulator options}!get\+Number\+Of\+Integrator\+Parameters@{get\+Number\+Of\+Integrator\+Parameters}}
+\index{get\+Number\+Of\+Integrator\+Parameters@{get\+Number\+Of\+Integrator\+Parameters}!Simulator options@{Simulator options}}
+\subsubsection[{get\+Number\+Of\+Integrator\+Parameters(\+R\+R\+Handle handle)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv get\+Number\+Of\+Integrator\+Parameters (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle}
+\end{DoxyParamCaption}
+)}\label{group__simopts_ga551b3fc29362907cd6f69f23ac7bf7cc}
+
+
+Get the number of adjustable settings for the current integrator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns an integer that corresponds to the number of adjustable integrator settings. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_ga0e60dc15106edf34142fa7b2160f4684}{}\index{Simulator options@{Simulator options}!get\+Number\+Of\+Integrators@{get\+Number\+Of\+Integrators}}
+\index{get\+Number\+Of\+Integrators@{get\+Number\+Of\+Integrators}!Simulator options@{Simulator options}}
+\subsubsection[{get\+Number\+Of\+Integrators(\+R\+R\+Handle handle)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv get\+Number\+Of\+Integrators (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle}
+\end{DoxyParamCaption}
+)}\label{group__simopts_ga0e60dc15106edf34142fa7b2160f4684}
+
+
+Get the number of implemented integrators. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns an integer that corresponds to the number of currently implemented integrators. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_gaea74da31e6dcaa4833bb6773d964aab4}{}\index{Simulator options@{Simulator options}!set\+Integrator@{set\+Integrator}}
+\index{set\+Integrator@{set\+Integrator}!Simulator options@{Simulator options}}
+\subsubsection[{set\+Integrator(\+R\+R\+Handle handle, char $\ast$name\+Of\+Integrator)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv set\+Integrator (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{name\+Of\+Integrator}
+\end{DoxyParamCaption}
+)}\label{group__simopts_gaea74da31e6dcaa4833bb6773d964aab4}
+
+
+Specify the current integrator to be used for simulation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em name\+Of\+Integrator} & Name of the integrator to be used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns True if successful. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_gac14fbd2a118994706d711650bce86967}{}\index{Simulator options@{Simulator options}!set\+Integrator\+Parameter\+Boolean@{set\+Integrator\+Parameter\+Boolean}}
+\index{set\+Integrator\+Parameter\+Boolean@{set\+Integrator\+Parameter\+Boolean}!Simulator options@{Simulator options}}
+\subsubsection[{set\+Integrator\+Parameter\+Boolean(\+R\+R\+Handle handle, char $\ast$parameter\+Name, int value)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv set\+Integrator\+Parameter\+Boolean (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\label{group__simopts_gac14fbd2a118994706d711650bce86967}
+
+
+Set the boolean value for a specific integrator setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the integrator setting. \\
+\hline
+\mbox{\tt in}  & {\em value} & The boolean value for the integrator setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns True if successful. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_ga48a56b47335553c84f2f5132adaeb9d3}{}\index{Simulator options@{Simulator options}!set\+Integrator\+Parameter\+Double@{set\+Integrator\+Parameter\+Double}}
+\index{set\+Integrator\+Parameter\+Double@{set\+Integrator\+Parameter\+Double}!Simulator options@{Simulator options}}
+\subsubsection[{set\+Integrator\+Parameter\+Double(\+R\+R\+Handle handle, char $\ast$parameter\+Name, double value)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv set\+Integrator\+Parameter\+Double (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{group__simopts_ga48a56b47335553c84f2f5132adaeb9d3}
+
+
+Set the double value for a specific integrator setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the integrator setting. \\
+\hline
+\mbox{\tt in}  & {\em value} & The double value for the integrator setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns True if successful. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_gaf5ce794bca9b6b8a60bb15e9b64bdaf1}{}\index{Simulator options@{Simulator options}!set\+Integrator\+Parameter\+Int@{set\+Integrator\+Parameter\+Int}}
+\index{set\+Integrator\+Parameter\+Int@{set\+Integrator\+Parameter\+Int}!Simulator options@{Simulator options}}
+\subsubsection[{set\+Integrator\+Parameter\+Int(\+R\+R\+Handle handle, char $\ast$parameter\+Name, int value)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv set\+Integrator\+Parameter\+Int (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\label{group__simopts_gaf5ce794bca9b6b8a60bb15e9b64bdaf1}
+
+
+Set the integer value for a specific integrator setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the integrator setting. \\
+\hline
+\mbox{\tt in}  & {\em value} & The integer value for the integrator setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns True if successful. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_gae3cbb90c964c48a7f312ff7022a3b4c1}{}\index{Simulator options@{Simulator options}!set\+Integrator\+Parameter\+String@{set\+Integrator\+Parameter\+String}}
+\index{set\+Integrator\+Parameter\+String@{set\+Integrator\+Parameter\+String}!Simulator options@{Simulator options}}
+\subsubsection[{set\+Integrator\+Parameter\+String(\+R\+R\+Handle handle, char $\ast$parameter\+Name, char $\ast$value)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv set\+Integrator\+Parameter\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name, }
+\item[{char $\ast$}]{value}
+\end{DoxyParamCaption}
+)}\label{group__simopts_gae3cbb90c964c48a7f312ff7022a3b4c1}
+
+
+Set the string value for a specific integrator setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the integrator setting. \\
+\hline
+\mbox{\tt in}  & {\em value} & The string value for the integrator setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns True if successful. 
+\end{DoxyReturn}
