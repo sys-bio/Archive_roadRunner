@@ -2,7 +2,11 @@
 * Integrator.cpp
 *
 *  Created on: Apr 25, 2014
-*      Author: andy
+*	Author: andy
+*
+*  Major Revision on: July 14, 2015
+*	Author: Wilbert Copeland
+
 */
 
 #include "Integrator.h"
@@ -196,6 +200,11 @@ namespace rr
 		}
 
 		return result;
+	}
+
+	int IntegratorFactory::registerIntegrator(const IntegratorInfo& i)
+	{
+		mIntegratorInfos.push_back(i);
 	}
 
 }

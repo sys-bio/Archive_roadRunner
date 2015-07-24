@@ -24,6 +24,15 @@
 using namespace std;
 namespace rr
 {
+	// creates a new CVODE integrator object
+	static Integrator* makeCVODEIntegrator(ExecutableModel *m)
+	{
+		return new CVODEIntegrator(m);
+	}
+
+	// register with factory
+	static int cvode_result IntegratorFactory::getInstance().registerIntegrator(IntegratorInfo("cvode", "cvode desc", makeCVODEIntegrator));
+
 	const int CVODEIntegrator::mDefaultMaxNumSteps = 10000;
 	const int CVODEIntegrator::mDefaultMaxAdamsOrder = 12;
 	const int CVODEIntegrator::mDefaultMaxBDFOrder = 5;
@@ -209,7 +218,7 @@ namespace rr
 		return Integrator::IntegrationMethod::Deterministic;
 	}
 
-	void CVODEIntegrator::setValue(string key, const Variant& val)
+	void CVODEIntegrator::setValue(std::string key, const Variant& val)
 	{
 		Integrator::setValue(key, val);
 

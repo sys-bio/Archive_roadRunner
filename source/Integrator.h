@@ -120,16 +120,58 @@ namespace rr
 			}
 	};
 
+	class RR_DECLSPEC IntegratorInfo
+	{
+	protected:
+		typedef Integrator* (*IntegratorCtor)(ExecutableModel *model);
+	public:
+		IntegratorInfo(std::string name, std::string description, IntegratorCtor ctor)
+			: mName(name), mDescription(description), mCtor(ctor) {}
+
+		std::string getName() const
+		{
+			return mName;
+		}
+
+		std::string getDescription() const
+		{
+			return mDescription;
+		}
+
+		Integrator *construct(ExecutableModel *model)
+		{
+			return mCtor(model);
+		}
+
+	private:
+		std::string mName;
+		std::string mDescription;
+		IntegratorCtor mCtor;
+	};
+
+
 	/* */
 	class RR_DECLSPEC IntegratorFactory
 	{
 	public:
+		Integrator* New(std::string name, ExecutableModel *m);
 
-		static Integrator* New(std::string name, ExecutableModel *m);
+		int registerIntegrator(const IntegratorInfo& i);
 
-		static std::vector<std::string> getIntegratorNames();
+		static IntegratorFactory& getInstance()
+		{
+			// FIXME: not thread safe
+			IntegratorFactory factory;
+			return factory;
+		}
 
+	private:
+		IntegratorFactory() {}
+
+		std::vector<IntegratorInfo> mIntegratorInfos;
 	};
+
+	
 
 }
 
