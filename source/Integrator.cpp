@@ -186,6 +186,14 @@ namespace rr
 	{
 		Integrator *result = 0;
 
+		for (std::vector<IntegratorRegistrar>::iterator it(mRegisteredIntegrators.begin()); it != mRegisteredIntegrators.end(); ++it)
+		{
+			if (it->getName() == name)
+			{
+				return it->construct(m);
+			}
+		}
+
 		if (name == "cvode")
 		{
 			result = new CVODEIntegrator(m);
@@ -202,9 +210,20 @@ namespace rr
 		return result;
 	}
 
-	int IntegratorFactory::registerIntegrator(const IntegratorInfo& i)
+	int IntegratorFactory::registerIntegrator(const IntegratorRegistrar& i)
 	{
-		mIntegratorInfos.push_back(i);
+		mRegisteredIntegrators.push_back(i);
+		return 0;
+	}
+
+	std::vector<std::string> IntegratorFactory::getRegisteredIntegratorNames()
+	{
+		std::vector<std::string> names;
+		for (std::vector<IntegratorRegistrar>::iterator it(mRegisteredIntegrators.begin()); it != mRegisteredIntegrators.end(); ++it)
+		{
+			names.push_back(it->getName());
+		}
+		return names;
 	}
 
 }

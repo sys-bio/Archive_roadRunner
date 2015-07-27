@@ -2880,7 +2880,6 @@ vector<double> RoadRunner::getReactionRates()
 
 Integrator* RoadRunner::getIntegrator()
 {
-    //applySimulateOptions();
     return impl->integrator;
 }
 
@@ -2897,9 +2896,6 @@ std::vector<std::string> RoadRunner::getExistingIntegratorNames()
 
 void RoadRunner::setIntegrator(std::string name)
 {
-	//impl->integrator = IntegratorFactory::New(name, impl->model);
-	//impl->simulateOpt.integrator = impl->integrator->getIntegratorName();
-
 	// Try to set integrator from an existing reference.
 	if (integratorExists(name))
 	{
@@ -2917,19 +2913,12 @@ void RoadRunner::setIntegrator(std::string name)
 	// Otherwise, create a new integrator.
 	else
 	{
-		impl->integrator = IntegratorFactory::New(name, impl->model);
+		impl->integrator = IntegratorFactory::getInstance().New(name, impl->model);
 		impl->integrators.push_back(impl->integrator);
 		impl->simulateOpt.integrator = impl->integrator->getIntegratorName();
 	}
-
 	return;
 }
-
-void reassignModelToIntegrators()
-{
-	//for (std::vector<Integrator*>::iterator it = impl->integrators.begin())
-}
-
 
 bool RoadRunner::integratorExists(std::string name)
 {

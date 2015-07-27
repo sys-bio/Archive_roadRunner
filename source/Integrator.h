@@ -1,6 +1,10 @@
 /*
 * Integrator.h
 *
+*	Major revision on ???
+*		Authors: Wilbert Copeland, Kyle Medley
+*
+*	
 *  Created on: Sep 7, 2013
 *      Author: andy
 */
@@ -120,13 +124,13 @@ namespace rr
 			}
 	};
 
-	class RR_DECLSPEC IntegratorInfo
+	class RR_DECLSPEC IntegratorRegistrar
 	{
 	protected:
 		typedef Integrator* (*IntegratorCtor)(ExecutableModel *model);
 	public:
-		IntegratorInfo(std::string name, std::string description, IntegratorCtor ctor)
-			: mName(name), mDescription(description), mCtor(ctor) {}
+		IntegratorRegistrar(std::string name, std::string description, std::string hint, IntegratorCtor ctor)
+			: mName(name), mDescription(description), mHint(hint), mCtor(ctor) {}
 
 		std::string getName() const
 		{
@@ -138,6 +142,11 @@ namespace rr
 			return mDescription;
 		}
 
+		std::string getHint() const
+		{
+			return mHint;
+		}
+
 		Integrator *construct(ExecutableModel *model)
 		{
 			return mCtor(model);
@@ -146,6 +155,7 @@ namespace rr
 	private:
 		std::string mName;
 		std::string mDescription;
+		std::string mHint;
 		IntegratorCtor mCtor;
 	};
 
@@ -156,11 +166,12 @@ namespace rr
 	public:
 		Integrator* New(std::string name, ExecutableModel *m);
 
-		int registerIntegrator(const IntegratorInfo& i);
+		int registerIntegrator(const IntegratorRegistrar& i);
+		std::vector<std::string> getRegisteredIntegratorNames();
 
 		static IntegratorFactory& getInstance()
 		{
-			// FIXME: not thread safe
+			// FIXME: not thread safe -- JKM, July 24, 2015.
 			IntegratorFactory factory;
 			return factory;
 		}
@@ -168,7 +179,7 @@ namespace rr
 	private:
 		IntegratorFactory() {}
 
-		std::vector<IntegratorInfo> mIntegratorInfos;
+		std::vector<IntegratorRegistrar> mRegisteredIntegrators;
 	};
 
 	

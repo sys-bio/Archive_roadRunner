@@ -24,14 +24,20 @@
 using namespace std;
 namespace rr
 {
-	// creates a new CVODE integrator object
+	/* Store the name, description, and hint as global variables to ensure consistency between
+	 * between IntegratorRegistrar and internal integrator methods (ie. getIntegratorName()). */
+	const char* gCVODEName = "cvode";
+	const char* gCVODEDesc = "CVODE description.";
+	const char* gCVODEHint = "CVODE hint.";
+
+	// Creates a new CVODE integrator object
 	static Integrator* makeCVODEIntegrator(ExecutableModel *m)
 	{
 		return new CVODEIntegrator(m);
 	}
 
-	// register with factory
-	static int cvode_result IntegratorFactory::getInstance().registerIntegrator(IntegratorInfo("cvode", "cvode desc", makeCVODEIntegrator));
+	// Register with factory
+	static int cvode_result = IntegratorFactory::getInstance().registerIntegrator(IntegratorRegistrar(gCVODEName, gCVODEDesc, gCVODEHint, makeCVODEIntegrator));
 
 	const int CVODEIntegrator::mDefaultMaxNumSteps = 10000;
 	const int CVODEIntegrator::mDefaultMaxAdamsOrder = 12;
@@ -200,17 +206,17 @@ namespace rr
 
 	std::string CVODEIntegrator::getIntegratorName() const
 	{
-		return "cvode";
+		return gCVODEName;
 	}
 
 	std::string CVODEIntegrator::getIntegratorDescription() const
 	{
-		return "CVODE description.";
+		return gCVODEDesc;
 	}
 
 	std::string CVODEIntegrator::getIntegratorHint() const
 	{
-		return "CVODE hint.";
+		return gCVODEHint;
 	}
 
 	Integrator::IntegrationMethod CVODEIntegrator::getIntegrationMethod() const

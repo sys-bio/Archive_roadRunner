@@ -427,19 +427,19 @@ C_DECL_SPEC char* rrcCallConv getParamPromotedSBML(RRHandle handle, const char* 
 
 
 /*!
-\brief Get the number of implemented integrators.
+\brief Get the number of registered integrators.
 \param[in] handle Handle to a RoadRunner instance.
-\return Returns an integer that corresponds to the number of currently implemented integrators.
+\return Returns an integer that corresponds to the number of registered integrators.
 \ingroup simopts
 */
-C_DECL_SPEC int rrcCallConv getNumberOfIntegrators (RRHandle handle);
+C_DECL_SPEC int rrcCallConv getNumberOfIntegrators();
 
 /*!
-\brief Get the names of implemented integrators.
+\brief Get the names of registered integrators.
 \param[in] handle Handle to a RoadRunner instance.
-\return Returns a list that contains the names of currently implemented integrators.
+\return Returns a list that contains the names of registered integrators.
 */
-C_DECL_SPEC RRStringArrayPtr rrcCallConv getListOfIntegrators(RRHandle handle);
+C_DECL_SPEC RRStringArrayPtr rrcCallConv getListOfIntegrators();
 
 /*!
 \brief Specify the current integrator to be used for simulation.
@@ -448,7 +448,7 @@ C_DECL_SPEC RRStringArrayPtr rrcCallConv getListOfIntegrators(RRHandle handle);
 \return Returns True if successful.
 \ingroup simopts
 */
-C_DECL_SPEC int rrcCallConv setIntegrator (RRHandle handle, char *nameOfIntegrator);
+C_DECL_SPEC bool rrcCallConv setIntegrator (RRHandle handle, char *nameOfIntegrator);
 
 /*!
 \brief Obtain a description of the current integrator.
@@ -528,7 +528,7 @@ C_DECL_SPEC int rrcCallConv getIntegratorParameterInt (RRHandle handle, char *pa
 \return Returns True if successful.
 \ingroup simopts
 */
-C_DECL_SPEC int rrcCallConv setIntegratorParameterInt (RRHandle handle, char *parameterName, int value);
+C_DECL_SPEC bool rrcCallConv setIntegratorParameterInt (RRHandle handle, char *parameterName, int value);
 
 /*!
 \brief Get the double value for a specific integrator setting.
@@ -547,7 +547,7 @@ C_DECL_SPEC double rrcCallConv getIntegratorParameterDouble (RRHandle handle, ch
 \return Returns True if successful.
 \ingroup simopts
 */
-C_DECL_SPEC int rrcCallConv setIntegratorParameterDouble (RRHandle handle, char *parameterName, double value);
+C_DECL_SPEC bool rrcCallConv setIntegratorParameterDouble (RRHandle handle, char *parameterName, double value);
 
 /*!
 \brief Get the string value for a specific integrator setting.
@@ -566,7 +566,7 @@ C_DECL_SPEC char* rrcCallConv getIntegratorParameterString (RRHandle handle, cha
 \return Returns True if successful.
 \ingroup simopts
 */
-C_DECL_SPEC int rrcCallConv setIntegratorParameterString (RRHandle handle, char *parameterName, char* value);
+C_DECL_SPEC bool rrcCallConv setIntegratorParameterString (RRHandle handle, char *parameterName, char* value);
 
 /*!
 \brief Get the boolean value for a specific integrator setting.
@@ -585,7 +585,7 @@ C_DECL_SPEC int rrcCallConv getIntegratorParameterBoolean (RRHandle handle, char
 \return Returns True if successful.
 \ingroup simopts
 */
-C_DECL_SPEC int rrcCallConv setIntegratorParameterBoolean (RRHandle handle, char *parameterName, int value);
+C_DECL_SPEC bool rrcCallConv setIntegratorParameterBoolean (RRHandle handle, char *parameterName, int value);
 
 
 

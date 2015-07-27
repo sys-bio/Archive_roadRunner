@@ -57,9 +57,9 @@ int main(int argc, char* argv[])
 
 
 	// Grab info on all implemented integrators.
-	numIntgs = getNumberOfIntegrators(_handle);
+	numIntgs = getNumberOfIntegrators();
 	printf("Number of integrators:\t %d\n", numIntgs);
-	_intgList = stringArrayToString(getListOfIntegrators(_handle));
+	_intgList = stringArrayToString(getListOfIntegrators());
 
 	// Probe default (CVODE) integrator
 	printf("%s \n", getIntegratorDescription(_handle));
@@ -78,13 +78,8 @@ int main(int argc, char* argv[])
 		printf("Type: %d\nDescription: %s\nHint: %s\n\n", settingType, settingDesc, settingHint);
 	}
 
-	// Add Gillespie Integrator to the mix and then grab updated info on all implemented integrators.
+	// Add and test Gillespie integrator
 	setIntegrator(_handle, "gillespie");
-	numIntgs = getNumberOfIntegrators(_handle);
-	printf("Number of integrators:\t %d\n", numIntgs);
-	_intgList = stringArrayToString(getListOfIntegrators(_handle));
-
-	// Probe Gillespie integrator
 	printf("%s \n", getIntegratorDescription(_handle));
 	printf("%s \n", getIntegratorHint(_handle));
 	printf("%d \n", getNumberOfIntegratorParameters(_handle));

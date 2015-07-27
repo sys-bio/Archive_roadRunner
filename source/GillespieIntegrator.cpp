@@ -1,6 +1,9 @@
 /*
  * GillespieIntegrator.cpp
  *
+ *	Major Revision on ???
+ *		Author: Wilbert Copeland
+ *
  *  Created on: Apr 23, 2014
  *      Author: andy
  */
@@ -26,6 +29,22 @@ using namespace std;
 
 namespace rr
 {
+	/* Store the name and description as global variables to ensure consistency between
+	* between IntegratorRegistrar and internal integrator methods (ie. getIntegratorName()). */
+	const char* gGillespieName = "gillespie";
+	const char* gGillespieDesc = "Gillespie description.";
+	const char* gGillespieHint = "Gillespie hint.";
+
+	// Creates a new Gillespie integrator object
+	static Integrator* makeGillespieIntegrator(ExecutableModel *m)
+	{
+		return new GillespieIntegrator(m);
+	}
+
+	// Register with factory
+	static int gillespie_result = IntegratorFactory::getInstance().registerIntegrator(IntegratorRegistrar(gGillespieName, gGillespieDesc, gGillespieHint, makeGillespieIntegrator));
+
+
 	static unsigned long defaultSeed()
 	{
 		int64_t seed = Config::getValue(Config::RANDOM_SEED).convert<int>();
@@ -90,12 +109,12 @@ namespace rr
 
 	std::string GillespieIntegrator::getIntegratorName() const
 	{
-		return "gillespie";
+		return gGillespieName;
 	}
 
 	std::string GillespieIntegrator::getIntegratorDescription() const
 	{
-		return "gillespie integrator description.";
+		return gGillespieDesc;
 	}
 
 	std::string GillespieIntegrator::getIntegratorHint() const
@@ -105,7 +124,7 @@ namespace rr
 
 	Integrator::IntegrationMethod GillespieIntegrator::getIntegrationMethod() const
 	{
-		return Integrator::IntegrationMethod::Deterministic;
+		return Integrator::IntegrationMethod::Stochastic;
 	}
 
 	void GillespieIntegrator::setValue(string key, const Variant& val)

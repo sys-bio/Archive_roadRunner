@@ -1319,19 +1319,21 @@ RRListPtr rrcCallConv getElasticityCoefficientIds(RRHandle handle)
 // Replacement methods for supporting solver configuration
 // ----------------------------------------------------------------------
 
-int rrcCallConv getNumberOfIntegrators(RRHandle handle)
+int rrcCallConv getNumberOfIntegrators()
 {
 	start_try
-		RoadRunner* rri = castToRoadRunner(handle);
-		return rri->getExistingIntegratorNames().size();
+		return IntegratorFactory::getInstance().getRegisteredIntegratorNames().size();
+		//RoadRunner* rri = castToRoadRunner(handle);
+		//return rri->getExistingIntegratorNames().size();
     catch_ptr_macro
 }
 
-RRStringArrayPtr rrcCallConv getListOfIntegrators(RRHandle handle)
+RRStringArrayPtr rrcCallConv getListOfIntegrators()
 {
 	start_try
-		RoadRunner* rri = castToRoadRunner(handle);
-		StringList intgNames = rri->getExistingIntegratorNames();
+		//RoadRunner* rri = castToRoadRunner(handle);
+		//StringList intgNames = rri->getExistingIntegratorNames();
+		StringList intgNames = IntegratorFactory::getInstance().getRegisteredIntegratorNames();
 		if (!intgNames.Count())
 		{
 			return NULL;
@@ -1340,7 +1342,7 @@ RRStringArrayPtr rrcCallConv getListOfIntegrators(RRHandle handle)
     catch_ptr_macro
 }
 
-int rrcCallConv setIntegrator (RRHandle handle, char *nameOfIntegrator)
+bool rrcCallConv setIntegrator (RRHandle handle, char *nameOfIntegrator)
 {
 	start_try
 		RoadRunner* rri = castToRoadRunner(handle);
@@ -1348,13 +1350,6 @@ int rrcCallConv setIntegrator (RRHandle handle, char *nameOfIntegrator)
 		ss << nameOfIntegrator;
 		rri->setIntegrator(ss.str());
 		return true;
-		//RoadRunner* rri = castToRoadRunner(handle);
-        //rri->getSimulateOptions().setItem ("integrator", nameOfIntegrator);
-        //if (strcmp (topLevelSolver, listOfSteadyStateSolvers) == 0) {
-        //   currentTopLevelSolver = listOfSteadyStateSolvers;
-        //   return (1);
-        //}
-        //return true;
     catch_ptr_macro
 }
 
@@ -1442,7 +1437,7 @@ int rrcCallConv getIntegratorParameterInt (RRHandle handle, char *parameterName)
     catch_ptr_macro
 }
 
-int rrcCallConv setIntegratorParameterInt (RRHandle handle, char *parameterName, int value)
+bool rrcCallConv setIntegratorParameterInt (RRHandle handle, char *parameterName, int value)
 {
     start_try
 		RoadRunner* rri = castToRoadRunner(handle);
@@ -1463,7 +1458,7 @@ double rrcCallConv getIntegratorParameterDouble (RRHandle handle, char *paramete
 	catch_ptr_macro
 }
 
-int rrcCallConv setIntegratorParameterDouble (RRHandle handle, char *parameterName, double value)
+bool rrcCallConv setIntegratorParameterDouble (RRHandle handle, char *parameterName, double value)
 {
 	start_try
 		RoadRunner* rri = castToRoadRunner(handle);
@@ -1487,7 +1482,7 @@ char* rrcCallConv getIntegratorParameterString (RRHandle handle, char *parameter
 }
 
 
-int rrcCallConv setIntegratorParameterString (RRHandle handle, char *parameterName, char* value)
+bool rrcCallConv setIntegratorParameterString (RRHandle handle, char *parameterName, char* value)
 {
 	start_try
 		RoadRunner* rri = castToRoadRunner(handle);
@@ -1510,7 +1505,7 @@ int rrcCallConv getIntegratorParameterBoolean (RRHandle handle, char *parameterN
 }
 
 
-int rrcCallConv setIntegratorParameterBoolean (RRHandle handle, char *parameterName, int value)
+bool rrcCallConv setIntegratorParameterBoolean (RRHandle handle, char *parameterName, int value)
 {
 	start_try
 		RoadRunner* rri = castToRoadRunner(handle);
@@ -2029,8 +2024,6 @@ vector<double> rr_getRatesOfChange(RoadRunner* rr)
 C_DECL_SPEC bool rrcCallConv getSeed(RRHandle h, long* result) {
     start_try
         RoadRunner *r = (RoadRunner*)h;
-        //Integrator *intg = r->getIntegrator(Integrator::GILLESPIE);
-		//*result = intg->getItem("seed").convert<long>();	
 		*result = r->getIntegrator()->getValue("seed").convert<long>();
         return true;
     catch_bool_macro;
@@ -2039,8 +2032,7 @@ C_DECL_SPEC bool rrcCallConv getSeed(RRHandle h, long* result) {
 C_DECL_SPEC bool rrcCallConv setSeed(RRHandle h, long result) {
     start_try
         RoadRunner *r = (RoadRunner*)h;
-        //Integrator *intg = r->getIntegrator(Integrator::GILLESPIE);
-        //intg->setItem("seed", result);
+
 		Integrator *intg = r->getIntegrator();
 		if (intg->getIntegratorName() == "gillespie")
 		{
@@ -2048,7 +2040,7 @@ C_DECL_SPEC bool rrcCallConv setSeed(RRHandle h, long result) {
 		}
 		else
 		{
-			Integrator *intg = IntegratorFactory::New("gillespie", r->getModel());
+			Integrator *intg = IntegratorFactory::getInstance().New("gillespie", r->getModel());
 			intg->setValue("seed", result);
 		}
         return true;
@@ -2059,8 +2051,6 @@ C_DECL_SPEC RRCDataPtr rrcCallConv gillespie(RRHandle handle) {
     start_try
         RoadRunner *r = (RoadRunner*)handle;
         SimulateOptions& o = r->getSimulateOptions();
-        //o.integrator = Integrator::GILLESPIE;
-        //o.integratorFlags |= Integrator::VARIABLE_STEP;
 		o.integrator = "gillespie";
 		r->getIntegrator()->setValue("variable_step_size", false);
         r->simulate();
