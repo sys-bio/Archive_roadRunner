@@ -24,6 +24,21 @@
 using namespace std;
 namespace rr
 {
+	/* Store the name, description, and hint as global variables to ensure consistency between
+	* between IntegratorRegistrar and internal integrator methods (ie. getIntegratorName()). */
+	const char* gCVODEName = "cvode";
+	const char* gCVODEDesc = "CVODE description.";
+	const char* gCVODEHint = "CVODE hint.";
+
+	// Creates a new CVODE integrator object
+	static Integrator* makeCVODEIntegrator(ExecutableModel *m)
+	{
+		return new CVODEIntegrator(m);
+	}
+
+	// Register with factory
+	static int cvode_result = IntegratorFactory::getInstance().registerIntegrator(IntegratorRegistrar(gCVODEName, gCVODEDesc, gCVODEHint, makeCVODEIntegrator));
+
 	const int CVODEIntegrator::mDefaultMaxNumSteps = 10000;
 	const int CVODEIntegrator::mDefaultMaxAdamsOrder = 12;
 	const int CVODEIntegrator::mDefaultMaxBDFOrder = 5;
@@ -102,17 +117,17 @@ namespace rr
 		Log(Logger::LOG_INFORMATION) << "creating CVODEIntegrator";
 
 		// Set default integrator settings.
-		AddSetting("stiff", false, "stiff hint.", "stiff description.");
-		AddSetting("variable_step_size", false, "Perform a variable time step simulation.", "Enabling this setting will allow the integrator to adapt the size of each time step. This will result in a non-uniform time column.");
-		AddSetting("multiple_steps", false, "multiple steps hint.", "multiple steps description.");
-		AddSetting("initial_time_step", 0.0, "initial time step hint.", "initial time step description.");
-		AddSetting("minimum_time_step", 0.0, "minimum time step hint.", "minimum time step description.");
-		AddSetting("maximum_time_step", 0.0, "maximum time step hint.", "maximum time step description.");
-		AddSetting("maximum_num_steps", mDefaultMaxNumSteps, "Maximum number of steps hint.", "Maximum number of steps description.");
-		AddSetting("maximum_adams_order", mDefaultMaxAdamsOrder, "Maximum Adams Order hint. (int)", "Maximum Adams Order description.");
-		AddSetting("maximum_bdf_order", mDefaultMaxBDFOrder, "Maximum BDF Order hint. (int)", "Maximum BDF Order description.");
-		AddSetting("relative_tolerance", 1e-6, "Relative tolerance hint.", "Relative tolerance description.");
-		AddSetting("absolute_tolerance", 1e-12, "Absolute tolerance hint.", "Absolute tolerance description.");
+		addSetting("stiff", false, "Specifies whether the integrator attempts to solve stiff equations. (bool)", "(bool) Specifies whether the integrator attempts to solve stiff equations. Ensure the integrator can solver stiff differential equations by setting this value to true.");
+		addSetting("variable_step_size", false, "Perform a variable time step simulation. (bool)", "(bool) Enabling this setting will allow the integrator to adapt the size of each time step. This will result in a non-uniform time column.");
+		addSetting("multiple_steps", false, "Perform a multiple time step simulation. (bool)", "(bool) Perform a multiple time step simulation. ");
+		addSetting("initial_time_step", 0.0, "Specifies the initial time step size. (double)", "(double) Specifies the initial time step size. If inappropriate, CVODE will attempt to estimate a better initial time step.");
+		addSetting("minimum_time_step", 0.0, "Specifies the minimum absolute value of step size allowed. (double)", "(double) The minimum absolute value of step size allowed.");
+		addSetting("maximum_time_step", 0.0, "Specifies the maximum absolute value of step size allowed. (double)", "(double) The maximum absolute value of step size allowed.");
+		addSetting("maximum_num_steps", mDefaultMaxNumSteps, "Specifies the maximum number of steps to be taken by the CVODE solver in its attempt to reach tout. (int)", "(int) Maximum number of steps to be taken by the CVODE solver in its attempt to reach tout.");
+		addSetting("maximum_adams_order", mDefaultMaxAdamsOrder, "Specifies the maximum order for Adams-Moulton intergration. (int)", "(int) Specifies the maximum order for Adams-Moulton intergration. This integration method is used for non-stiff problems. Default value is 12.");
+		addSetting("maximum_bdf_order", mDefaultMaxBDFOrder, "Specifies the maximum order for Backward Differentiation Formula integration. (int)", "(int) Specifies the maximum order for Backward Differentiation Formula integration. This integration method is used for stiff problems. Default value is 5.");
+		addSetting("relative_tolerance", 1e-6, "Specifies the scalar relative tolerance (double).", "CVODE calculates a vector of error weights which is used in all error and convergence tests. The weighted RMS norm for the relative tolerance should not become smaller than this value.");
+		addSetting("absolute_tolerance", 1e-12, "Specifies the scalar absolute tolerance (double).", "CVODE calculates a vector of error weights which is used in all error and convergence tests. The weighted RMS norm for the absolute tolerance should not become smaller than this value.");
 		CVODEIntegrator::loadConfigSettings();
 
 		if (aModel)
@@ -191,17 +206,17 @@ namespace rr
 
 	std::string CVODEIntegrator::getIntegratorName() const
 	{
-		return "cvode";
+		return gCVODEName;
 	}
 
 	std::string CVODEIntegrator::getIntegratorDescription() const
 	{
-		return "CVODE description.";
+		return gCVODEDesc;
 	}
 
 	std::string CVODEIntegrator::getIntegratorHint() const
 	{
-		return "CVODE hint.";
+		return gCVODEHint;
 	}
 
 	Integrator::IntegrationMethod CVODEIntegrator::getIntegrationMethod() const

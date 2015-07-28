@@ -1329,19 +1329,21 @@ char* rrcCallConv getConfigurationXML(RRHandle handle)
 // Replacement methods for supporting solver configuration
 // ----------------------------------------------------------------------
 
-int rrcCallConv getNumberOfIntegrators(RRHandle handle)
+int rrcCallConv getNumberOfIntegrators()
 {
 	start_try
-		RoadRunner* rri = castToRoadRunner(handle);
-		return rri->getExistingIntegratorNames().size();
+		IntegratorFactory::getInstance().getRegisteredIntegratorNames().size();
+		//RoadRunner* rri = castToRoadRunner(handle);
+		//return rri->getExistingIntegratorNames().size();
     catch_ptr_macro
 }
 
-RRStringArrayPtr rrcCallConv getListOfIntegrators(RRHandle handle)
+RRStringArrayPtr rrcCallConv getListOfIntegrators()
 {
 	start_try
-		RoadRunner* rri = castToRoadRunner(handle);
-		StringList intgNames = rri->getExistingIntegratorNames();
+		//RoadRunner* rri = castToRoadRunner(handle);
+		//StringList intgNames = rri->getExistingIntegratorNames();
+		StringList intgNames = IntegratorFactory::getInstance().getRegisteredIntegratorNames();
 		if (!intgNames.Count())
 		{
 			return NULL;
@@ -2058,7 +2060,7 @@ C_DECL_SPEC bool rrcCallConv setSeed(RRHandle h, long result) {
 		}
 		else
 		{
-			Integrator *intg = IntegratorFactory::New("gillespie", r->getModel());
+			Integrator *intg = IntegratorFactory::getInstance().New("gillespie", r->getModel());
 			intg->setValue("seed", result);
 		}
         return true;
