@@ -661,6 +661,11 @@ PyObject *Integrator_NewPythonObj(rr::Integrator* i) {
 %nodefaultdtor Dictionary;
 %nodefaultctor rr::BasicDictionary;
 %nodefaultdtor DictionaryImpl;
+%nodefaultdtor rr::IntegratorFactory;
+
+// not used from Python
+
+%ignore rr::IntegratorRegistrar;
 
 
 // ignore SimulateOptions key access methods,
