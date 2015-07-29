@@ -126,8 +126,8 @@ namespace rr
 		addSetting("maximum_num_steps", mDefaultMaxNumSteps, "Specifies the maximum number of steps to be taken by the CVODE solver in its attempt to reach tout. (int)", "(int) Maximum number of steps to be taken by the CVODE solver in its attempt to reach tout.");
 		addSetting("maximum_adams_order", mDefaultMaxAdamsOrder, "Specifies the maximum order for Adams-Moulton intergration. (int)", "(int) Specifies the maximum order for Adams-Moulton intergration. This integration method is used for non-stiff problems. Default value is 12.");
 		addSetting("maximum_bdf_order", mDefaultMaxBDFOrder, "Specifies the maximum order for Backward Differentiation Formula integration. (int)", "(int) Specifies the maximum order for Backward Differentiation Formula integration. This integration method is used for stiff problems. Default value is 5.");
-		addSetting("relative_tolerance", 1e-6, "Specifies the scalar relative tolerance (double).", "CVODE calculates a vector of error weights which is used in all error and convergence tests. The weighted RMS norm for the relative tolerance should not become smaller than this value.");
-		addSetting("absolute_tolerance", 1e-12, "Specifies the scalar absolute tolerance (double).", "CVODE calculates a vector of error weights which is used in all error and convergence tests. The weighted RMS norm for the absolute tolerance should not become smaller than this value.");
+		addSetting("relative_tolerance", 1e-8, "Specifies the scalar relative tolerance (double).", "CVODE calculates a vector of error weights which is used in all error and convergence tests. The weighted RMS norm for the relative tolerance should not become smaller than this value.");
+		addSetting("absolute_tolerance", 1e-14, "Specifies the scalar absolute tolerance (double).", "CVODE calculates a vector of error weights which is used in all error and convergence tests. The weighted RMS norm for the absolute tolerance should not become smaller than this value.");
 		CVODEIntegrator::loadConfigSettings();
 
 		if (aModel)
@@ -355,6 +355,7 @@ namespace rr
 			mModel->getEventTriggers(eventStatus.size(), 0, eventStatus.size() == 0 ? NULL : &eventStatus[0]);
 
 			// time step
+			std::cerr << "CVODE: nextTargetEndTime = " <<  nextTargetEndTime << "\n";
 			int nResult = CVode(mCVODE_Memory, nextTargetEndTime, mStateVector, &timeEnd, itask);
 
 			if (nResult == CV_ROOT_RETURN)
@@ -400,6 +401,7 @@ namespace rr
 			}
 			else if (nResult == CV_SUCCESS)
 			{
+        std::cerr << "nResult == CV_SUCCESS\n";
 				// copy integrator state vector into model
 				assignResultsToModel();
 
@@ -408,6 +410,7 @@ namespace rr
 				// if so, add an extra point if we're doing variable step
 				if (getValueAsBool("variable_step_size") && (timeEnd - timeStart > 2. * epsilon))
 				{
+          std::cerr << "variable_step_size\n";
 					// event status before time step
 					mModel->getEventTriggers(eventStatus.size(), 0, &eventStatus[0]);
 					// apply events and write state to variableStepPostEventState
@@ -548,6 +551,7 @@ namespace rr
 
 		// use non default CVODE value here, default is too short
 		// for some sbml tests.
+    std::cerr << "CVodeSetMaxNumSteps: " << mDefaultMaxNumSteps << "\n";
 		CVodeSetMaxNumSteps(mCVODE_Memory, mDefaultMaxNumSteps);
 
 		double t0 = 0.0;

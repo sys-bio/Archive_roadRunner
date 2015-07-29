@@ -118,6 +118,7 @@ void ProcessCommandLineArguments(int argc, char* argv[], Args& args)
                 else
                 {
                     args.CurrentLogLevel                = Logger::stringToLevel(rrOptArg);
+                    std::cerr << "log level: " << args.CurrentLogLevel << "\n";
                 }
                 break;
             case ('c'): args.compilerStr                    = std::string(rrOptArg);               break;
