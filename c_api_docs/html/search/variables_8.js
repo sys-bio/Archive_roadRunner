@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['weights',['Weights',['../struct_r_r_c_data.html#a2579ee2008f91694842f2278630852bf',1,'RRCData']]]
+  ['weights',['Weights',['../struct_r_r_c_data.html#a557faafe2bb582e0c88078603aacb1c7',1,'RRCData']]]
 ];

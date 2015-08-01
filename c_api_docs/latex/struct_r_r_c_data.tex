@@ -1,5 +1,6 @@
-\hypertarget{struct_r_r_c_data}{}\section{R\+R\+C\+Data Struct Reference}
+\hypertarget{struct_r_r_c_data}{\section{R\+R\+C\+Data Struct Reference}
 \label{struct_r_r_c_data}\index{R\+R\+C\+Data@{R\+R\+C\+Data}}
+}
 
 
 Structure for the result type from the simulate calls. The client is responsible for freeing the R\+R\+C\+Data\+Ptr.  
@@ -9,40 +10,40 @@ Structure for the result type from the simulate calls. The client is responsible
 
 {\ttfamily \#include $<$rrc\+\_\+types.\+h$>$}
 
-\subsection*{Public Attributes}
+\subsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
-int \hyperlink{struct_r_r_c_data_aaebd12e68638f3572eea166c7dd0af69}{R\+Size}
+int \hyperlink{struct_r_r_c_data_a4d8512c879223c0e0d1522dae38e7819}{R\+Size}
 \item 
-int \hyperlink{struct_r_r_c_data_a573616e93e0241d11b40ea56c708041b}{C\+Size}
+int \hyperlink{struct_r_r_c_data_a17c9a5894aa9cb3789346dcaa9c370bb}{C\+Size}
 \item 
-double $\ast$ \hyperlink{struct_r_r_c_data_a4f2db98f036a01dca7168fee658bac0c}{Data}
+double $\ast$ \hyperlink{struct_r_r_c_data_a7c5cbda3aa940f4b0d6e8a1679307dfc}{Data}
 \item 
-double $\ast$ \hyperlink{struct_r_r_c_data_a2579ee2008f91694842f2278630852bf}{Weights}
+double $\ast$ \hyperlink{struct_r_r_c_data_a557faafe2bb582e0c88078603aacb1c7}{Weights}
 \item 
-char $\ast$$\ast$ \hyperlink{struct_r_r_c_data_a54acd2748775883500033984275be173}{Column\+Headers}
+char $\ast$$\ast$ \hyperlink{struct_r_r_c_data_ab339159e5604808f92fe793f4f43da03}{Column\+Headers}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Structure for the result type from the simulate calls. The client is responsible for freeing the R\+R\+C\+Data\+Ptr. 
 
-\subsection{Member Data Documentation}
-\hypertarget{struct_r_r_c_data_a54acd2748775883500033984275be173}{}\index{R\+R\+C\+Data@{R\+R\+C\+Data}!Column\+Headers@{Column\+Headers}}
+\subsection{Field Documentation}
+\hypertarget{struct_r_r_c_data_ab339159e5604808f92fe793f4f43da03}{\index{R\+R\+C\+Data@{R\+R\+C\+Data}!Column\+Headers@{Column\+Headers}}
 \index{Column\+Headers@{Column\+Headers}!R\+R\+C\+Data@{R\+R\+C\+Data}}
-\subsubsection[{Column\+Headers}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$$\ast$ R\+R\+C\+Data\+::\+Column\+Headers}\label{struct_r_r_c_data_a54acd2748775883500033984275be173}
-Pointer to an array of column header strings \hypertarget{struct_r_r_c_data_a573616e93e0241d11b40ea56c708041b}{}\index{R\+R\+C\+Data@{R\+R\+C\+Data}!C\+Size@{C\+Size}}
+\subsubsection[{Column\+Headers}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$$\ast$ Column\+Headers}}\label{struct_r_r_c_data_ab339159e5604808f92fe793f4f43da03}
+Pointer to an array of column header strings \hypertarget{struct_r_r_c_data_a17c9a5894aa9cb3789346dcaa9c370bb}{\index{R\+R\+C\+Data@{R\+R\+C\+Data}!C\+Size@{C\+Size}}
 \index{C\+Size@{C\+Size}!R\+R\+C\+Data@{R\+R\+C\+Data}}
-\subsubsection[{C\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int R\+R\+C\+Data\+::\+C\+Size}\label{struct_r_r_c_data_a573616e93e0241d11b40ea56c708041b}
-The number of columns in the data matrix \hypertarget{struct_r_r_c_data_a4f2db98f036a01dca7168fee658bac0c}{}\index{R\+R\+C\+Data@{R\+R\+C\+Data}!Data@{Data}}
+\subsubsection[{C\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int C\+Size}}\label{struct_r_r_c_data_a17c9a5894aa9cb3789346dcaa9c370bb}
+The number of columns in the data matrix \hypertarget{struct_r_r_c_data_a7c5cbda3aa940f4b0d6e8a1679307dfc}{\index{R\+R\+C\+Data@{R\+R\+C\+Data}!Data@{Data}}
 \index{Data@{Data}!R\+R\+C\+Data@{R\+R\+C\+Data}}
-\subsubsection[{Data}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ R\+R\+C\+Data\+::\+Data}\label{struct_r_r_c_data_a4f2db98f036a01dca7168fee658bac0c}
-A pointer to the data stored in the matrix. Access an element using Data\mbox{[}row$\ast$\+C\+Size + col\mbox{]} \hypertarget{struct_r_r_c_data_aaebd12e68638f3572eea166c7dd0af69}{}\index{R\+R\+C\+Data@{R\+R\+C\+Data}!R\+Size@{R\+Size}}
+\subsubsection[{Data}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ Data}}\label{struct_r_r_c_data_a7c5cbda3aa940f4b0d6e8a1679307dfc}
+A pointer to the data stored in the matrix. Access an element using Data\mbox{[}row$\ast$\+C\+Size + col\mbox{]} \hypertarget{struct_r_r_c_data_a4d8512c879223c0e0d1522dae38e7819}{\index{R\+R\+C\+Data@{R\+R\+C\+Data}!R\+Size@{R\+Size}}
 \index{R\+Size@{R\+Size}!R\+R\+C\+Data@{R\+R\+C\+Data}}
-\subsubsection[{R\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int R\+R\+C\+Data\+::\+R\+Size}\label{struct_r_r_c_data_aaebd12e68638f3572eea166c7dd0af69}
-The number of rows in the data matrix \hypertarget{struct_r_r_c_data_a2579ee2008f91694842f2278630852bf}{}\index{R\+R\+C\+Data@{R\+R\+C\+Data}!Weights@{Weights}}
+\subsubsection[{R\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int R\+Size}}\label{struct_r_r_c_data_a4d8512c879223c0e0d1522dae38e7819}
+The number of rows in the data matrix \hypertarget{struct_r_r_c_data_a557faafe2bb582e0c88078603aacb1c7}{\index{R\+R\+C\+Data@{R\+R\+C\+Data}!Weights@{Weights}}
 \index{Weights@{Weights}!R\+R\+C\+Data@{R\+R\+C\+Data}}
-\subsubsection[{Weights}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ R\+R\+C\+Data\+::\+Weights}\label{struct_r_r_c_data_a2579ee2008f91694842f2278630852bf}
+\subsubsection[{Weights}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ Weights}}\label{struct_r_r_c_data_a557faafe2bb582e0c88078603aacb1c7}
 A pointer to weights stored in the Weights matrix. Access an element using Weights\mbox{[}row$\ast$\+C\+Size + col\mbox{]} 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}

@@ -1,5 +1,6 @@
-\hypertarget{group__state}{}\section{Current state of system}
+\hypertarget{group__state}{\section{Current state of system}
 \label{group__state}\index{Current state of system@{Current state of system}}
+}
 
 
 Compute derivatives, fluxes, and other values of the system at the current state.  
@@ -8,17 +9,17 @@ Compute derivatives, fluxes, and other values of the system at the current state
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__state_ga6ff35b4282c583424f4d5708330012b9}{get\+Value} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$symbol\+Id, double $\ast$value)
+bool \hyperlink{group__state_ga7ff97de8f8ea4b16f6867ed1c24b75f6}{get\+Value} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$symbol\+Id, double $\ast$value)
 \begin{DoxyCompactList}\small\item\em Get the value for a given symbol, use get\+Available\+Time\+Course\+Symbols(void) for a list of symbols. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__state_gab8416894a99ef18924c1a719be4521f3}{set\+Value} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$symbol\+Id, const double value)
+bool \hyperlink{group__state_ga68328fbeb920109b943dfc61d9585f1e}{set\+Value} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$symbol\+Id, const double value)
 \begin{DoxyCompactList}\small\item\em Set the value for a given symbol, use get\+Available\+Time\+Course\+Symbols(void) for a list of symbols. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__state_ga045d3842446954ba06e4010e19a2f1b1}{eval\+Model} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+bool \hyperlink{group__state_ga8f5b221fd8d82bc44f43f2742122f91a}{eval\+Model} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Evaluate the current model, that it update all assignments and rates of change. Do not carry out an integration step. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} rrc\+Call\+Conv \hyperlink{group__state_ga37cb4ffafece558c4b6f1af4e53667b9}{get\+Eigenvalue\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} \hyperlink{group__state_gab504f19865db9d18456dd887f4f14d60}{get\+Eigenvalue\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Obtain the list of eigenvalue Ids. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a32a8a60ac06858ff3a791672bd2bec73}{R\+R\+List\+Ptr} rrc\+Call\+Conv \hyperlink{group__state_ga60829d32710dc201c4103c76214a4bc6}{get\+Available\+Time\+Course\+Symbols} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a32a8a60ac06858ff3a791672bd2bec73}{R\+R\+List\+Ptr} \hyperlink{group__state_ga442797d91971ebb3e8251ef2ff5881af}{get\+Available\+Time\+Course\+Symbols} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Obtain the list of all available symbols. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a32a8a60ac06858ff3a791672bd2bec73}{R\+R\+List\+Ptr} rrc\+Call\+Conv \hyperlink{group__state_gafe7dc6a912c3f97edd20b1e6da61b12c}{get\+Available\+Steady\+State\+Symbols} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a32a8a60ac06858ff3a791672bd2bec73}{R\+R\+List\+Ptr} \hyperlink{group__state_ga7144267d44ea25640583a1724d38158b}{get\+Available\+Steady\+State\+Symbols} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Obtain the list of all available steady state symbols. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -28,13 +29,13 @@ Compute derivatives, fluxes, and other values of the system at the current state
 
 
 \subsection{Function Documentation}
-\hypertarget{group__state_ga045d3842446954ba06e4010e19a2f1b1}{}\index{Current state of system@{Current state of system}!eval\+Model@{eval\+Model}}
+\hypertarget{group__state_ga8f5b221fd8d82bc44f43f2742122f91a}{\index{Current state of system@{Current state of system}!eval\+Model@{eval\+Model}}
 \index{eval\+Model@{eval\+Model}!Current state of system@{Current state of system}}
-\subsubsection[{eval\+Model(\+R\+R\+Handle handle)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv eval\+Model (
+\subsubsection[{eval\+Model}]{\setlength{\rightskip}{0pt plus 5cm}bool eval\+Model (
 \begin{DoxyParamCaption}
 \item[{{\bf R\+R\+Handle}}]{handle}
 \end{DoxyParamCaption}
-)}\label{group__state_ga045d3842446954ba06e4010e19a2f1b1}
+)}}\label{group__state_ga8f5b221fd8d82bc44f43f2742122f91a}
 
 
 Evaluate the current model, that it update all assignments and rates of change. Do not carry out an integration step. 
@@ -47,13 +48,13 @@ Evaluate the current model, that it update all assignments and rates of change. 
 \begin{DoxyReturn}{Returns}
 Returns false if it fails 
 \end{DoxyReturn}
-\hypertarget{group__state_gafe7dc6a912c3f97edd20b1e6da61b12c}{}\index{Current state of system@{Current state of system}!get\+Available\+Steady\+State\+Symbols@{get\+Available\+Steady\+State\+Symbols}}
+\hypertarget{group__state_ga7144267d44ea25640583a1724d38158b}{\index{Current state of system@{Current state of system}!get\+Available\+Steady\+State\+Symbols@{get\+Available\+Steady\+State\+Symbols}}
 \index{get\+Available\+Steady\+State\+Symbols@{get\+Available\+Steady\+State\+Symbols}!Current state of system@{Current state of system}}
-\subsubsection[{get\+Available\+Steady\+State\+Symbols(\+R\+R\+Handle handle)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C {\bf R\+R\+List\+Ptr} rrc\+Call\+Conv get\+Available\+Steady\+State\+Symbols (
+\subsubsection[{get\+Available\+Steady\+State\+Symbols}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+R\+List\+Ptr} get\+Available\+Steady\+State\+Symbols (
 \begin{DoxyParamCaption}
 \item[{{\bf R\+R\+Handle}}]{handle}
 \end{DoxyParamCaption}
-)}\label{group__state_gafe7dc6a912c3f97edd20b1e6da61b12c}
+)}}\label{group__state_ga7144267d44ea25640583a1724d38158b}
 
 
 Obtain the list of all available steady state symbols. 
@@ -66,13 +67,13 @@ Obtain the list of all available steady state symbols.
 \begin{DoxyReturn}{Returns}
 Returns -\/1 if it fails, if successful it returns a pointer to a R\+R\+List\+Ptr struct 
 \end{DoxyReturn}
-\hypertarget{group__state_ga60829d32710dc201c4103c76214a4bc6}{}\index{Current state of system@{Current state of system}!get\+Available\+Time\+Course\+Symbols@{get\+Available\+Time\+Course\+Symbols}}
+\hypertarget{group__state_ga442797d91971ebb3e8251ef2ff5881af}{\index{Current state of system@{Current state of system}!get\+Available\+Time\+Course\+Symbols@{get\+Available\+Time\+Course\+Symbols}}
 \index{get\+Available\+Time\+Course\+Symbols@{get\+Available\+Time\+Course\+Symbols}!Current state of system@{Current state of system}}
-\subsubsection[{get\+Available\+Time\+Course\+Symbols(\+R\+R\+Handle handle)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C {\bf R\+R\+List\+Ptr} rrc\+Call\+Conv get\+Available\+Time\+Course\+Symbols (
+\subsubsection[{get\+Available\+Time\+Course\+Symbols}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+R\+List\+Ptr} get\+Available\+Time\+Course\+Symbols (
 \begin{DoxyParamCaption}
 \item[{{\bf R\+R\+Handle}}]{handle}
 \end{DoxyParamCaption}
-)}\label{group__state_ga60829d32710dc201c4103c76214a4bc6}
+)}}\label{group__state_ga442797d91971ebb3e8251ef2ff5881af}
 
 
 Obtain the list of all available symbols. 
@@ -85,13 +86,13 @@ Obtain the list of all available symbols.
 \begin{DoxyReturn}{Returns}
 Returns -\/1 if it fails, if successful it returns a pointer to a R\+R\+List\+Handle struct 
 \end{DoxyReturn}
-\hypertarget{group__state_ga37cb4ffafece558c4b6f1af4e53667b9}{}\index{Current state of system@{Current state of system}!get\+Eigenvalue\+Ids@{get\+Eigenvalue\+Ids}}
+\hypertarget{group__state_gab504f19865db9d18456dd887f4f14d60}{\index{Current state of system@{Current state of system}!get\+Eigenvalue\+Ids@{get\+Eigenvalue\+Ids}}
 \index{get\+Eigenvalue\+Ids@{get\+Eigenvalue\+Ids}!Current state of system@{Current state of system}}
-\subsubsection[{get\+Eigenvalue\+Ids(\+R\+R\+Handle handle)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C {\bf R\+R\+String\+Array\+Ptr} rrc\+Call\+Conv get\+Eigenvalue\+Ids (
+\subsubsection[{get\+Eigenvalue\+Ids}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+R\+String\+Array\+Ptr} get\+Eigenvalue\+Ids (
 \begin{DoxyParamCaption}
 \item[{{\bf R\+R\+Handle}}]{handle}
 \end{DoxyParamCaption}
-)}\label{group__state_ga37cb4ffafece558c4b6f1af4e53667b9}
+)}}\label{group__state_gab504f19865db9d18456dd887f4f14d60}
 
 
 Obtain the list of eigenvalue Ids. 
@@ -104,15 +105,15 @@ Obtain the list of eigenvalue Ids.
 \begin{DoxyReturn}{Returns}
 Returns -\/1 if it fails, if successful it returns a pointer to a R\+R\+String\+Array\+Ptr struct 
 \end{DoxyReturn}
-\hypertarget{group__state_ga6ff35b4282c583424f4d5708330012b9}{}\index{Current state of system@{Current state of system}!get\+Value@{get\+Value}}
+\hypertarget{group__state_ga7ff97de8f8ea4b16f6867ed1c24b75f6}{\index{Current state of system@{Current state of system}!get\+Value@{get\+Value}}
 \index{get\+Value@{get\+Value}!Current state of system@{Current state of system}}
-\subsubsection[{get\+Value(\+R\+R\+Handle handle, const char $\ast$symbol\+Id, double $\ast$value)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv get\+Value (
+\subsubsection[{get\+Value}]{\setlength{\rightskip}{0pt plus 5cm}bool get\+Value (
 \begin{DoxyParamCaption}
 \item[{{\bf R\+R\+Handle}}]{handle, }
 \item[{const char $\ast$}]{symbol\+Id, }
 \item[{double $\ast$}]{value}
 \end{DoxyParamCaption}
-)}\label{group__state_ga6ff35b4282c583424f4d5708330012b9}
+)}}\label{group__state_ga7ff97de8f8ea4b16f6867ed1c24b75f6}
 
 
 Get the value for a given symbol, use get\+Available\+Time\+Course\+Symbols(void) for a list of symbols. 
@@ -135,15 +136,15 @@ Example\+:
 \begin{DoxyReturn}{Returns}
 Returns true if successful 
 \end{DoxyReturn}
-\hypertarget{group__state_gab8416894a99ef18924c1a719be4521f3}{}\index{Current state of system@{Current state of system}!set\+Value@{set\+Value}}
+\hypertarget{group__state_ga68328fbeb920109b943dfc61d9585f1e}{\index{Current state of system@{Current state of system}!set\+Value@{set\+Value}}
 \index{set\+Value@{set\+Value}!Current state of system@{Current state of system}}
-\subsubsection[{set\+Value(\+R\+R\+Handle handle, const char $\ast$symbol\+Id, const double value)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv set\+Value (
+\subsubsection[{set\+Value}]{\setlength{\rightskip}{0pt plus 5cm}bool set\+Value (
 \begin{DoxyParamCaption}
 \item[{{\bf R\+R\+Handle}}]{handle, }
 \item[{const char $\ast$}]{symbol\+Id, }
 \item[{const double}]{value}
 \end{DoxyParamCaption}
-)}\label{group__state_gab8416894a99ef18924c1a719be4521f3}
+)}}\label{group__state_ga68328fbeb920109b943dfc61d9585f1e}
 
 
 Set the value for a given symbol, use get\+Available\+Time\+Course\+Symbols(void) for a list of symbols. 

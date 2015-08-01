@@ -1,5 +1,6 @@
-\hypertarget{rrc__api_8h}{}\section{rrc\+\_\+api.\+h File Reference}
+\hypertarget{rrc__api_8h}{\section{rrc\+\_\+api.\+h File Reference}
 \label{rrc__api_8h}\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
+}
 
 
 lib\+Road\+Runner C A\+P\+I 2012-\/2015  
@@ -14,318 +15,328 @@ lib\+Road\+Runner C A\+P\+I 2012-\/2015
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} rrc\+Call\+Conv \hyperlink{group__initialization_ga3285113641ecf1dc35c39fceb39b60fc}{create\+R\+R\+Instance} (void)
+\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} \hyperlink{group__initialization_gac5b4dbf9108edb1ea6e315379e5576e0}{create\+R\+R\+Instance} (void)
 \begin{DoxyCompactList}\small\item\em Initialize a new road\+Runner instance and return a handle to it. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} rrc\+Call\+Conv \hyperlink{group__initialization_ga0bd8e459a637346cdf196f91148015ec}{create\+R\+R\+Instance\+Ex} (const char $\ast$temp\+Folder, const char $\ast$compiler)
+\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} \hyperlink{group__initialization_ga03b0c84179407dda1f4ae19a66dacf47}{create\+R\+R\+Instance\+Ex} (const char $\ast$temp\+Folder, const char $\ast$compiler)
 \begin{DoxyCompactList}\small\item\em Initialize a new road\+Runner instance and return a handle to it. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__initialization_gae0b2f65464742bba3beb0ad38dcdd863}{free\+R\+R\+Instance} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+bool \hyperlink{group__initialization_gaa085b3245183be2ee16a94dfe0de1751}{free\+R\+R\+Instance} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Free the road\+Runner instance. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__initialization_gaf2251f911a95afd0fafcac1e3c7bb40d}{get\+Install\+Folder} (void)
+char $\ast$ \hyperlink{group__initialization_ga0717cdb4fb8684f97a2b6793544ba6e2}{get\+Install\+Folder} (void)
 \begin{DoxyCompactList}\small\item\em Returns the folder in which the Road\+Runner A\+P\+I is installed. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__initialization_gabe314ab514c04cd902c078b864f22a64}{set\+Install\+Folder} (const char $\ast$folder)
+bool \hyperlink{group__initialization_gad1eb8bfdac1addc406f8ea5ee6d32c8d}{set\+Install\+Folder} (const char $\ast$folder)
 \begin{DoxyCompactList}\small\item\em Set the internal string containing the folder in where the Road\+Runner C A\+P\+I is installed. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__utility_ga205f62add6103bac0fb26cad7e2e5914}{get\+A\+P\+I\+Version} (void)
+char $\ast$ \hyperlink{group__utility_ga0201bfe0112ad64005f753c3ef9f967a}{get\+A\+P\+I\+Version} (void)
 \begin{DoxyCompactList}\small\item\em Retrieve the current version number of the C A\+P\+I library. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__utility_ga176e563b3d7f32037c56ba1273d4c919}{get\+C\+P\+P\+A\+P\+I\+Version} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+char $\ast$ \hyperlink{group__utility_ga691ff48bcf6063a8544ee17c78c08a2e}{get\+C\+P\+P\+A\+P\+I\+Version} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Retrieve the current version number of the C++ A\+P\+I (Core Road\+Runner A\+P\+I) library. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{rrc__api_8h_a2d799defcade869e5610bbe3b547f39c}{get\+Version} ()
+int \hyperlink{rrc__api_8h_a5b15fe423a1ef9d1fd4ca2f7b1c7b240}{get\+Version} ()
 \item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{rrc__api_8h_a3ed15ae076fbdc30ee6f58705beb0763}{get\+Version\+Str} ()
+char $\ast$ \hyperlink{rrc__api_8h_a87e6433324fbf521f20a212769437a3a}{get\+Version\+Str} ()
 \item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{rrc__api_8h_a847f64fd6fdda38c19fdedc386272c01}{get\+Version\+Ex} ()
+char $\ast$ \hyperlink{rrc__api_8h_abbe7e84698149d0186cee05c9198d4f1}{get\+Version\+Ex} ()
 \item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__utility_gafce4606b138efa3b17e28f3966c1b93c}{get\+Extended\+A\+P\+I\+Info} ()
+char $\ast$ \hyperlink{group__utility_ga6375654feeeed364756d04996ffefca0}{get\+Extended\+A\+P\+I\+Info} ()
 \begin{DoxyCompactList}\small\item\em Retrieve extended A\+P\+I info. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__utility_ga6ffcdff4d0099d5c94fee9d1abf93f3d}{get\+Build\+Date} (void)
+char $\ast$ \hyperlink{group__utility_ga93a30bba20e93116a92454023621e152}{get\+Build\+Date} (void)
 \begin{DoxyCompactList}\small\item\em Retrieve the current build date of the library. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__utility_ga13bdcd39aaa18268a31afc060417437d}{get\+Build\+Time} (void)
+char $\ast$ \hyperlink{group__utility_ga37e61c01f414819c0997592a2fd7923d}{get\+Build\+Time} (void)
 \begin{DoxyCompactList}\small\item\em Retrieve the current build time (H\+H\+:\+M\+M\+:S\+S) of the library. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__utility_ga53e63bf5237b8e8839c5dd1fd5607e43}{get\+Build\+Date\+Time} (void)
+char $\ast$ \hyperlink{group__utility_ga238227d82d74d51ac2879413262e91b0}{get\+Build\+Date\+Time} (void)
 \begin{DoxyCompactList}\small\item\em Retrieve the current build date + time of the library. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__utility_ga909790f456d1a032049c75013814edd2}{get\+Copyright} (void)
+char $\ast$ \hyperlink{group__utility_gab6fdd755cfe37c9f3d6ba9afa2d26843}{get\+Copyright} (void)
 \begin{DoxyCompactList}\small\item\em Retrieve the current copyright notice for the library. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__utility_gae657705965d7a22b555f62a44d90a15f}{get\+Info} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+char $\ast$ \hyperlink{group__utility_ga45c49fe2586cf9feacb66d1c3253bb64}{get\+Info} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Retrieve info about current state of roadrunner, e.\+g. loaded model, conservation\+Analysis etc. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__utility_ga3289ab11b43ae71cb77e7d72905e4b21}{getlib\+S\+B\+M\+L\+Version} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+char $\ast$ \hyperlink{group__utility_ga776c22cd6c98c3e37a3837d95ed9ebfc}{getlib\+S\+B\+M\+L\+Version} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Retrieve the current version number of the lib\+S\+B\+M\+L library. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__utility_ga40e0e9b3f96c37bad8b0313eddf6caed}{set\+Temp\+Folder} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$folder)
+bool \hyperlink{group__utility_ga8d788961a18c347e246bbe6011ca4df8}{set\+Temp\+Folder} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$folder)
 \begin{DoxyCompactList}\small\item\em Set the path to the temporary folder where the C code will be stored. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__utility_ga6ee2696295901d265494a18228cfcc4c}{get\+Temp\+Folder} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+char $\ast$ \hyperlink{group__utility_gaab1f66913fef8d529635267744ac3de6}{get\+Temp\+Folder} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Retrieve the current temporary folder path. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__utility_gaa589240169c653747f7c702a614489c8}{get\+Working\+Directory} (void)
+char $\ast$ \hyperlink{group__utility_ga8572aeabff24d30099b45901b8992120}{get\+Working\+Directory} (void)
 \begin{DoxyCompactList}\small\item\em Retrieve the current working directory path. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__utility_ga98a4ed176eeff87e87fa4a4acf5240a6}{get\+R\+R\+C\+A\+P\+I\+Location} (void)
+char $\ast$ \hyperlink{group__utility_gad2d89e6329c3f10496e2eeb3af705541}{get\+R\+R\+C\+A\+P\+I\+Location} (void)
 \begin{DoxyCompactList}\small\item\em Retrieve the directory path of the shared rr\+C\+Api library. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__utility_ga452d753989b5142b29528ae5865224ae}{set\+Compiler} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$f\+Name\+With\+Path)
+bool \hyperlink{group__utility_ga359c597f4e2f825bbf054f76e2df46d9}{set\+Compiler} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$f\+Name\+With\+Path)
 \begin{DoxyCompactList}\small\item\em Set the path and filename to the compiler to be used by roadrunner. \end{DoxyCompactList}\item 
-\hypertarget{group__utility_gab3490137aa84bb6424ae8ccba0eb135c}{}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__utility_gab3490137aa84bb6424ae8ccba0eb135c}{get\+Compiler} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)\label{group__utility_gab3490137aa84bb6424ae8ccba0eb135c}
+\hypertarget{group__utility_gacce5637b3025d0f23a5baedd87538ba5}{char $\ast$ \hyperlink{group__utility_gacce5637b3025d0f23a5baedd87538ba5}{get\+Compiler} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)}\label{group__utility_gacce5637b3025d0f23a5baedd87538ba5}
 
 \begin{DoxyCompactList}\small\item\em Get the name of the compiler currently being used by roadrunner. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__utility_gab910a88973c4f823b1f576c7767cc0d5}{set\+Compiler\+Location} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$folder)
+bool \hyperlink{group__utility_ga67ef111be16bc217142f7042c4c73650}{set\+Compiler\+Location} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$folder)
 \begin{DoxyCompactList}\small\item\em Set the path to a folder containing the compiler to be used. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__utility_ga601a1298cfd5bea6847975ddd1ab5a2a}{get\+Compiler\+Location} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+char $\ast$ \hyperlink{group__utility_gaa7c663617b26a30e2d6d6ec87f8e8a1a}{get\+Compiler\+Location} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Get the path to a folder containing the compiler being used. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__utility_ga0d8069e1538d2c41f243e3b6d56abf41}{set\+Support\+Code\+Folder} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$folder)
+bool \hyperlink{group__utility_gaf6bd5a3e646e8c16b678bd7367662507}{set\+Support\+Code\+Folder} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$folder)
 \begin{DoxyCompactList}\small\item\em Set the path to a folder containing support code for model generation. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__utility_ga1462be979b060f04caa87394d5a53173}{get\+Support\+Code\+Folder} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+char $\ast$ \hyperlink{group__utility_ga9ea74c25e9f56b9e3176475510a7d304}{get\+Support\+Code\+Folder} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Get the path to a folder containing support code. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__utility_ga92ba42b5fab8b387744eedd03df10b60}{set\+Code\+Generation\+Mode} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int mode)
+bool \hyperlink{group__utility_ga9ebbfb65683084894314101e2c4e5571}{set\+Code\+Generation\+Mode} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int mode)
 \begin{DoxyCompactList}\small\item\em Set the runtime generation option \mbox{[}Not yet implemented\mbox{]}. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__errorfunctions_ga5ff7d55f1f52b72f5f17a687c0c361fd}{has\+Error} (void)
+bool \hyperlink{group__errorfunctions_ga97333a9e820160be2bfbece76043662c}{has\+Error} (void)
 \begin{DoxyCompactList}\small\item\em Check if there is an error string to retrieve. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__errorfunctions_ga0a0d2c042920c6fc648bcb4ce8091ede}{get\+Last\+Error} (void)
+char $\ast$ \hyperlink{group__errorfunctions_ga97659609c7c7715bd37e0962efd21c3a}{get\+Last\+Error} (void)
 \begin{DoxyCompactList}\small\item\em Retrieve the current error string. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__initialization_gacb21c6ed7c891635f41cfd43e99cda2f}{set\+Compute\+And\+Assign\+Conservation\+Laws} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const bool On\+\_\+\+Or\+\_\+\+Off)
+bool \hyperlink{group__initialization_gaf336e356c4647feec53d5f8ca02614d5}{set\+Compute\+And\+Assign\+Conservation\+Laws} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const bool On\+\_\+\+Or\+\_\+\+Off)
 \begin{DoxyCompactList}\small\item\em Enable or disable conservation analysis. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__loadsave_gaeaaaf4f7855457d6207934149f52f5f9}{load\+S\+B\+M\+L} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$sbml)
+bool \hyperlink{group__loadsave_gafb3515fd8472da389f5f24530017f037}{load\+S\+B\+M\+L} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$sbml)
 \begin{DoxyCompactList}\small\item\em Load a model from an S\+B\+M\+L string. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__loadsave_ga255d17e06e104da6a2f9e0696b1aa9e3}{load\+S\+B\+M\+L\+Ex} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$sbml, bool force\+Recompile)
+bool \hyperlink{group__loadsave_ga80ede4ecc6e4e697e289d187c1a8d844}{load\+S\+B\+M\+L\+Ex} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$sbml, bool force\+Recompile)
 \begin{DoxyCompactList}\small\item\em Load a model from an S\+B\+M\+L string. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__loadsave_ga03cb924c6790b039f77a1a9c5dbcdda1}{load\+S\+B\+M\+L\+From\+File} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$file\+Name)
+bool \hyperlink{group__loadsave_ga275b8f8d7350505c383fdc9634713041}{load\+S\+B\+M\+L\+From\+File} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$file\+Name)
 \begin{DoxyCompactList}\small\item\em Load a model from a S\+B\+M\+L file. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__loadsave_gab2aa4b93a3037879a0da7dc85b3a9746}{load\+S\+B\+M\+L\+From\+File\+E} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$file\+Name, bool force\+Recompile)
+bool \hyperlink{group__loadsave_gaba8e934b2e2c045312686c5e857aacab}{load\+S\+B\+M\+L\+From\+File\+E} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$file\+Name, bool force\+Recompile)
 \begin{DoxyCompactList}\small\item\em Load a model from a S\+B\+M\+L file, force recompilation. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__loadsave_ga53d8e3b97611797889b64601ec878559}{un\+Load\+Model} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+bool \hyperlink{group__loadsave_gaffa66f342ebcdb5a7821b688a44fea11}{un\+Load\+Model} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Unload current model. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__loadsave_ga1522e7efbb34bc40fd88376327a9535d}{is\+Model\+Loaded} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+bool \hyperlink{group__loadsave_ga533342a784ba4e48c16cc59e2307f609}{is\+Model\+Loaded} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em check if a model is loaded \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__loadsave_ga387b0694ce78f6f82e089cfade9faef8}{load\+Simulation\+Settings} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$file\+Name)
+bool \hyperlink{group__loadsave_ga93797731c7c87ca775b2d4ce1ed3178c}{load\+Simulation\+Settings} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$file\+Name)
 \begin{DoxyCompactList}\small\item\em Load simulation settings from a file. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__loadsave_ga9e8bda764dbeedb6b377d2050f6254f9}{get\+Current\+S\+B\+M\+L} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+char $\ast$ \hyperlink{group__loadsave_ga25a051f0d6f624e5f1634911cf545d79}{get\+Current\+S\+B\+M\+L} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Retrieve the {\bfseries current state} of the model in the form of an S\+B\+M\+L string. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__loadsave_gae45f7a34ebfdc69fb71d8b559213cb4c}{get\+S\+B\+M\+L} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+char $\ast$ \hyperlink{group__loadsave_ga1ad04f6a6ac4ffccd25a056490bb6f53}{get\+S\+B\+M\+L} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Retrieve the S\+B\+M\+L model that was last loaded into road\+Runner. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{rrc__api_8h_a1e12a65f50c3138f73628d090bda918a}{get\+Param\+Promoted\+S\+B\+M\+L} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$s\+Arg)
+char $\ast$ \hyperlink{rrc__api_8h_a6c696d860e612922c56973d36d87dbe9}{get\+Param\+Promoted\+S\+B\+M\+L} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$s\+Arg)
 \begin{DoxyCompactList}\small\item\em Promote any local parameters to global status. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__simulation_ga704215830b7d1b353cbd990c04a766c2}{set\+Configuration\+X\+M\+L} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$caps)
-\begin{DoxyCompactList}\small\item\em Set the simulator\textquotesingle{}s capabilities. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__simulation_ga40f63e6f1505d91ecf40bed49d8d717e}{get\+Configuration\+X\+M\+L} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
-\begin{DoxyCompactList}\small\item\em Get the simulator\textquotesingle{}s capabilities. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{group__simopts_ga0e60dc15106edf34142fa7b2160f4684}{get\+Number\+Of\+Integrators} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+bool \hyperlink{group__simulation_gaa77fd6c25d583b2ade1afd1579083a38}{set\+Configuration\+X\+M\+L} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$caps)
+\begin{DoxyCompactList}\small\item\em Set the simulator's capabilities. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__simulation_gac6b01548aaa54f95fa7ea5d7d8d5059b}{get\+Configuration\+X\+M\+L} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\begin{DoxyCompactList}\small\item\em Get the simulator's capabilities. \end{DoxyCompactList}\item 
+int \hyperlink{rrc__api_8h_a53617fbabff8088e10c8bc5deee40353}{get\+Num\+Registered\+Integrators} ()
 \begin{DoxyCompactList}\small\item\em Get the number of implemented integrators. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} rrc\+Call\+Conv \hyperlink{rrc__api_8h_a1f86376cdde6517c38fab5421a948e6f}{get\+List\+Of\+Integrators} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+char $\ast$ \hyperlink{rrc__api_8h_a5713f7cea279fc58aa497615ebb7ddbf}{get\+Registered\+Integrator\+Name} (int n)
+\begin{DoxyCompactList}\small\item\em Get the name of a registered integrator (e.\+g. cvode etc.) \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{rrc__api_8h_a6d22f11e49e89336e5d795e620e55530}{get\+Registered\+Integrator\+Hint} (int n)
+\begin{DoxyCompactList}\small\item\em Get the hint of a registered integrator (e.\+g. cvode etc.) \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{rrc__api_8h_aae54354d9935875691727e0b89e5ebc2}{get\+Registered\+Integrator\+Desc} (int n)
+\begin{DoxyCompactList}\small\item\em Get the description of a registered integrator (e.\+g. cvode etc.) \end{DoxyCompactList}\item 
+int \hyperlink{rrc__api_8h_a492555873a0da5f8aa167eeafb7d7d21}{get\+Num\+Instantiated\+Integrators} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\begin{DoxyCompactList}\small\item\em Get the number of instantiated integrators. \end{DoxyCompactList}\item 
+\hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} \hyperlink{rrc__api_8h_ac6c65b8fe4f2950f875c426e925197b4}{get\+List\+Of\+Integrators} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Get the names of implemented integrators. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{group__simopts_gaea74da31e6dcaa4833bb6773d964aab4}{set\+Integrator} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$name\+Of\+Integrator)
+int \hyperlink{rrc__api_8h_ad6e463525042165dede8261851cc46af}{set\+Integrator} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$name\+Of\+Integrator)
 \begin{DoxyCompactList}\small\item\em Specify the current integrator to be used for simulation. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__simopts_ga2049931879007c6df1bdb5dbb508b5fa}{get\+Integrator\+Description} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+char $\ast$ \hyperlink{rrc__api_8h_a6bcd64ac9ce4a728b14a1fa570d6f5ae}{get\+Integrator\+Name} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Obtain a description of the current integrator. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__simopts_ga8bd6ff2828f0d12e911f713dfbba930b}{get\+Integrator\+Hint} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+char $\ast$ \hyperlink{rrc__api_8h_a4a917a0539977b7206d1bfbddcc98347}{get\+Current\+Integrator\+Description} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\begin{DoxyCompactList}\small\item\em Obtain a description of the current integrator. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{rrc__api_8h_adc3f18f7a683daa8848968ba54436f96}{get\+Current\+Integrator\+Hint} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Obtain a short hint for the current integrator. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{group__simopts_ga551b3fc29362907cd6f69f23ac7bf7cc}{get\+Number\+Of\+Integrator\+Parameters} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+int \hyperlink{rrc__api_8h_a7885d06904fc2cdceaa7e71448cde468}{get\+Number\+Of\+Current\+Integrator\+Parameters} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Get the number of adjustable settings for the current integrator. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} rrc\+Call\+Conv \hyperlink{group__simopts_gaabaab4b46d128a4686f7b710368a5f97}{get\+List\+Of\+Integrator\+Parameter\+Names} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} \hyperlink{rrc__api_8h_a8bc1ea6950f141d40373416d64abaefa}{get\+List\+Of\+Current\+Integrator\+Parameter\+Names} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Get the names of adjustable settings for the current integrator. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__simopts_ga4e1bff8961e09923c786dbaaf108e903}{get\+Integrator\+Parameter\+Description} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+char $\ast$ \hyperlink{rrc__api_8h_ae4308a0893d84e49ef877d2db65d110c}{get\+Current\+Integrator\+Parameter\+Description} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
 \begin{DoxyCompactList}\small\item\em Get the description for a specific integrator setting. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__simopts_gad4109215ad180a0fd8da0b6aa4f7e6c4}{get\+Integrator\+Parameter\+Hint} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+char $\ast$ \hyperlink{rrc__api_8h_a4cc4c3b42b58f7ce266cff67cbc79c85}{get\+Current\+Integrator\+Parameter\+Hint} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
 \begin{DoxyCompactList}\small\item\em Get the hint for a specific integrator setting. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{group__simopts_gafb51cd6e56a7b09b3958b00a42f5035f}{get\+Integrator\+Parameter\+Type} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+int \hyperlink{rrc__api_8h_a04f015cae3234d1e24dc86c4ca6cf7ab}{get\+Current\+Integrator\+Parameter\+Type} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
 \begin{DoxyCompactList}\small\item\em Get the return type for a specific integrator setting. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{group__simopts_ga45805f74ab551df53520a8ea03c499cd}{get\+Integrator\+Parameter\+Int} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+int \hyperlink{rrc__api_8h_a23b63638fae7a4823ac503474126c85b}{get\+Current\+Integrator\+Parameter\+Int} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
 \begin{DoxyCompactList}\small\item\em Get the integer value for a specific integrator setting. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{group__simopts_gaf5ce794bca9b6b8a60bb15e9b64bdaf1}{set\+Integrator\+Parameter\+Int} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, int value)
+int \hyperlink{rrc__api_8h_a4b5b2be1b4a77b8225f5c7d9a1e0bdfb}{set\+Current\+Integrator\+Parameter\+Int} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, int value)
 \begin{DoxyCompactList}\small\item\em Set the integer value for a specific integrator setting. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C double rrc\+Call\+Conv \hyperlink{group__simopts_ga5d1a97952f28e70d92d5b6ba71eafd29}{get\+Integrator\+Parameter\+Double} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+double \hyperlink{rrc__api_8h_ad859b0cb1724ab3aeee81230c2da272a}{get\+Current\+Integrator\+Parameter\+Double} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
 \begin{DoxyCompactList}\small\item\em Get the double value for a specific integrator setting. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{group__simopts_ga48a56b47335553c84f2f5132adaeb9d3}{set\+Integrator\+Parameter\+Double} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, double value)
+int \hyperlink{rrc__api_8h_a90d69322c437f56d551c14445b57bb5a}{set\+Current\+Integrator\+Parameter\+Double} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, double value)
 \begin{DoxyCompactList}\small\item\em Set the double value for a specific integrator setting. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char $\ast$rrc\+Call\+Conv \hyperlink{group__simopts_ga2f175aab11a88d4c1939aaecb11f7848}{get\+Integrator\+Parameter\+String} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+char $\ast$ \hyperlink{rrc__api_8h_a11536f253e0b43f8a282bf3bdfaf1328}{get\+Current\+Integrator\+Parameter\+String} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
 \begin{DoxyCompactList}\small\item\em Get the string value for a specific integrator setting. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{group__simopts_gae3cbb90c964c48a7f312ff7022a3b4c1}{set\+Integrator\+Parameter\+String} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, char $\ast$value)
+int \hyperlink{rrc__api_8h_a7b901ff654788259368fc15c01fe53a6}{set\+Current\+Integrator\+Parameter\+String} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, char $\ast$value)
 \begin{DoxyCompactList}\small\item\em Set the string value for a specific integrator setting. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{group__simopts_gacf16504048ed0e308c8d8f2a7512efd7}{get\+Integrator\+Parameter\+Boolean} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+int \hyperlink{rrc__api_8h_ab06f6ef3c9c6b57a2806132b1906a52e}{get\+Current\+Integrator\+Parameter\+Boolean} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
 \begin{DoxyCompactList}\small\item\em Get the boolean value for a specific integrator setting. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{group__simopts_gac14fbd2a118994706d711650bce86967}{set\+Integrator\+Parameter\+Boolean} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, int value)
+int \hyperlink{rrc__api_8h_ab89192771385f30f5223756c46bda227}{set\+Current\+Integrator\+Parameter\+Boolean} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, int value)
 \begin{DoxyCompactList}\small\item\em Set the boolean value for a specific integrator setting. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__simulation_ga6f2c769375399d14087d6e5e99339aa7}{set\+Time\+Start} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double time\+Start)
+bool \hyperlink{group__simulation_gaa5898253f7c907443f5df78387e3e77c}{set\+Time\+Start} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double time\+Start)
 \begin{DoxyCompactList}\small\item\em Set the time start for a time course simulation. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__simulation_ga93f6c401b6a9e301fcdc380a6048b28c}{set\+Time\+End} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double time\+End)
+bool \hyperlink{group__simulation_gaf609c0853e0d053f43f4ef4f068f002f}{set\+Time\+End} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double time\+End)
 \begin{DoxyCompactList}\small\item\em Set the time end for a time course simulation. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__simulation_ga4575f315d9794b53adf78bfb60973d58}{set\+Num\+Points} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int number\+Of\+Points)
+bool \hyperlink{group__simulation_ga13f8b0ebfd2effe5264c3fed0ebb2471}{set\+Num\+Points} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int number\+Of\+Points)
 \begin{DoxyCompactList}\small\item\em Set the number of points to generate in a time course simulation. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__simulation_ga61cca45bb48776d12f5bcc52d0c77e04}{set\+Time\+Course\+Selection\+List} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$list)
+bool \hyperlink{group__simulation_gabc78e3202e85470f1c0e380a8988fc9e}{set\+Time\+Course\+Selection\+List} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$list)
 \begin{DoxyCompactList}\small\item\em Set the selection list for output from simulate(void) or simulate\+Ex(void) \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} rrc\+Call\+Conv \hyperlink{group__simulation_gab58d3101cad36a26f0d421e64cf0d0f6}{get\+Time\+Course\+Selection\+List} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} \hyperlink{group__simulation_ga4c2ce3bcc97cbd6a5dcae423dfeeba0c}{get\+Time\+Course\+Selection\+List} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Get the current selection list for simulate(void) or simulate\+Ex(void) \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} rrc\+Call\+Conv \hyperlink{group__simulation_ga9ac99f6909eb0a6244035fc9cdeff94d}{simulate} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} \hyperlink{group__simulation_ga55c9ef1913377542f61d1d622911cc7b}{simulate} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Carry out a time-\/course simulation. set\+Time\+Start, set\+Time\+End, set\+Num\+Points, etc are used to set the simulation characteristics. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} rrc\+Call\+Conv \hyperlink{group__simulation_gaa52283eaebe340a4a39cc4900441be93}{get\+Simulation\+Result} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} \hyperlink{group__simulation_ga4c4bdc924e48c8e271e4654c6f40b3c8}{get\+Simulation\+Result} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Retrieve the result of the last simulation. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} rrc\+Call\+Conv \hyperlink{group__simulation_ga12a2129f06507eafbace57a8612cc600}{simulate\+Ex} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const double time\+Start, const double time\+End, const int number\+Of\+Points)
+\hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} \hyperlink{group__simulation_gaa568722adbce33e145ce8c4a78146465}{simulate\+Ex} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const double time\+Start, const double time\+End, const int number\+Of\+Points)
 \begin{DoxyCompactList}\small\item\em Carry out a time-\/course simulation based on the given arguments, time start, time end and number of points. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__simulation_ga8f7109b90040ff57b8366c2f1867f066}{one\+Step} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const double current\+Time, const double step\+Size, double $\ast$value)
+bool \hyperlink{group__simulation_ga64cec7cbfbac4e4a11dcda4cc6eb2b9e}{one\+Step} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const double current\+Time, const double step\+Size, double $\ast$value)
 \begin{DoxyCompactList}\small\item\em Carry out a one step integration of the model. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__simulation_ga0d05bdfec6dd9387c64dd196ec3d880d}{get\+Time\+Start} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double $\ast$time\+Start)
+bool \hyperlink{group__simulation_gaf302d02e9f0d57dd05995a7a211e5236}{get\+Time\+Start} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double $\ast$time\+Start)
 \begin{DoxyCompactList}\small\item\em Get the value of the current time start. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__simulation_ga83a02783c6a1c48eb05eafce742972cd}{get\+Time\+End} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double $\ast$time\+End)
+bool \hyperlink{group__simulation_ga1130df59dce620b619e3e58874025e57}{get\+Time\+End} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double $\ast$time\+End)
 \begin{DoxyCompactList}\small\item\em Get the value of the current time end. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__simulation_gaaa761b3be4a3348a60c7ae7083d57947}{get\+Num\+Points} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int $\ast$num\+Points)
+bool \hyperlink{group__simulation_ga3e14da4bd986a908e4f6bcfc42c20717}{get\+Num\+Points} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int $\ast$num\+Points)
 \begin{DoxyCompactList}\small\item\em Get the value of the current number of points. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__steadystate_gab1db24cab922136cc3a6a57b4bfbf80a}{steady\+State} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double $\ast$value)
+bool \hyperlink{group__steadystate_ga6585d37a9c56840e1acbb38e9df07262}{steady\+State} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double $\ast$value)
 \begin{DoxyCompactList}\small\item\em Compute the steady state of the current model. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} rrc\+Call\+Conv \hyperlink{group__steadystate_ga808060f5094396e4697434eb5a41f14f}{compute\+Steady\+State\+Values} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} \hyperlink{group__steadystate_gac30f43194bb3045396e40cc6c0ffa24d}{compute\+Steady\+State\+Values} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em A convenient method for returning a vector of the steady state species concentrations. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__steadystate_gaff273d8a9038c411779b206bf58d71eb}{set\+Steady\+State\+Selection\+List} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$list)
+bool \hyperlink{group__steadystate_ga9b9f94c413981a2e1e9df3c6ea43ce4a}{set\+Steady\+State\+Selection\+List} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$list)
 \begin{DoxyCompactList}\small\item\em Set the selection list of the steady state analysis. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} rrc\+Call\+Conv \hyperlink{group__steadystate_gaadc456216e3ed8cd9f75c15ac1685616}{get\+Steady\+State\+Selection\+List} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} \hyperlink{group__steadystate_gac90278de49539b861fdde7d7d0a51918}{get\+Steady\+State\+Selection\+List} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Get the selection list for the steady state analysis. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__state_ga6ff35b4282c583424f4d5708330012b9}{get\+Value} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$symbol\+Id, double $\ast$value)
+bool \hyperlink{group__state_ga7ff97de8f8ea4b16f6867ed1c24b75f6}{get\+Value} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$symbol\+Id, double $\ast$value)
 \begin{DoxyCompactList}\small\item\em Get the value for a given symbol, use get\+Available\+Time\+Course\+Symbols(void) for a list of symbols. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__state_gab8416894a99ef18924c1a719be4521f3}{set\+Value} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$symbol\+Id, const double value)
+bool \hyperlink{group__state_ga68328fbeb920109b943dfc61d9585f1e}{set\+Value} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$symbol\+Id, const double value)
 \begin{DoxyCompactList}\small\item\em Set the value for a given symbol, use get\+Available\+Time\+Course\+Symbols(void) for a list of symbols. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} rrc\+Call\+Conv \hyperlink{group__floating_ga0659eab040dbdfde46b9fc73b46b65d6}{get\+Floating\+Species\+Concentrations} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} \hyperlink{group__floating_ga68e7a5d2a51820bdfe9eb96a0e67c53c}{get\+Floating\+Species\+Concentrations} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Retrieve in a vector the concentrations for all the floating species. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} rrc\+Call\+Conv \hyperlink{group__boundary_gaa36e026ba8f7488c7a57e96c0471763b}{get\+Boundary\+Species\+Concentrations} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} \hyperlink{group__boundary_ga79f76cd262168c68697d915046781997}{get\+Boundary\+Species\+Concentrations} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Retrieve the concentrations for all the boundary species in a vector. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} rrc\+Call\+Conv \hyperlink{group__parameters_ga8786ef7925e23f93be3826e3bc1a7c73}{get\+Global\+Parameter\+Values} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} \hyperlink{group__parameters_ga3add5376f5242d85532074605e19f38c}{get\+Global\+Parameter\+Values} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Retrieve the values for all the global parameter values in a vector. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__boundary_gadf834c3d92ac79a778dfcd5d97d3e340}{set\+Boundary\+Species\+By\+Index} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const int index, const double value)
+bool \hyperlink{group__boundary_ga456eb3f123433bba613db16c98cc7766}{set\+Boundary\+Species\+By\+Index} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const int index, const double value)
 \begin{DoxyCompactList}\small\item\em Set the concentration for a particular boundary species. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__floating_ga1a86710f9772e7a7072aa7de264b0c45}{set\+Floating\+Species\+Initial\+Concentration\+By\+Index} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int index, double value)
+bool \hyperlink{group__floating_ga0cd4f0808862786a6cf7019f9d1d7d01}{set\+Floating\+Species\+Initial\+Concentration\+By\+Index} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int index, double value)
 \begin{DoxyCompactList}\small\item\em Set the initial concentration for a particular floating species. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__floating_ga7dcf8267460ec9fec7559194ed7e7e1d}{get\+Floating\+Species\+Initial\+Concentration\+By\+Index} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int index, double $\ast$value)
+bool \hyperlink{group__floating_ga18817e95a20396665311107be6cbcde6}{get\+Floating\+Species\+Initial\+Concentration\+By\+Index} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int index, double $\ast$value)
 \begin{DoxyCompactList}\small\item\em Get the initial concentration for a particular floating species. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__floating_ga892e70470a45d8be4e443c6048064c0e}{set\+Floating\+Species\+By\+Index} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const int index, const double value)
+bool \hyperlink{group__floating_gad77c7ee6b6edad962659d16f20497dd6}{set\+Floating\+Species\+By\+Index} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const int index, const double value)
 \begin{DoxyCompactList}\small\item\em Set the concentration for a particular floating species. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__parameters_ga3f4d3739191a328326e0de1f7c07334a}{set\+Global\+Parameter\+By\+Index} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const int index, const double value)
+bool \hyperlink{group__parameters_gaf53b31742420ec60079ca65c62a65801}{set\+Global\+Parameter\+By\+Index} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const int index, const double value)
 \begin{DoxyCompactList}\small\item\em Set the value for a particular global parameter. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__boundary_ga5bdb50a2653fc268731aaba05d7b7377}{get\+Boundary\+Species\+By\+Index} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const int index, double $\ast$value)
+bool \hyperlink{group__boundary_gacbc24df270121b930fe317f1f96bf478}{get\+Boundary\+Species\+By\+Index} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const int index, double $\ast$value)
 \begin{DoxyCompactList}\small\item\em Retrieve the concentration for a particular floating species. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__floating_gaa5ab4c688801aa88c60bea9c745a8d7d}{get\+Floating\+Species\+By\+Index} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const int index, double $\ast$value)
+bool \hyperlink{group__floating_ga4f8f8270363e5545c94f7b434319807b}{get\+Floating\+Species\+By\+Index} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const int index, double $\ast$value)
 \begin{DoxyCompactList}\small\item\em Retrieve the concentration for a particular floating species. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__parameters_gac2fed7cbeb8f0b2099f72f73de5dac36}{get\+Global\+Parameter\+By\+Index} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const int index, double $\ast$value)
+bool \hyperlink{group__parameters_ga87c8b1dbb74786c677502d34ecfd19ba}{get\+Global\+Parameter\+By\+Index} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const int index, double $\ast$value)
 \begin{DoxyCompactList}\small\item\em Retrieve the global parameter value. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__compartment_ga4ed76bba681918dd733c0857c160c2cb}{get\+Compartment\+By\+Index} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const int index, double $\ast$value)
+bool \hyperlink{group__compartment_ga9de42b53c1d31e477f7172d170a53d65}{get\+Compartment\+By\+Index} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const int index, double $\ast$value)
 \begin{DoxyCompactList}\small\item\em Retrieve the compartment volume for a particular compartment. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__compartment_ga8baaf727b28d0acc9fdb90ae5682e4d7}{set\+Compartment\+By\+Index} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const int index, const double value)
+bool \hyperlink{group__compartment_gaebcce9341fbd6568d8076e595d54818c}{set\+Compartment\+By\+Index} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const int index, const double value)
 \begin{DoxyCompactList}\small\item\em Set the volume for a particular compartment. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__floating_gab6bde54c81fa570ab09da91b65e92327}{set\+Floating\+Species\+Concentrations} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const \hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} vec)
+bool \hyperlink{group__floating_gaf0efd671999c1689be3614e4af162bc2}{set\+Floating\+Species\+Concentrations} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const \hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} vec)
 \begin{DoxyCompactList}\small\item\em Set the floating species concentration to the vector vec. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__boundary_gacc067866a08d07a196d681328b5b3e38}{set\+Boundary\+Species\+Concentrations} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const \hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} vec)
+bool \hyperlink{group__boundary_ga2897a6feacbedd60bd05cf84dbabecfd}{set\+Boundary\+Species\+Concentrations} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const \hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} vec)
 \begin{DoxyCompactList}\small\item\em Set the boundary species concentration to the vector vec. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_ae586a879d30f0823087e42d93464b5dd}{R\+R\+Double\+Matrix\+Ptr} rrc\+Call\+Conv \hyperlink{group___stoich_ga6debd886f8814dec86b8eaa5c9d00a3e}{get\+Full\+Jacobian} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_ae586a879d30f0823087e42d93464b5dd}{R\+R\+Double\+Matrix\+Ptr} \hyperlink{group___stoich_ga88846978224863c431128cbd438c8e85}{get\+Full\+Jacobian} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Retrieve the full Jacobian for the current model. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_ae586a879d30f0823087e42d93464b5dd}{R\+R\+Double\+Matrix\+Ptr} rrc\+Call\+Conv \hyperlink{group___stoich_ga0f121b1c3787ad8c932174a777a865e2}{get\+Reduced\+Jacobian} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_ae586a879d30f0823087e42d93464b5dd}{R\+R\+Double\+Matrix\+Ptr} \hyperlink{group___stoich_ga1de0e1a27f15a1226b2a1bf1ce55fa7d}{get\+Reduced\+Jacobian} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Retrieve the reduced Jacobian for the current model. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_ae586a879d30f0823087e42d93464b5dd}{R\+R\+Double\+Matrix\+Ptr} rrc\+Call\+Conv \hyperlink{group___stoich_ga2f8e012b9cefe206bdbac30f07619613}{get\+Eigenvalues} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_ae586a879d30f0823087e42d93464b5dd}{R\+R\+Double\+Matrix\+Ptr} \hyperlink{group___stoich_gab8a67356f527fdc041058480189c7f68}{get\+Eigenvalues} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Retrieve the eigenvalue matrix for the current model. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_ae586a879d30f0823087e42d93464b5dd}{R\+R\+Double\+Matrix\+Ptr} rrc\+Call\+Conv \hyperlink{group___stoich_ga162f8d37e89e83e5e14cee87c02f89f2}{get\+Stoichiometry\+Matrix} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_ae586a879d30f0823087e42d93464b5dd}{R\+R\+Double\+Matrix\+Ptr} \hyperlink{group___stoich_ga9dfb0e092b1bf08be1be27e06faf6f63}{get\+Stoichiometry\+Matrix} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Retrieve the stoichiometry matrix for the current model. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_ae586a879d30f0823087e42d93464b5dd}{R\+R\+Double\+Matrix\+Ptr} rrc\+Call\+Conv \hyperlink{group___stoich_gad42abf401bcd8f7bbe9255d6013b512b}{get\+Link\+Matrix} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_ae586a879d30f0823087e42d93464b5dd}{R\+R\+Double\+Matrix\+Ptr} \hyperlink{group___stoich_ga9a9b2fadc5491d57b4487c8a8260c919}{get\+Link\+Matrix} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Retrieve the Link matrix for the current model. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_ae586a879d30f0823087e42d93464b5dd}{R\+R\+Double\+Matrix\+Ptr} rrc\+Call\+Conv \hyperlink{group___stoich_ga6f7995e073044c3e1767c9eda148e0c8}{get\+Nr\+Matrix} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_ae586a879d30f0823087e42d93464b5dd}{R\+R\+Double\+Matrix\+Ptr} \hyperlink{group___stoich_ga37357549fd3ad7854df3da5ec6af11cb}{get\+Nr\+Matrix} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Retrieve the reduced stoichiometry matrix for the current model. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_ae586a879d30f0823087e42d93464b5dd}{R\+R\+Double\+Matrix\+Ptr} rrc\+Call\+Conv \hyperlink{group___stoich_gab253411012b1974cf831970034453aef}{get\+Conservation\+Matrix} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_ae586a879d30f0823087e42d93464b5dd}{R\+R\+Double\+Matrix\+Ptr} \hyperlink{group___stoich_ga3f9e52bb0382f993ab16312a72290ef7}{get\+Conservation\+Matrix} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Retrieve the conservation matrix for the current model. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__initial_conditions_ga669ae93bd60148aaf48f7105748a551e}{set\+Floating\+Species\+Initial\+Concentrations} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const \hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} vec)
+bool \hyperlink{group__initial_conditions_ga48bea9d12449568647e4f0fc6ea22b3a}{set\+Floating\+Species\+Initial\+Concentrations} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const \hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} vec)
 \begin{DoxyCompactList}\small\item\em Set the initial floating species concentrations. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} rrc\+Call\+Conv \hyperlink{group__initial_conditions_ga69c0a516f028a0608d8b9167ff56111f}{get\+Floating\+Species\+Initial\+Concentrations} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} \hyperlink{group__initial_conditions_ga2f4703d54375cb17e20887df4eb90032}{get\+Floating\+Species\+Initial\+Concentrations} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Get the initial floating species concentrations. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} rrc\+Call\+Conv \hyperlink{group__initial_conditions_ga1e19db0cfd663b9648f59191afdc64c6}{get\+Floating\+Species\+Initial\+Condition\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} \hyperlink{group__initial_conditions_ga0839c13a84160df0f2b94e9aef0be5b6}{get\+Floating\+Species\+Initial\+Condition\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Get the initial floating species Ids. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{group__reaction_gaaa9941b7cba362c4098feedb02b047a4}{get\+Number\+Of\+Reactions} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+int \hyperlink{group__reaction_ga45a8bf0e5d7c9012222f0ad4c36e6731}{get\+Number\+Of\+Reactions} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Obtain the number of reactions in the loaded model. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__reaction_ga6fbbae97760afea7cc74e26e2cb74926}{get\+Reaction\+Rate} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const int index, double $\ast$rate)
+bool \hyperlink{group__reaction_ga9e5d91c68214fd9642d3ffb9338cae19}{get\+Reaction\+Rate} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const int index, double $\ast$rate)
 \begin{DoxyCompactList}\small\item\em Retrieve a give reaction rate as indicated by the index parameter. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} rrc\+Call\+Conv \hyperlink{group__reaction_gae0d748f8af83914cc078f8728d67ed0e}{get\+Reaction\+Rates} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} \hyperlink{group__reaction_gaa4b8c528a76898bbb78cfa41479dd085}{get\+Reaction\+Rates} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Retrieve a vector of reaction rates as determined by the current state of the model. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} rrc\+Call\+Conv \hyperlink{group__reaction_ga106854f50f9896130fb77f64f2c5885c}{get\+Reaction\+Rates\+Ex} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const \hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} vec)
+\hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} \hyperlink{group__reaction_ga1dd7908ba77e177592587da9c21ed4f6}{get\+Reaction\+Rates\+Ex} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const \hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} vec)
 \begin{DoxyCompactList}\small\item\em Retrieve a vector of reaction rates given a vector of species concentrations. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} rrc\+Call\+Conv \hyperlink{group__rate_of_change_gad6f6fb8bf6b5e05b6337ec3c802709b3}{get\+Rates\+Of\+Change} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} \hyperlink{group__rate_of_change_gab8675813f06e4017dbe9d7584dc2fceb}{get\+Rates\+Of\+Change} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Retrieve the vector of rates of change as determined by the current state of the model. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} rrc\+Call\+Conv \hyperlink{group__rate_of_change_gaba7873ab3d30fc5b84bc3a901dcca811}{get\+Rates\+Of\+Change\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} \hyperlink{group__rate_of_change_ga4713af515e980542c14a735bc0e43983}{get\+Rates\+Of\+Change\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Retrieve the string list of rates of change Ids. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__rate_of_change_gacf4b39414587f2d4a51c8f90d7c4a571}{get\+Rate\+Of\+Change} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const int, double $\ast$value)
+bool \hyperlink{group__rate_of_change_ga07c04f81f07fad80bc78369b122972c2}{get\+Rate\+Of\+Change} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const int, double $\ast$value)
 \begin{DoxyCompactList}\small\item\em Retrieve the rate of change for a given floating species. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} rrc\+Call\+Conv \hyperlink{group__rate_of_change_ga353516c3b4889b3751e3422cad518c0e}{get\+Rates\+Of\+Change\+Ex} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const \hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} vec)
+\hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} \hyperlink{group__rate_of_change_ga4e1783d741cc0c81954db891e085c664}{get\+Rates\+Of\+Change\+Ex} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const \hyperlink{rrc__types_8h_a3be72d6006034fd349f753d2bf441bf7}{R\+R\+Vector\+Ptr} vec)
 \begin{DoxyCompactList}\small\item\em Retrieve the vector of rates of change given a vector of floating species concentrations. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__state_ga045d3842446954ba06e4010e19a2f1b1}{eval\+Model} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+bool \hyperlink{group__state_ga8f5b221fd8d82bc44f43f2742122f91a}{eval\+Model} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Evaluate the current model, that it update all assignments and rates of change. Do not carry out an integration step. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{group__compartment_gadb42e920ac63aa0b1b6d6a6a9c6fd504}{get\+Number\+Of\+Compartments} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+int \hyperlink{group__compartment_gabc437da46732973852cbbc11a03843d7}{get\+Number\+Of\+Compartments} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Returns the number of compartments in the model. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{group__boundary_ga7baf198510082275b3648b5691dd16b5}{get\+Number\+Of\+Boundary\+Species} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+int \hyperlink{group__boundary_gafc498cd4c301202105c25c86cff89ffc}{get\+Number\+Of\+Boundary\+Species} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Returns the number of boundary species in the model. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{group__floating_gab520e3bf495d490a96c5ee19870e7691}{get\+Number\+Of\+Floating\+Species} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+int \hyperlink{group__floating_ga71c45e94c31e5632a3c4815da05bec9a}{get\+Number\+Of\+Floating\+Species} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Returns the number of floating species in the model. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{group__parameters_ga430bad38724b6db3feea39b31231e85e}{get\+Number\+Of\+Global\+Parameters} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+int \hyperlink{group__parameters_ga3c5874112e8cd770fdeff634261b1740}{get\+Number\+Of\+Global\+Parameters} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Returns the number of global parameters in the model. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{group__floating_ga284f3c15160144a2639f1d3379f7766b}{get\+Number\+Of\+Dependent\+Species} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+int \hyperlink{group__floating_ga6038680c2da9d284277d9b73bb0c2a40}{get\+Number\+Of\+Dependent\+Species} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Returns the number of dependent species in the model. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv \hyperlink{group__floating_gaf41fdcb9fb98b278742bb5269a317741}{get\+Number\+Of\+Independent\+Species} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+int \hyperlink{group__floating_ga2c4d57dbedac2ccdf4ee9605d6a53932}{get\+Number\+Of\+Independent\+Species} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Returns the number of independent species in the model. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} rrc\+Call\+Conv \hyperlink{group__reaction_ga893427e9bcf19edb7742fd7a40bde89e}{get\+Reaction\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} \hyperlink{group__reaction_ga15b82b01e2ec0d4e1b0cf8a5ea2d500b}{get\+Reaction\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Obtain the list of reaction Ids. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} rrc\+Call\+Conv \hyperlink{group__boundary_ga31cfec3f7179f15a44eead1d45564a7c}{get\+Boundary\+Species\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} \hyperlink{group__boundary_ga89364daccd0a439f387e46c4265be2e5}{get\+Boundary\+Species\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Obtain the list of boundary species Ids. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} rrc\+Call\+Conv \hyperlink{group__floating_gadfa89aaae617d977977469f3c8e0efae}{get\+Floating\+Species\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} \hyperlink{group__floating_ga18277715f5f3df21eaee5f99d65ed7b7}{get\+Floating\+Species\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Obtain the list of floating species Id. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} rrc\+Call\+Conv \hyperlink{group__parameters_ga0ad560fd0b56ac0c36eff2db996b40cb}{get\+Global\+Parameter\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} \hyperlink{group__parameters_ga75b8b7b950a89fce030cbc0120051e90}{get\+Global\+Parameter\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Obtain the list of global parameter Ids. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} rrc\+Call\+Conv \hyperlink{group__compartment_ga319aa6ee06a7150d35c87f8ed2c9ab8a}{get\+Compartment\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} \hyperlink{group__compartment_ga49d71e059c4ccdf92d0a48d180174ec1}{get\+Compartment\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Obtain the list of compartment Ids. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} rrc\+Call\+Conv \hyperlink{group__state_ga37cb4ffafece558c4b6f1af4e53667b9}{get\+Eigenvalue\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} \hyperlink{group__state_gab504f19865db9d18456dd887f4f14d60}{get\+Eigenvalue\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Obtain the list of eigenvalue Ids. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a32a8a60ac06858ff3a791672bd2bec73}{R\+R\+List\+Ptr} rrc\+Call\+Conv \hyperlink{group__state_ga60829d32710dc201c4103c76214a4bc6}{get\+Available\+Time\+Course\+Symbols} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a32a8a60ac06858ff3a791672bd2bec73}{R\+R\+List\+Ptr} \hyperlink{group__state_ga442797d91971ebb3e8251ef2ff5881af}{get\+Available\+Time\+Course\+Symbols} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Obtain the list of all available symbols. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a32a8a60ac06858ff3a791672bd2bec73}{R\+R\+List\+Ptr} rrc\+Call\+Conv \hyperlink{group__state_gafe7dc6a912c3f97edd20b1e6da61b12c}{get\+Available\+Steady\+State\+Symbols} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a32a8a60ac06858ff3a791672bd2bec73}{R\+R\+List\+Ptr} \hyperlink{group__state_ga7144267d44ea25640583a1724d38158b}{get\+Available\+Steady\+State\+Symbols} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Obtain the list of all available steady state symbols. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a32a8a60ac06858ff3a791672bd2bec73}{R\+R\+List\+Ptr} rrc\+Call\+Conv \hyperlink{group__mca_ga344045fc1136134e90c716343ac06f9a}{get\+Elasticity\+Coefficient\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a32a8a60ac06858ff3a791672bd2bec73}{R\+R\+List\+Ptr} \hyperlink{group__mca_gacad76b5762c25a32e413b99e9b2cfb10}{get\+Elasticity\+Coefficient\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Obtain the list of elasticity coefficient Ids. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a32a8a60ac06858ff3a791672bd2bec73}{R\+R\+List\+Ptr} rrc\+Call\+Conv \hyperlink{group__mca_gaaaf6b7d6da161d1a64fea9e0ce9c2843}{get\+Unscaled\+Flux\+Control\+Coefficient\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a32a8a60ac06858ff3a791672bd2bec73}{R\+R\+List\+Ptr} \hyperlink{group__mca_ga90f444f3a93b225edda7264df6dbdb12}{get\+Unscaled\+Flux\+Control\+Coefficient\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Obtain the list of unscaled flux control coefficient Ids. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a32a8a60ac06858ff3a791672bd2bec73}{R\+R\+List\+Ptr} rrc\+Call\+Conv \hyperlink{group__mca_ga3031fcbb6954adaa81ac6f8574c5dc33}{get\+Flux\+Control\+Coefficient\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a32a8a60ac06858ff3a791672bd2bec73}{R\+R\+List\+Ptr} \hyperlink{group__mca_ga9c427f19db0adbed6fd5642aa2f921ba}{get\+Flux\+Control\+Coefficient\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Obtain the list of flux control coefficient Ids. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a32a8a60ac06858ff3a791672bd2bec73}{R\+R\+List\+Ptr} rrc\+Call\+Conv \hyperlink{group__mca_ga869f3496c8a786a1af0018cf9a98ec16}{get\+Unscaled\+Concentration\+Control\+Coefficient\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a32a8a60ac06858ff3a791672bd2bec73}{R\+R\+List\+Ptr} \hyperlink{group__mca_ga5eafcd38aa64319b3952f3379118a460}{get\+Unscaled\+Concentration\+Control\+Coefficient\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Obtain the list of unscaled concentration control coefficient Ids. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a32a8a60ac06858ff3a791672bd2bec73}{R\+R\+List\+Ptr} rrc\+Call\+Conv \hyperlink{group__mca_ga5d09e5709cba8b6496f3df5a17915c38}{get\+Concentration\+Control\+Coefficient\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a32a8a60ac06858ff3a791672bd2bec73}{R\+R\+List\+Ptr} \hyperlink{group__mca_ga650eb79cd39ede099c416607706b9608}{get\+Concentration\+Control\+Coefficient\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Obtain the list of concentration coefficient Ids. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_ae586a879d30f0823087e42d93464b5dd}{R\+R\+Double\+Matrix\+Ptr} rrc\+Call\+Conv \hyperlink{group__mca_ga27848ea67739637339d1c240c3d54a1b}{get\+Unscaled\+Elasticity\+Matrix} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_ae586a879d30f0823087e42d93464b5dd}{R\+R\+Double\+Matrix\+Ptr} \hyperlink{group__mca_ga14c1f732f8988b2956f096de2fe284f6}{get\+Unscaled\+Elasticity\+Matrix} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Retrieve the unscaled elasticity matrix for the current model. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_ae586a879d30f0823087e42d93464b5dd}{R\+R\+Double\+Matrix\+Ptr} rrc\+Call\+Conv \hyperlink{group__mca_ga4b3e243893115cba0c1d20aa5b207343}{get\+Scaled\+Elasticity\+Matrix} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_ae586a879d30f0823087e42d93464b5dd}{R\+R\+Double\+Matrix\+Ptr} \hyperlink{group__mca_ga4f2788a77a8c7549cb8e45b1c5a89bc7}{get\+Scaled\+Elasticity\+Matrix} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Retrieve the scaled elasticity matrix for the current model. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__mca_gaba5b9bdc9edb663e6563e6ce836481ef}{get\+Scaled\+Floating\+Species\+Elasticity} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$reaction\+Id, const char $\ast$species\+Id, double $\ast$value)
+bool \hyperlink{group__mca_ga2bb4853eff9e824836b776cf67ba63b0}{get\+Scaled\+Floating\+Species\+Elasticity} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$reaction\+Id, const char $\ast$species\+Id, double $\ast$value)
 \begin{DoxyCompactList}\small\item\em Retrieve the scaled elasticity matrix for the current model. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_ae586a879d30f0823087e42d93464b5dd}{R\+R\+Double\+Matrix\+Ptr} rrc\+Call\+Conv \hyperlink{group__mca_ga98eca56a5da7035bcf55bce9fbed1e56}{get\+Unscaled\+Concentration\+Control\+Coefficient\+Matrix} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_ae586a879d30f0823087e42d93464b5dd}{R\+R\+Double\+Matrix\+Ptr} \hyperlink{group__mca_gacb5aba2a12248da9b2d55624687a7ace}{get\+Unscaled\+Concentration\+Control\+Coefficient\+Matrix} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Retrieve the matrix of unscaled concentration control coefficients for the current model. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_ae586a879d30f0823087e42d93464b5dd}{R\+R\+Double\+Matrix\+Ptr} rrc\+Call\+Conv \hyperlink{group__mca_gaea6b9bb323f08262796f3c82a71b43c1}{get\+Scaled\+Concentration\+Control\+Coefficient\+Matrix} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_ae586a879d30f0823087e42d93464b5dd}{R\+R\+Double\+Matrix\+Ptr} \hyperlink{group__mca_ga9933c9181db0991fd502e76a1151a98f}{get\+Scaled\+Concentration\+Control\+Coefficient\+Matrix} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Retrieve the matrix of scaled concentration control coefficients for the current model. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_ae586a879d30f0823087e42d93464b5dd}{R\+R\+Double\+Matrix\+Ptr} rrc\+Call\+Conv \hyperlink{group__mca_ga50d5f6aabac3cd1801c471845b191297}{get\+Unscaled\+Flux\+Control\+Coefficient\+Matrix} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_ae586a879d30f0823087e42d93464b5dd}{R\+R\+Double\+Matrix\+Ptr} \hyperlink{group__mca_ga814b6a3331bd0e31f59b0c2ef82f6a1c}{get\+Unscaled\+Flux\+Control\+Coefficient\+Matrix} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Retrieve the matrix of unscaled flux control coefficients for the current model. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_ae586a879d30f0823087e42d93464b5dd}{R\+R\+Double\+Matrix\+Ptr} rrc\+Call\+Conv \hyperlink{group__mca_ga72cf127d1cc36b55786c2700fc53182b}{get\+Scaled\+Flux\+Control\+Coefficient\+Matrix} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_ae586a879d30f0823087e42d93464b5dd}{R\+R\+Double\+Matrix\+Ptr} \hyperlink{group__mca_ga4428693777e8c5e858709a455495d653}{get\+Scaled\+Flux\+Control\+Coefficient\+Matrix} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Retrieve the matrix of scaled flux control coefficients for the current model. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__mca_gae9f84e6ea3736a774eecd6e9585299b4}{getu\+C\+C} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$variable, const char $\ast$parameter, double $\ast$value)
+bool \hyperlink{group__mca_gae8316aebf007cc8ea676ac3ed1ed1168}{getu\+C\+C} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$variable, const char $\ast$parameter, double $\ast$value)
 \begin{DoxyCompactList}\small\item\em Retrieve a single unscaled control coefficient. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__mca_ga186d25721094be37bf8f82dcc2662652}{get\+C\+C} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$variable, const char $\ast$parameter, double $\ast$value)
+bool \hyperlink{group__mca_ga65db235364c7a461c95b95cf492a8f8b}{get\+C\+C} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$variable, const char $\ast$parameter, double $\ast$value)
 \begin{DoxyCompactList}\small\item\em Retrieve a single control coefficient. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__mca_ga1965125a33ed28f80fbdce867f8bde93}{get\+E\+E} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$name, const char $\ast$species, double $\ast$value)
+bool \hyperlink{group__mca_gab6c1db248f1c131833612dbcd6cc132a}{get\+E\+E} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$name, const char $\ast$species, double $\ast$value)
 \begin{DoxyCompactList}\small\item\em Retrieve a single elasticity coefficient. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__mca_ga0b1b29ecf19805b173e35ca3388d3deb}{getu\+E\+E} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$name, const char $\ast$species, double $\ast$value)
+bool \hyperlink{group__mca_ga528375b48f135755470a7cfbf3e7eeb9}{getu\+E\+E} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$name, const char $\ast$species, double $\ast$value)
 \begin{DoxyCompactList}\small\item\em Retrieve a single unscaled elasticity coefficient. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__stochastic_ga7f5813153b9ea59a30cbc2cdfbdedffc}{get\+Seed} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, long $\ast$seed)
+bool \hyperlink{group__stochastic_ga84b5d5b30763611e53bf0881bfcc2229}{get\+Seed} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, long $\ast$seed)
 \begin{DoxyCompactList}\small\item\em Determine the current seed used by the random generator. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__stochastic_gaa694837d219e6fd8c55183ad5aa05910}{set\+Seed} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, long seed)
+bool \hyperlink{group__stochastic_ga050cbb1242145c14e4a5f2f152d40a01}{set\+Seed} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, long seed)
 \begin{DoxyCompactList}\small\item\em Set the current seed used by the random generator. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} rrc\+Call\+Conv \hyperlink{group__stochastic_gaeaf09f5ac0fcf9df24ccb0e62c82703e}{gillespie} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} \hyperlink{group__stochastic_ga241498728efe5f47cc302c9315f8a663}{gillespie} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Carry out a time-\/course simulation using the Gillespie algorithm with variable step size. set\+Time\+Start, set\+Time\+End, etc are used to set the simulation characteristics. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} rrc\+Call\+Conv \hyperlink{group__stochastic_ga90d4504aafacfdc2148bedbde8b84823}{gillespie\+Ex} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double time\+Start, double time\+End)
+\hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} \hyperlink{group__stochastic_ga4d5211689f620321e9fa934adad6490f}{gillespie\+Ex} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double time\+Start, double time\+End)
 \begin{DoxyCompactList}\small\item\em Carry out a time-\/course simulation using the Gillespie algorithm based on the given arguments, time start, time end and number of points. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} rrc\+Call\+Conv \hyperlink{group__stochastic_ga2177740637e6d6732621c7cded0dbba5}{gillespie\+On\+Grid} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} \hyperlink{group__stochastic_gad0b691715fdddc67fa25c4478a7fe6b8}{gillespie\+On\+Grid} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Carry out a time-\/course simulation using the Gillespie algorithm with fixed step size. set\+Time\+Start, set\+Time\+End, set\+Num\+Points, etc are used to set the simulation characteristics. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} rrc\+Call\+Conv \hyperlink{group__stochastic_gabedfc117be6781c6caca54ecc74561ea}{gillespie\+On\+Grid\+Ex} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double time\+Start, double time\+End, int number\+Of\+Points)
+\hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} \hyperlink{group__stochastic_gae6789000f5ea8712c594150b27ce8d87}{gillespie\+On\+Grid\+Ex} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double time\+Start, double time\+End, int number\+Of\+Points)
 \begin{DoxyCompactList}\small\item\em Carry out a time-\/course simulation using the Gillespie algorithm with fixed step size based on the given arguments, time start, time end, and number of points. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} rrc\+Call\+Conv \hyperlink{group__stochastic_ga3f887a483162b0eed518be4faec411d6}{gillespie\+Mean\+On\+Grid} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int number\+Of\+Simulations)
+\hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} \hyperlink{group__stochastic_ga46197b22a2cacfa3bdae630273d91dac}{gillespie\+Mean\+On\+Grid} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int number\+Of\+Simulations)
 \begin{DoxyCompactList}\small\item\em Carry out a series of time-\/course simulations using the Gillespie algorithm with fixed step size, then return the average of the simulations. set\+Time\+Start, set\+Time\+End, set\+Num\+Points, etc are used to set the simulation characteristics. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} rrc\+Call\+Conv \hyperlink{group__stochastic_ga984a669536f489f257335903ce54469c}{gillespie\+Mean\+On\+Grid\+Ex} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double time\+Start, double time\+End, int number\+Of\+Points, int number\+Of\+Simulations)
+\hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} \hyperlink{group__stochastic_ga36f575b021017cbcac1e14ca839e5944}{gillespie\+Mean\+On\+Grid\+Ex} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double time\+Start, double time\+End, int number\+Of\+Points, int number\+Of\+Simulations)
 \begin{DoxyCompactList}\small\item\em Carry out a series of time-\/course simulations using the Gillespie algorithm with fixed step size, then return the average of the simulations. Based on the given arguments, time start, time end, and number of points. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} rrc\+Call\+Conv \hyperlink{group__stochastic_ga4caaa9e174e6b9065524e7cdc56fabb4}{gillespie\+Mean\+S\+D\+On\+Grid} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int number\+Of\+Simulations)
+\hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} \hyperlink{group__stochastic_ga2898cc7e6c6068614f0df2698582e6af}{gillespie\+Mean\+S\+D\+On\+Grid} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int number\+Of\+Simulations)
 \begin{DoxyCompactList}\small\item\em Carry out a series of time-\/course simulations using the Gillespie algorithm with fixed step size, then return the average and standard deviation of the simulations. set\+Time\+Start, set\+Time\+End, set\+Num\+Points, etc are used to set the simulation characteristics. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} rrc\+Call\+Conv \hyperlink{group__stochastic_ga11f181f858ccff7015069b6479772024}{gillespie\+Mean\+S\+D\+On\+Grid\+Ex} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double time\+Start, double time\+End, int number\+Of\+Steps, int number\+Of\+Simulations)
+\hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} \hyperlink{group__stochastic_ga451494155afde700a3bb7934f1bda0fe}{gillespie\+Mean\+S\+D\+On\+Grid\+Ex} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double time\+Start, double time\+End, int number\+Of\+Steps, int number\+Of\+Simulations)
 \begin{DoxyCompactList}\small\item\em Carry out a series of time-\/course simulations using the Gillespie algorithm with fixed step size, then return the average and standard deviation of the simulations. Based on the given arguments, time start, time end, number of points, and number of simulations. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__reset_gabde768cf80e67fe8f2811a28843e41f4}{reset} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+bool \hyperlink{group__reset_gaeaf9374c9a0cad0898f5e0a37bc387c5}{reset} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Resets all variables of the model to their current initial values. Does not change the parameters. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__reset_ga50d3ec99c57ba89550a4deef3129e19f}{reset\+All} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+bool \hyperlink{group__reset_ga0fdde5a5cdd90408a0e2050d8e4243ec}{reset\+All} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Resets all variables of the model to their current initial values, and resets all parameters to their original values. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__reset_ga24d6b0810b8cbf5a7e9b4da38908b6f7}{reset\+To\+Origin} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+bool \hyperlink{group__reset_ga30ad9eec8febc573febf1ad8b40c99ad}{reset\+To\+Origin} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Resets the model to the state in which it was first loaded, including initial conditions, variables, and parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -389,13 +400,249 @@ Y\+O\+U C\+A\+N\+N\+O\+T\+:
 redistribute any piece of this software without proper attribution; 
 
 \subsection{Function Documentation}
-\hypertarget{rrc__api_8h_a1f86376cdde6517c38fab5421a948e6f}{}\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!get\+List\+Of\+Integrators@{get\+List\+Of\+Integrators}}
-\index{get\+List\+Of\+Integrators@{get\+List\+Of\+Integrators}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
-\subsubsection[{get\+List\+Of\+Integrators(\+R\+R\+Handle handle)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C {\bf R\+R\+String\+Array\+Ptr} rrc\+Call\+Conv get\+List\+Of\+Integrators (
+\hypertarget{rrc__api_8h_a4a917a0539977b7206d1bfbddcc98347}{\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!get\+Current\+Integrator\+Description@{get\+Current\+Integrator\+Description}}
+\index{get\+Current\+Integrator\+Description@{get\+Current\+Integrator\+Description}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
+\subsubsection[{get\+Current\+Integrator\+Description}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Current\+Integrator\+Description (
 \begin{DoxyParamCaption}
 \item[{{\bf R\+R\+Handle}}]{handle}
 \end{DoxyParamCaption}
-)}\label{rrc__api_8h_a1f86376cdde6517c38fab5421a948e6f}
+)}}\label{rrc__api_8h_a4a917a0539977b7206d1bfbddcc98347}
+
+
+Obtain a description of the current integrator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em name\+Of\+Integrator} & Name of the integrator to be used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a description of the current integrator. 
+\end{DoxyReturn}
+\hypertarget{rrc__api_8h_adc3f18f7a683daa8848968ba54436f96}{\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!get\+Current\+Integrator\+Hint@{get\+Current\+Integrator\+Hint}}
+\index{get\+Current\+Integrator\+Hint@{get\+Current\+Integrator\+Hint}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
+\subsubsection[{get\+Current\+Integrator\+Hint}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Current\+Integrator\+Hint (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle}
+\end{DoxyParamCaption}
+)}}\label{rrc__api_8h_adc3f18f7a683daa8848968ba54436f96}
+
+
+Obtain a short hint for the current integrator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em name\+Of\+Integrator} & Name of the integrator to be used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a short hint of the current integrator. 
+\end{DoxyReturn}
+\hypertarget{rrc__api_8h_ab06f6ef3c9c6b57a2806132b1906a52e}{\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!get\+Current\+Integrator\+Parameter\+Boolean@{get\+Current\+Integrator\+Parameter\+Boolean}}
+\index{get\+Current\+Integrator\+Parameter\+Boolean@{get\+Current\+Integrator\+Parameter\+Boolean}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
+\subsubsection[{get\+Current\+Integrator\+Parameter\+Boolean}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Current\+Integrator\+Parameter\+Boolean (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name}
+\end{DoxyParamCaption}
+)}}\label{rrc__api_8h_ab06f6ef3c9c6b57a2806132b1906a52e}
+
+
+Get the boolean value for a specific integrator setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the integrator setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a boolean value for the integrator setting. 
+\end{DoxyReturn}
+\hypertarget{rrc__api_8h_ae4308a0893d84e49ef877d2db65d110c}{\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!get\+Current\+Integrator\+Parameter\+Description@{get\+Current\+Integrator\+Parameter\+Description}}
+\index{get\+Current\+Integrator\+Parameter\+Description@{get\+Current\+Integrator\+Parameter\+Description}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
+\subsubsection[{get\+Current\+Integrator\+Parameter\+Description}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Current\+Integrator\+Parameter\+Description (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name}
+\end{DoxyParamCaption}
+)}}\label{rrc__api_8h_ae4308a0893d84e49ef877d2db65d110c}
+
+
+Get the description for a specific integrator setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the integrator setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a description for the integrator setting. 
+\end{DoxyReturn}
+\hypertarget{rrc__api_8h_ad859b0cb1724ab3aeee81230c2da272a}{\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!get\+Current\+Integrator\+Parameter\+Double@{get\+Current\+Integrator\+Parameter\+Double}}
+\index{get\+Current\+Integrator\+Parameter\+Double@{get\+Current\+Integrator\+Parameter\+Double}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
+\subsubsection[{get\+Current\+Integrator\+Parameter\+Double}]{\setlength{\rightskip}{0pt plus 5cm}double get\+Current\+Integrator\+Parameter\+Double (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name}
+\end{DoxyParamCaption}
+)}}\label{rrc__api_8h_ad859b0cb1724ab3aeee81230c2da272a}
+
+
+Get the double value for a specific integrator setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the integrator setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a double value for the integrator setting. 
+\end{DoxyReturn}
+\hypertarget{rrc__api_8h_a4cc4c3b42b58f7ce266cff67cbc79c85}{\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!get\+Current\+Integrator\+Parameter\+Hint@{get\+Current\+Integrator\+Parameter\+Hint}}
+\index{get\+Current\+Integrator\+Parameter\+Hint@{get\+Current\+Integrator\+Parameter\+Hint}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
+\subsubsection[{get\+Current\+Integrator\+Parameter\+Hint}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Current\+Integrator\+Parameter\+Hint (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name}
+\end{DoxyParamCaption}
+)}}\label{rrc__api_8h_a4cc4c3b42b58f7ce266cff67cbc79c85}
+
+
+Get the hint for a specific integrator setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the integrator setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a hint for the integrator setting. 
+\end{DoxyReturn}
+\hypertarget{rrc__api_8h_a23b63638fae7a4823ac503474126c85b}{\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!get\+Current\+Integrator\+Parameter\+Int@{get\+Current\+Integrator\+Parameter\+Int}}
+\index{get\+Current\+Integrator\+Parameter\+Int@{get\+Current\+Integrator\+Parameter\+Int}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
+\subsubsection[{get\+Current\+Integrator\+Parameter\+Int}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Current\+Integrator\+Parameter\+Int (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name}
+\end{DoxyParamCaption}
+)}}\label{rrc__api_8h_a23b63638fae7a4823ac503474126c85b}
+
+
+Get the integer value for a specific integrator setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the integrator setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns an integer value for the integrator setting. 
+\end{DoxyReturn}
+\hypertarget{rrc__api_8h_a11536f253e0b43f8a282bf3bdfaf1328}{\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!get\+Current\+Integrator\+Parameter\+String@{get\+Current\+Integrator\+Parameter\+String}}
+\index{get\+Current\+Integrator\+Parameter\+String@{get\+Current\+Integrator\+Parameter\+String}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
+\subsubsection[{get\+Current\+Integrator\+Parameter\+String}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Current\+Integrator\+Parameter\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name}
+\end{DoxyParamCaption}
+)}}\label{rrc__api_8h_a11536f253e0b43f8a282bf3bdfaf1328}
+
+
+Get the string value for a specific integrator setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the integrator setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a string value for the integrator setting. 
+\end{DoxyReturn}
+\hypertarget{rrc__api_8h_a04f015cae3234d1e24dc86c4ca6cf7ab}{\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!get\+Current\+Integrator\+Parameter\+Type@{get\+Current\+Integrator\+Parameter\+Type}}
+\index{get\+Current\+Integrator\+Parameter\+Type@{get\+Current\+Integrator\+Parameter\+Type}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
+\subsubsection[{get\+Current\+Integrator\+Parameter\+Type}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Current\+Integrator\+Parameter\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name}
+\end{DoxyParamCaption}
+)}}\label{rrc__api_8h_a04f015cae3234d1e24dc86c4ca6cf7ab}
+
+
+Get the return type for a specific integrator setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the integrator setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a integer that indicates the return type for the integrator setting. 0-\/\+S\+T\+R\+I\+N\+G, 1-\/\+B\+O\+O\+L, 2-\/\+I\+N\+T32, 3-\/\+U\+I\+N\+T32, 4-\/\+I\+N\+T64, 5-\/\+U\+I\+N\+T64, 6-\/\+F\+L\+O\+A\+T, 7-\/\+D\+O\+U\+B\+L\+E, 8-\/\+C\+H\+A\+R, 9-\/\+U\+C\+H\+A\+R, 10-\/\+E\+M\+P\+T\+Y 
+\end{DoxyReturn}
+\hypertarget{rrc__api_8h_a6bcd64ac9ce4a728b14a1fa570d6f5ae}{\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!get\+Integrator\+Name@{get\+Integrator\+Name}}
+\index{get\+Integrator\+Name@{get\+Integrator\+Name}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
+\subsubsection[{get\+Integrator\+Name}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Integrator\+Name (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle}
+\end{DoxyParamCaption}
+)}}\label{rrc__api_8h_a6bcd64ac9ce4a728b14a1fa570d6f5ae}
+
+
+Obtain a description of the current integrator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em name\+Of\+Integrator} & Name of the integrator to be used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a description of the current integrator. 
+\end{DoxyReturn}
+\hypertarget{rrc__api_8h_a8bc1ea6950f141d40373416d64abaefa}{\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!get\+List\+Of\+Current\+Integrator\+Parameter\+Names@{get\+List\+Of\+Current\+Integrator\+Parameter\+Names}}
+\index{get\+List\+Of\+Current\+Integrator\+Parameter\+Names@{get\+List\+Of\+Current\+Integrator\+Parameter\+Names}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
+\subsubsection[{get\+List\+Of\+Current\+Integrator\+Parameter\+Names}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+R\+String\+Array\+Ptr} get\+List\+Of\+Current\+Integrator\+Parameter\+Names (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle}
+\end{DoxyParamCaption}
+)}}\label{rrc__api_8h_a8bc1ea6950f141d40373416d64abaefa}
+
+
+Get the names of adjustable settings for the current integrator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a list that contains the names of adjustable integrator settings. 
+\end{DoxyReturn}
+\hypertarget{rrc__api_8h_ac6c65b8fe4f2950f875c426e925197b4}{\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!get\+List\+Of\+Integrators@{get\+List\+Of\+Integrators}}
+\index{get\+List\+Of\+Integrators@{get\+List\+Of\+Integrators}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
+\subsubsection[{get\+List\+Of\+Integrators}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+R\+String\+Array\+Ptr} get\+List\+Of\+Integrators (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle}
+\end{DoxyParamCaption}
+)}}\label{rrc__api_8h_ac6c65b8fe4f2950f875c426e925197b4}
 
 
 Get the names of implemented integrators. 
@@ -408,14 +655,70 @@ Get the names of implemented integrators.
 \begin{DoxyReturn}{Returns}
 Returns a list that contains the names of currently implemented integrators. 
 \end{DoxyReturn}
-\hypertarget{rrc__api_8h_a1e12a65f50c3138f73628d090bda918a}{}\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!get\+Param\+Promoted\+S\+B\+M\+L@{get\+Param\+Promoted\+S\+B\+M\+L}}
+\hypertarget{rrc__api_8h_a7885d06904fc2cdceaa7e71448cde468}{\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!get\+Number\+Of\+Current\+Integrator\+Parameters@{get\+Number\+Of\+Current\+Integrator\+Parameters}}
+\index{get\+Number\+Of\+Current\+Integrator\+Parameters@{get\+Number\+Of\+Current\+Integrator\+Parameters}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
+\subsubsection[{get\+Number\+Of\+Current\+Integrator\+Parameters}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Number\+Of\+Current\+Integrator\+Parameters (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle}
+\end{DoxyParamCaption}
+)}}\label{rrc__api_8h_a7885d06904fc2cdceaa7e71448cde468}
+
+
+Get the number of adjustable settings for the current integrator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns an integer that corresponds to the number of adjustable integrator settings. 
+\end{DoxyReturn}
+\hypertarget{rrc__api_8h_a492555873a0da5f8aa167eeafb7d7d21}{\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!get\+Num\+Instantiated\+Integrators@{get\+Num\+Instantiated\+Integrators}}
+\index{get\+Num\+Instantiated\+Integrators@{get\+Num\+Instantiated\+Integrators}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
+\subsubsection[{get\+Num\+Instantiated\+Integrators}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Num\+Instantiated\+Integrators (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle}
+\end{DoxyParamCaption}
+)}}\label{rrc__api_8h_a492555873a0da5f8aa167eeafb7d7d21}
+
+
+Get the number of instantiated integrators. 
+
+Instantiated Integrators
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns an integer that corresponds to the number of currently registered integrators. 
+\end{DoxyReturn}
+\hypertarget{rrc__api_8h_a53617fbabff8088e10c8bc5deee40353}{\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!get\+Num\+Registered\+Integrators@{get\+Num\+Registered\+Integrators}}
+\index{get\+Num\+Registered\+Integrators@{get\+Num\+Registered\+Integrators}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
+\subsubsection[{get\+Num\+Registered\+Integrators}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Num\+Registered\+Integrators (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{rrc__api_8h_a53617fbabff8088e10c8bc5deee40353}
+
+
+Get the number of implemented integrators. 
+
+Registered Integrators
+
+\begin{DoxyReturn}{Returns}
+Returns an integer that corresponds to the number of currently registered integrators. 
+\end{DoxyReturn}
+\hypertarget{rrc__api_8h_a6c696d860e612922c56973d36d87dbe9}{\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!get\+Param\+Promoted\+S\+B\+M\+L@{get\+Param\+Promoted\+S\+B\+M\+L}}
 \index{get\+Param\+Promoted\+S\+B\+M\+L@{get\+Param\+Promoted\+S\+B\+M\+L}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
-\subsubsection[{get\+Param\+Promoted\+S\+B\+M\+L(\+R\+R\+Handle handle, const char $\ast$s\+Arg)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char$\ast$ rrc\+Call\+Conv get\+Param\+Promoted\+S\+B\+M\+L (
+\subsubsection[{get\+Param\+Promoted\+S\+B\+M\+L}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Param\+Promoted\+S\+B\+M\+L (
 \begin{DoxyParamCaption}
 \item[{{\bf R\+R\+Handle}}]{handle, }
 \item[{const char $\ast$}]{s\+Arg}
 \end{DoxyParamCaption}
-)}\label{rrc__api_8h_a1e12a65f50c3138f73628d090bda918a}
+)}}\label{rrc__api_8h_a6c696d860e612922c56973d36d87dbe9}
 
 
 Promote any local parameters to global status. 
@@ -432,30 +735,214 @@ This routine will convert any local reaction parameters and promote them to glob
 \begin{DoxyReturn}{Returns}
 Returns null if it fails otherwise it returns the promoted S\+B\+M\+L model as a string 
 \end{DoxyReturn}
-\hypertarget{rrc__api_8h_a2d799defcade869e5610bbe3b547f39c}{}\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!get\+Version@{get\+Version}}
+\hypertarget{rrc__api_8h_aae54354d9935875691727e0b89e5ebc2}{\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!get\+Registered\+Integrator\+Desc@{get\+Registered\+Integrator\+Desc}}
+\index{get\+Registered\+Integrator\+Desc@{get\+Registered\+Integrator\+Desc}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
+\subsubsection[{get\+Registered\+Integrator\+Desc}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Registered\+Integrator\+Desc (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{rrc__api_8h_aae54354d9935875691727e0b89e5ebc2}
+
+
+Get the description of a registered integrator (e.\+g. cvode etc.) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em n} & The index of the registered integrator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Callee owns memory 
+\end{DoxyNote}
+\hypertarget{rrc__api_8h_a6d22f11e49e89336e5d795e620e55530}{\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!get\+Registered\+Integrator\+Hint@{get\+Registered\+Integrator\+Hint}}
+\index{get\+Registered\+Integrator\+Hint@{get\+Registered\+Integrator\+Hint}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
+\subsubsection[{get\+Registered\+Integrator\+Hint}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Registered\+Integrator\+Hint (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{rrc__api_8h_a6d22f11e49e89336e5d795e620e55530}
+
+
+Get the hint of a registered integrator (e.\+g. cvode etc.) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em n} & The index of the registered integrator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Callee owns memory 
+\end{DoxyNote}
+\hypertarget{rrc__api_8h_a5713f7cea279fc58aa497615ebb7ddbf}{\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!get\+Registered\+Integrator\+Name@{get\+Registered\+Integrator\+Name}}
+\index{get\+Registered\+Integrator\+Name@{get\+Registered\+Integrator\+Name}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
+\subsubsection[{get\+Registered\+Integrator\+Name}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Registered\+Integrator\+Name (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{rrc__api_8h_a5713f7cea279fc58aa497615ebb7ddbf}
+
+
+Get the name of a registered integrator (e.\+g. cvode etc.) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em n} & The index of the registered integrator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Callee owns memory 
+\end{DoxyNote}
+\hypertarget{rrc__api_8h_a5b15fe423a1ef9d1fd4ca2f7b1c7b240}{\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!get\+Version@{get\+Version}}
 \index{get\+Version@{get\+Version}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
-\subsubsection[{get\+Version()}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C int rrc\+Call\+Conv get\+Version (
+\subsubsection[{get\+Version}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Version (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{rrc__api_8h_a2d799defcade869e5610bbe3b547f39c}
+)}}\label{rrc__api_8h_a5b15fe423a1ef9d1fd4ca2f7b1c7b240}
 Get the version number.
 
 \begin{DoxyReturn}{Returns}
 the roadrunner version number in the form or 102030 if the number is 1.\+2.\+3
 \end{DoxyReturn}
-returns the individual version numbers as X\+X\+Y\+Y\+Z\+Z where X\+X is the major version, Y\+Y the minor and Z\+Z the revision, eg 10000, or 10100, 20000 etc \hypertarget{rrc__api_8h_a847f64fd6fdda38c19fdedc386272c01}{}\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!get\+Version\+Ex@{get\+Version\+Ex}}
+returns the individual version numbers as X\+X\+Y\+Y\+Z\+Z where X\+X is the major version, Y\+Y the minor and Z\+Z the revision, eg 10000, or 10100, 20000 etc \hypertarget{rrc__api_8h_abbe7e84698149d0186cee05c9198d4f1}{\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!get\+Version\+Ex@{get\+Version\+Ex}}
 \index{get\+Version\+Ex@{get\+Version\+Ex}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
-\subsubsection[{get\+Version\+Ex()}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char$\ast$ rrc\+Call\+Conv get\+Version\+Ex (
+\subsubsection[{get\+Version\+Ex}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Version\+Ex (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{rrc__api_8h_a847f64fd6fdda38c19fdedc386272c01}
-returns something like \char`\"{}1.\+0.\+0; compiled with clang \char`\"{}3.\+3 (tags/\+R\+E\+L\+E\+A\+S\+E\+\_\+33/final)" on date Dec 8 2013, 17\+:24\+:57\textquotesingle{} \hypertarget{rrc__api_8h_a3ed15ae076fbdc30ee6f58705beb0763}{}\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!get\+Version\+Str@{get\+Version\+Str}}
+)}}\label{rrc__api_8h_abbe7e84698149d0186cee05c9198d4f1}
+returns something like \char`\"{}1.\+0.\+0; compiled with clang \char`\"{}3.\+3 (tags/\+R\+E\+L\+E\+A\+S\+E\+\_\+33/final)" on date Dec 8 2013, 17\+:24\+:57' \hypertarget{rrc__api_8h_a87e6433324fbf521f20a212769437a3a}{\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!get\+Version\+Str@{get\+Version\+Str}}
 \index{get\+Version\+Str@{get\+Version\+Str}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
-\subsubsection[{get\+Version\+Str()}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C char$\ast$ rrc\+Call\+Conv get\+Version\+Str (
+\subsubsection[{get\+Version\+Str}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Version\+Str (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{rrc__api_8h_a3ed15ae076fbdc30ee6f58705beb0763}
-returns roadrunner as a string, i.\+e. \char`\"{}1.\+0.\+0\char`\"{} 
+)}}\label{rrc__api_8h_a87e6433324fbf521f20a212769437a3a}
+returns roadrunner as a string, i.\+e. \char`\"{}1.\+0.\+0\char`\"{} \hypertarget{rrc__api_8h_ab89192771385f30f5223756c46bda227}{\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!set\+Current\+Integrator\+Parameter\+Boolean@{set\+Current\+Integrator\+Parameter\+Boolean}}
+\index{set\+Current\+Integrator\+Parameter\+Boolean@{set\+Current\+Integrator\+Parameter\+Boolean}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
+\subsubsection[{set\+Current\+Integrator\+Parameter\+Boolean}]{\setlength{\rightskip}{0pt plus 5cm}int set\+Current\+Integrator\+Parameter\+Boolean (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}}\label{rrc__api_8h_ab89192771385f30f5223756c46bda227}
+
+
+Set the boolean value for a specific integrator setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the integrator setting. \\
+\hline
+\mbox{\tt in}  & {\em value} & The boolean value for the integrator setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns True if successful. 
+\end{DoxyReturn}
+\hypertarget{rrc__api_8h_a90d69322c437f56d551c14445b57bb5a}{\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!set\+Current\+Integrator\+Parameter\+Double@{set\+Current\+Integrator\+Parameter\+Double}}
+\index{set\+Current\+Integrator\+Parameter\+Double@{set\+Current\+Integrator\+Parameter\+Double}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
+\subsubsection[{set\+Current\+Integrator\+Parameter\+Double}]{\setlength{\rightskip}{0pt plus 5cm}int set\+Current\+Integrator\+Parameter\+Double (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}}\label{rrc__api_8h_a90d69322c437f56d551c14445b57bb5a}
+
+
+Set the double value for a specific integrator setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the integrator setting. \\
+\hline
+\mbox{\tt in}  & {\em value} & The double value for the integrator setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns True if successful. 
+\end{DoxyReturn}
+\hypertarget{rrc__api_8h_a4b5b2be1b4a77b8225f5c7d9a1e0bdfb}{\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!set\+Current\+Integrator\+Parameter\+Int@{set\+Current\+Integrator\+Parameter\+Int}}
+\index{set\+Current\+Integrator\+Parameter\+Int@{set\+Current\+Integrator\+Parameter\+Int}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
+\subsubsection[{set\+Current\+Integrator\+Parameter\+Int}]{\setlength{\rightskip}{0pt plus 5cm}int set\+Current\+Integrator\+Parameter\+Int (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}}\label{rrc__api_8h_a4b5b2be1b4a77b8225f5c7d9a1e0bdfb}
+
+
+Set the integer value for a specific integrator setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the integrator setting. \\
+\hline
+\mbox{\tt in}  & {\em value} & The integer value for the integrator setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns True if successful. 
+\end{DoxyReturn}
+\hypertarget{rrc__api_8h_a7b901ff654788259368fc15c01fe53a6}{\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!set\+Current\+Integrator\+Parameter\+String@{set\+Current\+Integrator\+Parameter\+String}}
+\index{set\+Current\+Integrator\+Parameter\+String@{set\+Current\+Integrator\+Parameter\+String}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
+\subsubsection[{set\+Current\+Integrator\+Parameter\+String}]{\setlength{\rightskip}{0pt plus 5cm}int set\+Current\+Integrator\+Parameter\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name, }
+\item[{char $\ast$}]{value}
+\end{DoxyParamCaption}
+)}}\label{rrc__api_8h_a7b901ff654788259368fc15c01fe53a6}
+
+
+Set the string value for a specific integrator setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the integrator setting. \\
+\hline
+\mbox{\tt in}  & {\em value} & The string value for the integrator setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns True if successful. 
+\end{DoxyReturn}
+\hypertarget{rrc__api_8h_ad6e463525042165dede8261851cc46af}{\index{rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}!set\+Integrator@{set\+Integrator}}
+\index{set\+Integrator@{set\+Integrator}!rrc\+\_\+api.\+h@{rrc\+\_\+api.\+h}}
+\subsubsection[{set\+Integrator}]{\setlength{\rightskip}{0pt plus 5cm}int set\+Integrator (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{name\+Of\+Integrator}
+\end{DoxyParamCaption}
+)}}\label{rrc__api_8h_ad6e463525042165dede8261851cc46af}
+
+
+Specify the current integrator to be used for simulation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em name\+Of\+Integrator} & Name of the integrator to be used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns True if successful. 
+\end{DoxyReturn}

@@ -15,15 +15,15 @@ Road\+Runner is a S\+B\+M\+L compliant high performance and portable simulation 
     \hyperlink{struct_r_r_c_data}{RRCDataPtr} result;
 
     printf (\textcolor{stringliteral}{"Starting Test Program %s\(\backslash\)n"}, argv[0]);
-    rrHandle = \hyperlink{group__initialization_ga3285113641ecf1dc35c39fceb39b60fc}{createRRInstance}();
-    \textcolor{keywordflow}{if} (!\hyperlink{group__loadsave_ga03cb924c6790b039f77a1a9c5dbcdda1}{loadSBMLFromFile} (rrHandle, \textcolor{stringliteral}{"feedback.xml"})) \{
-        printf (\textcolor{stringliteral}{"Failed to load model: %s\(\backslash\)n"}, \hyperlink{group__errorfunctions_ga0a0d2c042920c6fc648bcb4ce8091ede}{getLastError} ());
+    rrHandle = \hyperlink{group__initialization_gac5b4dbf9108edb1ea6e315379e5576e0}{createRRInstance}();
+    \textcolor{keywordflow}{if} (!\hyperlink{group__loadsave_ga275b8f8d7350505c383fdc9634713041}{loadSBMLFromFile} (rrHandle, \textcolor{stringliteral}{"feedback.xml"})) \{
+        printf (\textcolor{stringliteral}{"Failed to load model: %s\(\backslash\)n"}, \hyperlink{group__errorfunctions_ga97659609c7c7715bd37e0962efd21c3a}{getLastError} ());
         getchar ();
         exit (0);
     \}
-    result = \hyperlink{group__simulation_ga12a2129f06507eafbace57a8612cc600}{simulateEx} (rrHandle, 0, 10, 100);
-    printf (\hyperlink{group__to_string_ga9ecd62cd0fd10a179bd2fe5e55f69929}{rrCDataToString} (result));
-    \hyperlink{group__free_routines_gaca3178e98973909708974aedef4ece46}{freeRRCData}(result);
+    result = \hyperlink{group__simulation_gaa568722adbce33e145ce8c4a78146465}{simulateEx} (rrHandle, 0, 10, 100);
+    printf (\hyperlink{group__to_string_ga505aeb10e21f0ef93770f7723aa12514}{rrCDataToString} (result));
+    \hyperlink{group__free_routines_ga96317bb0c9ad3daee01c9665cc14b223}{freeRRCData}(result);
 
     getchar ();
     exit (0);
@@ -47,19 +47,19 @@ More complex example, using C A\+P\+I\+:
    \textcolor{keywordtype}{int} col;
    \textcolor{keywordtype}{int} row;
    printf (\textcolor{stringliteral}{"Starting Test Program %s\(\backslash\)n"}, argv[0]);
-   rrHandle = \hyperlink{group__initialization_ga3285113641ecf1dc35c39fceb39b60fc}{createRRInstance}();
-   \textcolor{keywordflow}{if} (!\hyperlink{group__loadsave_gaeaaaf4f7855457d6207934149f52f5f9}{loadSBML} (rrHandle, \textcolor{stringliteral}{"feedback.xml"})) \{
+   rrHandle = \hyperlink{group__initialization_gac5b4dbf9108edb1ea6e315379e5576e0}{createRRInstance}();
+   \textcolor{keywordflow}{if} (!\hyperlink{group__loadsave_gafb3515fd8472da389f5f24530017f037}{loadSBML} (rrHandle, \textcolor{stringliteral}{"feedback.xml"})) \{
       printf (\textcolor{stringliteral}{"Error while loading SBML file\(\backslash\)n"});
-      printf (\textcolor{stringliteral}{"Error message: %s\(\backslash\)n"}, \hyperlink{group__errorfunctions_ga0a0d2c042920c6fc648bcb4ce8091ede}{getLastError}());
+      printf (\textcolor{stringliteral}{"Error message: %s\(\backslash\)n"}, \hyperlink{group__errorfunctions_ga97659609c7c7715bd37e0962efd21c3a}{getLastError}());
       getchar ();
       exit (0);
    \}
-   result = \hyperlink{group__simulation_ga12a2129f06507eafbace57a8612cc600}{simulateEx} (rrHandle, 0, 10, 10);  \textcolor{comment}{// start time, end time, and number of points}
+   result = \hyperlink{group__simulation_gaa568722adbce33e145ce8c4a78146465}{simulateEx} (rrHandle, 0, 10, 10);  \textcolor{comment}{// start time, end time, and number of points}
    index = 0;
    \textcolor{comment}{// Print out column headers... typically time and species.}
-   \textcolor{keywordflow}{for} (col = 0; col < result->\hyperlink{struct_r_r_c_data_a573616e93e0241d11b40ea56c708041b}{CSize}; col++)
+   \textcolor{keywordflow}{for} (col = 0; col < result->\hyperlink{struct_r_r_c_data_a17c9a5894aa9cb3789346dcaa9c370bb}{CSize}; col++)
    \{
-      printf (\textcolor{stringliteral}{"%10s"}, result->\hyperlink{struct_r_r_c_data_a54acd2748775883500033984275be173}{ColumnHeaders}[index++]);
+      printf (\textcolor{stringliteral}{"%10s"}, result->\hyperlink{struct_r_r_c_data_ab339159e5604808f92fe793f4f43da03}{ColumnHeaders}[index++]);
       \textcolor{keywordflow}{if} (col < result->CSize - 1)
       \{
          printf (\textcolor{stringliteral}{"\(\backslash\)t"});
@@ -68,11 +68,11 @@ More complex example, using C A\+P\+I\+:
    printf (\textcolor{stringliteral}{"\(\backslash\)n"});
    index = 0;
    \textcolor{comment}{// Print out the data}
-   \textcolor{keywordflow}{for} (row = 0; row < result->\hyperlink{struct_r_r_c_data_aaebd12e68638f3572eea166c7dd0af69}{RSize}; row++)
+   \textcolor{keywordflow}{for} (row = 0; row < result->\hyperlink{struct_r_r_c_data_a4d8512c879223c0e0d1522dae38e7819}{RSize}; row++)
    \{
-      \textcolor{keywordflow}{for} (col = 0; col < result->\hyperlink{struct_r_r_c_data_a573616e93e0241d11b40ea56c708041b}{CSize}; col++)
+      \textcolor{keywordflow}{for} (col = 0; col < result->\hyperlink{struct_r_r_c_data_a17c9a5894aa9cb3789346dcaa9c370bb}{CSize}; col++)
       \{
-         printf (\textcolor{stringliteral}{"%10f"}, result->\hyperlink{struct_r_r_c_data_a4f2db98f036a01dca7168fee658bac0c}{Data}[index++]);
+         printf (\textcolor{stringliteral}{"%10f"}, result->\hyperlink{struct_r_r_c_data_a7c5cbda3aa940f4b0d6e8a1679307dfc}{Data}[index++]);
          \textcolor{keywordflow}{if} (col < result->CSize -1)
          \{
             printf (\textcolor{stringliteral}{"\(\backslash\)t"});
@@ -81,8 +81,8 @@ More complex example, using C A\+P\+I\+:
    printf (\textcolor{stringliteral}{"\(\backslash\)n"});
    \}
    \textcolor{comment}{//Cleanup}
-   \hyperlink{group__free_routines_gaca3178e98973909708974aedef4ece46}{freeRRCData} (result);
-   \hyperlink{group__initialization_gae0b2f65464742bba3beb0ad38dcdd863}{freeRRInstance} (rrHandle);
+   \hyperlink{group__free_routines_ga96317bb0c9ad3daee01c9665cc14b223}{freeRRCData} (result);
+   \hyperlink{group__initialization_gaa085b3245183be2ee16a94dfe0de1751}{freeRRInstance} (rrHandle);
    getchar ();
    exit (0);
 \}

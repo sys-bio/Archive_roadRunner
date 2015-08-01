@@ -1,5 +1,6 @@
-\hypertarget{group__stochastic}{}\section{Stochastic simulations}
+\hypertarget{group__stochastic}{\section{Stochastic simulations}
 \label{group__stochastic}\index{Stochastic simulations@{Stochastic simulations}}
+}
 
 
 Stochastic simulation algorithms.  
@@ -8,25 +9,25 @@ Stochastic simulation algorithms.
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__stochastic_ga7f5813153b9ea59a30cbc2cdfbdedffc}{get\+Seed} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, long $\ast$seed)
+bool \hyperlink{group__stochastic_ga84b5d5b30763611e53bf0881bfcc2229}{get\+Seed} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, long $\ast$seed)
 \begin{DoxyCompactList}\small\item\em Determine the current seed used by the random generator. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv \hyperlink{group__stochastic_gaa694837d219e6fd8c55183ad5aa05910}{set\+Seed} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, long seed)
+bool \hyperlink{group__stochastic_ga050cbb1242145c14e4a5f2f152d40a01}{set\+Seed} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, long seed)
 \begin{DoxyCompactList}\small\item\em Set the current seed used by the random generator. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} rrc\+Call\+Conv \hyperlink{group__stochastic_gaeaf09f5ac0fcf9df24ccb0e62c82703e}{gillespie} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} \hyperlink{group__stochastic_ga241498728efe5f47cc302c9315f8a663}{gillespie} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Carry out a time-\/course simulation using the Gillespie algorithm with variable step size. set\+Time\+Start, set\+Time\+End, etc are used to set the simulation characteristics. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} rrc\+Call\+Conv \hyperlink{group__stochastic_ga90d4504aafacfdc2148bedbde8b84823}{gillespie\+Ex} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double time\+Start, double time\+End)
+\hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} \hyperlink{group__stochastic_ga4d5211689f620321e9fa934adad6490f}{gillespie\+Ex} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double time\+Start, double time\+End)
 \begin{DoxyCompactList}\small\item\em Carry out a time-\/course simulation using the Gillespie algorithm based on the given arguments, time start, time end and number of points. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} rrc\+Call\+Conv \hyperlink{group__stochastic_ga2177740637e6d6732621c7cded0dbba5}{gillespie\+On\+Grid} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} \hyperlink{group__stochastic_gad0b691715fdddc67fa25c4478a7fe6b8}{gillespie\+On\+Grid} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Carry out a time-\/course simulation using the Gillespie algorithm with fixed step size. set\+Time\+Start, set\+Time\+End, set\+Num\+Points, etc are used to set the simulation characteristics. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} rrc\+Call\+Conv \hyperlink{group__stochastic_gabedfc117be6781c6caca54ecc74561ea}{gillespie\+On\+Grid\+Ex} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double time\+Start, double time\+End, int number\+Of\+Points)
+\hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} \hyperlink{group__stochastic_gae6789000f5ea8712c594150b27ce8d87}{gillespie\+On\+Grid\+Ex} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double time\+Start, double time\+End, int number\+Of\+Points)
 \begin{DoxyCompactList}\small\item\em Carry out a time-\/course simulation using the Gillespie algorithm with fixed step size based on the given arguments, time start, time end, and number of points. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} rrc\+Call\+Conv \hyperlink{group__stochastic_ga3f887a483162b0eed518be4faec411d6}{gillespie\+Mean\+On\+Grid} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int number\+Of\+Simulations)
+\hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} \hyperlink{group__stochastic_ga46197b22a2cacfa3bdae630273d91dac}{gillespie\+Mean\+On\+Grid} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int number\+Of\+Simulations)
 \begin{DoxyCompactList}\small\item\em Carry out a series of time-\/course simulations using the Gillespie algorithm with fixed step size, then return the average of the simulations. set\+Time\+Start, set\+Time\+End, set\+Num\+Points, etc are used to set the simulation characteristics. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} rrc\+Call\+Conv \hyperlink{group__stochastic_ga984a669536f489f257335903ce54469c}{gillespie\+Mean\+On\+Grid\+Ex} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double time\+Start, double time\+End, int number\+Of\+Points, int number\+Of\+Simulations)
+\hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} \hyperlink{group__stochastic_ga36f575b021017cbcac1e14ca839e5944}{gillespie\+Mean\+On\+Grid\+Ex} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double time\+Start, double time\+End, int number\+Of\+Points, int number\+Of\+Simulations)
 \begin{DoxyCompactList}\small\item\em Carry out a series of time-\/course simulations using the Gillespie algorithm with fixed step size, then return the average of the simulations. Based on the given arguments, time start, time end, and number of points. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} rrc\+Call\+Conv \hyperlink{group__stochastic_ga4caaa9e174e6b9065524e7cdc56fabb4}{gillespie\+Mean\+S\+D\+On\+Grid} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int number\+Of\+Simulations)
+\hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} \hyperlink{group__stochastic_ga2898cc7e6c6068614f0df2698582e6af}{gillespie\+Mean\+S\+D\+On\+Grid} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int number\+Of\+Simulations)
 \begin{DoxyCompactList}\small\item\em Carry out a series of time-\/course simulations using the Gillespie algorithm with fixed step size, then return the average and standard deviation of the simulations. set\+Time\+Start, set\+Time\+End, set\+Num\+Points, etc are used to set the simulation characteristics. \end{DoxyCompactList}\item 
-C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C \hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} rrc\+Call\+Conv \hyperlink{group__stochastic_ga11f181f858ccff7015069b6479772024}{gillespie\+Mean\+S\+D\+On\+Grid\+Ex} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double time\+Start, double time\+End, int number\+Of\+Steps, int number\+Of\+Simulations)
+\hyperlink{rrc__types_8h_a9da8b124eb9c3c0045f8926c6a420b4a}{R\+R\+C\+Data\+Ptr} \hyperlink{group__stochastic_ga451494155afde700a3bb7934f1bda0fe}{gillespie\+Mean\+S\+D\+On\+Grid\+Ex} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double time\+Start, double time\+End, int number\+Of\+Steps, int number\+Of\+Simulations)
 \begin{DoxyCompactList}\small\item\em Carry out a series of time-\/course simulations using the Gillespie algorithm with fixed step size, then return the average and standard deviation of the simulations. Based on the given arguments, time start, time end, number of points, and number of simulations. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -36,14 +37,14 @@ Stochastic simulation algorithms.
 
 
 \subsection{Function Documentation}
-\hypertarget{group__stochastic_ga7f5813153b9ea59a30cbc2cdfbdedffc}{}\index{Stochastic simulations@{Stochastic simulations}!get\+Seed@{get\+Seed}}
+\hypertarget{group__stochastic_ga84b5d5b30763611e53bf0881bfcc2229}{\index{Stochastic simulations@{Stochastic simulations}!get\+Seed@{get\+Seed}}
 \index{get\+Seed@{get\+Seed}!Stochastic simulations@{Stochastic simulations}}
-\subsubsection[{get\+Seed(\+R\+R\+Handle handle, long $\ast$seed)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv get\+Seed (
+\subsubsection[{get\+Seed}]{\setlength{\rightskip}{0pt plus 5cm}bool get\+Seed (
 \begin{DoxyParamCaption}
 \item[{{\bf R\+R\+Handle}}]{handle, }
 \item[{long $\ast$}]{seed}
 \end{DoxyParamCaption}
-)}\label{group__stochastic_ga7f5813153b9ea59a30cbc2cdfbdedffc}
+)}}\label{group__stochastic_ga84b5d5b30763611e53bf0881bfcc2229}
 
 
 Determine the current seed used by the random generator. 
@@ -58,13 +59,13 @@ Determine the current seed used by the random generator.
 \begin{DoxyReturn}{Returns}
 Returns true if successful 
 \end{DoxyReturn}
-\hypertarget{group__stochastic_gaeaf09f5ac0fcf9df24ccb0e62c82703e}{}\index{Stochastic simulations@{Stochastic simulations}!gillespie@{gillespie}}
+\hypertarget{group__stochastic_ga241498728efe5f47cc302c9315f8a663}{\index{Stochastic simulations@{Stochastic simulations}!gillespie@{gillespie}}
 \index{gillespie@{gillespie}!Stochastic simulations@{Stochastic simulations}}
-\subsubsection[{gillespie(\+R\+R\+Handle handle)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C {\bf R\+R\+C\+Data\+Ptr} rrc\+Call\+Conv gillespie (
+\subsubsection[{gillespie}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+R\+C\+Data\+Ptr} gillespie (
 \begin{DoxyParamCaption}
 \item[{{\bf R\+R\+Handle}}]{handle}
 \end{DoxyParamCaption}
-)}\label{group__stochastic_gaeaf09f5ac0fcf9df24ccb0e62c82703e}
+)}}\label{group__stochastic_ga241498728efe5f47cc302c9315f8a663}
 
 
 Carry out a time-\/course simulation using the Gillespie algorithm with variable step size. set\+Time\+Start, set\+Time\+End, etc are used to set the simulation characteristics. 
@@ -77,15 +78,15 @@ Carry out a time-\/course simulation using the Gillespie algorithm with variable
 \begin{DoxyReturn}{Returns}
 Returns an array (R\+R\+C\+Data\+Ptr) of columns containing the results of the simulation including string labels for the individual columns. The client is responsible for freeing the resulting R\+R\+C\+Data\+Ptr structure. 
 \end{DoxyReturn}
-\hypertarget{group__stochastic_ga90d4504aafacfdc2148bedbde8b84823}{}\index{Stochastic simulations@{Stochastic simulations}!gillespie\+Ex@{gillespie\+Ex}}
+\hypertarget{group__stochastic_ga4d5211689f620321e9fa934adad6490f}{\index{Stochastic simulations@{Stochastic simulations}!gillespie\+Ex@{gillespie\+Ex}}
 \index{gillespie\+Ex@{gillespie\+Ex}!Stochastic simulations@{Stochastic simulations}}
-\subsubsection[{gillespie\+Ex(\+R\+R\+Handle handle, double time\+Start, double time\+End)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C {\bf R\+R\+C\+Data\+Ptr} rrc\+Call\+Conv gillespie\+Ex (
+\subsubsection[{gillespie\+Ex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+R\+C\+Data\+Ptr} gillespie\+Ex (
 \begin{DoxyParamCaption}
 \item[{{\bf R\+R\+Handle}}]{handle, }
 \item[{double}]{time\+Start, }
 \item[{double}]{time\+End}
 \end{DoxyParamCaption}
-)}\label{group__stochastic_ga90d4504aafacfdc2148bedbde8b84823}
+)}}\label{group__stochastic_ga4d5211689f620321e9fa934adad6490f}
 
 
 Carry out a time-\/course simulation using the Gillespie algorithm based on the given arguments, time start, time end and number of points. 
@@ -113,14 +114,14 @@ Example\+:
 \begin{DoxyReturn}{Returns}
 Returns an array (R\+R\+C\+Data\+Ptr) of columns containing the results of the simulation including string labels for the individual columns. The client is responsible for freeing the resulting R\+R\+C\+Data\+Ptr structure. 
 \end{DoxyReturn}
-\hypertarget{group__stochastic_ga3f887a483162b0eed518be4faec411d6}{}\index{Stochastic simulations@{Stochastic simulations}!gillespie\+Mean\+On\+Grid@{gillespie\+Mean\+On\+Grid}}
+\hypertarget{group__stochastic_ga46197b22a2cacfa3bdae630273d91dac}{\index{Stochastic simulations@{Stochastic simulations}!gillespie\+Mean\+On\+Grid@{gillespie\+Mean\+On\+Grid}}
 \index{gillespie\+Mean\+On\+Grid@{gillespie\+Mean\+On\+Grid}!Stochastic simulations@{Stochastic simulations}}
-\subsubsection[{gillespie\+Mean\+On\+Grid(\+R\+R\+Handle handle, int number\+Of\+Simulations)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C {\bf R\+R\+C\+Data\+Ptr} rrc\+Call\+Conv gillespie\+Mean\+On\+Grid (
+\subsubsection[{gillespie\+Mean\+On\+Grid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+R\+C\+Data\+Ptr} gillespie\+Mean\+On\+Grid (
 \begin{DoxyParamCaption}
 \item[{{\bf R\+R\+Handle}}]{handle, }
 \item[{int}]{number\+Of\+Simulations}
 \end{DoxyParamCaption}
-)}\label{group__stochastic_ga3f887a483162b0eed518be4faec411d6}
+)}}\label{group__stochastic_ga46197b22a2cacfa3bdae630273d91dac}
 
 
 Carry out a series of time-\/course simulations using the Gillespie algorithm with fixed step size, then return the average of the simulations. set\+Time\+Start, set\+Time\+End, set\+Num\+Points, etc are used to set the simulation characteristics. 
@@ -135,9 +136,9 @@ Carry out a series of time-\/course simulations using the Gillespie algorithm wi
 \begin{DoxyReturn}{Returns}
 Returns an array (R\+R\+C\+Data\+Ptr) of columns containing the average of the results of the simulations including string labels for the individual columns. The client is responsible for freeing the resulting R\+R\+C\+Data\+Ptr structure. 
 \end{DoxyReturn}
-\hypertarget{group__stochastic_ga984a669536f489f257335903ce54469c}{}\index{Stochastic simulations@{Stochastic simulations}!gillespie\+Mean\+On\+Grid\+Ex@{gillespie\+Mean\+On\+Grid\+Ex}}
+\hypertarget{group__stochastic_ga36f575b021017cbcac1e14ca839e5944}{\index{Stochastic simulations@{Stochastic simulations}!gillespie\+Mean\+On\+Grid\+Ex@{gillespie\+Mean\+On\+Grid\+Ex}}
 \index{gillespie\+Mean\+On\+Grid\+Ex@{gillespie\+Mean\+On\+Grid\+Ex}!Stochastic simulations@{Stochastic simulations}}
-\subsubsection[{gillespie\+Mean\+On\+Grid\+Ex(\+R\+R\+Handle handle, double time\+Start, double time\+End, int number\+Of\+Points, int number\+Of\+Simulations)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C {\bf R\+R\+C\+Data\+Ptr} rrc\+Call\+Conv gillespie\+Mean\+On\+Grid\+Ex (
+\subsubsection[{gillespie\+Mean\+On\+Grid\+Ex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+R\+C\+Data\+Ptr} gillespie\+Mean\+On\+Grid\+Ex (
 \begin{DoxyParamCaption}
 \item[{{\bf R\+R\+Handle}}]{handle, }
 \item[{double}]{time\+Start, }
@@ -145,7 +146,7 @@ Returns an array (R\+R\+C\+Data\+Ptr) of columns containing the average of the r
 \item[{int}]{number\+Of\+Points, }
 \item[{int}]{number\+Of\+Simulations}
 \end{DoxyParamCaption}
-)}\label{group__stochastic_ga984a669536f489f257335903ce54469c}
+)}}\label{group__stochastic_ga36f575b021017cbcac1e14ca839e5944}
 
 
 Carry out a series of time-\/course simulations using the Gillespie algorithm with fixed step size, then return the average of the simulations. Based on the given arguments, time start, time end, and number of points. 
@@ -179,14 +180,14 @@ Example\+:
 \begin{DoxyReturn}{Returns}
 Returns an array (R\+R\+C\+Data\+Ptr) of columns containing the average of the results of the simulation including string labels for the individual columns. The client is responsible for freeing the resulting R\+R\+C\+Data\+Ptr structure. 
 \end{DoxyReturn}
-\hypertarget{group__stochastic_ga4caaa9e174e6b9065524e7cdc56fabb4}{}\index{Stochastic simulations@{Stochastic simulations}!gillespie\+Mean\+S\+D\+On\+Grid@{gillespie\+Mean\+S\+D\+On\+Grid}}
+\hypertarget{group__stochastic_ga2898cc7e6c6068614f0df2698582e6af}{\index{Stochastic simulations@{Stochastic simulations}!gillespie\+Mean\+S\+D\+On\+Grid@{gillespie\+Mean\+S\+D\+On\+Grid}}
 \index{gillespie\+Mean\+S\+D\+On\+Grid@{gillespie\+Mean\+S\+D\+On\+Grid}!Stochastic simulations@{Stochastic simulations}}
-\subsubsection[{gillespie\+Mean\+S\+D\+On\+Grid(\+R\+R\+Handle handle, int number\+Of\+Simulations)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C {\bf R\+R\+C\+Data\+Ptr} rrc\+Call\+Conv gillespie\+Mean\+S\+D\+On\+Grid (
+\subsubsection[{gillespie\+Mean\+S\+D\+On\+Grid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+R\+C\+Data\+Ptr} gillespie\+Mean\+S\+D\+On\+Grid (
 \begin{DoxyParamCaption}
 \item[{{\bf R\+R\+Handle}}]{handle, }
 \item[{int}]{number\+Of\+Simulations}
 \end{DoxyParamCaption}
-)}\label{group__stochastic_ga4caaa9e174e6b9065524e7cdc56fabb4}
+)}}\label{group__stochastic_ga2898cc7e6c6068614f0df2698582e6af}
 
 
 Carry out a series of time-\/course simulations using the Gillespie algorithm with fixed step size, then return the average and standard deviation of the simulations. set\+Time\+Start, set\+Time\+End, set\+Num\+Points, etc are used to set the simulation characteristics. 
@@ -201,9 +202,9 @@ Carry out a series of time-\/course simulations using the Gillespie algorithm wi
 \begin{DoxyReturn}{Returns}
 Returns an array (R\+R\+C\+Data\+Ptr) of columns containing the average of the results of the simulations including string labels for the individual columns. The averages are in Data and the standard deviations are in Weights. The client is responsible for freeing the resulting R\+R\+C\+Data\+Ptr structure. 
 \end{DoxyReturn}
-\hypertarget{group__stochastic_ga11f181f858ccff7015069b6479772024}{}\index{Stochastic simulations@{Stochastic simulations}!gillespie\+Mean\+S\+D\+On\+Grid\+Ex@{gillespie\+Mean\+S\+D\+On\+Grid\+Ex}}
+\hypertarget{group__stochastic_ga451494155afde700a3bb7934f1bda0fe}{\index{Stochastic simulations@{Stochastic simulations}!gillespie\+Mean\+S\+D\+On\+Grid\+Ex@{gillespie\+Mean\+S\+D\+On\+Grid\+Ex}}
 \index{gillespie\+Mean\+S\+D\+On\+Grid\+Ex@{gillespie\+Mean\+S\+D\+On\+Grid\+Ex}!Stochastic simulations@{Stochastic simulations}}
-\subsubsection[{gillespie\+Mean\+S\+D\+On\+Grid\+Ex(\+R\+R\+Handle handle, double time\+Start, double time\+End, int number\+Of\+Steps, int number\+Of\+Simulations)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C {\bf R\+R\+C\+Data\+Ptr} rrc\+Call\+Conv gillespie\+Mean\+S\+D\+On\+Grid\+Ex (
+\subsubsection[{gillespie\+Mean\+S\+D\+On\+Grid\+Ex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+R\+C\+Data\+Ptr} gillespie\+Mean\+S\+D\+On\+Grid\+Ex (
 \begin{DoxyParamCaption}
 \item[{{\bf R\+R\+Handle}}]{handle, }
 \item[{double}]{time\+Start, }
@@ -211,7 +212,7 @@ Returns an array (R\+R\+C\+Data\+Ptr) of columns containing the average of the r
 \item[{int}]{number\+Of\+Steps, }
 \item[{int}]{number\+Of\+Simulations}
 \end{DoxyParamCaption}
-)}\label{group__stochastic_ga11f181f858ccff7015069b6479772024}
+)}}\label{group__stochastic_ga451494155afde700a3bb7934f1bda0fe}
 
 
 Carry out a series of time-\/course simulations using the Gillespie algorithm with fixed step size, then return the average and standard deviation of the simulations. Based on the given arguments, time start, time end, number of points, and number of simulations. 
@@ -245,13 +246,13 @@ Example\+:
 \begin{DoxyReturn}{Returns}
 Returns an array (R\+R\+C\+Data\+Ptr) of columns containing the average of the results of the simulation including string labels for the individual columns. The average values are in Data and the standard deviations are in Weights. The client is responsible for freeing the resulting R\+R\+C\+Data\+Ptr structure. 
 \end{DoxyReturn}
-\hypertarget{group__stochastic_ga2177740637e6d6732621c7cded0dbba5}{}\index{Stochastic simulations@{Stochastic simulations}!gillespie\+On\+Grid@{gillespie\+On\+Grid}}
+\hypertarget{group__stochastic_gad0b691715fdddc67fa25c4478a7fe6b8}{\index{Stochastic simulations@{Stochastic simulations}!gillespie\+On\+Grid@{gillespie\+On\+Grid}}
 \index{gillespie\+On\+Grid@{gillespie\+On\+Grid}!Stochastic simulations@{Stochastic simulations}}
-\subsubsection[{gillespie\+On\+Grid(\+R\+R\+Handle handle)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C {\bf R\+R\+C\+Data\+Ptr} rrc\+Call\+Conv gillespie\+On\+Grid (
+\subsubsection[{gillespie\+On\+Grid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+R\+C\+Data\+Ptr} gillespie\+On\+Grid (
 \begin{DoxyParamCaption}
 \item[{{\bf R\+R\+Handle}}]{handle}
 \end{DoxyParamCaption}
-)}\label{group__stochastic_ga2177740637e6d6732621c7cded0dbba5}
+)}}\label{group__stochastic_gad0b691715fdddc67fa25c4478a7fe6b8}
 
 
 Carry out a time-\/course simulation using the Gillespie algorithm with fixed step size. set\+Time\+Start, set\+Time\+End, set\+Num\+Points, etc are used to set the simulation characteristics. 
@@ -264,16 +265,16 @@ Carry out a time-\/course simulation using the Gillespie algorithm with fixed st
 \begin{DoxyReturn}{Returns}
 Returns an array (R\+R\+C\+Data\+Ptr) of columns containing the results of the simulation including string labels for the individual columns. The client is responsible for freeing the resulting R\+R\+C\+Data\+Ptr structure. 
 \end{DoxyReturn}
-\hypertarget{group__stochastic_gabedfc117be6781c6caca54ecc74561ea}{}\index{Stochastic simulations@{Stochastic simulations}!gillespie\+On\+Grid\+Ex@{gillespie\+On\+Grid\+Ex}}
+\hypertarget{group__stochastic_gae6789000f5ea8712c594150b27ce8d87}{\index{Stochastic simulations@{Stochastic simulations}!gillespie\+On\+Grid\+Ex@{gillespie\+On\+Grid\+Ex}}
 \index{gillespie\+On\+Grid\+Ex@{gillespie\+On\+Grid\+Ex}!Stochastic simulations@{Stochastic simulations}}
-\subsubsection[{gillespie\+On\+Grid\+Ex(\+R\+R\+Handle handle, double time\+Start, double time\+End, int number\+Of\+Points)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C {\bf R\+R\+C\+Data\+Ptr} rrc\+Call\+Conv gillespie\+On\+Grid\+Ex (
+\subsubsection[{gillespie\+On\+Grid\+Ex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+R\+C\+Data\+Ptr} gillespie\+On\+Grid\+Ex (
 \begin{DoxyParamCaption}
 \item[{{\bf R\+R\+Handle}}]{handle, }
 \item[{double}]{time\+Start, }
 \item[{double}]{time\+End, }
 \item[{int}]{number\+Of\+Points}
 \end{DoxyParamCaption}
-)}\label{group__stochastic_gabedfc117be6781c6caca54ecc74561ea}
+)}}\label{group__stochastic_gae6789000f5ea8712c594150b27ce8d87}
 
 
 Carry out a time-\/course simulation using the Gillespie algorithm with fixed step size based on the given arguments, time start, time end, and number of points. 
@@ -304,14 +305,14 @@ Example\+:
 \begin{DoxyReturn}{Returns}
 Returns an array (R\+R\+C\+Data\+Ptr) of columns containing the results of the simulation including string labels for the individual columns. The client is responsible for freeing the resulting R\+R\+C\+Data\+Ptr structure. 
 \end{DoxyReturn}
-\hypertarget{group__stochastic_gaa694837d219e6fd8c55183ad5aa05910}{}\index{Stochastic simulations@{Stochastic simulations}!set\+Seed@{set\+Seed}}
+\hypertarget{group__stochastic_ga050cbb1242145c14e4a5f2f152d40a01}{\index{Stochastic simulations@{Stochastic simulations}!set\+Seed@{set\+Seed}}
 \index{set\+Seed@{set\+Seed}!Stochastic simulations@{Stochastic simulations}}
-\subsubsection[{set\+Seed(\+R\+R\+Handle handle, long seed)}]{\setlength{\rightskip}{0pt plus 5cm}C\+\_\+\+D\+E\+C\+L\+\_\+\+S\+P\+E\+C bool rrc\+Call\+Conv set\+Seed (
+\subsubsection[{set\+Seed}]{\setlength{\rightskip}{0pt plus 5cm}bool set\+Seed (
 \begin{DoxyParamCaption}
 \item[{{\bf R\+R\+Handle}}]{handle, }
 \item[{long}]{seed}
 \end{DoxyParamCaption}
-)}\label{group__stochastic_gaa694837d219e6fd8c55183ad5aa05910}
+)}}\label{group__stochastic_ga050cbb1242145c14e4a5f2f152d40a01}
 
 
 Set the current seed used by the random generator. 

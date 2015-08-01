@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['columnheaders',['ColumnHeaders',['../struct_r_r_c_data.html#a54acd2748775883500033984275be173',1,'RRCData']]],
-  ['count',['Count',['../struct_r_r_vector.html#ac3284c62697a2b68a7900a668a09d858',1,'RRVector::Count()'],['../struct_r_r_string_array.html#ac36cf70dc7a2832c24c5dec622fec2fb',1,'RRStringArray::Count()'],['../struct_r_r_complex_vector.html#a930d0decc2af8858b710280850d14d97',1,'RRComplexVector::Count()'],['../struct_r_r_list.html#a7026370b1982636d3dbba185f94eab12',1,'RRList::Count()']]],
-  ['csize',['CSize',['../struct_r_r_double_matrix.html#a0df8ed25504d41748cdde8c3e92062bb',1,'RRDoubleMatrix::CSize()'],['../struct_r_r_complex_matrix.html#ac78072d57b04058c4a816b23abcdff2a',1,'RRComplexMatrix::CSize()'],['../struct_r_r_c_data.html#a573616e93e0241d11b40ea56c708041b',1,'RRCData::CSize()']]]
+  ['columnheaders',['ColumnHeaders',['../struct_r_r_c_data.html#ab339159e5604808f92fe793f4f43da03',1,'RRCData']]],
+  ['count',['Count',['../struct_r_r_vector.html#aad462966ed963f892117056de1eba502',1,'RRVector::Count()'],['../struct_r_r_string_array.html#aad462966ed963f892117056de1eba502',1,'RRStringArray::Count()'],['../struct_r_r_complex_vector.html#aad462966ed963f892117056de1eba502',1,'RRComplexVector::Count()'],['../struct_r_r_list.html#aad462966ed963f892117056de1eba502',1,'RRList::Count()']]],
+  ['csize',['CSize',['../struct_r_r_double_matrix.html#a17c9a5894aa9cb3789346dcaa9c370bb',1,'RRDoubleMatrix::CSize()'],['../struct_r_r_complex_matrix.html#a17c9a5894aa9cb3789346dcaa9c370bb',1,'RRComplexMatrix::CSize()'],['../struct_r_r_c_data.html#a17c9a5894aa9cb3789346dcaa9c370bb',1,'RRCData::CSize()']]]
 ];
