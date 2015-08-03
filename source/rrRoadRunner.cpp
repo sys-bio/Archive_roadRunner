@@ -290,8 +290,10 @@ public:
     {
         for (std::vector<Integrator*>::iterator it = integrators.begin(); it != integrators.end(); ++it)
         {
+//             delete *it;
             (*it)->syncWithModel(m);
         }
+//         integrators.clear();
     }
 
     void setParameterValue(const ParameterType parameterType,
@@ -840,6 +842,7 @@ void RoadRunner::load(const string& uriOrSbml, const Dictionary *dict)
         self.loadOpt = LoadSBMLOptions(dict);
     }
 
+    // TODO: streamline so SBML document is not read several times
     // check that stoichiometry is defined
     if (!isStoichDefined(self.mCurrentSBML)) {
         // if any reactions are missing stoich, the simulation results will be wrong

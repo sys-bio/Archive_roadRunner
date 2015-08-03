@@ -43,7 +43,9 @@ namespace rr
 	}
 
 	void GillespieIntegrator::initializeFromModel() {
+//         Log(Logger::LOG_DEBUG) << "GillespieIntegrator::initializeFromModel\n";
         nReactions = model->getNumReactions();
+        Log(Logger::LOG_DEBUG) << "GillespieIntegrator::initializeFromModel, nReactions = " << nReactions << "\n";
         reactionRates = new double[nReactions];
         reactionRatesBuffer = new double[nReactions];
         stateVectorSize = model->getStateVector(0);
@@ -70,7 +72,11 @@ namespace rr
 			stoichScale(1.0),
 			stoichRows(0),
 			stoichCols(0),
-			stoichData(NULL)
+			stoichData(NULL),
+			reactionRates(NULL),
+			reactionRatesBuffer(NULL),
+			stateVector(NULL),
+			stateVectorRate(NULL)
 	{
 		// Set default integrator settings.
 		addSetting("seed", defaultSeed(), "Set the seed into the random engine. (ulong)", "(ulong) Set the seed into the random engine.");
@@ -79,7 +85,8 @@ namespace rr
 		addSetting("minimum_time_step", 0.0, "Specifies the minimum absolute value of step size allowed. (double)", "(double) The minimum absolute value of step size allowed.");
 		addSetting("maximum_time_step", 0.0, "Specifies the maximum absolute value of step size allowed. (double)", "(double) The maximum absolute value of step size allowed.");
 
-        initializeFromModel();
+        if (model)
+            initializeFromModel();
 	}
 
 	GillespieIntegrator::~GillespieIntegrator()
@@ -89,17 +96,33 @@ namespace rr
 		delete[] stateVector;
 		delete[] stateVectorRate;
 		delete[] stoichData;
+        reactionRates = NULL;
+        reactionRatesBuffer = NULL;
+        stateVector = NULL;
+        stateVectorRate = NULL;
+        stoichData = NULL;
 	}
 
     void GillespieIntegrator::syncWithModel(ExecutableModel* m)
     {
+        resetSettings();
+        std::cerr << "GillespieIntegrator::syncWithModel\n";
         delete[] reactionRates;
         delete[] reactionRatesBuffer;
         delete[] stateVector;
         delete[] stateVectorRate;
         delete[] stoichData;
+        reactionRates = NULL;
+        reactionRatesBuffer = NULL;
+        stateVector = NULL;
+        stateVectorRate = NULL;
+        stoichData = NULL;
 
         model = m;
+        model->reset();
+
+        nReactions = 0;
+        stateVectorSize = 0;
 
         timeScale = 1.;
         stoichScale = 1.;
@@ -237,7 +260,17 @@ namespace rr
 			for (int k = 0; k < nReactions; k++)
 			{
 				Log(Logger::LOG_DEBUG) << "reac rate: " << k << ": "
-					<< reactionRates[k];
+					<< reactionRates[k] <<  ", nReactions = " << nReactions;
+
+                    {
+                        int l = model->getStateVector(NULL);
+                        double* svec = new double[l];
+                        model->getStateVector(svec);
+                        for (int z =0; z<l; ++z) {
+                            Log(Logger::LOG_DEBUG) << "svec: " << svec[z];
+                        }
+                        delete[] svec;
+                    }
 
 				// if reaction rate is negative, that means reaction goes in reverse,
 				// this is fine, we just have to reverse the stoichiometry,

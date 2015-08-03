@@ -45,19 +45,20 @@ int main(int argc, char* argv[])
 {
     int n;
     // enable logging
-//     setLogLevel("debug");
-    enableLoggingToFile();
-    {
-        char* t = getLogFileName();
-        fprintf(stderr,"Enabling logging to %s\n", t);
-        free(t);
-    }
+    setLogLevel("debug");
+//     enableLoggingToFile();
+//     {
+//         char* t = getLogFileName();
+//         fprintf(stderr,"Enabling logging to %s\n", t);
+//         free(t);
+//     }
 
     fprintf(stderr,"Initializing RoadRunner...\n");
     RRHandle _handle = createRRInstance();
 
     // set integrator to gillespie before loading a model to test for crashing
     setCurrentIntegrator(_handle, "gillespie");
+    setCurrentIntegrator(_handle, "cvode");
 
     for(n = 0; n<2; ++n) {
         struct RRStringArray *strArray;
@@ -165,6 +166,8 @@ int main(int argc, char* argv[])
         result = simulateEx(_handle, 0, 10, 100);
         fprintf(stderr,rrCDataToString(result));
         freeRRCData(result);
+
+        return 1;
     }
 
     freeRRInstance(_handle);
