@@ -246,54 +246,50 @@ bool \hyperlink{group__mca_ga2bb4853eff9e824836b776cf67ba63b0}{get\+Scaled\+Floa
 \begin{DoxyCompactList}\small\item\em Retrieve a vector of reaction rates given a vector of species concentrations. \end{DoxyCompactList}\item 
 \hyperlink{rrc__types_8h_a32a8a60ac06858ff3a791672bd2bec73}{R\+R\+List\+Ptr} \hyperlink{group__mca_gacad76b5762c25a32e413b99e9b2cfb10}{get\+Elasticity\+Coefficient\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Obtain the list of elasticity coefficient Ids. \end{DoxyCompactList}\item 
-bool \hyperlink{group__simulation_gaa77fd6c25d583b2ade1afd1579083a38}{set\+Configuration\+X\+M\+L} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$caps)
-\begin{DoxyCompactList}\small\item\em Set the simulator's capabilities. \end{DoxyCompactList}\item 
-char $\ast$ \hyperlink{group__simulation_gac6b01548aaa54f95fa7ea5d7d8d5059b}{get\+Configuration\+X\+M\+L} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
-\begin{DoxyCompactList}\small\item\em Get the simulator's capabilities. \end{DoxyCompactList}\item 
-int {\bfseries get\+Num\+Registered\+Integrators} ()
+int \hyperlink{group__simopts_ga53617fbabff8088e10c8bc5deee40353}{get\+Num\+Registered\+Integrators} ()
 \begin{DoxyCompactList}\small\item\em Get the number of implemented integrators. \end{DoxyCompactList}\item 
-char $\ast$ {\bfseries get\+Registered\+Integrator\+Name} (int n)
+char $\ast$ \hyperlink{group__simopts_ga5713f7cea279fc58aa497615ebb7ddbf}{get\+Registered\+Integrator\+Name} (int n)
 \begin{DoxyCompactList}\small\item\em Get the name of a registered integrator (e.\+g. cvode etc.) \end{DoxyCompactList}\item 
-char $\ast$ {\bfseries get\+Registered\+Integrator\+Hint} (int n)
+char $\ast$ \hyperlink{group__simopts_ga6d22f11e49e89336e5d795e620e55530}{get\+Registered\+Integrator\+Hint} (int n)
 \begin{DoxyCompactList}\small\item\em Get the hint of a registered integrator (e.\+g. cvode etc.) \end{DoxyCompactList}\item 
-char $\ast$ {\bfseries get\+Registered\+Integrator\+Desc} (int n)
+char $\ast$ \hyperlink{group__simopts_gaae54354d9935875691727e0b89e5ebc2}{get\+Registered\+Integrator\+Desc} (int n)
 \begin{DoxyCompactList}\small\item\em Get the description of a registered integrator (e.\+g. cvode etc.) \end{DoxyCompactList}\item 
-int {\bfseries get\+Num\+Instantiated\+Integrators} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+int \hyperlink{group__simopts_ga492555873a0da5f8aa167eeafb7d7d21}{get\+Num\+Instantiated\+Integrators} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Get the number of instantiated integrators. \end{DoxyCompactList}\item 
 \hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} {\bfseries get\+List\+Of\+Integrators} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Get the names of implemented integrators. \end{DoxyCompactList}\item 
-int {\bfseries set\+Integrator} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$name\+Of\+Integrator)
+int \hyperlink{group__simopts_gad6e463525042165dede8261851cc46af}{set\+Integrator} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$name\+Of\+Integrator)
 \begin{DoxyCompactList}\small\item\em Specify the current integrator to be used for simulation. \end{DoxyCompactList}\item 
-char $\ast$ {\bfseries get\+Current\+Integrator\+Description} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+char $\ast$ \hyperlink{group__simopts_ga4a917a0539977b7206d1bfbddcc98347}{get\+Current\+Integrator\+Description} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Obtain a description of the current integrator. \end{DoxyCompactList}\item 
-char $\ast$ {\bfseries get\+Current\+Integrator\+Hint} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+char $\ast$ \hyperlink{group__simopts_gadc3f18f7a683daa8848968ba54436f96}{get\+Current\+Integrator\+Hint} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Obtain a short hint for the current integrator. \end{DoxyCompactList}\item 
-int {\bfseries get\+Number\+Of\+Current\+Integrator\+Parameters} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+int \hyperlink{group__simopts_ga7885d06904fc2cdceaa7e71448cde468}{get\+Number\+Of\+Current\+Integrator\+Parameters} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Get the number of adjustable settings for the current integrator. \end{DoxyCompactList}\item 
-\hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} {\bfseries get\+List\+Of\+Current\+Integrator\+Parameter\+Names} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} \hyperlink{group__simopts_ga8bc1ea6950f141d40373416d64abaefa}{get\+List\+Of\+Current\+Integrator\+Parameter\+Names} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Get the names of adjustable settings for the current integrator. \end{DoxyCompactList}\item 
-char $\ast$ {\bfseries get\+Current\+Integrator\+Parameter\+Description} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+char $\ast$ \hyperlink{group__simopts_gae4308a0893d84e49ef877d2db65d110c}{get\+Current\+Integrator\+Parameter\+Description} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
 \begin{DoxyCompactList}\small\item\em Get the description for a specific integrator setting. \end{DoxyCompactList}\item 
-char $\ast$ {\bfseries get\+Current\+Integrator\+Parameter\+Hint} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+char $\ast$ \hyperlink{group__simopts_ga4cc4c3b42b58f7ce266cff67cbc79c85}{get\+Current\+Integrator\+Parameter\+Hint} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
 \begin{DoxyCompactList}\small\item\em Get the hint for a specific integrator setting. \end{DoxyCompactList}\item 
-int {\bfseries get\+Current\+Integrator\+Parameter\+Type} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+int \hyperlink{group__simopts_ga04f015cae3234d1e24dc86c4ca6cf7ab}{get\+Current\+Integrator\+Parameter\+Type} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
 \begin{DoxyCompactList}\small\item\em Get the return type for a specific integrator setting. \end{DoxyCompactList}\item 
-int {\bfseries get\+Current\+Integrator\+Parameter\+Int} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+int \hyperlink{group__simopts_ga23b63638fae7a4823ac503474126c85b}{get\+Current\+Integrator\+Parameter\+Int} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
 \begin{DoxyCompactList}\small\item\em Get the integer value for a specific integrator setting. \end{DoxyCompactList}\item 
-int {\bfseries set\+Current\+Integrator\+Parameter\+Int} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, int value)
+int \hyperlink{group__simopts_ga4b5b2be1b4a77b8225f5c7d9a1e0bdfb}{set\+Current\+Integrator\+Parameter\+Int} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, int value)
 \begin{DoxyCompactList}\small\item\em Set the integer value for a specific integrator setting. \end{DoxyCompactList}\item 
-double {\bfseries get\+Current\+Integrator\+Parameter\+Double} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+double \hyperlink{group__simopts_gad859b0cb1724ab3aeee81230c2da272a}{get\+Current\+Integrator\+Parameter\+Double} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
 \begin{DoxyCompactList}\small\item\em Get the double value for a specific integrator setting. \end{DoxyCompactList}\item 
 \hypertarget{namespacerrc_a36b434b7876cb96b5bd346db92272b89}{int {\bfseries set\+Integrator\+Parameter\+Double} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, double value)}\label{namespacerrc_a36b434b7876cb96b5bd346db92272b89}
 
 \item 
-char $\ast$ {\bfseries get\+Current\+Integrator\+Parameter\+String} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+char $\ast$ \hyperlink{group__simopts_ga11536f253e0b43f8a282bf3bdfaf1328}{get\+Current\+Integrator\+Parameter\+String} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
 \begin{DoxyCompactList}\small\item\em Get the string value for a specific integrator setting. \end{DoxyCompactList}\item 
-int {\bfseries set\+Current\+Integrator\+Parameter\+String} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, char $\ast$value)
+int \hyperlink{group__simopts_ga7b901ff654788259368fc15c01fe53a6}{set\+Current\+Integrator\+Parameter\+String} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, char $\ast$value)
 \begin{DoxyCompactList}\small\item\em Set the string value for a specific integrator setting. \end{DoxyCompactList}\item 
-int {\bfseries get\+Current\+Integrator\+Parameter\+Boolean} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+int \hyperlink{group__simopts_gab06f6ef3c9c6b57a2806132b1906a52e}{get\+Current\+Integrator\+Parameter\+Boolean} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
 \begin{DoxyCompactList}\small\item\em Get the boolean value for a specific integrator setting. \end{DoxyCompactList}\item 
-int {\bfseries set\+Current\+Integrator\+Parameter\+Boolean} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, int value)
+int \hyperlink{group__simopts_gab89192771385f30f5223756c46bda227}{set\+Current\+Integrator\+Parameter\+Boolean} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, int value)
 \begin{DoxyCompactList}\small\item\em Set the boolean value for a specific integrator setting. \end{DoxyCompactList}\item 
 \hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} \hyperlink{group__state_gab504f19865db9d18456dd887f4f14d60}{get\+Eigenvalue\+Ids} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Obtain the list of eigenvalue Ids. \end{DoxyCompactList}\item 
