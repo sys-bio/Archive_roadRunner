@@ -7,6 +7,7 @@ var searchData=
   ['reaction_20group',['Reaction group',['../group__reaction.html',1,'']]],
   ['reset',['reset',['../group__reset.html#gaeaf9374c9a0cad0898f5e0a37bc387c5',1,'rrc::reset()'],['../group__reset.html#gaeaf9374c9a0cad0898f5e0a37bc387c5',1,'reset(RRHandle handle):&#160;_rrc_api.cpp'],['../group__reset.html',1,'(Global Namespace)']]],
   ['resetall',['resetAll',['../group__reset.html#ga0fdde5a5cdd90408a0e2050d8e4243ec',1,'rrc::resetAll()'],['../group__reset.html#ga0fdde5a5cdd90408a0e2050d8e4243ec',1,'resetAll():&#160;_rrc_api.cpp']]],
+  ['resetcurrentintegratorparameters',['resetCurrentIntegratorParameters',['../group__simopts.html#gaefa42b6e122d13988bde99fcf6e050d6',1,'rrc::resetCurrentIntegratorParameters()'],['../group__simopts.html#gaefa42b6e122d13988bde99fcf6e050d6',1,'resetCurrentIntegratorParameters():&#160;rrc_api.cpp']]],
   ['resettoorigin',['resetToOrigin',['../group__reset.html#ga30ad9eec8febc573febf1ad8b40c99ad',1,'rrc::resetToOrigin()'],['../group__reset.html#ga30ad9eec8febc573febf1ad8b40c99ad',1,'resetToOrigin():&#160;_rrc_api.cpp']]],
   ['rr_5fmax_5fpath',['RR_MAX_PATH',['../rrc__api_8cpp.html#af3b54520e40857c14ac49a364ba094a8',1,'rrc_api.cpp']]],
   ['rrc_5fapi_2ecpp',['rrc_api.cpp',['../rrc__api_8cpp.html',1,'']]],
