@@ -1380,8 +1380,9 @@ int rrcCallConv getNumInstantiatedIntegrators(RRHandle handle)
 RRStringArrayPtr rrcCallConv getListOfIntegrators(RRHandle handle)
 {
 	start_try
-		RoadRunner* rri = castToRoadRunner(handle);
-		StringList intgNames = rri->getExistingIntegratorNames();
+		//RoadRunner* rri = castToRoadRunner(handle);
+		//StringList intgNames = rri->getExistingIntegratorNames();
+		StringList intgNames = IntegratorFactory::getInstance().getListIntegratorNames();
 		if (!intgNames.Count())
 		{
 			return NULL;

@@ -205,6 +205,8 @@ namespace rr
 
         std::size_t getNumIntegrators() const;
 
+		std::vector<std::string> getListIntegratorNames();
+
         std::string getIntegratorName(std::size_t n) const;
 
         std::string getIntegratorHint(std::size_t n) const;

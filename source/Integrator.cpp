@@ -221,6 +221,18 @@ namespace rr
         return mRegisteredIntegrators.size();
     }
 
+	std::vector<std::string> IntegratorFactory::getListIntegratorNames()
+	{
+		std::vector<std::string> intgNames;
+		int numIntgs = static_cast<int>(IntegratorFactory::getInstance().mRegisteredIntegrators.size());
+		for (int i = 0; i < numIntgs; ++i)
+		{
+			std::size_t n = static_cast<std::size_t>(i);
+			intgNames.push_back(IntegratorFactory::getInstance().getIntegratorName(n));
+		}
+		return intgNames;
+	}
+
     std::string IntegratorFactory::getIntegratorName(std::size_t n) const {
         return mRegisteredIntegrators.at(n)->getName();
     }
