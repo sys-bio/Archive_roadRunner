@@ -871,14 +871,17 @@ void RoadRunner::load(const string& uriOrSbml, const Dictionary *dict)
 
     impl->syncIntegratorsWithModel(impl->model);
 
-	setIntegrator(self.simulateOpt.integrator);
+// 	setIntegrator(self.simulateOpt.integrator);
 
     reset();
+
+//     setIntegrator("cvode");
 
     if ((self.loadOpt.loadFlags & LoadSBMLOptions::NO_DEFAULT_SELECTIONS) == 0)
     {
         createDefaultSelectionLists();
     }
+//     setIntegrator("gillespie");
 }
 
 bool RoadRunner::createDefaultSelectionLists()
@@ -938,7 +941,9 @@ void RoadRunner::reset(int options)
         // model gets set to before time = 0
         impl->model->reset(options);
 
+//         setIntegrator("cvode");
         impl->integrator->restart(0.0);
+//         setIntegrator("gillespie");
 
         try
         {
@@ -949,6 +954,7 @@ void RoadRunner::reset(int options)
             Log(lWarning)<<"Constraint Violated at time = 0\n"<<e.Message();
         }
     }
+    setIntegrator("gillespie");
 }
 
 bool RoadRunner::populateResult()

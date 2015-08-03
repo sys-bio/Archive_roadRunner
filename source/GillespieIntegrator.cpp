@@ -344,8 +344,53 @@ namespace rr
 		return t;
 	}
 
+    void GillespieIntegrator::testRootsAtInitialTime()
+    {
+        vector<unsigned char> initialEventStatus(model->getEventTriggers(0, 0, 0), false);
+        model->getEventTriggers(initialEventStatus.size(), 0, initialEventStatus.size() == 0 ? NULL : &initialEventStatus[0]);
+        applyEvents(0, initialEventStatus);
+    }
+
+    void GillespieIntegrator::applyEvents(double timeEnd, vector<unsigned char> &previousEventStatus)
+    {
+        model->applyEvents(timeEnd, previousEventStatus.size() == 0 ? NULL : &previousEventStatus[0], stateVector, stateVector);
+
+        if (timeEnd > 0.0) {
+            model->setTime(timeEnd);
+
+            // copy state vector into cvode memory
+            if (stateVector)
+            {
+                model->getStateVector(stateVector);
+            }
+
+            // set tolerances and so forth.
+//             reInit(timeEnd);
+        }
+    }
+
 	void GillespieIntegrator::restart(double t0)
 	{
+        if (!model) {
+            return;
+        }
+
+        if (t0 <= 0.0) {
+            if (stateVector)
+            {
+                model->getStateVector(stateVector);
+            }
+
+            testRootsAtInitialTime();
+        }
+
+        model->setTime(t0);
+
+        // copy state vector into memory
+        if (stateVector)
+        {
+            model->getStateVector(stateVector);
+        }
 	}
 
 	void GillespieIntegrator::setListener(IntegratorListenerPtr)

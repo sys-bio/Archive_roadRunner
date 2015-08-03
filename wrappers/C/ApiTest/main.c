@@ -58,7 +58,7 @@ int main(int argc, char* argv[])
 
     // set integrator to gillespie before loading a model to test for crashing
     setCurrentIntegrator(_handle, "gillespie");
-    setCurrentIntegrator(_handle, "cvode");
+//     setCurrentIntegrator(_handle, "cvode");
 
     for(n = 0; n<2; ++n) {
         struct RRStringArray *strArray;
