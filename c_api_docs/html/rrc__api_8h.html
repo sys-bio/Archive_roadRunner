@@ -229,7 +229,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
 <tr class="memdesc:gac6b01548aaa54f95fa7ea5d7d8d5059b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the simulator's capabilities.  <a href="group__simulation.html#gac6b01548aaa54f95fa7ea5d7d8d5059b">More...</a><br /></td></tr>
 <tr class="separator:gac6b01548aaa54f95fa7ea5d7d8d5059b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga53617fbabff8088e10c8bc5deee40353"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__simopts.html#ga53617fbabff8088e10c8bc5deee40353">getNumRegisteredIntegrators</a> ()</td></tr>
-<tr class="memdesc:ga53617fbabff8088e10c8bc5deee40353"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of implemented integrators.  <a href="group__simopts.html#ga53617fbabff8088e10c8bc5deee40353">More...</a><br /></td></tr>
+<tr class="memdesc:ga53617fbabff8088e10c8bc5deee40353"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of supported integrators.  <a href="group__simopts.html#ga53617fbabff8088e10c8bc5deee40353">More...</a><br /></td></tr>
 <tr class="separator:ga53617fbabff8088e10c8bc5deee40353"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5713f7cea279fc58aa497615ebb7ddbf"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__simopts.html#ga5713f7cea279fc58aa497615ebb7ddbf">getRegisteredIntegratorName</a> (int n)</td></tr>
 <tr class="memdesc:ga5713f7cea279fc58aa497615ebb7ddbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of a registered integrator (e.g. cvode etc.)  <a href="group__simopts.html#ga5713f7cea279fc58aa497615ebb7ddbf">More...</a><br /></td></tr>
@@ -246,12 +246,12 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
 <tr class="memitem:ac6c65b8fe4f2950f875c426e925197b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rrc__types_8h.html#a7c9475df6c7337d99482b13a365e7596">RRStringArrayPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rrc__api_8h.html#ac6c65b8fe4f2950f875c426e925197b4">getListOfIntegrators</a> (<a class="el" href="rrc__types_8h.html#a1d68f0592372208fa5a5f2799ea4b3ae">RRHandle</a> handle)</td></tr>
 <tr class="memdesc:ac6c65b8fe4f2950f875c426e925197b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the names of implemented integrators.  <a href="#ac6c65b8fe4f2950f875c426e925197b4">More...</a><br /></td></tr>
 <tr class="separator:ac6c65b8fe4f2950f875c426e925197b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad6e463525042165dede8261851cc46af"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__simopts.html#gad6e463525042165dede8261851cc46af">setIntegrator</a> (<a class="el" href="rrc__types_8h.html#a1d68f0592372208fa5a5f2799ea4b3ae">RRHandle</a> handle, char *nameOfIntegrator)</td></tr>
-<tr class="memdesc:gad6e463525042165dede8261851cc46af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify the current integrator to be used for simulation.  <a href="group__simopts.html#gad6e463525042165dede8261851cc46af">More...</a><br /></td></tr>
-<tr class="separator:gad6e463525042165dede8261851cc46af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6bcd64ac9ce4a728b14a1fa570d6f5ae"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__simopts.html#ga6bcd64ac9ce4a728b14a1fa570d6f5ae">getIntegratorName</a> (<a class="el" href="rrc__types_8h.html#a1d68f0592372208fa5a5f2799ea4b3ae">RRHandle</a> handle)</td></tr>
-<tr class="memdesc:ga6bcd64ac9ce4a728b14a1fa570d6f5ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a description of the current integrator.  <a href="group__simopts.html#ga6bcd64ac9ce4a728b14a1fa570d6f5ae">More...</a><br /></td></tr>
-<tr class="separator:ga6bcd64ac9ce4a728b14a1fa570d6f5ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7d4664a6a66a2a9b224db95b751127fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__simopts.html#ga7d4664a6a66a2a9b224db95b751127fe">setCurrentIntegrator</a> (<a class="el" href="rrc__types_8h.html#a1d68f0592372208fa5a5f2799ea4b3ae">RRHandle</a> handle, char *nameOfIntegrator)</td></tr>
+<tr class="memdesc:ga7d4664a6a66a2a9b224db95b751127fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify the current integrator to be used for simulation.  <a href="group__simopts.html#ga7d4664a6a66a2a9b224db95b751127fe">More...</a><br /></td></tr>
+<tr class="separator:ga7d4664a6a66a2a9b224db95b751127fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac5b7c83a8b539302b657f4ad3522fc9c"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__simopts.html#gac5b7c83a8b539302b657f4ad3522fc9c">getCurrentIntegratorName</a> (<a class="el" href="rrc__types_8h.html#a1d68f0592372208fa5a5f2799ea4b3ae">RRHandle</a> handle)</td></tr>
+<tr class="memdesc:gac5b7c83a8b539302b657f4ad3522fc9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a description of the current integrator.  <a href="group__simopts.html#gac5b7c83a8b539302b657f4ad3522fc9c">More...</a><br /></td></tr>
+<tr class="separator:gac5b7c83a8b539302b657f4ad3522fc9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4a917a0539977b7206d1bfbddcc98347"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__simopts.html#ga4a917a0539977b7206d1bfbddcc98347">getCurrentIntegratorDescription</a> (<a class="el" href="rrc__types_8h.html#a1d68f0592372208fa5a5f2799ea4b3ae">RRHandle</a> handle)</td></tr>
 <tr class="memdesc:ga4a917a0539977b7206d1bfbddcc98347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a description of the current integrator.  <a href="group__simopts.html#ga4a917a0539977b7206d1bfbddcc98347">More...</a><br /></td></tr>
 <tr class="separator:ga4a917a0539977b7206d1bfbddcc98347"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -726,7 +726,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 3 2015 10:20:08 for libRoadRunner C API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 3 2015 10:40:31 for libRoadRunner C API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

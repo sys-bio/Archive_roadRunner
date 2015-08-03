@@ -88,7 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga53617fbabff8088e10c8bc5deee40353"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__simopts.html#ga53617fbabff8088e10c8bc5deee40353">getNumRegisteredIntegrators</a> ()</td></tr>
-<tr class="memdesc:ga53617fbabff8088e10c8bc5deee40353"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of implemented integrators.  <a href="#ga53617fbabff8088e10c8bc5deee40353">More...</a><br /></td></tr>
+<tr class="memdesc:ga53617fbabff8088e10c8bc5deee40353"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of supported integrators.  <a href="#ga53617fbabff8088e10c8bc5deee40353">More...</a><br /></td></tr>
 <tr class="separator:ga53617fbabff8088e10c8bc5deee40353"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5713f7cea279fc58aa497615ebb7ddbf"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__simopts.html#ga5713f7cea279fc58aa497615ebb7ddbf">getRegisteredIntegratorName</a> (int n)</td></tr>
 <tr class="memdesc:ga5713f7cea279fc58aa497615ebb7ddbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of a registered integrator (e.g. cvode etc.)  <a href="#ga5713f7cea279fc58aa497615ebb7ddbf">More...</a><br /></td></tr>
@@ -102,12 +102,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ga492555873a0da5f8aa167eeafb7d7d21"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__simopts.html#ga492555873a0da5f8aa167eeafb7d7d21">getNumInstantiatedIntegrators</a> (<a class="el" href="rrc__types_8h.html#a1d68f0592372208fa5a5f2799ea4b3ae">RRHandle</a> handle)</td></tr>
 <tr class="memdesc:ga492555873a0da5f8aa167eeafb7d7d21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of instantiated integrators.  <a href="#ga492555873a0da5f8aa167eeafb7d7d21">More...</a><br /></td></tr>
 <tr class="separator:ga492555873a0da5f8aa167eeafb7d7d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad6e463525042165dede8261851cc46af"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__simopts.html#gad6e463525042165dede8261851cc46af">setIntegrator</a> (<a class="el" href="rrc__types_8h.html#a1d68f0592372208fa5a5f2799ea4b3ae">RRHandle</a> handle, char *nameOfIntegrator)</td></tr>
-<tr class="memdesc:gad6e463525042165dede8261851cc46af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify the current integrator to be used for simulation.  <a href="#gad6e463525042165dede8261851cc46af">More...</a><br /></td></tr>
-<tr class="separator:gad6e463525042165dede8261851cc46af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6bcd64ac9ce4a728b14a1fa570d6f5ae"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__simopts.html#ga6bcd64ac9ce4a728b14a1fa570d6f5ae">getIntegratorName</a> (<a class="el" href="rrc__types_8h.html#a1d68f0592372208fa5a5f2799ea4b3ae">RRHandle</a> handle)</td></tr>
-<tr class="memdesc:ga6bcd64ac9ce4a728b14a1fa570d6f5ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a description of the current integrator.  <a href="#ga6bcd64ac9ce4a728b14a1fa570d6f5ae">More...</a><br /></td></tr>
-<tr class="separator:ga6bcd64ac9ce4a728b14a1fa570d6f5ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7d4664a6a66a2a9b224db95b751127fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__simopts.html#ga7d4664a6a66a2a9b224db95b751127fe">setCurrentIntegrator</a> (<a class="el" href="rrc__types_8h.html#a1d68f0592372208fa5a5f2799ea4b3ae">RRHandle</a> handle, char *nameOfIntegrator)</td></tr>
+<tr class="memdesc:ga7d4664a6a66a2a9b224db95b751127fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify the current integrator to be used for simulation.  <a href="#ga7d4664a6a66a2a9b224db95b751127fe">More...</a><br /></td></tr>
+<tr class="separator:ga7d4664a6a66a2a9b224db95b751127fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac5b7c83a8b539302b657f4ad3522fc9c"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__simopts.html#gac5b7c83a8b539302b657f4ad3522fc9c">getCurrentIntegratorName</a> (<a class="el" href="rrc__types_8h.html#a1d68f0592372208fa5a5f2799ea4b3ae">RRHandle</a> handle)</td></tr>
+<tr class="memdesc:gac5b7c83a8b539302b657f4ad3522fc9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a description of the current integrator.  <a href="#gac5b7c83a8b539302b657f4ad3522fc9c">More...</a><br /></td></tr>
+<tr class="separator:gac5b7c83a8b539302b657f4ad3522fc9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4a917a0539977b7206d1bfbddcc98347"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__simopts.html#ga4a917a0539977b7206d1bfbddcc98347">getCurrentIntegratorDescription</a> (<a class="el" href="rrc__types_8h.html#a1d68f0592372208fa5a5f2799ea4b3ae">RRHandle</a> handle)</td></tr>
 <tr class="memdesc:ga4a917a0539977b7206d1bfbddcc98347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a description of the current integrator.  <a href="#ga4a917a0539977b7206d1bfbddcc98347">More...</a><br /></td></tr>
 <tr class="separator:ga4a917a0539977b7206d1bfbddcc98347"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -206,6 +206,32 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns a short hint of the current integrator. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gac5b7c83a8b539302b657f4ad3522fc9c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* getCurrentIntegratorName </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rrc__types_8h.html#a1d68f0592372208fa5a5f2799ea4b3ae">RRHandle</a>&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtain a description of the current integrator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Handle to a RoadRunner instance. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nameOfIntegrator</td><td>Name of the integrator to be used. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns a description of the current integrator. </dd></dl>
 
 </div>
 </div>
@@ -461,32 +487,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga6bcd64ac9ce4a728b14a1fa570d6f5ae"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char* getIntegratorName </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="rrc__types_8h.html#a1d68f0592372208fa5a5f2799ea4b3ae">RRHandle</a>&#160;</td>
-          <td class="paramname"><em>handle</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Obtain a description of the current integrator. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Handle to a RoadRunner instance. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">nameOfIntegrator</td><td>Name of the integrator to be used. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns a description of the current integrator. </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="ga8bc1ea6950f141d40373416d64abaefa"></a>
 <div class="memitem">
 <div class="memproto">
@@ -576,7 +576,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the number of implemented integrators. </p>
+<p>Get the number of supported integrators. </p>
 <p>Registered Integrators</p>
 <dl class="section return"><dt>Returns</dt><dd>Returns an integer that corresponds to the number of currently registered integrators. </dd></dl>
 
@@ -599,7 +599,6 @@ Functions</h2></td></tr>
 <p>Get the description of a registered integrator (e.g. cvode etc.) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Handle to a RoadRunner instance. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>The index of the registered integrator </td></tr>
   </table>
   </dd>
@@ -625,7 +624,6 @@ Functions</h2></td></tr>
 <p>Get the hint of a registered integrator (e.g. cvode etc.) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Handle to a RoadRunner instance. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>The index of the registered integrator </td></tr>
   </table>
   </dd>
@@ -651,12 +649,47 @@ Functions</h2></td></tr>
 <p>Get the name of a registered integrator (e.g. cvode etc.) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Handle to a RoadRunner instance. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>The index of the registered integrator </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Callee owns memory </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga7d4664a6a66a2a9b224db95b751127fe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int setCurrentIntegrator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rrc__types_8h.html#a1d68f0592372208fa5a5f2799ea4b3ae">RRHandle</a>&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>nameOfIntegrator</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Specify the current integrator to be used for simulation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Handle to a RoadRunner instance. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nameOfIntegrator</td><td>Name of the integrator to be used. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns True if successful. </dd></dl>
 
 </div>
 </div>
@@ -832,46 +865,10 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="gad6e463525042165dede8261851cc46af"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int setIntegrator </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="rrc__types_8h.html#a1d68f0592372208fa5a5f2799ea4b3ae">RRHandle</a>&#160;</td>
-          <td class="paramname"><em>handle</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>nameOfIntegrator</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Specify the current integrator to be used for simulation. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Handle to a RoadRunner instance. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">nameOfIntegrator</td><td>Name of the integrator to be used. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns True if successful. </dd></dl>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 3 2015 10:20:08 for libRoadRunner C API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 3 2015 10:40:31 for libRoadRunner C API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
