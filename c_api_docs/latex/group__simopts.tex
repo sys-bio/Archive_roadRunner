@@ -64,7 +64,61 @@ int \hyperlink{group__simopts_ga7b901ff654788259368fc15c01fe53a6}{set\+Current\+
 int \hyperlink{group__simopts_gab06f6ef3c9c6b57a2806132b1906a52e}{get\+Current\+Integrator\+Parameter\+Boolean} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
 \begin{DoxyCompactList}\small\item\em Get the boolean value for a specific integrator setting. \end{DoxyCompactList}\item 
 int \hyperlink{group__simopts_gab89192771385f30f5223756c46bda227}{set\+Current\+Integrator\+Parameter\+Boolean} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, int value)
-\begin{DoxyCompactList}\small\item\em Set the boolean value for a specific integrator setting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Set the boolean value for a specific integrator setting. \end{DoxyCompactList}\item 
+int \hyperlink{group__simopts_ga210bf6ea10e2c17023a4f108833680e7}{get\+Num\+Registered\+Steady\+State\+Solvers} ()
+\begin{DoxyCompactList}\small\item\em Get the number of registered steady state solvers. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__simopts_gae4dfba532a52cfdd6011355a2a48fdd0}{get\+Registered\+Steady\+State\+Solver\+Name} (int n)
+\begin{DoxyCompactList}\small\item\em Get the name of a registered steady state solver (e.\+g. cvode etc.) \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__simopts_gaf6ac4275f7bc0967d420f15377b189a6}{get\+Registered\+Steady\+State\+Solver\+Hint} (int n)
+\begin{DoxyCompactList}\small\item\em Get the hint of a registered steady state solver (e.\+g. cvode etc.) \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__simopts_ga090a38a435c4819945e8fc7724ff68f2}{get\+Registered\+Steady\+State\+Solver\+Description} (int n)
+\begin{DoxyCompactList}\small\item\em Get the description of a registered steady state solver (e.\+g. cvode etc.) \end{DoxyCompactList}\item 
+int \hyperlink{group__simopts_ga3f75fb22d03a7f532bedf31d45a791be}{set\+Current\+Steady\+State\+Solver} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$name\+Of\+Steady\+State\+Solver)
+\begin{DoxyCompactList}\small\item\em Specify the current steady state solver to be used for simulation.  This method instantiates a new steady state solver of the given type (e.\+g. cvode, gillespie) if one does not currently exist. Otherwise, the existing steady state solver of this type is used. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__simopts_gac0d4601ea3af03c7c15353bb10bbd95f}{get\+Current\+Steady\+State\+Solver\+Name} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\begin{DoxyCompactList}\small\item\em Obtain a description of the current steady state solver. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__simopts_ga408c62750f0976ed81a84fbeb77980df}{get\+Current\+Steady\+State\+Solver\+Description} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\begin{DoxyCompactList}\small\item\em Obtain a description of the current steady state solver. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__simopts_ga7e0bc7da3c46b6869fc086ccea75d052}{get\+Current\+Steady\+State\+Solver\+Hint} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\begin{DoxyCompactList}\small\item\em Obtain a short hint for the current steady state solver. \end{DoxyCompactList}\item 
+int \hyperlink{group__simopts_ga669437dfce773b8fa6f72bd3d26748b0}{get\+Number\+Of\+Current\+Steady\+State\+Solver\+Parameters} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\begin{DoxyCompactList}\small\item\em Get the number of adjustable settings for the current steady state solver. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__simopts_gae7bae8b195623a1f170422b4257bc97b}{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Name} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int n)
+\begin{DoxyCompactList}\small\item\em Get the name of a parameter of the current steady state solver. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__simopts_gae8ec0f65a3425758d77f43ed8ce21ce3}{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Description} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int n)
+\begin{DoxyCompactList}\small\item\em Get the description of a parameter of the current steady state solver. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__simopts_gae77505cd72c88e472c6e6b8f967aa263}{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Hint} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int n)
+\begin{DoxyCompactList}\small\item\em Get the hint of a parameter of the current steady state solver. \end{DoxyCompactList}\item 
+int \hyperlink{group__simopts_gafccd26495f4b099700e8f52fdb20794a}{reset\+Current\+Steady\+State\+Solver\+Parameters} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\begin{DoxyCompactList}\small\item\em Reset the steady state solver parameters to their default values. \end{DoxyCompactList}\item 
+\hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} \hyperlink{group__simopts_gaab9cc86032339b6275487ca0be59b853}{get\+List\+Of\+Current\+Steady\+State\+Solver\+Parameter\+Names} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\begin{DoxyCompactList}\small\item\em Get the names of adjustable settings for the current steady state solver. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__simopts_ga4e00e2cbee01bc5b91c0ae6cfb454b75}{get\+Current\+Steady\+State\+Solver\+Parameter\+Description} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+\begin{DoxyCompactList}\small\item\em Get the description for a specific steady state solver setting. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__simopts_gae754a6adb94adcc4ff2f653f8f10c273}{get\+Current\+Steady\+State\+Solver\+Parameter\+Hint} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+\begin{DoxyCompactList}\small\item\em Get the hint for a specific steady state solver setting. \end{DoxyCompactList}\item 
+int \hyperlink{group__simopts_ga56bede07a54dfef6e610f231a794b8bf}{get\+Current\+Steady\+State\+Solver\+Parameter\+Type} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+\begin{DoxyCompactList}\small\item\em Get the return type for a specific steady state solver setting. \end{DoxyCompactList}\item 
+int \hyperlink{group__simopts_gaa9d75e9d517748ca24a31bdc7aabd403}{get\+Current\+Steady\+State\+Solver\+Parameter\+Int} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+\begin{DoxyCompactList}\small\item\em Get the integer value for a specific steady state solver setting. \end{DoxyCompactList}\item 
+int \hyperlink{group__simopts_gabfe7778b94e2c0311cb58ed61fa84697}{set\+Current\+Steady\+State\+Solver\+Parameter\+Int} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, int value)
+\begin{DoxyCompactList}\small\item\em Set the integer value for a specific steady state solver setting. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{group__simopts_gad591e2afd57f3c63cd9df72949daefb1}{get\+Current\+Steady\+State\+Solver\+Parameter\+U\+Int} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+\begin{DoxyCompactList}\small\item\em Get the unsigned integer value for a specific steady state solver setting. \end{DoxyCompactList}\item 
+int \hyperlink{group__simopts_ga3091b392515179d6993e9255f327cb3e}{set\+Current\+Steady\+State\+Solver\+Parameter\+U\+Int} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, unsigned int value)
+\begin{DoxyCompactList}\small\item\em Set the unsigned integer value for a specific steady state solver setting. \end{DoxyCompactList}\item 
+double \hyperlink{group__simopts_gaef590828bd962f47e941ca74b09a93ac}{get\+Current\+Steady\+State\+Solver\+Parameter\+Double} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+\begin{DoxyCompactList}\small\item\em Get the double value for a specific steady state solver setting. \end{DoxyCompactList}\item 
+int \hyperlink{group__simopts_ga6487a043a634ea934606bb7b784403d5}{set\+Current\+Steady\+State\+Solver\+Parameter\+Double} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, double value)
+\begin{DoxyCompactList}\small\item\em Set the double value for a specific steady state solver setting. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__simopts_gab55ff5d92aab50f66e969d4ce8aa53fe}{get\+Current\+Steady\+State\+Solver\+Parameter\+String} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+\begin{DoxyCompactList}\small\item\em Get the string value for a specific steady state solver setting. \end{DoxyCompactList}\item 
+int \hyperlink{group__simopts_ga55010e4ed7f2612113ebbb894473c2f9}{set\+Current\+Steady\+State\+Solver\+Parameter\+String} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, char $\ast$value)
+\begin{DoxyCompactList}\small\item\em Set the string value for a specific steady state solver setting. \end{DoxyCompactList}\item 
+int \hyperlink{group__simopts_ga079741650e3df582e5b51147bb8b47d8}{get\+Current\+Steady\+State\+Solver\+Parameter\+Boolean} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+\begin{DoxyCompactList}\small\item\em Get the boolean value for a specific steady state solver setting. \end{DoxyCompactList}\item 
+int \hyperlink{group__simopts_ga65b83fdacb58e594c065c35252c9db57}{set\+Current\+Steady\+State\+Solver\+Parameter\+Boolean} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, int value)
+\begin{DoxyCompactList}\small\item\em Set the boolean value for a specific steady state solver setting. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -363,6 +417,296 @@ Get the unsigned integer value for a specific integrator setting.
 \begin{DoxyReturn}{Returns}
 Returns an integer value for the integrator setting. 
 \end{DoxyReturn}
+\hypertarget{group__simopts_ga408c62750f0976ed81a84fbeb77980df}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!get\+Current\+Steady\+State\+Solver\+Description@{get\+Current\+Steady\+State\+Solver\+Description}}
+\index{get\+Current\+Steady\+State\+Solver\+Description@{get\+Current\+Steady\+State\+Solver\+Description}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{get\+Current\+Steady\+State\+Solver\+Description}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Current\+Steady\+State\+Solver\+Description (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_ga408c62750f0976ed81a84fbeb77980df}
+
+
+Obtain a description of the current steady state solver. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a description of the current steady state solver. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_ga7e0bc7da3c46b6869fc086ccea75d052}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!get\+Current\+Steady\+State\+Solver\+Hint@{get\+Current\+Steady\+State\+Solver\+Hint}}
+\index{get\+Current\+Steady\+State\+Solver\+Hint@{get\+Current\+Steady\+State\+Solver\+Hint}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{get\+Current\+Steady\+State\+Solver\+Hint}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Current\+Steady\+State\+Solver\+Hint (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_ga7e0bc7da3c46b6869fc086ccea75d052}
+
+
+Obtain a short hint for the current steady state solver. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a short hint of the current steady state solver. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_gac0d4601ea3af03c7c15353bb10bbd95f}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!get\+Current\+Steady\+State\+Solver\+Name@{get\+Current\+Steady\+State\+Solver\+Name}}
+\index{get\+Current\+Steady\+State\+Solver\+Name@{get\+Current\+Steady\+State\+Solver\+Name}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{get\+Current\+Steady\+State\+Solver\+Name}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Current\+Steady\+State\+Solver\+Name (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_gac0d4601ea3af03c7c15353bb10bbd95f}
+
+
+Obtain a description of the current steady state solver. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a description of the current steady state solver. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_gae8ec0f65a3425758d77f43ed8ce21ce3}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Description@{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Description}}
+\index{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Description@{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Description}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Description}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Description (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_gae8ec0f65a3425758d77f43ed8ce21ce3}
+
+
+Get the description of a parameter of the current steady state solver. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em n} & The index of the parameter (0 $<$= n $<$ \hyperlink{group__simopts_ga669437dfce773b8fa6f72bd3d26748b0}{get\+Number\+Of\+Current\+Steady\+State\+Solver\+Parameters}) \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__simopts_gae77505cd72c88e472c6e6b8f967aa263}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Hint@{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Hint}}
+\index{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Hint@{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Hint}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Hint}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Hint (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_gae77505cd72c88e472c6e6b8f967aa263}
+
+
+Get the hint of a parameter of the current steady state solver. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em n} & The index of the parameter (0 $<$= n $<$ \hyperlink{group__simopts_ga669437dfce773b8fa6f72bd3d26748b0}{get\+Number\+Of\+Current\+Steady\+State\+Solver\+Parameters}) \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__simopts_gae7bae8b195623a1f170422b4257bc97b}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Name@{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Name}}
+\index{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Name@{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Name}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Name}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Name (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_gae7bae8b195623a1f170422b4257bc97b}
+
+
+Get the name of a parameter of the current steady state solver. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em n} & The index of the parameter (0 $<$= n $<$ \hyperlink{group__simopts_ga669437dfce773b8fa6f72bd3d26748b0}{get\+Number\+Of\+Current\+Steady\+State\+Solver\+Parameters}) \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__simopts_ga079741650e3df582e5b51147bb8b47d8}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!get\+Current\+Steady\+State\+Solver\+Parameter\+Boolean@{get\+Current\+Steady\+State\+Solver\+Parameter\+Boolean}}
+\index{get\+Current\+Steady\+State\+Solver\+Parameter\+Boolean@{get\+Current\+Steady\+State\+Solver\+Parameter\+Boolean}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{get\+Current\+Steady\+State\+Solver\+Parameter\+Boolean}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Current\+Steady\+State\+Solver\+Parameter\+Boolean (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_ga079741650e3df582e5b51147bb8b47d8}
+
+
+Get the boolean value for a specific steady state solver setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the steady state solver setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a boolean value for the steady state solver setting. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_ga4e00e2cbee01bc5b91c0ae6cfb454b75}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!get\+Current\+Steady\+State\+Solver\+Parameter\+Description@{get\+Current\+Steady\+State\+Solver\+Parameter\+Description}}
+\index{get\+Current\+Steady\+State\+Solver\+Parameter\+Description@{get\+Current\+Steady\+State\+Solver\+Parameter\+Description}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{get\+Current\+Steady\+State\+Solver\+Parameter\+Description}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Current\+Steady\+State\+Solver\+Parameter\+Description (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_ga4e00e2cbee01bc5b91c0ae6cfb454b75}
+
+
+Get the description for a specific steady state solver setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the steady state solver setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a description for the steady state solver setting. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_gaef590828bd962f47e941ca74b09a93ac}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!get\+Current\+Steady\+State\+Solver\+Parameter\+Double@{get\+Current\+Steady\+State\+Solver\+Parameter\+Double}}
+\index{get\+Current\+Steady\+State\+Solver\+Parameter\+Double@{get\+Current\+Steady\+State\+Solver\+Parameter\+Double}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{get\+Current\+Steady\+State\+Solver\+Parameter\+Double}]{\setlength{\rightskip}{0pt plus 5cm}double get\+Current\+Steady\+State\+Solver\+Parameter\+Double (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_gaef590828bd962f47e941ca74b09a93ac}
+
+
+Get the double value for a specific steady state solver setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the steady state solver setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a double value for the steady state solver setting. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_gae754a6adb94adcc4ff2f653f8f10c273}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!get\+Current\+Steady\+State\+Solver\+Parameter\+Hint@{get\+Current\+Steady\+State\+Solver\+Parameter\+Hint}}
+\index{get\+Current\+Steady\+State\+Solver\+Parameter\+Hint@{get\+Current\+Steady\+State\+Solver\+Parameter\+Hint}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{get\+Current\+Steady\+State\+Solver\+Parameter\+Hint}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Current\+Steady\+State\+Solver\+Parameter\+Hint (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_gae754a6adb94adcc4ff2f653f8f10c273}
+
+
+Get the hint for a specific steady state solver setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the steady state solver setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a hint for the steady state solver setting. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_gaa9d75e9d517748ca24a31bdc7aabd403}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!get\+Current\+Steady\+State\+Solver\+Parameter\+Int@{get\+Current\+Steady\+State\+Solver\+Parameter\+Int}}
+\index{get\+Current\+Steady\+State\+Solver\+Parameter\+Int@{get\+Current\+Steady\+State\+Solver\+Parameter\+Int}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{get\+Current\+Steady\+State\+Solver\+Parameter\+Int}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Current\+Steady\+State\+Solver\+Parameter\+Int (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_gaa9d75e9d517748ca24a31bdc7aabd403}
+
+
+Get the integer value for a specific steady state solver setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the steady state solver setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns an integer value for the steady state solver setting. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_gab55ff5d92aab50f66e969d4ce8aa53fe}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!get\+Current\+Steady\+State\+Solver\+Parameter\+String@{get\+Current\+Steady\+State\+Solver\+Parameter\+String}}
+\index{get\+Current\+Steady\+State\+Solver\+Parameter\+String@{get\+Current\+Steady\+State\+Solver\+Parameter\+String}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{get\+Current\+Steady\+State\+Solver\+Parameter\+String}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Current\+Steady\+State\+Solver\+Parameter\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_gab55ff5d92aab50f66e969d4ce8aa53fe}
+
+
+Get the string value for a specific steady state solver setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the steady state solver setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a string value for the steady state solver setting. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_ga56bede07a54dfef6e610f231a794b8bf}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!get\+Current\+Steady\+State\+Solver\+Parameter\+Type@{get\+Current\+Steady\+State\+Solver\+Parameter\+Type}}
+\index{get\+Current\+Steady\+State\+Solver\+Parameter\+Type@{get\+Current\+Steady\+State\+Solver\+Parameter\+Type}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{get\+Current\+Steady\+State\+Solver\+Parameter\+Type}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Current\+Steady\+State\+Solver\+Parameter\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_ga56bede07a54dfef6e610f231a794b8bf}
+
+
+Get the return type for a specific steady state solver setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the steady state solver setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a integer that indicates the return type for the steady state solver setting. 0-\/\+S\+T\+R\+I\+N\+G, 1-\/\+B\+O\+O\+L, 2-\/\+I\+N\+T32, 3-\/\+U\+I\+N\+T32, 4-\/\+I\+N\+T64, 5-\/\+U\+I\+N\+T64, 6-\/\+F\+L\+O\+A\+T, 7-\/\+D\+O\+U\+B\+L\+E, 8-\/\+C\+H\+A\+R, 9-\/\+U\+C\+H\+A\+R, 10-\/\+E\+M\+P\+T\+Y 
+\end{DoxyReturn}
+\hypertarget{group__simopts_gad591e2afd57f3c63cd9df72949daefb1}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!get\+Current\+Steady\+State\+Solver\+Parameter\+U\+Int@{get\+Current\+Steady\+State\+Solver\+Parameter\+U\+Int}}
+\index{get\+Current\+Steady\+State\+Solver\+Parameter\+U\+Int@{get\+Current\+Steady\+State\+Solver\+Parameter\+U\+Int}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{get\+Current\+Steady\+State\+Solver\+Parameter\+U\+Int}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int get\+Current\+Steady\+State\+Solver\+Parameter\+U\+Int (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_gad591e2afd57f3c63cd9df72949daefb1}
+
+
+Get the unsigned integer value for a specific steady state solver setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the steady state solver setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns an integer value for the steady state solver setting. 
+\end{DoxyReturn}
 \hypertarget{group__simopts_ga8bc1ea6950f141d40373416d64abaefa}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!get\+List\+Of\+Current\+Integrator\+Parameter\+Names@{get\+List\+Of\+Current\+Integrator\+Parameter\+Names}}
 \index{get\+List\+Of\+Current\+Integrator\+Parameter\+Names@{get\+List\+Of\+Current\+Integrator\+Parameter\+Names}!Solver options A\+P\+I@{Solver options A\+P\+I}}
 \subsubsection[{get\+List\+Of\+Current\+Integrator\+Parameter\+Names}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+R\+String\+Array\+Ptr} get\+List\+Of\+Current\+Integrator\+Parameter\+Names (
@@ -382,6 +726,25 @@ Get the names of adjustable settings for the current integrator.
 \begin{DoxyReturn}{Returns}
 Returns a list that contains the names of adjustable integrator settings. 
 \end{DoxyReturn}
+\hypertarget{group__simopts_gaab9cc86032339b6275487ca0be59b853}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!get\+List\+Of\+Current\+Steady\+State\+Solver\+Parameter\+Names@{get\+List\+Of\+Current\+Steady\+State\+Solver\+Parameter\+Names}}
+\index{get\+List\+Of\+Current\+Steady\+State\+Solver\+Parameter\+Names@{get\+List\+Of\+Current\+Steady\+State\+Solver\+Parameter\+Names}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{get\+List\+Of\+Current\+Steady\+State\+Solver\+Parameter\+Names}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+R\+String\+Array\+Ptr} get\+List\+Of\+Current\+Steady\+State\+Solver\+Parameter\+Names (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_gaab9cc86032339b6275487ca0be59b853}
+
+
+Get the names of adjustable settings for the current steady state solver. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a list that contains the names of adjustable steady state solver settings. 
+\end{DoxyReturn}
 \hypertarget{group__simopts_ga7885d06904fc2cdceaa7e71448cde468}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!get\+Number\+Of\+Current\+Integrator\+Parameters@{get\+Number\+Of\+Current\+Integrator\+Parameters}}
 \index{get\+Number\+Of\+Current\+Integrator\+Parameters@{get\+Number\+Of\+Current\+Integrator\+Parameters}!Solver options A\+P\+I@{Solver options A\+P\+I}}
 \subsubsection[{get\+Number\+Of\+Current\+Integrator\+Parameters}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Number\+Of\+Current\+Integrator\+Parameters (
@@ -400,6 +763,25 @@ Get the number of adjustable settings for the current integrator.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Returns an integer that corresponds to the number of adjustable integrator settings. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_ga669437dfce773b8fa6f72bd3d26748b0}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!get\+Number\+Of\+Current\+Steady\+State\+Solver\+Parameters@{get\+Number\+Of\+Current\+Steady\+State\+Solver\+Parameters}}
+\index{get\+Number\+Of\+Current\+Steady\+State\+Solver\+Parameters@{get\+Number\+Of\+Current\+Steady\+State\+Solver\+Parameters}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{get\+Number\+Of\+Current\+Steady\+State\+Solver\+Parameters}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Number\+Of\+Current\+Steady\+State\+Solver\+Parameters (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_ga669437dfce773b8fa6f72bd3d26748b0}
+
+
+Get the number of adjustable settings for the current steady state solver. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns an integer that corresponds to the number of adjustable steady state solver settings. 
 \end{DoxyReturn}
 \hypertarget{group__simopts_ga492555873a0da5f8aa167eeafb7d7d21}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!get\+Num\+Instantiated\+Integrators@{get\+Num\+Instantiated\+Integrators}}
 \index{get\+Num\+Instantiated\+Integrators@{get\+Num\+Instantiated\+Integrators}!Solver options A\+P\+I@{Solver options A\+P\+I}}
@@ -433,6 +815,20 @@ Get the number of registered integrators.
 
 \begin{DoxyReturn}{Returns}
 Returns an integer that corresponds to the number of currently registered integrators. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_ga210bf6ea10e2c17023a4f108833680e7}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!get\+Num\+Registered\+Steady\+State\+Solvers@{get\+Num\+Registered\+Steady\+State\+Solvers}}
+\index{get\+Num\+Registered\+Steady\+State\+Solvers@{get\+Num\+Registered\+Steady\+State\+Solvers}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{get\+Num\+Registered\+Steady\+State\+Solvers}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Num\+Registered\+Steady\+State\+Solvers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_ga210bf6ea10e2c17023a4f108833680e7}
+
+
+Get the number of registered steady state solvers. 
+
+\begin{DoxyReturn}{Returns}
+Returns an integer that corresponds to the number of currently registered steady state solvers. 
 \end{DoxyReturn}
 \hypertarget{group__simopts_ga3b8047489d530224b71e5ea64e898f85}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!get\+Registered\+Integrator\+Description@{get\+Registered\+Integrator\+Description}}
 \index{get\+Registered\+Integrator\+Description@{get\+Registered\+Integrator\+Description}!Solver options A\+P\+I@{Solver options A\+P\+I}}
@@ -491,6 +887,63 @@ Get the name of a registered integrator (e.\+g. cvode etc.)
 \begin{DoxyNote}{Note}
 Callee owns memory 
 \end{DoxyNote}
+\hypertarget{group__simopts_ga090a38a435c4819945e8fc7724ff68f2}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!get\+Registered\+Steady\+State\+Solver\+Description@{get\+Registered\+Steady\+State\+Solver\+Description}}
+\index{get\+Registered\+Steady\+State\+Solver\+Description@{get\+Registered\+Steady\+State\+Solver\+Description}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{get\+Registered\+Steady\+State\+Solver\+Description}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Registered\+Steady\+State\+Solver\+Description (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_ga090a38a435c4819945e8fc7724ff68f2}
+
+
+Get the description of a registered steady state solver (e.\+g. cvode etc.) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n} & The index of the registered steady state solver \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Callee owns memory 
+\end{DoxyNote}
+\hypertarget{group__simopts_gaf6ac4275f7bc0967d420f15377b189a6}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!get\+Registered\+Steady\+State\+Solver\+Hint@{get\+Registered\+Steady\+State\+Solver\+Hint}}
+\index{get\+Registered\+Steady\+State\+Solver\+Hint@{get\+Registered\+Steady\+State\+Solver\+Hint}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{get\+Registered\+Steady\+State\+Solver\+Hint}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Registered\+Steady\+State\+Solver\+Hint (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_gaf6ac4275f7bc0967d420f15377b189a6}
+
+
+Get the hint of a registered steady state solver (e.\+g. cvode etc.) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n} & The index of the registered steady state solver \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Callee owns memory 
+\end{DoxyNote}
+\hypertarget{group__simopts_gae4dfba532a52cfdd6011355a2a48fdd0}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!get\+Registered\+Steady\+State\+Solver\+Name@{get\+Registered\+Steady\+State\+Solver\+Name}}
+\index{get\+Registered\+Steady\+State\+Solver\+Name@{get\+Registered\+Steady\+State\+Solver\+Name}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{get\+Registered\+Steady\+State\+Solver\+Name}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Registered\+Steady\+State\+Solver\+Name (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_gae4dfba532a52cfdd6011355a2a48fdd0}
+
+
+Get the name of a registered steady state solver (e.\+g. cvode etc.) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n} & The index of the registered steady state solver \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Callee owns memory 
+\end{DoxyNote}
 \hypertarget{group__simopts_gaefa42b6e122d13988bde99fcf6e050d6}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!reset\+Current\+Integrator\+Parameters@{reset\+Current\+Integrator\+Parameters}}
 \index{reset\+Current\+Integrator\+Parameters@{reset\+Current\+Integrator\+Parameters}!Solver options A\+P\+I@{Solver options A\+P\+I}}
 \subsubsection[{reset\+Current\+Integrator\+Parameters}]{\setlength{\rightskip}{0pt plus 5cm}int reset\+Current\+Integrator\+Parameters (
@@ -501,6 +954,25 @@ Callee owns memory
 
 
 Reset the integrator parameters to their default values. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns True if successful. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_gafccd26495f4b099700e8f52fdb20794a}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!reset\+Current\+Steady\+State\+Solver\+Parameters@{reset\+Current\+Steady\+State\+Solver\+Parameters}}
+\index{reset\+Current\+Steady\+State\+Solver\+Parameters@{reset\+Current\+Steady\+State\+Solver\+Parameters}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{reset\+Current\+Steady\+State\+Solver\+Parameters}]{\setlength{\rightskip}{0pt plus 5cm}int reset\+Current\+Steady\+State\+Solver\+Parameters (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_gafccd26495f4b099700e8f52fdb20794a}
+
+
+Reset the steady state solver parameters to their default values. 
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -652,6 +1124,153 @@ Set the unsigned integer value for a specific integrator setting.
 \mbox{\tt in}  & {\em paramter\+Name} & Name of the integrator setting. \\
 \hline
 \mbox{\tt in}  & {\em value} & The integer value for the integrator setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns True if successful. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_ga3f75fb22d03a7f532bedf31d45a791be}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!set\+Current\+Steady\+State\+Solver@{set\+Current\+Steady\+State\+Solver}}
+\index{set\+Current\+Steady\+State\+Solver@{set\+Current\+Steady\+State\+Solver}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{set\+Current\+Steady\+State\+Solver}]{\setlength{\rightskip}{0pt plus 5cm}int set\+Current\+Steady\+State\+Solver (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{name\+Of\+Steady\+State\+Solver}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_ga3f75fb22d03a7f532bedf31d45a791be}
+
+
+Specify the current steady state solver to be used for simulation.  This method instantiates a new steady state solver of the given type (e.\+g. cvode, gillespie) if one does not currently exist. Otherwise, the existing steady state solver of this type is used. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em name\+Of\+Steady\+State\+Solver} & Name of the steady state solver to be used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns True if successful. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_ga65b83fdacb58e594c065c35252c9db57}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!set\+Current\+Steady\+State\+Solver\+Parameter\+Boolean@{set\+Current\+Steady\+State\+Solver\+Parameter\+Boolean}}
+\index{set\+Current\+Steady\+State\+Solver\+Parameter\+Boolean@{set\+Current\+Steady\+State\+Solver\+Parameter\+Boolean}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{set\+Current\+Steady\+State\+Solver\+Parameter\+Boolean}]{\setlength{\rightskip}{0pt plus 5cm}int set\+Current\+Steady\+State\+Solver\+Parameter\+Boolean (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_ga65b83fdacb58e594c065c35252c9db57}
+
+
+Set the boolean value for a specific steady state solver setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the steady state solver setting. \\
+\hline
+\mbox{\tt in}  & {\em value} & The boolean value for the steady state solver setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns True if successful. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_ga6487a043a634ea934606bb7b784403d5}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!set\+Current\+Steady\+State\+Solver\+Parameter\+Double@{set\+Current\+Steady\+State\+Solver\+Parameter\+Double}}
+\index{set\+Current\+Steady\+State\+Solver\+Parameter\+Double@{set\+Current\+Steady\+State\+Solver\+Parameter\+Double}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{set\+Current\+Steady\+State\+Solver\+Parameter\+Double}]{\setlength{\rightskip}{0pt plus 5cm}int set\+Current\+Steady\+State\+Solver\+Parameter\+Double (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_ga6487a043a634ea934606bb7b784403d5}
+
+
+Set the double value for a specific steady state solver setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the steady state solver setting. \\
+\hline
+\mbox{\tt in}  & {\em value} & The double value for the steady state solver setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns True if successful. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_gabfe7778b94e2c0311cb58ed61fa84697}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!set\+Current\+Steady\+State\+Solver\+Parameter\+Int@{set\+Current\+Steady\+State\+Solver\+Parameter\+Int}}
+\index{set\+Current\+Steady\+State\+Solver\+Parameter\+Int@{set\+Current\+Steady\+State\+Solver\+Parameter\+Int}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{set\+Current\+Steady\+State\+Solver\+Parameter\+Int}]{\setlength{\rightskip}{0pt plus 5cm}int set\+Current\+Steady\+State\+Solver\+Parameter\+Int (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_gabfe7778b94e2c0311cb58ed61fa84697}
+
+
+Set the integer value for a specific steady state solver setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the steady state solver setting. \\
+\hline
+\mbox{\tt in}  & {\em value} & The integer value for the steady state solver setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns True if successful. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_ga55010e4ed7f2612113ebbb894473c2f9}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!set\+Current\+Steady\+State\+Solver\+Parameter\+String@{set\+Current\+Steady\+State\+Solver\+Parameter\+String}}
+\index{set\+Current\+Steady\+State\+Solver\+Parameter\+String@{set\+Current\+Steady\+State\+Solver\+Parameter\+String}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{set\+Current\+Steady\+State\+Solver\+Parameter\+String}]{\setlength{\rightskip}{0pt plus 5cm}int set\+Current\+Steady\+State\+Solver\+Parameter\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name, }
+\item[{char $\ast$}]{value}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_ga55010e4ed7f2612113ebbb894473c2f9}
+
+
+Set the string value for a specific steady state solver setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the steady state solver setting. \\
+\hline
+\mbox{\tt in}  & {\em value} & The string value for the steady state solver setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns True if successful. 
+\end{DoxyReturn}
+\hypertarget{group__simopts_ga3091b392515179d6993e9255f327cb3e}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!set\+Current\+Steady\+State\+Solver\+Parameter\+U\+Int@{set\+Current\+Steady\+State\+Solver\+Parameter\+U\+Int}}
+\index{set\+Current\+Steady\+State\+Solver\+Parameter\+U\+Int@{set\+Current\+Steady\+State\+Solver\+Parameter\+U\+Int}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{set\+Current\+Steady\+State\+Solver\+Parameter\+U\+Int}]{\setlength{\rightskip}{0pt plus 5cm}int set\+Current\+Steady\+State\+Solver\+Parameter\+U\+Int (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{char $\ast$}]{parameter\+Name, }
+\item[{unsigned int}]{value}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_ga3091b392515179d6993e9255f327cb3e}
+
+
+Set the unsigned integer value for a specific steady state solver setting. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em paramter\+Name} & Name of the steady state solver setting. \\
+\hline
+\mbox{\tt in}  & {\em value} & The integer value for the steady state solver setting. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

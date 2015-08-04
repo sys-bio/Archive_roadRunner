@@ -158,6 +158,60 @@ int \hyperlink{group__simopts_gab06f6ef3c9c6b57a2806132b1906a52e}{get\+Current\+
 \begin{DoxyCompactList}\small\item\em Get the boolean value for a specific integrator setting. \end{DoxyCompactList}\item 
 int \hyperlink{group__simopts_gab89192771385f30f5223756c46bda227}{set\+Current\+Integrator\+Parameter\+Boolean} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, int value)
 \begin{DoxyCompactList}\small\item\em Set the boolean value for a specific integrator setting. \end{DoxyCompactList}\item 
+int \hyperlink{group__simopts_ga210bf6ea10e2c17023a4f108833680e7}{get\+Num\+Registered\+Steady\+State\+Solvers} ()
+\begin{DoxyCompactList}\small\item\em Get the number of registered steady state solvers. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__simopts_gae4dfba532a52cfdd6011355a2a48fdd0}{get\+Registered\+Steady\+State\+Solver\+Name} (int n)
+\begin{DoxyCompactList}\small\item\em Get the name of a registered steady state solver (e.\+g. cvode etc.) \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__simopts_gaf6ac4275f7bc0967d420f15377b189a6}{get\+Registered\+Steady\+State\+Solver\+Hint} (int n)
+\begin{DoxyCompactList}\small\item\em Get the hint of a registered steady state solver (e.\+g. cvode etc.) \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__simopts_ga090a38a435c4819945e8fc7724ff68f2}{get\+Registered\+Steady\+State\+Solver\+Description} (int n)
+\begin{DoxyCompactList}\small\item\em Get the description of a registered steady state solver (e.\+g. cvode etc.) \end{DoxyCompactList}\item 
+int \hyperlink{group__simopts_ga3f75fb22d03a7f532bedf31d45a791be}{set\+Current\+Steady\+State\+Solver} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$name\+Of\+Steady\+State\+Solver)
+\begin{DoxyCompactList}\small\item\em Specify the current steady state solver to be used for simulation.  This method instantiates a new steady state solver of the given type (e.\+g. cvode, gillespie) if one does not currently exist. Otherwise, the existing steady state solver of this type is used. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__simopts_gac0d4601ea3af03c7c15353bb10bbd95f}{get\+Current\+Steady\+State\+Solver\+Name} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\begin{DoxyCompactList}\small\item\em Obtain a description of the current steady state solver. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__simopts_ga408c62750f0976ed81a84fbeb77980df}{get\+Current\+Steady\+State\+Solver\+Description} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\begin{DoxyCompactList}\small\item\em Obtain a description of the current steady state solver. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__simopts_ga7e0bc7da3c46b6869fc086ccea75d052}{get\+Current\+Steady\+State\+Solver\+Hint} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\begin{DoxyCompactList}\small\item\em Obtain a short hint for the current steady state solver. \end{DoxyCompactList}\item 
+int \hyperlink{group__simopts_ga669437dfce773b8fa6f72bd3d26748b0}{get\+Number\+Of\+Current\+Steady\+State\+Solver\+Parameters} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\begin{DoxyCompactList}\small\item\em Get the number of adjustable settings for the current steady state solver. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__simopts_gae7bae8b195623a1f170422b4257bc97b}{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Name} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int n)
+\begin{DoxyCompactList}\small\item\em Get the name of a parameter of the current steady state solver. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__simopts_gae8ec0f65a3425758d77f43ed8ce21ce3}{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Description} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int n)
+\begin{DoxyCompactList}\small\item\em Get the description of a parameter of the current steady state solver. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__simopts_gae77505cd72c88e472c6e6b8f967aa263}{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Hint} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int n)
+\begin{DoxyCompactList}\small\item\em Get the hint of a parameter of the current steady state solver. \end{DoxyCompactList}\item 
+int \hyperlink{group__simopts_gafccd26495f4b099700e8f52fdb20794a}{reset\+Current\+Steady\+State\+Solver\+Parameters} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\begin{DoxyCompactList}\small\item\em Reset the steady state solver parameters to their default values. \end{DoxyCompactList}\item 
+\hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} \hyperlink{group__simopts_gaab9cc86032339b6275487ca0be59b853}{get\+List\+Of\+Current\+Steady\+State\+Solver\+Parameter\+Names} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+\begin{DoxyCompactList}\small\item\em Get the names of adjustable settings for the current steady state solver. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__simopts_ga4e00e2cbee01bc5b91c0ae6cfb454b75}{get\+Current\+Steady\+State\+Solver\+Parameter\+Description} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+\begin{DoxyCompactList}\small\item\em Get the description for a specific steady state solver setting. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__simopts_gae754a6adb94adcc4ff2f653f8f10c273}{get\+Current\+Steady\+State\+Solver\+Parameter\+Hint} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+\begin{DoxyCompactList}\small\item\em Get the hint for a specific steady state solver setting. \end{DoxyCompactList}\item 
+int \hyperlink{group__simopts_ga56bede07a54dfef6e610f231a794b8bf}{get\+Current\+Steady\+State\+Solver\+Parameter\+Type} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+\begin{DoxyCompactList}\small\item\em Get the return type for a specific steady state solver setting. \end{DoxyCompactList}\item 
+int \hyperlink{group__simopts_gaa9d75e9d517748ca24a31bdc7aabd403}{get\+Current\+Steady\+State\+Solver\+Parameter\+Int} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+\begin{DoxyCompactList}\small\item\em Get the integer value for a specific steady state solver setting. \end{DoxyCompactList}\item 
+int \hyperlink{group__simopts_gabfe7778b94e2c0311cb58ed61fa84697}{set\+Current\+Steady\+State\+Solver\+Parameter\+Int} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, int value)
+\begin{DoxyCompactList}\small\item\em Set the integer value for a specific steady state solver setting. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{group__simopts_gad591e2afd57f3c63cd9df72949daefb1}{get\+Current\+Steady\+State\+Solver\+Parameter\+U\+Int} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+\begin{DoxyCompactList}\small\item\em Get the unsigned integer value for a specific steady state solver setting. \end{DoxyCompactList}\item 
+int \hyperlink{group__simopts_ga3091b392515179d6993e9255f327cb3e}{set\+Current\+Steady\+State\+Solver\+Parameter\+U\+Int} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, unsigned int value)
+\begin{DoxyCompactList}\small\item\em Set the unsigned integer value for a specific steady state solver setting. \end{DoxyCompactList}\item 
+double \hyperlink{group__simopts_gaef590828bd962f47e941ca74b09a93ac}{get\+Current\+Steady\+State\+Solver\+Parameter\+Double} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+\begin{DoxyCompactList}\small\item\em Get the double value for a specific steady state solver setting. \end{DoxyCompactList}\item 
+int \hyperlink{group__simopts_ga6487a043a634ea934606bb7b784403d5}{set\+Current\+Steady\+State\+Solver\+Parameter\+Double} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, double value)
+\begin{DoxyCompactList}\small\item\em Set the double value for a specific steady state solver setting. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__simopts_gab55ff5d92aab50f66e969d4ce8aa53fe}{get\+Current\+Steady\+State\+Solver\+Parameter\+String} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+\begin{DoxyCompactList}\small\item\em Get the string value for a specific steady state solver setting. \end{DoxyCompactList}\item 
+int \hyperlink{group__simopts_ga55010e4ed7f2612113ebbb894473c2f9}{set\+Current\+Steady\+State\+Solver\+Parameter\+String} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, char $\ast$value)
+\begin{DoxyCompactList}\small\item\em Set the string value for a specific steady state solver setting. \end{DoxyCompactList}\item 
+int \hyperlink{group__simopts_ga079741650e3df582e5b51147bb8b47d8}{get\+Current\+Steady\+State\+Solver\+Parameter\+Boolean} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
+\begin{DoxyCompactList}\small\item\em Get the boolean value for a specific steady state solver setting. \end{DoxyCompactList}\item 
+int \hyperlink{group__simopts_ga65b83fdacb58e594c065c35252c9db57}{set\+Current\+Steady\+State\+Solver\+Parameter\+Boolean} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name, int value)
+\begin{DoxyCompactList}\small\item\em Set the boolean value for a specific steady state solver setting. \end{DoxyCompactList}\item 
 bool \hyperlink{group__simulation_gaa5898253f7c907443f5df78387e3e77c}{set\+Time\+Start} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double time\+Start)
 \begin{DoxyCompactList}\small\item\em Set the time start for a time course simulation. \end{DoxyCompactList}\item 
 bool \hyperlink{group__simulation_gaf609c0853e0d053f43f4ef4f068f002f}{set\+Time\+End} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double time\+End)
