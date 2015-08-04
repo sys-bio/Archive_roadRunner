@@ -81,6 +81,7 @@ set(rrCoreSources
     CVODEIntegrator
     Dictionary
     GillespieIntegrator
+	NLEQSolver
     RK4Integrator
     rrNLEQInterface
     rrTestSuiteModelSimulation
@@ -96,6 +97,7 @@ set(rrCoreSources
     rrSBMLModelSimulation
     rrSBMLReader
     SBMLValidator
+	Solver
     Variant
     conservation/ConservationExtension
     conservation/ConservationDocumentPlugin
