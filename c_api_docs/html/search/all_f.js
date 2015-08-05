@@ -43,6 +43,7 @@ var searchData=
   ['simulate',['simulate',['../group__simulation.html#ga55c9ef1913377542f61d1d622911cc7b',1,'rrc::simulate()'],['../group__simulation.html#ga55c9ef1913377542f61d1d622911cc7b',1,'simulate():&#160;_rrc_api.cpp']]],
   ['simulateex',['simulateEx',['../group__simulation.html#gaa568722adbce33e145ce8c4a78146465',1,'rrc::simulateEx()'],['../group__simulation.html#gaa568722adbce33e145ce8c4a78146465',1,'simulateEx():&#160;_rrc_api.cpp']]],
   ['size',['size',['../classrrc_1_1_string_list.html#a90ca964ebcc1b02bbcde225edd49e812',1,'rrc::StringList']]],
+  ['solvertypetostring',['solverTypeToString',['../group__simopts.html#ga756168c1c856360e327f017ac7578333',1,'rrc::solverTypeToString()'],['../group__simopts.html#ga756168c1c856360e327f017ac7578333',1,'solverTypeToString():&#160;rrc_api.cpp']]],
   ['start_5ftry',['start_try',['../rrc__macros_8h.html#af21ae6629abfdec1764f2d56b2e11b6c',1,'rrc_macros.h']]],
   ['steadystate',['steadyState',['../group__steadystate.html#ga6585d37a9c56840e1acbb38e9df07262',1,'rrc::steadyState()'],['../group__steadystate.html#ga6585d37a9c56840e1acbb38e9df07262',1,'steadyState(RRHandle handle, double *value):&#160;_rrc_api.cpp'],['../group__steadystate.html',1,'(Global Namespace)']]],
   ['stochastic_20simulations',['Stochastic simulations',['../group__stochastic.html',1,'']]],

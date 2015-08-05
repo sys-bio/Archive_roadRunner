@@ -35,6 +35,8 @@ char $\ast$ \hyperlink{group__simopts_ga2e525f711d43789ec1170f043f86f127}{get\+C
 \begin{DoxyCompactList}\small\item\em Get the description of a parameter of the current integrator. \end{DoxyCompactList}\item 
 char $\ast$ \hyperlink{group__simopts_gafa723d0091d673126b4330ec9d6dca11}{get\+Current\+Integrator\+Nth\+Parameter\+Hint} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int n)
 \begin{DoxyCompactList}\small\item\em Get the hint of a parameter of the current integrator. \end{DoxyCompactList}\item 
+int \hyperlink{group__simopts_ga0d54a5567d45d3f0547fecbaeae86dd7}{get\+Current\+Integrator\+Nth\+Parameter\+Type} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int n)
+\begin{DoxyCompactList}\small\item\em Get the type of a parameter of the current integrator. \end{DoxyCompactList}\item 
 int \hyperlink{group__simopts_gaefa42b6e122d13988bde99fcf6e050d6}{reset\+Current\+Integrator\+Parameters} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Reset the integrator parameters to their default values. \end{DoxyCompactList}\item 
 \hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} \hyperlink{group__simopts_ga8bc1ea6950f141d40373416d64abaefa}{get\+List\+Of\+Current\+Integrator\+Parameter\+Names} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
@@ -89,8 +91,12 @@ char $\ast$ \hyperlink{group__simopts_gae8ec0f65a3425758d77f43ed8ce21ce3}{get\+C
 \begin{DoxyCompactList}\small\item\em Get the description of a parameter of the current steady state solver. \end{DoxyCompactList}\item 
 char $\ast$ \hyperlink{group__simopts_gae77505cd72c88e472c6e6b8f967aa263}{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Hint} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int n)
 \begin{DoxyCompactList}\small\item\em Get the hint of a parameter of the current steady state solver. \end{DoxyCompactList}\item 
+int \hyperlink{group__simopts_ga77dcaf609de8b7c9ff829e26f02695b0}{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Type} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int n)
+\begin{DoxyCompactList}\small\item\em Get the type of a parameter of the current steady state solver. \end{DoxyCompactList}\item 
 int \hyperlink{group__simopts_gafccd26495f4b099700e8f52fdb20794a}{reset\+Current\+Steady\+State\+Solver\+Parameters} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Reset the steady state solver parameters to their default values. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{group__simopts_ga756168c1c856360e327f017ac7578333}{solver\+Type\+To\+String} (int code)
+\begin{DoxyCompactList}\small\item\em Get a string description of the type \mbox{[}S\+T\+A\+T\+I\+C M\+E\+M\+O\+R\+Y -\/ D\+O N\+O\+T F\+R\+E\+E\mbox{]}  Can call on return value of e.\+g. \hyperlink{group__simopts_ga77dcaf609de8b7c9ff829e26f02695b0}{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Type} to retrieve human-\/readable string representation. \end{DoxyCompactList}\item 
 \hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} \hyperlink{group__simopts_gaab9cc86032339b6275487ca0be59b853}{get\+List\+Of\+Current\+Steady\+State\+Solver\+Parameter\+Names} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Get the names of adjustable settings for the current steady state solver. \end{DoxyCompactList}\item 
 char $\ast$ \hyperlink{group__simopts_ga4e00e2cbee01bc5b91c0ae6cfb454b75}{get\+Current\+Steady\+State\+Solver\+Parameter\+Description} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, char $\ast$parameter\+Name)
@@ -233,6 +239,25 @@ Get the hint of a parameter of the current integrator.
 
 
 Get the name of a parameter of the current integrator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em n} & The index of the parameter (0 $<$= n $<$ \hyperlink{group__simopts_ga7885d06904fc2cdceaa7e71448cde468}{get\+Number\+Of\+Current\+Integrator\+Parameters}) \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__simopts_ga0d54a5567d45d3f0547fecbaeae86dd7}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!get\+Current\+Integrator\+Nth\+Parameter\+Type@{get\+Current\+Integrator\+Nth\+Parameter\+Type}}
+\index{get\+Current\+Integrator\+Nth\+Parameter\+Type@{get\+Current\+Integrator\+Nth\+Parameter\+Type}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{get\+Current\+Integrator\+Nth\+Parameter\+Type}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Current\+Integrator\+Nth\+Parameter\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_ga0d54a5567d45d3f0547fecbaeae86dd7}
+
+
+Get the type of a parameter of the current integrator. 
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -523,6 +548,25 @@ Get the hint of a parameter of the current steady state solver.
 
 
 Get the name of a parameter of the current steady state solver. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance. \\
+\hline
+\mbox{\tt in}  & {\em n} & The index of the parameter (0 $<$= n $<$ \hyperlink{group__simopts_ga669437dfce773b8fa6f72bd3d26748b0}{get\+Number\+Of\+Current\+Steady\+State\+Solver\+Parameters}) \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__simopts_ga77dcaf609de8b7c9ff829e26f02695b0}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Type@{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Type}}
+\index{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Type@{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Type}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Type}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_ga77dcaf609de8b7c9ff829e26f02695b0}
+
+
+Get the type of a parameter of the current steady state solver. 
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -1276,3 +1320,19 @@ Set the unsigned integer value for a specific steady state solver setting.
 \begin{DoxyReturn}{Returns}
 Returns True if successful. 
 \end{DoxyReturn}
+\hypertarget{group__simopts_ga756168c1c856360e327f017ac7578333}{\index{Solver options A\+P\+I@{Solver options A\+P\+I}!solver\+Type\+To\+String@{solver\+Type\+To\+String}}
+\index{solver\+Type\+To\+String@{solver\+Type\+To\+String}!Solver options A\+P\+I@{Solver options A\+P\+I}}
+\subsubsection[{solver\+Type\+To\+String}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ solver\+Type\+To\+String (
+\begin{DoxyParamCaption}
+\item[{int}]{code}
+\end{DoxyParamCaption}
+)}}\label{group__simopts_ga756168c1c856360e327f017ac7578333}
+
+
+Get a string description of the type \mbox{[}S\+T\+A\+T\+I\+C M\+E\+M\+O\+R\+Y -\/ D\+O N\+O\+T F\+R\+E\+E\mbox{]}  Can call on return value of e.\+g. \hyperlink{group__simopts_ga77dcaf609de8b7c9ff829e26f02695b0}{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Type} to retrieve human-\/readable string representation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em code} & Type code for the parameter \\
+\hline
+\end{DoxyParams}

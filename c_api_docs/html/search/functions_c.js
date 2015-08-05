@@ -42,6 +42,7 @@ var searchData=
   ['simulate',['simulate',['../group__simulation.html#ga55c9ef1913377542f61d1d622911cc7b',1,'rrc::simulate()'],['../group__simulation.html#ga55c9ef1913377542f61d1d622911cc7b',1,'simulate():&#160;_rrc_api.cpp']]],
   ['simulateex',['simulateEx',['../group__simulation.html#gaa568722adbce33e145ce8c4a78146465',1,'rrc::simulateEx()'],['../group__simulation.html#gaa568722adbce33e145ce8c4a78146465',1,'simulateEx():&#160;_rrc_api.cpp']]],
   ['size',['size',['../classrrc_1_1_string_list.html#a90ca964ebcc1b02bbcde225edd49e812',1,'rrc::StringList']]],
+  ['solvertypetostring',['solverTypeToString',['../group__simopts.html#ga756168c1c856360e327f017ac7578333',1,'rrc::solverTypeToString()'],['../group__simopts.html#ga756168c1c856360e327f017ac7578333',1,'solverTypeToString():&#160;rrc_api.cpp']]],
   ['steadystate',['steadyState',['../group__steadystate.html#ga6585d37a9c56840e1acbb38e9df07262',1,'rrc::steadyState()'],['../group__steadystate.html#ga6585d37a9c56840e1acbb38e9df07262',1,'steadyState():&#160;_rrc_api.cpp']]],
   ['stringarraytostring',['stringArrayToString',['../group__to_string.html#ga404f239a08ca9e328087a488b500cef6',1,'rrc::stringArrayToString()'],['../group__to_string.html#ga404f239a08ca9e328087a488b500cef6',1,'stringArrayToString():&#160;rrc_utilities.cpp']]]
 ];
