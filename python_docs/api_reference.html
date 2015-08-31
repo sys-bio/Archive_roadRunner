@@ -271,76 +271,11 @@ setting the duration automatically sets the end time and visa versa.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="roadrunner.Config.SIMULATEOPTIONS_ABSOLUTE">
-<tt class="descclassname">Config.</tt><tt class="descname">SIMULATEOPTIONS_ABSOLUTE</tt><em class="property"> double</em><a class="headerlink" href="#roadrunner.Config.SIMULATEOPTIONS_ABSOLUTE" title="Permalink to this definition">¶</a></dt>
-<dd><p>The absolute error tolerance used by the integrator.</p>
-<p>A number representing the absolute difference permitted for the integrator
-tolerance. Defaults to 1.000000e-10.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="roadrunner.Config.SIMULATEOPTIONS_RELATIVE">
-<tt class="descclassname">Config.</tt><tt class="descname">SIMULATEOPTIONS_RELATIVE</tt><em class="property"> double</em><a class="headerlink" href="#roadrunner.Config.SIMULATEOPTIONS_RELATIVE" title="Permalink to this definition">¶</a></dt>
-<dd><p>The relative error tolerance used by the integrator.</p>
-<p>A float-point number representing the relative difference permitted.
-Defaults to 1.000000e-05.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="roadrunner.Config.SIMULATEOPTIONS_STRUCTURED_RESULT">
 <tt class="descclassname">Config.</tt><tt class="descname">SIMULATEOPTIONS_STRUCTURED_RESULT</tt><em class="property"> bool</em><a class="headerlink" href="#roadrunner.Config.SIMULATEOPTIONS_STRUCTURED_RESULT" title="Permalink to this definition">¶</a></dt>
 <dd><p>A boolean option to return a structured array from the RoadRunner.simulate method. Structured
 arrays contain column names and other data. A structured array needs to be converted into regular
 arrays before they can be used in numpy functions.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="roadrunner.Config.SIMULATEOPTIONS_STIFF">
-<tt class="descclassname">Config.</tt><tt class="descname">SIMULATEOPTIONS_STIFF</tt><em class="property"> bool</em><a class="headerlink" href="#roadrunner.Config.SIMULATEOPTIONS_STIFF" title="Permalink to this definition">¶</a></dt>
-<dd><p>Is the model a stiff system? setting this to stiff causes
-RoadRunner to load a stiff solver which could potentially be
-extremly slow</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="roadrunner.Config.SIMULATEOPTIONS_MULTI_STEP">
-<tt class="descclassname">Config.</tt><tt class="descname">SIMULATEOPTIONS_MULTI_STEP</tt><em class="property"> bool</em><a class="headerlink" href="#roadrunner.Config.SIMULATEOPTIONS_MULTI_STEP" title="Permalink to this definition">¶</a></dt>
-<dd><p>The MULTI_STEP option tells the solver to take a series of internal steps
-and then return the solution at the point reached by that step.</p>
-<p>In simulate, this option will likely be slower than normal mode,
-but may be useful to monitor solutions as they are integrated.</p>
-<p>This is intended to be used in combination with the
-IntegratorListener. It this option is set, and there is a
-IntegratorListener set, RoadRunner::integrate will run the
-integrator in a series of internal steps, and the listner
-will by notified at each step.</p>
-<p>Highly Experimental!!!</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="roadrunner.Config.SIMULATEOPTIONS_INITIAL_TIMESTEP">
-<tt class="descclassname">Config.</tt><tt class="descname">SIMULATEOPTIONS_INITIAL_TIMESTEP</tt><em class="property"> double</em><a class="headerlink" href="#roadrunner.Config.SIMULATEOPTIONS_INITIAL_TIMESTEP" title="Permalink to this definition">¶</a></dt>
-<dd><p>A user specified initial time step. If this is &lt;=  0, the integrator
-will attempt to determine a safe initial time step.</p>
-<p>Note, for each number of steps given to RoadRunner::simulate or RoadRunner::oneStep,
-the internal integrator may take many many steps to reach one of the external time
-steps. This value specifies an initial value for the internal integrator
-time step.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="roadrunner.Config.SIMULATEOPTIONS_MINIMUM_TIMESTEP">
-<tt class="descclassname">Config.</tt><tt class="descname">SIMULATEOPTIONS_MINIMUM_TIMESTEP</tt><em class="property"> double</em><a class="headerlink" href="#roadrunner.Config.SIMULATEOPTIONS_MINIMUM_TIMESTEP" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specify The Minimum Time Step That The Internal Integrator
-Will Use. Uses Integrator Estimated Value If &lt;= 0.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="roadrunner.Config.SIMULATEOPTIONS_MAXIMUM_NUM_STEPS">
-<tt class="descclassname">Config.</tt><tt class="descname">SIMULATEOPTIONS_MAXIMUM_NUM_STEPS</tt><em class="property"> int</em><a class="headerlink" href="#roadrunner.Config.SIMULATEOPTIONS_MAXIMUM_NUM_STEPS" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specify The Maximum Number Of Steps The Internal Integrator Will Use
-Before Reaching The User Specified Time Span. Uses The Integrator
-Default Value If &lt;= 0.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1304,29 +1239,6 @@ also available as separate properties which set the integratorFlags bitfield.</p
 </dd></dl>
 
 <dl class="attribute">
-<dt id="roadrunner.SimulateOptions.STIFF">
-<tt class="descclassname">SimulateOptions.</tt><tt class="descname">STIFF</tt><a class="headerlink" href="#roadrunner.SimulateOptions.STIFF" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use the stiff (implicit) integrator. Defaults to off.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="roadrunner.SimulateOptions.MULTI_STEP">
-<tt class="descclassname">SimulateOptions.</tt><tt class="descname">MULTI_STEP</tt><a class="headerlink" href="#roadrunner.SimulateOptions.MULTI_STEP" title="Permalink to this definition">¶</a></dt>
-<dd><ul class="simple">
-<li>Experimental *</li>
-</ul>
-<p>Perform a multi-step simulation. In multi-step simulation, one may monitor
-the variable time stepping via the IntegratorListener events system.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="roadrunner.SimulateOptions.absolute">
-<tt class="descclassname">SimulateOptions.</tt><tt class="descname">absolute</tt><a class="headerlink" href="#roadrunner.SimulateOptions.absolute" title="Permalink to this definition">¶</a></dt>
-<dd><p>A number representing the absolute difference permitted for the integrator
-tolerance.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="roadrunner.SimulateOptions.amounts">
 <tt class="descclassname">SimulateOptions.</tt><tt class="descname">amounts</tt><a class="headerlink" href="#roadrunner.SimulateOptions.amounts" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of the variable whose output in the results file is in amount
@@ -1357,27 +1269,6 @@ duration accordingly and visa versa.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="roadrunner.SimulateOptions.flags">
-<tt class="descclassname">SimulateOptions.</tt><tt class="descname">flags</tt><a class="headerlink" href="#roadrunner.SimulateOptions.flags" title="Permalink to this definition">¶</a></dt>
-<dd><p>can be set to ResetModel so that the model is reset to its initial state
-when the simulation is run.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="roadrunner.SimulateOptions.relative">
-<tt class="descclassname">SimulateOptions.</tt><tt class="descname">relative</tt><a class="headerlink" href="#roadrunner.SimulateOptions.relative" title="Permalink to this definition">¶</a></dt>
-<dd><p>A float-point number representing the relative difference permitted.
-Defaults 0.0001</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="roadrunner.SimulateOptions.resetModel">
-<tt class="descclassname">SimulateOptions.</tt><tt class="descname">resetModel</tt><a class="headerlink" href="#roadrunner.SimulateOptions.resetModel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Causes the model to be reset to the original conditions specified
-in the SBML when the simulation is run.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="roadrunner.SimulateOptions.start">
 <tt class="descclassname">SimulateOptions.</tt><tt class="descname">start</tt><a class="headerlink" href="#roadrunner.SimulateOptions.start" title="Permalink to this definition">¶</a></dt>
 <dd><p>The start time of the simulation time-series data.
@@ -1391,76 +1282,6 @@ Often this is 0, but not necessarily.</p>
 When a simulation system calculates the data points to record, it will typically
 divide the duration by the number of time steps. Thus, for N steps, the output
 will have N+1 data rows.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="roadrunner.SimulateOptions.stiff">
-<tt class="descclassname">SimulateOptions.</tt><tt class="descname">stiff</tt><a class="headerlink" href="#roadrunner.SimulateOptions.stiff" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use the stiff integrator. Only use this if the model is stiff and causes issues with the regular
-integrator. The stiff integrator is slower than the conventional integrator.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="roadrunner.SimulateOptions.multiStep">
-<tt class="descclassname">SimulateOptions.</tt><tt class="descname">multiStep</tt><a class="headerlink" href="#roadrunner.SimulateOptions.multiStep" title="Permalink to this definition">¶</a></dt>
-<dd><p>Perform a multi step integration.</p>
-<ul class="simple">
-<li>Experimental *</li>
-</ul>
-<p>Perform a multi-step simulation. In multi-step simulation, one may monitor
-the variable time stepping via the IntegratorListener events system.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="roadrunner.SimulateOptions.variables">
-<tt class="descclassname">SimulateOptions.</tt><tt class="descname">variables</tt><a class="headerlink" href="#roadrunner.SimulateOptions.variables" title="Permalink to this definition">¶</a></dt>
-<dd><p>The variables (in addition to time) whose values will be saved in the result.
-These are SBML model id&#8217;s. Order is significant, as this determines the order
-of the columns in the result matrix.</p>
-<p>Important: if a symbol in this list refers to a species in the model,
-then that symbol should also be listed in either the amount or concentration
-lists below. If a species symbol is listed in variables, but is not listed
-in either amounts or concentrations, then it defaults to an amount value.</p>
-<p>The ordering of the symbols in variable is what determines the output
-ordering. The order of symbols in either amounts or concentrations do not
-effect the output ordering.</p>
-<p>NOTE:If a listed variable has two underscores in it (&#8216;__&#8217;), that variable
-is actually present only in a submodel of the main model, from the
-Hierarchical Model Composition package, in the format submodelID__variableID.
-If the model is flattened, the variable will appear automatically.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="roadrunner.SimulateOptions.initialTimeStep">
-<tt class="descclassname">SimulateOptions.</tt><tt class="descname">initialTimeStep</tt><a class="headerlink" href="#roadrunner.SimulateOptions.initialTimeStep" title="Permalink to this definition">¶</a></dt>
-<dd><p>A user specified initial time step. If this is &lt;=  0, the integrator
-will attempt to determine a safe initial time step.</p>
-<p>Note, for each number of steps given to RoadRunner.simulate or RoadRunner.integrate
-the internal integrator may take many many steps to reach one of the external time
-steps. This value specifies an initial value for the internal integrator
-time step.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="roadrunner.SimulateOptions.minimumTimeStep">
-<tt class="descclassname">SimulateOptions.</tt><tt class="descname">minimumTimeStep</tt><a class="headerlink" href="#roadrunner.SimulateOptions.minimumTimeStep" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specify the minimum time step that the internal integrator
-will use. Uses integrator estimated value if &lt;= 0.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="roadrunner.SimulateOptions.maximumTimeStep">
-<tt class="descclassname">SimulateOptions.</tt><tt class="descname">maximumTimeStep</tt><a class="headerlink" href="#roadrunner.SimulateOptions.maximumTimeStep" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specify the maximum time step size that the internal integrator
-will use. Uses integrator estimated value if &lt;= 0.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="roadrunner.SimulateOptions.maximumNumSteps">
-<tt class="descclassname">SimulateOptions.</tt><tt class="descname">maximumNumSteps</tt><a class="headerlink" href="#roadrunner.SimulateOptions.maximumNumSteps" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specify the maximum number of steps the internal integrator will use
-before reaching the user specified time span. Uses the integrator
-default value if &lt;= 0.</p>
 </dd></dl>
 
 </div>
