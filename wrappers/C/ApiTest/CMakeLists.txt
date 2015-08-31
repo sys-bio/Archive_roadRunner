@@ -56,6 +56,21 @@ set_property(TARGET ss-solver-test
     POCO_NO_AUTOMATIC_LIBS
     )
 
+# Steady state solver test
+add_executable(getAvailableTimeCourseSymbolsTest getAvailableTimeCourseSymbolsTest.c)
+install(TARGETS getAvailableTimeCourseSymbolsTest DESTINATION bin COMPONENT testing)
+target_link_libraries (getAvailableTimeCourseSymbolsTest roadrunner_c_api PocoXML)
+
+set_property(TARGET getAvailableTimeCourseSymbolsTest
+    PROPERTY  COMPILE_DEFINITIONS
+    STATIC_LIBSTRUCT
+    STATIC_RR
+    POCO_STATIC
+    XML_STATIC
+    POCO_NO_AUTOMATIC_LIBS
+    )
+
+
 
 
 
