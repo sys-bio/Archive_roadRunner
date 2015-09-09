@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>RoadRunner API Reference &mdash; libRoadRunner 1.3.1 documentation</title>
+    <title>RoadRunner API Reference &mdash; libRoadRunner 1.3.23 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.3.1',
+        VERSION:     '1.3.23',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="libRoadRunner 1.3.1 documentation" href="index.html" />
+    <link rel="top" title="libRoadRunner 1.3.23 documentation" href="index.html" />
     <link rel="prev" title="Utility Functions" href="utility_functions.html" /> 
   </head>
   <body>
@@ -39,7 +39,7 @@
         <li class="right" >
           <a href="utility_functions.html" title="Utility Functions"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">libRoadRunner 1.3.1 documentation</a> &raquo;</li> 
+        <li><a href="index.html">libRoadRunner 1.3.23 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -55,24 +55,12 @@
 (c) 2009-2014 Endre Somogyi and Herbert Sauro</p>
 <div class="section" id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
-<p>Many RoadRunner classes use a number of configuration parameters. Most of these can be set using
-the Config class. The values stored in the Config class only determines the default values of
-parameters. Most methods let users specify explicit values for parameters. For example, if one ran
-a time series simulation, users could specify various parameter via the optional SimulateOptions object:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">roadrunner</span>
-<span class="n">opt</span> <span class="o">=</span> <span class="n">roadrunner</span><span class="o">.</span><span class="n">SimulateOptions</span><span class="p">()</span>
-<span class="n">opt</span><span class="o">.</span><span class="n">relative</span> <span class="o">=</span> <span class="mf">1.3e-5</span>
-<span class="n">opt</span><span class="o">.</span><span class="n">absolute</span> <span class="o">=</span> <span class="mf">3e-12</span>
-<span class="n">opt</span><span class="o">.</span><span class="n">steps</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">opt</span><span class="o">.</span><span class="n">duration</span> <span class="o">=</span> <span class="mf">1.1</span>
-<span class="n">r</span> <span class="o">=</span> <span class="n">roadrunner</span><span class="o">.</span><span class="n">RoadRunner</span><span class="p">(</span><span class="s">&#39;/Users/andy/test.xml&#39;</span><span class="p">)</span>
-<span class="n">r</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="n">opt</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>If no SimulateOptions object is given, then the default configuration parameters are used. The
-Config class will look in the following locations for the config file, and will load the values from
-the first config file it finds. If it does not find a config file in one of the following locations,
-a default set of configuration parameters are used. The search locations of the config file are:</p>
+<p>Many of RoadRunner classes use a number of configuration parameters. Most of these can be set using
+the Config class. The values stored in the Config class only determine the <em>default</em> values of
+parameters. The Config class will look in the following locations for the config file, and will
+load the values from the first config file it finds. If it does not find a config file in one of
+the following locations, a default set of configuration parameters are used. The search locations
+of the config file are:</p>
 <p>#1: the ROADRUNNER_CONFIG environment variable</p>
 <p>#2: try the user&#8217;s home directory for roadrunner.conf, i.e.:</p>
 <div class="highlight-python"><div class="highlight"><pre>/Users/andy/roadrunner.conf
@@ -108,16 +96,14 @@ Configuration Functions section.</p>
 <dt id="roadrunner.Config.setValue">
 <em class="property">static </em><tt class="descclassname">Config.</tt><tt class="descname">setValue</tt><big>(</big><em>key</em>, <em>value</em><big>)</big><a class="headerlink" href="#roadrunner.Config.setValue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the value of a configuration key. The value must be either a string, integer, double or
-boolean. If one wanted to change the value of the default integrator tolerances, one would:</p>
+boolean. If one wanted to turn off moiety conservation (this will not have an effect on
+already loaded models):</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">roadrunner</span> <span class="kn">import</span> <span class="n">Config</span>
-<span class="n">Config</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">Config</span><span class="o">.</span><span class="n">SIMULATEOPTIONS_ABSOLUTE</span><span class="p">,</span> <span class="mf">3.14e-12</span><span class="p">)</span>
-<span class="n">Config</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">Config</span><span class="o">.</span><span class="n">SIMULATEOPTIONS_RELATIVE</span><span class="p">,</span> <span class="mf">2.78e-5</span><span class="p">)</span>
+<span class="n">Config</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">Config</span><span class="o">.</span><span class="n">LOADSBMLOPTIONS_CONSERVED_MOIETIES</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Or, other options may be set to Boolean or integer values. To enable an optimization features,
-or to set default simulation time steps:</p>
+<p>Or, other options may be set to Boolean or integer values. To enable an optimization features:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">Config</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">Config</span><span class="o">.</span><span class="n">LOADSBMLOPTIONS_OPTIMIZE_INSTRUCTION_SIMPLIFIER</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
-<span class="n">Config</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">Config</span><span class="o">.</span><span class="n">SIMULATEOPTIONS_STEPS</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -255,27 +241,18 @@ original JIT engine. Does NOT work on LLVM 3.1</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="roadrunner.Config.SIMULATEOPTIONS_STEPS">
-<tt class="descclassname">Config.</tt><tt class="descname">SIMULATEOPTIONS_STEPS</tt><em class="property"> int</em><a class="headerlink" href="#roadrunner.Config.SIMULATEOPTIONS_STEPS" title="Permalink to this definition">¶</a></dt>
-<dd><p>The number of steps at which the output is sampled. The samples are evenly spaced.
-When a simulation system calculates the data points to record, it will typically
-divide the duration by the number of time steps. Thus, for N steps, the output
-will have N+1 data rows.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="roadrunner.Config.SIMULATEOPTIONS_DURATION">
-<tt class="descclassname">Config.</tt><tt class="descname">SIMULATEOPTIONS_DURATION</tt><em class="property"> double</em><a class="headerlink" href="#roadrunner.Config.SIMULATEOPTIONS_DURATION" title="Permalink to this definition">¶</a></dt>
-<dd><p>The duration of the simulation run, in the model&#8217;s units of time. Note,
-setting the duration automatically sets the end time and visa versa.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="roadrunner.Config.SIMULATEOPTIONS_STRUCTURED_RESULT">
-<tt class="descclassname">Config.</tt><tt class="descname">SIMULATEOPTIONS_STRUCTURED_RESULT</tt><em class="property"> bool</em><a class="headerlink" href="#roadrunner.Config.SIMULATEOPTIONS_STRUCTURED_RESULT" title="Permalink to this definition">¶</a></dt>
-<dd><p>A boolean option to return a structured array from the RoadRunner.simulate method. Structured
-arrays contain column names and other data. A structured array needs to be converted into regular
-arrays before they can be used in numpy functions.</p>
+<dt id="roadrunner.Config.SIMULATEOPTIONS_MULTI_STEP">
+<tt class="descclassname">Config.</tt><tt class="descname">SIMULATEOPTIONS_MULTI_STEP</tt><em class="property"> bool</em><a class="headerlink" href="#roadrunner.Config.SIMULATEOPTIONS_MULTI_STEP" title="Permalink to this definition">¶</a></dt>
+<dd><p>The MULTI_STEP option tells the solver to take a series of internal steps
+and then return the solution at the point reached by that step.</p>
+<p>In simulate, this option will likely be slower than normal mode,
+but may be useful to monitor solutions as they are integrated.</p>
+<p>This is intended to be used in combination with the
+IntegratorListener. It this option is set, and there is a
+IntegratorListener set, RoadRunner::integrate will run the
+integrator in a series of internal steps, and the listner
+will by notified at each step.</p>
+<p>Highly Experimental!!!</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1205,85 +1182,6 @@ The K matrix has the structure, <img class="math" src="_images/math/54bd9cc427b5
 </dd></dl>
 
 </div>
-</div>
-<div class="section" id="controlling-simulation-settings">
-<h2>Controlling Simulation Settings<a class="headerlink" href="#controlling-simulation-settings" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="roadrunner.SimulateOptions">
-<em class="property">class </em><tt class="descclassname">roadrunner.</tt><tt class="descname">SimulateOptions</tt><big>(</big><em>*args</em><big>)</big><a class="headerlink" href="#roadrunner.SimulateOptions" title="Permalink to this definition">¶</a></dt>
-<dd><p>The SimulateOptions object allows tuning a variety of simulation and integration
-options such as tolerances and time step size.</p>
-<p>This is the full set of options that determines how RoadRunner performs
-a simulation of an SBML model.</p>
-<p>This is a superset of the values stored in a SBML test suite settings file, the
-documentation of the fields which correspond to an SBML test suite settings was
-taken from <a class="reference external" href="http://sbml.org">http://sbml.org</a></p>
-<p>This object can be read from a SBML test suite options file by using a file
-name in the constructor.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>sbmlSettingFilePath</strong> &#8211; (optional) if this is given, the settings are read
-from this settings file, if not, the default values are set.</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="roadrunner.SimulateOptions.integratorFlags">
-<tt class="descclassname">SimulateOptions.</tt><tt class="descname">integratorFlags</tt><a class="headerlink" href="#roadrunner.SimulateOptions.integratorFlags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A bitfield which may contain the following options. In python these options are
-also available as separate properties which set the integratorFlags bitfield.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="roadrunner.SimulateOptions.amounts">
-<tt class="descclassname">SimulateOptions.</tt><tt class="descname">amounts</tt><a class="headerlink" href="#roadrunner.SimulateOptions.amounts" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of the variable whose output in the results file is in amount
-(not concentration) units. This list of variables must be a subset of
-the names listed in variables.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="roadrunner.SimulateOptions.concentrations">
-<tt class="descclassname">SimulateOptions.</tt><tt class="descname">concentrations</tt><a class="headerlink" href="#roadrunner.SimulateOptions.concentrations" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of the variable whose output in the results file is in concentration
-(not amount) units. This list of variables must be a subset of the names
-listed in variables.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="roadrunner.SimulateOptions.duration">
-<tt class="descclassname">SimulateOptions.</tt><tt class="descname">duration</tt><a class="headerlink" href="#roadrunner.SimulateOptions.duration" title="Permalink to this definition">¶</a></dt>
-<dd><p>The duration of the simulation run, in the model&#8217;s units of time. Note,
-setting the duration automatically sets the end time and visa versa.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="roadrunner.SimulateOptions.end">
-<tt class="descclassname">SimulateOptions.</tt><tt class="descname">end</tt><a class="headerlink" href="#roadrunner.SimulateOptions.end" title="Permalink to this definition">¶</a></dt>
-<dd><p>The simulation end time. Note, setting the end time automatically sets the
-duration accordingly and visa versa.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="roadrunner.SimulateOptions.start">
-<tt class="descclassname">SimulateOptions.</tt><tt class="descname">start</tt><a class="headerlink" href="#roadrunner.SimulateOptions.start" title="Permalink to this definition">¶</a></dt>
-<dd><p>The start time of the simulation time-series data.
-Often this is 0, but not necessarily.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="roadrunner.SimulateOptions.steps">
-<tt class="descclassname">SimulateOptions.</tt><tt class="descname">steps</tt><a class="headerlink" href="#roadrunner.SimulateOptions.steps" title="Permalink to this definition">¶</a></dt>
-<dd><p>The number of steps at which the output is sampled. The samples are evenly spaced.
-When a simulation system calculates the data points to record, it will typically
-divide the duration by the number of time steps. Thus, for N steps, the output
-will have N+1 data rows.</p>
-</dd></dl>
-
 </div>
 <div class="section" id="sbml-compile-options">
 <h2>SBML Compile Options<a class="headerlink" href="#sbml-compile-options" title="Permalink to this headline">¶</a></h2>
@@ -2632,7 +2530,6 @@ target which matches the host.</p>
 <li><a class="reference internal" href="#analysis">Analysis</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#controlling-simulation-settings">Controlling Simulation Settings</a></li>
 <li><a class="reference internal" href="#sbml-compile-options">SBML Compile Options</a></li>
 <li><a class="reference internal" href="#accessing-the-sbml-model-variables">Accessing the SBML Model Variables</a><ul>
 <li><a class="reference internal" href="#floating-species">Floating Species</a></li>
@@ -2694,7 +2591,7 @@ target which matches the host.</p>
         <li class="right" >
           <a href="utility_functions.html" title="Utility Functions"
              >previous</a> |</li>
-        <li><a href="index.html">libRoadRunner 1.3.1 documentation</a> &raquo;</li> 
+        <li><a href="index.html">libRoadRunner 1.3.23 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

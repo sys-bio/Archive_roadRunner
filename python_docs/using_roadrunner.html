@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Basic Tutorial &mdash; libRoadRunner 1.3.1 documentation</title>
+    <title>Basic Tutorial &mdash; libRoadRunner 1.3.23 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.3.1',
+        VERSION:     '1.3.23',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="libRoadRunner 1.3.1 documentation" href="index.html" />
+    <link rel="top" title="libRoadRunner 1.3.23 documentation" href="index.html" />
     <link rel="up" title="Introduction" href="introduction.html" />
     <link rel="next" title="What Is SBML?" href="what_is_sbml.html" />
     <link rel="prev" title="Installing RoadRunner" href="installing_rr.html" /> 
@@ -44,7 +44,7 @@
         <li class="right" >
           <a href="installing_rr.html" title="Installing RoadRunner"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">libRoadRunner 1.3.1 documentation</a> &raquo;</li>
+        <li><a href="index.html">libRoadRunner 1.3.23 documentation</a> &raquo;</li>
           <li><a href="introduction.html" accesskey="U">Introduction</a> &raquo;</li> 
       </ul>
     </div>  
@@ -120,7 +120,7 @@ way:</p>
 <p>This means set the time start to zero, the time end to 10 and generate 100 points. This means that the simulation points
 will be output in intervals of 0.1.</p>
 <p>The simulate method also accepts a number of keyword arguments. These may be uses like:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">result</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">reset</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">stiff</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">relative</span><span class="o">=</span><span class="mf">1E-6</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">result</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">reset</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">stiff</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>For more details of the simulate method see <a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.simulate" title="roadrunner.RoadRunner.simulate"><tt class="xref py py-meth docutils literal"><span class="pre">RoadRunner.simulate()</span></tt></a>
@@ -146,7 +146,7 @@ The follow table summarizes the various options.</p>
 <td>Duration of the simulation. Setting &#8216;duration&#8217; will automatically change &#8216;end&#8217;</td>
 </tr>
 <tr class="row-odd"><td>steps</td>
-<td>Number of points to generate</td>
+<td>Number of steps to generate</td>
 </tr>
 <tr class="row-even"><td>absolute</td>
 <td>Absolute tolerance for the CVODE integrator</td>
@@ -186,15 +186,6 @@ with slightly different parameters values. To do this we must reset the initial 
 the original values. To do that we run the command reset:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">rr</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 </pre></div>
-</div>
-<p>Simulation options can also be set outside of the call to simulate. The new values will apply to
-future calls to simulate:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">roadrunner</span><span class="o">.</span><span class="n">SimulateOptions</span><span class="p">()</span><span class="o">.</span><span class="n">relative</span> <span class="o">=</span> <span class="mf">1E-6</span>
-</pre></div>
-</div>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">More details on <a class="reference internal" href="api_reference.html"><em>RoadRunner API Reference</em></a></p>
 </div>
 </div>
 <div class="section" id="changing-parameters">
@@ -434,7 +425,7 @@ symbols:</p>
         <li class="right" >
           <a href="installing_rr.html" title="Installing RoadRunner"
              >previous</a> |</li>
-        <li><a href="index.html">libRoadRunner 1.3.1 documentation</a> &raquo;</li>
+        <li><a href="index.html">libRoadRunner 1.3.23 documentation</a> &raquo;</li>
           <li><a href="introduction.html" >Introduction</a> &raquo;</li> 
       </ul>
     </div>
