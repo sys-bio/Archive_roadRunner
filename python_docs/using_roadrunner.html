@@ -357,6 +357,50 @@ symbols:</p>
 </pre></div>
 </div>
 </div>
+<div class="section" id="solvers">
+<h2>Solvers<a class="headerlink" href="#solvers" title="Permalink to this headline">¶</a></h2>
+<p>RoadRunner has two types of solvers: integrators and steady-state solvers.
+Integrators control numerical timecourse integration via the <cite>simulate</cite> method.
+By default, RoadRunner uses CVODE, a real differential equation solver from the
+SUNDIALS suite. Internally, CVODE features an adaptive timestep. However, unless <cite>variableStep</cite>
+is specified in the call to <cite>simulate</cite>, the output will contain evenly spaced intervals.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span> <span class="n">r</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="go"># Output will contain evenly spaced intervals</span>
+<span class="gp">&gt;&gt;&gt; </span> <span class="n">r</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="n">variableStep</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="go"># Intervals will vary according to CVODE step size</span>
+</pre></div>
+</div>
+<p>RoadRunner also contains a basic 4th-order Runge-Kutta integrator, which can be selected
+with a call to <cite>setIntegrator</cite>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span> <span class="n">r</span><span class="o">.</span><span class="n">setIntegrator</span><span class="p">(</span><span class="s">&#39;rk4&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Runge-Kutta always uses a fixed step size, and does not support events.</p>
+<p>Some integrators, such as CVODE, have parameters which can be set by the user.
+To see a list of these settings, use <cite>getSettings</cite>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span> <span class="n">r</span><span class="o">.</span><span class="n">getIntegrator</span><span class="p">()</span><span class="o">.</span><span class="n">getSettings</span><span class="p">()</span>
+<span class="go">(&#39;relative_tolerance&#39;, &#39;absolute_tolerance&#39;, &#39;stiff&#39;, &#39;maximum_bdf_order&#39;, &#39;maximum_adams_order&#39;, &#39;maximum_num_steps&#39;, &#39;maximum_time_step&#39;, &#39;minimum_time_step&#39;, &#39;initial_time_step&#39;, &#39;multiple_steps&#39;, &#39;variable_step_size&#39;)</span>
+</pre></div>
+</div>
+<p>To set a parameter, use one of the two alternative methods:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span> <span class="n">r</span><span class="o">.</span><span class="n">getIntegrator</span><span class="p">()</span><span class="o">.</span><span class="n">relative_tolerance</span> <span class="o">=</span> <span class="mf">1e-10</span>
+<span class="gp">&gt;&gt;&gt; </span> <span class="n">r</span><span class="o">.</span><span class="n">getIntegrator</span><span class="p">()</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s">&#39;relative_tolerance&#39;</span><span class="p">,</span> <span class="mf">1e-10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Be sure to set the parameter to the correct type, which can be obtained from
+the parameter&#8217;s hint or description:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span> <span class="n">r</span><span class="o">.</span><span class="n">getIntegrator</span><span class="p">()</span><span class="o">.</span><span class="n">getHint</span><span class="p">(</span><span class="s">&#39;relative_tolerance&#39;</span><span class="p">)</span>
+<span class="go">&#39;Specifies the scalar relative tolerance (double).&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span> <span class="n">r</span><span class="o">.</span><span class="n">getIntegrator</span><span class="p">()</span><span class="o">.</span><span class="n">getDescription</span><span class="p">(</span><span class="s">&#39;relative_tolerance&#39;</span><span class="p">)</span>
+<span class="go">&#39;(double) CVODE calculates a vector of error weights which is used in all error and convergence tests. The weighted RMS norm for the relative tolerance should not become smaller than this value.&#39;</span>
+</pre></div>
+</div>
+<p>Parameters also have a display name:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span> <span class="n">r</span><span class="o">.</span><span class="n">getIntegrator</span><span class="p">()</span><span class="o">.</span><span class="n">getDisplayName</span><span class="p">(</span><span class="s">&#39;relative_tolerance&#39;</span><span class="p">)</span>
+<span class="go">&#39;Relative Tolerance&#39;</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 
@@ -378,6 +422,7 @@ symbols:</p>
 <li><a class="reference internal" href="#selecting-simulation-output">Selecting Simulation Output</a></li>
 <li><a class="reference internal" href="#plotting-data">Plotting Data</a></li>
 <li><a class="reference internal" href="#changing-initial-conditions">Changing Initial Conditions</a></li>
+<li><a class="reference internal" href="#solvers">Solvers</a></li>
 </ul>
 </li>
 </ul>
