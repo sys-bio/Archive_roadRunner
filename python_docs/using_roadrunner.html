@@ -400,6 +400,17 @@ the parameter&#8217;s hint or description:</p>
 <span class="go">&#39;Relative Tolerance&#39;</span>
 </pre></div>
 </div>
+<p>The other type of solver is a steady-state solver, which works in essentially the same way:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span> <span class="n">r</span><span class="o">.</span><span class="n">getSteadyStateSolver</span><span class="p">()</span><span class="o">.</span><span class="n">getSettings</span><span class="p">()</span>
+<span class="go">(&#39;maximum_iterations&#39;, &#39;minimum_damping&#39;, &#39;relative_tolerance&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span> <span class="n">r</span><span class="o">.</span><span class="n">getSteadyStateSolver</span><span class="p">()</span><span class="o">.</span><span class="n">getHint</span><span class="p">(</span><span class="s">&#39;maximum_iterations&#39;</span><span class="p">)</span>
+<span class="go">&#39;The maximum number of iterations the solver is allowed to use (int)&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span> <span class="n">r</span><span class="o">.</span><span class="n">getSteadyStateSolver</span><span class="p">()</span><span class="o">.</span><span class="n">getDescription</span><span class="p">(</span><span class="s">&#39;maximum_iterations&#39;</span><span class="p">)</span>
+<span class="go">&#39;(int) Iteration caps off at the maximum, regardless of whether a solution has been reached&#39;</span>
+</pre></div>
+</div>
+<p>The steady state solver is invoked by a call to <cite>r.steadyState()</cite>.
+RoadRunner only has a single steady state solver (NLEQ).</p>
 </div>
 </div>
 
