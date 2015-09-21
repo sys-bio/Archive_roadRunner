@@ -23,8 +23,9 @@ road\+Runner C A\+P\+I 2012
 {\ttfamily \#include \char`\"{}rrc\+\_\+utilities.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}rrc\+\_\+cpp\+\_\+support.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}Integrator.\+h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}Solver.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Steady\+State\+Solver.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}Dictionary.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}rr\+Config.\+h\char`\"{}}\\*
 {\ttfamily \#include $<$unistd.\+h$>$}\\*
 {\ttfamily \#include $<$limits.\+h$>$}\\*
 \subsection*{Macros}
@@ -101,7 +102,7 @@ char $\ast$ \hyperlink{group__loadsave_ga1ad04f6a6ac4ffccd25a056490bb6f53}{get\+
 \begin{DoxyCompactList}\small\item\em Retrieve the S\+B\+M\+L model that was last loaded into road\+Runner. \end{DoxyCompactList}\item 
 bool \hyperlink{group__loadsave_ga533342a784ba4e48c16cc59e2307f609}{is\+Model\+Loaded} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em check if a model is loaded \end{DoxyCompactList}\item 
-bool \hyperlink{group__loadsave_gaffa66f342ebcdb5a7821b688a44fea11}{un\+Load\+Model} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+bool \hyperlink{group__loadsave_ga78e637849c0d221eeee1168d101fcf30}{clear\+Model} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Unload current model. \end{DoxyCompactList}\item 
 bool \hyperlink{group__simulation_gaa5898253f7c907443f5df78387e3e77c}{set\+Time\+Start} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const double time\+Start)
 \begin{DoxyCompactList}\small\item\em Set the time start for a time course simulation. \end{DoxyCompactList}\item 
@@ -269,6 +270,8 @@ int \hyperlink{group__simopts_ga7885d06904fc2cdceaa7e71448cde468}{get\+Number\+O
 \begin{DoxyCompactList}\small\item\em Get the number of adjustable settings for the current integrator. \end{DoxyCompactList}\item 
 char $\ast$ \hyperlink{group__simopts_ga81f0ab837b82e6bdc8740237c7a2ef11}{get\+Current\+Integrator\+Nth\+Parameter\+Name} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int n)
 \begin{DoxyCompactList}\small\item\em Get the name of a parameter of the current integrator. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__simopts_gae27a074293fc7bde4fcb09720bfdfb85}{get\+Current\+Integrator\+Nth\+Parameter\+Display\+Name} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int n)
+\begin{DoxyCompactList}\small\item\em Get the display name of a parameter of the current integrator. \end{DoxyCompactList}\item 
 char $\ast$ \hyperlink{group__simopts_gafa723d0091d673126b4330ec9d6dca11}{get\+Current\+Integrator\+Nth\+Parameter\+Hint} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int n)
 \begin{DoxyCompactList}\small\item\em Get the hint of a parameter of the current integrator. \end{DoxyCompactList}\item 
 int \hyperlink{group__simopts_ga0d54a5567d45d3f0547fecbaeae86dd7}{get\+Current\+Integrator\+Nth\+Parameter\+Type} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int n)
@@ -329,6 +332,8 @@ char $\ast$ \hyperlink{group__simopts_gae77505cd72c88e472c6e6b8f967aa263}{get\+C
 \begin{DoxyCompactList}\small\item\em Get the hint of a parameter of the current steady state solver. \end{DoxyCompactList}\item 
 int \hyperlink{group__simopts_ga77dcaf609de8b7c9ff829e26f02695b0}{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Type} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int n)
 \begin{DoxyCompactList}\small\item\em Get the type of a parameter of the current steady state solver. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__simopts_ga26312818edb69cf716ac56a5a065d1d5}{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Display\+Name} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int n)
+\begin{DoxyCompactList}\small\item\em Get the display name of a parameter of the current steady state solver. \end{DoxyCompactList}\item 
 char $\ast$ \hyperlink{group__simopts_gae8ec0f65a3425758d77f43ed8ce21ce3}{get\+Current\+Steady\+State\+Solver\+Nth\+Parameter\+Description} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int n)
 \begin{DoxyCompactList}\small\item\em Get the description of a parameter of the current steady state solver. \end{DoxyCompactList}\item 
 int \hyperlink{group__simopts_gafccd26495f4b099700e8f52fdb20794a}{reset\+Current\+Steady\+State\+Solver\+Parameters} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
@@ -424,7 +429,19 @@ bool \hyperlink{group__reset_gaeaf9374c9a0cad0898f5e0a37bc387c5}{reset} (\hyperl
 bool \hyperlink{group__reset_ga0fdde5a5cdd90408a0e2050d8e4243ec}{reset\+All} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Resets all variables of the model to their current initial values, and resets all parameters to their original values. \end{DoxyCompactList}\item 
 bool \hyperlink{group__reset_ga30ad9eec8febc573febf1ad8b40c99ad}{reset\+To\+Origin} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
-\begin{DoxyCompactList}\small\item\em Resets the model to the state in which it was first loaded, including initial conditions, variables, and parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Resets the model to the state in which it was first loaded, including initial conditions, variables, and parameters. \end{DoxyCompactList}\item 
+int \hyperlink{group__config_gae778c76310afed5f769e44bd181e5f4a}{set\+Config\+Bool} (const char $\ast$key, int value)
+\begin{DoxyCompactList}\small\item\em Set a boolean configuration value. \end{DoxyCompactList}\item 
+int \hyperlink{group__config_ga22a14b4d4a38b8f70b181600eea85afb}{get\+Config\+Bool} (const char $\ast$key)
+\begin{DoxyCompactList}\small\item\em Get a boolean configuration value. \end{DoxyCompactList}\item 
+int \hyperlink{group__config_gaa99f01232a745b6b424ac0b7b683bfe3}{set\+Config\+Int} (const char $\ast$key, int value)
+\begin{DoxyCompactList}\small\item\em Set an integer configuration value. \end{DoxyCompactList}\item 
+int \hyperlink{group__config_ga743f765ab2f01f2200f4e1d6f228fc24}{get\+Config\+Int} (const char $\ast$key)
+\begin{DoxyCompactList}\small\item\em Get an integer configuration value. \end{DoxyCompactList}\item 
+int \hyperlink{group__config_gafb1fcaaa3158be1cded7a28f3a2e6b74}{set\+Config\+Double} (const char $\ast$key, double value)
+\begin{DoxyCompactList}\small\item\em Set a double configuration value. \end{DoxyCompactList}\item 
+double \hyperlink{group__config_ga144a5a318ee0d879fa60fc7138b4f349}{get\+Config\+Double} (const char $\ast$key)
+\begin{DoxyCompactList}\small\item\em Get a double configuration value. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}

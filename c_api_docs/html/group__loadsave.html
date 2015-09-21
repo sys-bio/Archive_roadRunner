@@ -99,9 +99,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gaba8e934b2e2c045312686c5e857aacab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__loadsave.html#gaba8e934b2e2c045312686c5e857aacab">loadSBMLFromFileE</a> (<a class="el" href="rrc__types_8h.html#a1d68f0592372208fa5a5f2799ea4b3ae">RRHandle</a> handle, const char *fileName, bool forceRecompile)</td></tr>
 <tr class="memdesc:gaba8e934b2e2c045312686c5e857aacab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a model from a SBML file, force recompilation.  <a href="#gaba8e934b2e2c045312686c5e857aacab">More...</a><br /></td></tr>
 <tr class="separator:gaba8e934b2e2c045312686c5e857aacab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaffa66f342ebcdb5a7821b688a44fea11"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__loadsave.html#gaffa66f342ebcdb5a7821b688a44fea11">unLoadModel</a> (<a class="el" href="rrc__types_8h.html#a1d68f0592372208fa5a5f2799ea4b3ae">RRHandle</a> handle)</td></tr>
-<tr class="memdesc:gaffa66f342ebcdb5a7821b688a44fea11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unload current model.  <a href="#gaffa66f342ebcdb5a7821b688a44fea11">More...</a><br /></td></tr>
-<tr class="separator:gaffa66f342ebcdb5a7821b688a44fea11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga78e637849c0d221eeee1168d101fcf30"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__loadsave.html#ga78e637849c0d221eeee1168d101fcf30">clearModel</a> (<a class="el" href="rrc__types_8h.html#a1d68f0592372208fa5a5f2799ea4b3ae">RRHandle</a> handle)</td></tr>
+<tr class="memdesc:ga78e637849c0d221eeee1168d101fcf30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unload current model.  <a href="#ga78e637849c0d221eeee1168d101fcf30">More...</a><br /></td></tr>
+<tr class="separator:ga78e637849c0d221eeee1168d101fcf30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga533342a784ba4e48c16cc59e2307f609"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__loadsave.html#ga533342a784ba4e48c16cc59e2307f609">isModelLoaded</a> (<a class="el" href="rrc__types_8h.html#a1d68f0592372208fa5a5f2799ea4b3ae">RRHandle</a> handle)</td></tr>
 <tr class="memdesc:ga533342a784ba4e48c16cc59e2307f609"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if a model is loaded  <a href="#ga533342a784ba4e48c16cc59e2307f609">More...</a><br /></td></tr>
 <tr class="separator:ga533342a784ba4e48c16cc59e2307f609"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,6 +118,31 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Read and write models to files or strings. Support for SBML formats. </p>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga78e637849c0d221eeee1168d101fcf30"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool clearModel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rrc__types_8h.html#a1d68f0592372208fa5a5f2799ea4b3ae">RRHandle</a>&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unload current model. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Handle to a RoadRunner instance </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if successful </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ga25a051f0d6f624e5f1634911cf545d79"></a>
 <div class="memitem">
 <div class="memproto">
@@ -387,35 +412,10 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="gaffa66f342ebcdb5a7821b688a44fea11"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool unLoadModel </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="rrc__types_8h.html#a1d68f0592372208fa5a5f2799ea4b3ae">RRHandle</a>&#160;</td>
-          <td class="paramname"><em>handle</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Unload current model. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Handle to a RoadRunner instance </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns true if successful </dd></dl>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 5 2015 10:41:02 for libRoadRunner C API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Sep 21 2015 10:36:13 for libRoadRunner C API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

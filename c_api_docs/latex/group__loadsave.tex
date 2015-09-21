@@ -17,7 +17,7 @@ bool \hyperlink{group__loadsave_ga275b8f8d7350505c383fdc9634713041}{load\+S\+B\+
 \begin{DoxyCompactList}\small\item\em Load a model from a S\+B\+M\+L file. \end{DoxyCompactList}\item 
 bool \hyperlink{group__loadsave_gaba8e934b2e2c045312686c5e857aacab}{load\+S\+B\+M\+L\+From\+File\+E} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, const char $\ast$file\+Name, bool force\+Recompile)
 \begin{DoxyCompactList}\small\item\em Load a model from a S\+B\+M\+L file, force recompilation. \end{DoxyCompactList}\item 
-bool \hyperlink{group__loadsave_gaffa66f342ebcdb5a7821b688a44fea11}{un\+Load\+Model} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
+bool \hyperlink{group__loadsave_ga78e637849c0d221eeee1168d101fcf30}{clear\+Model} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em Unload current model. \end{DoxyCompactList}\item 
 bool \hyperlink{group__loadsave_ga533342a784ba4e48c16cc59e2307f609}{is\+Model\+Loaded} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle)
 \begin{DoxyCompactList}\small\item\em check if a model is loaded \end{DoxyCompactList}\item 
@@ -35,6 +35,25 @@ Read and write models to files or strings. Support for S\+B\+M\+L formats.
 
 
 \subsection{Function Documentation}
+\hypertarget{group__loadsave_ga78e637849c0d221eeee1168d101fcf30}{\index{Read and write models@{Read and write models}!clear\+Model@{clear\+Model}}
+\index{clear\+Model@{clear\+Model}!Read and write models@{Read and write models}}
+\subsubsection[{clear\+Model}]{\setlength{\rightskip}{0pt plus 5cm}bool clear\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+R\+Handle}}]{handle}
+\end{DoxyParamCaption}
+)}}\label{group__loadsave_ga78e637849c0d221eeee1168d101fcf30}
+
+
+Unload current model. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if successful 
+\end{DoxyReturn}
 \hypertarget{group__loadsave_ga25a051f0d6f624e5f1634911cf545d79}{\index{Read and write models@{Read and write models}!get\+Current\+S\+B\+M\+L@{get\+Current\+S\+B\+M\+L}}
 \index{get\+Current\+S\+B\+M\+L@{get\+Current\+S\+B\+M\+L}!Read and write models@{Read and write models}}
 \subsubsection[{get\+Current\+S\+B\+M\+L}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ get\+Current\+S\+B\+M\+L (
@@ -203,25 +222,6 @@ Load simulation settings from a file.
 \mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance \\
 \hline
 \mbox{\tt in}  & {\em file\+Name} & file name (or full path) to file that holds simulation settings \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Returns true if successful 
-\end{DoxyReturn}
-\hypertarget{group__loadsave_gaffa66f342ebcdb5a7821b688a44fea11}{\index{Read and write models@{Read and write models}!un\+Load\+Model@{un\+Load\+Model}}
-\index{un\+Load\+Model@{un\+Load\+Model}!Read and write models@{Read and write models}}
-\subsubsection[{un\+Load\+Model}]{\setlength{\rightskip}{0pt plus 5cm}bool un\+Load\+Model (
-\begin{DoxyParamCaption}
-\item[{{\bf R\+R\+Handle}}]{handle}
-\end{DoxyParamCaption}
-)}}\label{group__loadsave_gaffa66f342ebcdb5a7821b688a44fea11}
-
-
-Unload current model. 
-
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

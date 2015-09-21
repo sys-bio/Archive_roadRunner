@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['clearmodel',['clearModel',['../group__loadsave.html#ga78e637849c0d221eeee1168d101fcf30',1,'rrc::clearModel()'],['../group__loadsave.html#ga78e637849c0d221eeee1168d101fcf30',1,'clearModel():&#160;_rrc_api.cpp']]],
   ['compilesource',['compileSource',['../group__helper_routines.html#ga7813ff2d99be248dbea539b8a3c01d3f',1,'rrc::compileSource()'],['../group__helper_routines.html#ga7813ff2d99be248dbea539b8a3c01d3f',1,'compileSource():&#160;rrc_utilities.cpp']]],
   ['complexmatrixtostring',['complexMatrixToString',['../group__to_string.html#ga41169534497c2764945c24949c11ddbb',1,'rrc::complexMatrixToString()'],['../group__to_string.html#ga41169534497c2764945c24949c11ddbb',1,'complexMatrixToString():&#160;rrc_utilities.cpp']]],
   ['complexvectortostring',['complexVectorToString',['../group__to_string.html#ga21993774c8d77e0c8988d94d75f8036c',1,'rrc::complexVectorToString()'],['../group__to_string.html#ga21993774c8d77e0c8988d94d75f8036c',1,'complexVectorToString():&#160;rrc_utilities.cpp']]],
