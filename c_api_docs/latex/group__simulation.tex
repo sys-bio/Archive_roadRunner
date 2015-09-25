@@ -36,7 +36,9 @@ bool \hyperlink{group__simulation_gaf302d02e9f0d57dd05995a7a211e5236}{get\+Time\
 bool \hyperlink{group__simulation_ga1130df59dce620b619e3e58874025e57}{get\+Time\+End} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, double $\ast$time\+End)
 \begin{DoxyCompactList}\small\item\em Get the value of the current time end. \end{DoxyCompactList}\item 
 bool \hyperlink{group__simulation_ga3e14da4bd986a908e4f6bcfc42c20717}{get\+Num\+Points} (\hyperlink{rrc__types_8h_a1d68f0592372208fa5a5f2799ea4b3ae}{R\+R\+Handle} handle, int $\ast$num\+Points)
-\begin{DoxyCompactList}\small\item\em Get the value of the current number of points. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the value of the current number of points. \end{DoxyCompactList}\item 
+\hyperlink{rrc__types_8h_a7c9475df6c7337d99482b13a365e7596}{R\+R\+String\+Array\+Ptr} \hyperlink{group__simulation_ga1a1ed70f4b55da8fd36909dad2ad9477}{get\+List\+Of\+Config\+Keys} ()
+\begin{DoxyCompactList}\small\item\em Get the current selection list for simulate(void) or simulate\+Ex(void) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -95,6 +97,25 @@ Example\+:
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Returns null if it fails, otherwise it returns the simulator's capabilities in the form of an X\+M\+L string 
+\end{DoxyReturn}
+\hypertarget{group__simulation_ga1a1ed70f4b55da8fd36909dad2ad9477}{\index{Time-\/course simulation@{Time-\/course simulation}!get\+List\+Of\+Config\+Keys@{get\+List\+Of\+Config\+Keys}}
+\index{get\+List\+Of\+Config\+Keys@{get\+List\+Of\+Config\+Keys}!Time-\/course simulation@{Time-\/course simulation}}
+\subsubsection[{get\+List\+Of\+Config\+Keys}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+R\+String\+Array\+Ptr} get\+List\+Of\+Config\+Keys (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{group__simulation_ga1a1ed70f4b55da8fd36909dad2ad9477}
+
+
+Get the current selection list for simulate(void) or simulate\+Ex(void) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to a Road\+Runner instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of symbol Ids indicating the current selection list 
 \end{DoxyReturn}
 \hypertarget{group__simulation_ga3e14da4bd986a908e4f6bcfc42c20717}{\index{Time-\/course simulation@{Time-\/course simulation}!get\+Num\+Points@{get\+Num\+Points}}
 \index{get\+Num\+Points@{get\+Num\+Points}!Time-\/course simulation@{Time-\/course simulation}}
