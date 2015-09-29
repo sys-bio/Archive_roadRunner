@@ -199,12 +199,12 @@ install (FILES
 endif()
 
 if(WIN32)
-    set(RUNTIMES libxml2.DLL iconv.dll zlib1.dll)
-    foreach(runtime ${RUNTIMES})
-    install(    FILES 	${THIRD_PARTY_FOLDER}/dependencies/libsbml/bin/${runtime} 
-                DESTINATION bin 
-                COMPONENT rr_core)
-    endforeach()
+    #set(RUNTIMES libxml2.DLL iconv.dll zlib1.dll)
+    #foreach(runtime ${RUNTIMES})
+    #install(    FILES 	${THIRD_PARTY_FOLDER}/dependencies/libsbml/bin/${runtime} 
+    #            DESTINATION bin 
+    #            COMPONENT rr_core)
+    #endforeach()
     
     file(GLOB libxml_deps "${THIRD_PARTY_FOLDER}/dependencies/libsbml/include/*.h")
     install(FILES ${libxml_deps} DESTINATION include)
