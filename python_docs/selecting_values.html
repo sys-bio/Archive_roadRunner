@@ -88,21 +88,21 @@ is also valid for sbml elements which are defined by rate rules.</dd>
 <dt>Elasticity</dt>
 <dd>The form of <code class="docutils literal"><span class="pre">ee(ReactionId,</span> <span class="pre">ParameterId)</span></code> where <code class="docutils literal"><span class="pre">ReactionId</span></code> is a reaction name,
 and <code class="docutils literal"><span class="pre">ParameterId</span></code> is a global parameter id. This selection intentionally has a function form, it
-selects the elasticity control coefficient, <a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.getEE" title="roadrunner.RoadRunner.getEE"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getEE()</span></code></a></dd>
+selects the elasticity control coefficient, <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getEE" title="RoadRunner.RoadRunner.getEE"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getEE()</span></code></a></dd>
 <dt>Unscaled Elasticity</dt>
 <dd>The form of <code class="docutils literal"><span class="pre">uee(ReactionId,</span> <span class="pre">ParameterId)</span></code> where <code class="docutils literal"><span class="pre">ReactionId</span></code> is a reaction name,
 and <code class="docutils literal"><span class="pre">ParameterId</span></code> is a global parameter id. This selection intentionally has a function form, it
-selects the elasticity control coefficient, <a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.getEE" title="roadrunner.RoadRunner.getEE"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getEE()</span></code></a></dd>
+selects the elasticity control coefficient, <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getEE" title="RoadRunner.RoadRunner.getEE"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getEE()</span></code></a></dd>
 <dt>Control</dt>
 <dd>Control coefficient selections have the form of <code class="docutils literal"><span class="pre">cc(Id,</span> <span class="pre">ParameterId)</span></code>. The string <code class="docutils literal"><span class="pre">Id</span></code>
-and <code class="docutils literal"><span class="pre">ParameterId</span></code> must be valid arguments for <a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.getCC" title="roadrunner.RoadRunner.getCC"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getCC()</span></code></a> This selection
+and <code class="docutils literal"><span class="pre">ParameterId</span></code> must be valid arguments for <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getCC" title="RoadRunner.RoadRunner.getCC"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getCC()</span></code></a> This selection
 intentionally has a function form, it selects the elasticity control coefficient,
-<a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.getCC" title="roadrunner.RoadRunner.getCC"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getCC()</span></code></a></dd>
+<a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getCC" title="RoadRunner.RoadRunner.getCC"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getCC()</span></code></a></dd>
 <dt>Unscaled Control</dt>
 <dd>A string with the form of <code class="docutils literal"><span class="pre">ucc(Id,</span> <span class="pre">ParameterId)</span></code>. The string <code class="docutils literal"><span class="pre">Id</span></code> and <code class="docutils literal"><span class="pre">ParameterId</span></code> must be
 valid arguments for :meth:<code class="docutils literal"><span class="pre">RoadRunner.getuCC</span></code>
 This selection intentionally has a function form, it
-selects the unscaled elasticity control coefficient, <a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.getuCC" title="roadrunner.RoadRunner.getuCC"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getuCC()</span></code></a></dd>
+selects the unscaled elasticity control coefficient, <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getuCC" title="RoadRunner.RoadRunner.getuCC"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getuCC()</span></code></a></dd>
 <dt>Eigenvalue</dt>
 <dd>The form of <code class="docutils literal"><span class="pre">eigen(identifier)</span></code>. The eigenvalue of a floating species.</dd>
 <dt>Initial Concentration</dt>
@@ -112,14 +112,14 @@ selects the unscaled elasticity control coefficient, <a class="reference interna
 </dl>
 <div class="section" id="experimenting-with-selections">
 <h3>Experimenting With Selections<a class="headerlink" href="#experimenting-with-selections" title="Permalink to this headline">¶</a></h3>
-<p>One my try individual selection string using the <code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getSelectionValue()</span></code> method. This
+<p>One my try individual selection string using the <code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getValue()</span></code> method. This
 takes a selection string, determines if it is valid, and returns the value it selects. For example:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">rr</span><span class="o">.</span><span class="n">getSelectionValue</span><span class="p">(</span><span class="s">&quot;cc(S1, J4_KS4)&quot;</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">rr</span><span class="o">.</span><span class="n">getValue</span><span class="p">(</span><span class="s">&quot;cc(S1, J4_KS4)&quot;</span><span class="p">)</span>
 <span class="go">    -0.42955738179207886</span>
 </pre></div>
 </div>
 <p>Even though they are almost always specified by a string, RoadRunner selections are actually
-objects. One can create a selection object directly using <a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.createSelection" title="roadrunner.RoadRunner.createSelection"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.createSelection()</span></code></a>, and in
+objects. One can create a selection object directly using <code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.createSelection()</span></code>, and in
 order to see extended information about, simply display it. For example, using ipython:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">sel</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">createSelection</span><span class="p">(</span><span class="s">&quot;cc(S1, J4_KS4)&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sel</span>
@@ -128,7 +128,7 @@ order to see extended information about, simply display it. For example, using i
 </div>
 <p>We can see that this is a CONTROL record.</p>
 <p>It is also possible to modify the simulation selection list by deleting existing items and adding
-new ones created with <a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.createSelection" title="roadrunner.RoadRunner.createSelection"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.createSelection()</span></code></a>. If someone has does not want to display
+new ones created with <code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.createSelection()</span></code>. If someone has does not want to display
 the concentration of species <code class="docutils literal"><span class="pre">S2</span></code> and instead wants to display the rate of change of species
 <code class="docutils literal"><span class="pre">S</span></code>:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">rr</span><span class="o">.</span><span class="n">selections</span>
@@ -142,11 +142,11 @@ the concentration of species <code class="docutils literal"><span class="pre">S2
 </div>
 <p>Even though the selection list intentionally appears as a list of strings, it is actually a list of
 selection objects. So, elements that are inserted or appended to this list must be selection objects
-created by <a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.createSelection" title="roadrunner.RoadRunner.createSelection"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.createSelection()</span></code></a>.</p>
+created by <code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.createSelection()</span></code>.</p>
 </div>
 <div class="section" id="selecting-simulation-results">
 <h3>Selecting Simulation Results<a class="headerlink" href="#selecting-simulation-results" title="Permalink to this headline">¶</a></h3>
-<p>The columns of the RoadRunner simulation results are determined by the <a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.selections" title="roadrunner.RoadRunner.selections"><code class="xref py py-attr docutils literal"><span class="pre">RoadRunner.selections</span></code></a>
+<p>The columns of the RoadRunner simulation results are determined by the <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.selections" title="RoadRunner.RoadRunner.selections"><code class="xref py py-attr docutils literal"><span class="pre">RoadRunner.selections</span></code></a>
 property. This is a list of what values will be displayed in the result, and can be set simply by:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">rr</span><span class="o">.</span><span class="n">selections</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;time&#39;</span><span class="p">,</span> <span class="s">&#39;[S1]&#39;</span><span class="p">,</span> <span class="s">&#39;S1&#39;</span><span class="p">,</span> <span class="s">&quot;S1&#39;&quot;</span><span class="p">]</span>
 </pre></div>
@@ -167,6 +167,12 @@ wanted to plot the elasticity of a particular reaction:</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.ExecutableModel.__getitem__" title="RoadRunner.ExecutableModel.__getitem__"><code class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.__getitem__</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api_reference.html#RoadRunner.ExecutableModel.__setitem__" title="RoadRunner.ExecutableModel.__setitem__"><code class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.__setitem__</span></code></a></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 </div>

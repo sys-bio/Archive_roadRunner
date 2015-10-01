@@ -74,7 +74,7 @@ specified using the variable <code class="docutils literal"><span class="pre">rr
 <span id="id1"></span><h2>Loading Models<a class="headerlink" href="#loading-models" title="Permalink to this headline">¶</a></h2>
 <p>RoadRunner reads models using the SBML format. If you have a SBML model stored on your hard drive, it is
 possible to load that model either by giving he document contents or path to the Roadrunner
-constructor, or later by using the method, <a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.load" title="roadrunner.RoadRunner.load"><code class="xref py py-meth docutils literal"><span class="pre">load()</span></code></a>. Let&#8217;s assume you have a model called
+constructor, or later by using the method, <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.load" title="RoadRunner.RoadRunner.load"><code class="xref py py-meth docutils literal"><span class="pre">load()</span></code></a>. Let&#8217;s assume you have a model called
 mymodel.xml in <code class="docutils literal"><span class="pre">C:\MyModels</span></code>. To load this model in <strong>Windows</strong> we would use the command:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">rr</span> <span class="o">=</span> <span class="n">roadrunner</span><span class="o">.</span><span class="n">RoadRunner</span><span class="p">(</span><span class="s">&quot;C:/MyModels/mymodel.xml&quot;</span><span class="p">)</span>
 </pre></div>
@@ -123,7 +123,7 @@ will be output in intervals of 0.1.</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">result</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">reset</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">stiff</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>For more details of the simulate method see <a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.simulate" title="roadrunner.RoadRunner.simulate"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.simulate()</span></code></a>
+<p>For more details of the simulate method see <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.simulate" title="RoadRunner.RoadRunner.simulate"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.simulate()</span></code></a>
 The follow table summarizes the various options.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -307,9 +307,9 @@ invoked.</p>
 <p>There are a number of methods to get and set the initial conditions of a loaded model. In order to
 specify a given initial conditions we use the notation, <code class="docutils literal"><span class="pre">init(X)</span></code>.  The values stored in the
 initial conditions are applied to the model whenever it is reset. The list of all initial condition
-symbols can be obtained by the methods, <a class="reference internal" href="api_reference.html#roadrunner.ExecutableModel.getFloatingSpeciesInitAmountIds" title="roadrunner.ExecutableModel.getFloatingSpeciesInitAmountIds"><code class="xref py py-meth docutils literal"><span class="pre">getFloatingSpeciesInitAmountIds()</span></code></a>
-and <a class="reference internal" href="api_reference.html#roadrunner.ExecutableModel.getFloatingSpeciesInitConcentrationIds" title="roadrunner.ExecutableModel.getFloatingSpeciesInitConcentrationIds"><code class="xref py py-meth docutils literal"><span class="pre">getFloatingSpeciesInitConcentrationIds()</span></code></a> assuming <code class="docutils literal"><span class="pre">r</span></code> is a roadunner
-variable. As with all other selection symbols, the <a class="reference internal" href="api_reference.html#roadrunner.ExecutableModel.keys" title="roadrunner.ExecutableModel.keys"><code class="xref py py-meth docutils literal"><span class="pre">keys()</span></code></a> returns all
+symbols can be obtained by the methods, <a class="reference internal" href="api_reference.html#RoadRunner.ExecutableModel.getFloatingSpeciesInitAmountIds" title="RoadRunner.ExecutableModel.getFloatingSpeciesInitAmountIds"><code class="xref py py-meth docutils literal"><span class="pre">getFloatingSpeciesInitAmountIds()</span></code></a>
+and <a class="reference internal" href="api_reference.html#RoadRunner.ExecutableModel.getFloatingSpeciesInitConcentrationIds" title="RoadRunner.ExecutableModel.getFloatingSpeciesInitConcentrationIds"><code class="xref py py-meth docutils literal"><span class="pre">getFloatingSpeciesInitConcentrationIds()</span></code></a> assuming <code class="docutils literal"><span class="pre">r</span></code> is a roadunner
+variable. As with all other selection symbols, the <a class="reference internal" href="api_reference.html#RoadRunner.ExecutableModel.keys" title="RoadRunner.ExecutableModel.keys"><code class="xref py py-meth docutils literal"><span class="pre">keys()</span></code></a> returns all
 available selection symbols:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span> <span class="n">r</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
 <span class="go">[ &#39;S1&#39;, &#39;S2&#39;, &#39;[S1]&#39;, &#39;[S2]&#39;, &#39;compartment&#39;, &#39;k1&#39;, &#39;cm0&#39;,</span>

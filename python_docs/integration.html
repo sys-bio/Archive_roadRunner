@@ -81,7 +81,7 @@ has been increased, the simulation time may be over.</p>
 <p>If one encounters exceptions from the integrator, the first thing that one should try is specifying
 an initial time step and tighter absolute and relative tolerances.</p>
 <p>All of the parameters to tune the integration are optional keyword arguments to
-<a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.simulate" title="roadrunner.RoadRunner.simulate"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.simulate()</span></code></a>. Setting these values may be performed as:</p>
+<a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.simulate" title="RoadRunner.RoadRunner.simulate"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.simulate()</span></code></a>. Setting these values may be performed as:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">r</span><span class="o">=</span><span class="n">roadrunner</span><span class="o">.</span><span class="n">RoadRunner</span><span class="p">(</span><span class="s">&quot;mymodel.xml&quot;</span><span class="p">)</span>
 <span class="n">r</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">absolute</span> <span class="o">=</span> <span class="mf">5e-10</span><span class="p">,</span> <span class="n">initialTimeStep</span> <span class="o">=</span> <span class="mf">0.00001</span> <span class="p">)</span>
 </pre></div>
