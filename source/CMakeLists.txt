@@ -330,6 +330,8 @@ target_link_libraries (${target}-static
 if(WIN32)
     target_link_libraries (${target}-static
         libsbml-static
+		libiconv
+		zdll
         libf2c
     ws2_32
     iphlpapi
