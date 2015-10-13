@@ -144,7 +144,7 @@ here. The variable type of the parameter is listed after the key name.</p>
 <dl class="attribute">
 <dt id="RoadRunner.Config.LOADSBMLOPTIONS_CONSERVED_MOIETIES">
 <code class="descclassname">Config.</code><code class="descname">LOADSBMLOPTIONS_CONSERVED_MOIETIES</code><em class="property"> bool</em><a class="headerlink" href="#RoadRunner.Config.LOADSBMLOPTIONS_CONSERVED_MOIETIES" title="Permalink to this definition">¶</a></dt>
-<dd><p>perform conservation analysis.</p>
+<dd><p>Perform conservation analysis. By default, this attribute is set as False.</p>
 <p>This causes a re-ordering of the species, so results generated
 with this flag enabled can not be compared index wise to results
 generated otherwise.</p>
@@ -152,6 +152,10 @@ generated otherwise.</p>
 which define or alter any floating species, and which have simple constant stoichiometries.</p>
 <p>Moiety conservation may cause unexpected results, be aware of what it is before enableing.</p>
 <p>Not recommended for time series simulations.</p>
+<p>To enable, type:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">roadrunner</span><span class="o">.</span><span class="n">Config</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">roadrunner</span><span class="o">.</span><span class="n">Config</span><span class="o">.</span><span class="n">LOADSBMLOPTIONS_CONSERVED_MOIETIES</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="attribute">
@@ -587,6 +591,10 @@ configuration to the values specified in the document.</p>
 is converted using the ConservedMoietyConverter. All of the linearly dependent
 species are replaced with assignment rules and a new set of conserved moiety
 parameters are introduced.</p>
+<p>To enable, type:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">conservedMoietyAnalysis</span> <span class="o">=</span> <span class="bp">True</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </div>
@@ -2053,6 +2061,7 @@ this is not given, a new array is allocated and returned.</li>
 </div>
 <div class="section" id="conserved-moieties">
 <h3>Conserved Moieties<a class="headerlink" href="#conserved-moieties" title="Permalink to this headline">¶</a></h3>
+<p>Refer to <code class="xref py py-attr docutils literal"><span class="pre">RoadRunner.conservedMoietyAnalysis</span></code> and <code class="xref py py-attr docutils literal"><span class="pre">Config.LOADSBMLOPTIONS_CONSERVED_MOIETIES</span></code> for more information.</p>
 <dl class="method">
 <dt id="RoadRunner.ExecutableModel.getNumConservedMoieties">
 <code class="descclassname">ExecutableModel.</code><code class="descname">getNumConservedMoieties</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.ExecutableModel.getNumConservedMoieties" title="Permalink to this definition">¶</a></dt>
