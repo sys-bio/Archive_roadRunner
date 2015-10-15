@@ -120,7 +120,7 @@ here. If no file was found, this returns a empty string.</p>
 <em class="property">static </em><code class="descclassname">Config.</code><code class="descname">readConfigFile</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.Config.readConfigFile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read all of the values from a configuration file at the given path. This overrides any previously
 stored configuration. This allows users to have any number of configuration files and load them
-at any time. Say someone had to use Windows, and they had a file in thier C: drive, this would be
+at any time. Say someone had to use Windows, and they had a file in their C: drive, this would be
 loaded via:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">Config</span><span class="o">.</span><span class="n">readConfigFile</span><span class="p">(</span><span class="s">&quot;C:/my_config_file.txt&quot;</span><span class="p">)</span>
 </pre></div>
@@ -148,9 +148,9 @@ here. The variable type of the parameter is listed after the key name.</p>
 <p>This causes a re-ordering of the species, so results generated
 with this flag enabled can not be compared index wise to results
 generated otherwise.</p>
-<p>Moiety conservation is only compatable with simple models which do NOT have any events or rules
+<p>Moiety conservation is only compatible with simple models which do NOT have any events or rules
 which define or alter any floating species, and which have simple constant stoichiometries.</p>
-<p>Moiety conservation may cause unexpected results, be aware of what it is before enableing.</p>
+<p>Moiety conservation may cause unexpected results, be aware of what it is before enabling.</p>
 <p>Not recommended for time series simulations.</p>
 <p>To enable, type:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">roadrunner</span><span class="o">.</span><span class="n">Config</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">roadrunner</span><span class="o">.</span><span class="n">Config</span><span class="o">.</span><span class="n">LOADSBMLOPTIONS_CONSERVED_MOIETIES</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
@@ -193,7 +193,7 @@ conditions.</p>
 <dt id="RoadRunner.Config.LOADSBMLOPTIONS_OPTIMIZE_GVN">
 <code class="descclassname">Config.</code><code class="descname">LOADSBMLOPTIONS_OPTIMIZE_GVN</code><em class="property"> bool</em><a class="headerlink" href="#RoadRunner.Config.LOADSBMLOPTIONS_OPTIMIZE_GVN" title="Permalink to this definition">¶</a></dt>
 <dd><p>GVN - This pass performs global value numbering and redundant load
-elimination cotemporaneously.</p>
+elimination contemporaneously.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -254,14 +254,14 @@ but may be useful to monitor solutions as they are integrated.</p>
 <p>This is intended to be used in combination with the
 IntegratorListener. It this option is set, and there is a
 IntegratorListener set, RoadRunner::integrate will run the
-integrator in a series of internal steps, and the listner
+integrator in a series of internal steps, and the listener
 will by notified at each step.</p>
 <p>Highly Experimental!!!</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt>
-<code class="descname">Config.ROADRUNNER_DISABLE_PYTHON_DYNAMIC_PROPERTIES,</code></dt>
+<dt id="RoadRunner.Config.ROADRUNNER_DISABLE_PYTHON_DYNAMIC_PROPERTIES">
+<code class="descclassname">Config.</code><code class="descname">ROADRUNNER_DISABLE_PYTHON_DYNAMIC_PROPERTIES</code><em class="property"> int</em><a class="headerlink" href="#RoadRunner.Config.ROADRUNNER_DISABLE_PYTHON_DYNAMIC_PROPERTIES" title="Permalink to this definition">¶</a></dt>
 <dd><p>RoadRunner by default dynamically generates accessors properties
 for all SBML symbol names on the model object when it is retrieved
 in Python. This feature is very nice for interactive use, but
@@ -270,8 +270,8 @@ can be disabled here.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt>
-<code class="descname">Config.ROADRUNNER_DISABLE_WARNINGS,</code></dt>
+<dt id="RoadRunner.Config.ROADRUNNER_DISABLE_WARNINGS">
+<code class="descclassname">Config.</code><code class="descname">ROADRUNNER_DISABLE_WARNINGS</code><em class="property"> int</em><a class="headerlink" href="#RoadRunner.Config.ROADRUNNER_DISABLE_WARNINGS" title="Permalink to this definition">¶</a></dt>
 <dd><p>disable SBML conserved moiety warnings.</p>
 <p>Conserved Moiety Conversion may cause unexpected behavior, be aware of what it
 is before enabling.</p>
@@ -1791,20 +1791,7 @@ given by the order of Ids returned by getBoundarySpeciesIds()</p>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">an array of the boundary species amounts.</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray.</td>
-</tr>
-</tbody>
-</table>
-<p>given by the order of Ids returned by getBoundarySpeciesIds()</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>numpy.ndarray</em>) &#8211; (optional) an index array indicating which items to return.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">an array of the boundary species amounts.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray.</td>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
 </tr>
 </tbody>
 </table>
@@ -1827,20 +1814,7 @@ given by the order of Ids returned by getBoundarySpeciesIds()</p>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">an array of the boundary species concentrations.</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray.</td>
-</tr>
-</tbody>
-</table>
-<p>given by the order of Ids returned by getBoundarySpeciesIds()</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>numpy.ndarray</em>) &#8211; (optional) an index array indicating which items to return.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">an array of the boundary species concentrations.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray.</td>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
 </tr>
 </tbody>
 </table>
