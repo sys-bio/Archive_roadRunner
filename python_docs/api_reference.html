@@ -359,29 +359,29 @@ shortly.</p>
 <dl class="method">
 <dt id="roadrunner.RoadRunner.getCompiler">
 <code class="descclassname">RoadRunner.</code><code class="descname">getCompiler</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#roadrunner.RoadRunner.getCompiler" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the JIT <a class="reference internal" href="#RoadRunner.Compiler" title="RoadRunner.Compiler"><code class="xref py py-class docutils literal"><span class="pre">Compiler</span></code></a> object currently being used.
+<dd><p>Returns the JIT <a class="reference internal" href="#RoadRunner.Compiler" title="RoadRunner.Compiler"><code class="xref py py-class docutils literal"><span class="pre">Compiler</span></code></a> object currently being used.
 This object provides various information about the current processor and system.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="RoadRunner.RoadRunner.getConfigurationXML">
 <code class="descclassname">RoadRunner.</code><code class="descname">getConfigurationXML</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.getConfigurationXML" title="Permalink to this definition">¶</a></dt>
-<dd><p>recurse through all of the child configurable objects that this
+<dd><p>Recurse through all of the child configurable objects that this
 class ones and build an assemble all of their configuration parameters
 into a single xml document which is returned as a string.</p>
 <p>The value of this result depends on what child objects are presently loaded.</p>
 </dd></dl>
 
-<dl class="staticmethod">
+<dl class="method">
 <dt id="RoadRunner.RoadRunner.getExtendedVersionInfo">
-<em class="property">static </em><code class="descclassname">RoadRunner.</code><code class="descname">getExtendedVersionInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.getExtendedVersionInfo" title="Permalink to this definition">¶</a></dt>
-<dd><p>getVersion plus info about dependent libs versions.</p>
+<code class="descclassname">RoadRunner.</code><code class="descname">getExtendedVersionInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.getExtendedVersionInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <a class="reference internal" href="#roadrunner.getVersionStr" title="roadrunner.getVersionStr"><code class="xref py py-meth docutils literal"><span class="pre">getVersionStr()</span></code></a> as well as info about dependent libs versions.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="RoadRunner.RoadRunner.getInfo">
 <code class="descclassname">RoadRunner.</code><code class="descname">getInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.getInfo" title="Permalink to this definition">¶</a></dt>
-<dd><p>return info about the current state of the object</p>
+<dd><p>Returns info about the current state of the object.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -395,31 +395,37 @@ into a single xml document which is returned as a string.</p>
 <dl class="method">
 <dt id="RoadRunner.RoadRunner.getInstanceCount">
 <code class="descclassname">RoadRunner.</code><code class="descname">getInstanceCount</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.getInstanceCount" title="Permalink to this definition">¶</a></dt>
-<dd><p>Number of currently running RoadRunner instances.</p>
+<dd><p>Returns number of currently running RoadRunner instances.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="RoadRunner.RoadRunner.getInstanceID">
 <code class="descclassname">RoadRunner.</code><code class="descname">getInstanceID</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.getInstanceID" title="Permalink to this definition">¶</a></dt>
-<dd><p>When there are multiple instances of RoadRunner, this is the instance id.</p>
+<dd><p>Returns the instance id when there are multiple instances of RoadRunner.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="RoadRunner.RoadRunner.getIntegrator">
 <code class="descclassname">RoadRunner.</code><code class="descname">getIntegrator</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.getIntegrator" title="Permalink to this definition">¶</a></dt>
-<dd><p>get the integrator which is currently being used to
+<dd><p>Returns the integrator which is currently being used to
 time evolve the system.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="RoadRunner.RoadRunner.getAvailableIntegrators">
 <code class="descclassname">RoadRunner.</code><code class="descname">getAvailableIntegrators</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.getAvailableIntegrators" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get a list of available integrator names.</p>
+<dd><p>Returns a list of names of available integrators.</p>
 </dd></dl>
 
-<dl class="staticmethod">
+<dl class="method">
+<dt id="RoadRunner.RoadRunner.getExistingIntegratorNames">
+<code class="descclassname">RoadRunner.</code><code class="descname">getExistingIntegratorNames</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.getExistingIntegratorNames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of names of all integrators.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="RoadRunner.RoadRunner.getParamPromotedSBML">
-<em class="property">static </em><code class="descclassname">RoadRunner.</code><code class="descname">getParamPromotedSBML</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.getParamPromotedSBML" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">RoadRunner.</code><code class="descname">getParamPromotedSBML</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.getParamPromotedSBML" title="Permalink to this definition">¶</a></dt>
 <dd><p>Takes an SBML document (in textual form) and changes all of the local parameters
 to be global parameters.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -437,9 +443,10 @@ to be global parameters.</p>
 <dl class="method">
 <dt id="RoadRunner.RoadRunner.getCurrentSBML">
 <code class="descclassname">RoadRunner.</code><code class="descname">getCurrentSBML</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.getCurrentSBML" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the current state of the model in the form of an SBML string.</p>
-<p>That is the SBML will reflect the current state of the model and not the
-original SBML that was loaded into RoadRunner.</p>
+<dd><p>Returns the SBML with the current model parameters.
+This is different than <code class="xref py py-meth docutils literal"><span class="pre">getSBML()</span></code> which returns the original SBML.
+This may optionally up or down-convert the document to a different version, if the level and version arguments are non-zero.
+If both arguments are zero, then the document is left alone and the original version is returned.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -510,9 +517,14 @@ obtained from createSelection</td>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="RoadRunner.RoadRunner.selections">
-<code class="descclassname">RoadRunner.</code><code class="descname">selections</code><a class="headerlink" href="#RoadRunner.RoadRunner.selections" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get or set the list of current selections used for the simulation result columns.</p>
+<dt id="RoadRunner.RoadRunner.timeCourseSelections">
+<code class="descclassname">RoadRunner.</code><code class="descname">timeCourseSelections</code><a class="headerlink" href="#RoadRunner.RoadRunner.timeCourseSelections" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the list of current selections used for the time course simulation result columns.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">rr</span><span class="o">.</span><span class="n">timeCourseSelections</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;time&#39;</span><span class="p">,</span> <span class="s">&#39;S1&#39;</span><span class="p">,</span> <span class="s">&#39;S2&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rr</span><span class="o">.</span><span class="n">timeCourseSelections</span>
+<span class="go">[&#39;time&#39;, &#39;S1&#39;, &#39;S2&#39;]</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -551,6 +563,20 @@ obtained from createSelection</td>
 </dd></dl>
 
 <dl class="method">
+<dt id="RoadRunner.RoadRunner.clearModel">
+<code class="descclassname">RoadRunner.</code><code class="descname">clearModel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.clearModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears the currently loaded model and all associated memory.
+Returns True if memory was freed, False if no model was loaded in the first place.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">isModelLoaded</span><span class="p">()</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">clearModel</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">isModelLoaded</span><span class="p">()</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="RoadRunner.RoadRunner.oneStep">
 <code class="descclassname">RoadRunner.</code><code class="descname">oneStep</code><span class="sig-paren">(</span><em>startTime</em>, <em>stepSize</em><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.oneStep" title="Permalink to this definition">¶</a></dt>
 <dd><p>Carry out a one step integration of the model. The method takes two arguments,
@@ -564,7 +590,21 @@ the new time which will be currentTime + StepSize:</p>
 <dl class="method">
 <dt id="RoadRunner.RoadRunner.reset">
 <code class="descclassname">RoadRunner.</code><code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.reset" title="Permalink to this definition">¶</a></dt>
-<dd><p>This method resets all the floating species concentrations to their initial values.</p>
+<dd><p>Resets all the floating species concentrations to their initial values.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="RoadRunner.RoadRunner.resetAll">
+<code class="descclassname">RoadRunner.</code><code class="descname">resetAll</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.resetAll" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets all variables, species, etc. to the CURRENT initial values.
+It also resets all parameter back to the values they had when the model was first loaded</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="RoadRunner.RoadRunner.resetToOrigin">
+<code class="descclassname">RoadRunner.</code><code class="descname">resetToOrigin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.resetToOrigin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets the model back to the state is was when it was FIRST loaded.
+The scope of reset includes all initial values and parameters, etc.</p>
 </dd></dl>
 
 <dl class="method">
@@ -605,7 +645,7 @@ parameters are introduced.</p>
 <dl class="method">
 <dt id="RoadRunner.RoadRunner.simulate">
 <code class="descclassname">RoadRunner.</code><code class="descname">simulate</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.simulate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Simulate the optionally plot current SBML model. This is the one stop shopping method
+<dd><p>Simulate and optionally plot current SBML model. This is the one stop shopping method
 for simulation and plotting.</p>
 <p>simulate accepts a up to four positional arguments and a large number of keyword args.</p>
 <p>The first four (optional) arguments are treated as:</p>
@@ -668,7 +708,7 @@ the duration accordingly and visa versa.</dd>
 <dt>relative</dt>
 <dd>A float-point number representing the relative difference permitted.
 Defaults 0.0001</dd>
-<dt>resetModel (or just &#8220;reset&#8221;???)</dt>
+<dt>reset</dt>
 <dd>True or False
 Causes the model to be reset to the original conditions specified in
 the SBML when the simulation is run.</dd>
@@ -722,6 +762,91 @@ column vector, and the 0&#8217;th column is the simulation time.</td>
 </table>
 </dd></dl>
 
+<dl class="method">
+<dt id="RoadRunner.RoadRunner.gillespie">
+<code class="descclassname">RoadRunner.</code><code class="descname">gillespie</code><span class="sig-paren">(</span><em>start</em>, <em>end</em>, <em>steps</em><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.gillespie" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run a Gillespie stochastic simulation.</p>
+<p>Use <a class="reference internal" href="#RoadRunner.RoadRunner.reset" title="RoadRunner.RoadRunner.reset"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.reset()</span></code></a> to reset the model each time.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>start</strong> &#8211; start time</li>
+<li><strong>end</strong> &#8211; end time</li>
+<li><strong>steps</strong> &#8211; number of steps</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">a numpy array with each selected output time series being a
+column vector, and the 0&#8217;th column is the simulation time.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Examples:</p>
+<p>Simulate from time zero to 40 time units</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">gillespie</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Simulate on a grid with 10 points from start 0 to end time 40</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">gillespie</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Simulate from time zero to 40 time units using the given selection list</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;&gt;&gt; result = r.gillespie (0, 40, [‘time’, ‘S1’])
+</pre></div>
+</div>
+<p>Simulate from time zero to 40 time units, on a grid with 20 points using the given selection list</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;&gt;&gt; result = r.gillespie (0, 40, 20, [‘time’, ‘S1’])
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="RoadRunner.RoadRunner.integrate">
+<code class="descclassname">RoadRunner.</code><code class="descname">integrate</code><span class="sig-paren">(</span><em>t0</em>, <em>tf</em>, <em>options</em><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.integrate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carry out a single integration step using a stepsize as indicated in the method call.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>t0</strong> &#8211; start time</li>
+<li><strong>tf</strong> &#8211; end time</li>
+<li><strong>options</strong> &#8211; override current options</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="RoadRunner.RoadRunner.plot">
+<code class="descclassname">RoadRunner.</code><code class="descname">plot</code><span class="sig-paren">(</span><em>result</em>, <em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot results from a simulation carried out by the simulate or gillespie functions.</p>
+<p>To plot data currently held by roadrunner that was generated in the last simulation, use:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>result</strong> (<em>numpy.ndarray</em>) &#8211; Data returned from a simulate or gillespie call</li>
+<li><strong>loc</strong> (<em>str</em>) &#8211; string representing the location of legend i.e. &#8220;upper right&#8221;</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="RoadRunner.RoadRunner.simulateOptions">
 <code class="descclassname">RoadRunner.</code><code class="descname">simulateOptions</code><em class="property"> None</em><a class="headerlink" href="#RoadRunner.RoadRunner.simulateOptions" title="Permalink to this definition">¶</a></dt>
@@ -729,37 +854,21 @@ column vector, and the 0&#8217;th column is the simulation time.</td>
 </dd></dl>
 
 <dl class="function">
-<dt id="RoadRunner.RoadRunner_getCopyright">
-<code class="descclassname">RoadRunner.</code><code class="descname">RoadRunner_getCopyright</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner_getCopyright" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the copyright string</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="RoadRunner.RoadRunner_getExtendedVersionInfo">
-<code class="descclassname">RoadRunner.</code><code class="descname">RoadRunner_getExtendedVersionInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner_getExtendedVersionInfo" title="Permalink to this definition">¶</a></dt>
-<dd><p>getVersion plus info about dependent libs versions.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="RoadRunner.RoadRunner_getParamPromotedSBML">
-<code class="descclassname">RoadRunner.</code><code class="descname">RoadRunner_getParamPromotedSBML</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner_getParamPromotedSBML" title="Permalink to this definition">¶</a></dt>
-<dd><p>Takes an SBML document (in textual form) and changes all of the local parameters
-to be global parameters.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>SBML</strong> (<em>str</em>) &#8211; the contents of an SBML document</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
+<dt id="RoadRunner.Roadrunner.getSimulationData">
+<code class="descclassname">Roadrunner.</code><code class="descname">getSimulationData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.Roadrunner.getSimulationData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the array of simulated data. When simulation has not been run,
+the function will return an empty array.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="steady-state-sections">
-<h3>Steady State Sections<a class="headerlink" href="#steady-state-sections" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="steady-state">
+<h3>Steady State<a class="headerlink" href="#steady-state" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="RoadRunner.RoadRunner.steadyStateSolver">
+<em class="property">class </em><code class="descclassname">RoadRunner.</code><code class="descname">steadyStateSolver</code><a class="headerlink" href="#RoadRunner.RoadRunner.steadyStateSolver" title="Permalink to this definition">¶</a></dt>
+<dd><p>RoadRunner.steadyStateSolver class.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="RoadRunner.RoadRunner.steadyStateSelections">
 <code class="descclassname">RoadRunner.</code><code class="descname">steadyStateSelections</code><a class="headerlink" href="#RoadRunner.RoadRunner.steadyStateSelections" title="Permalink to this definition">¶</a></dt>
@@ -776,7 +885,7 @@ of valid selection symbols:</p>
 <dl class="method">
 <dt id="RoadRunner.RoadRunner.steadyState">
 <code class="descclassname">RoadRunner.</code><code class="descname">steadyState</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.steadyState" title="Permalink to this definition">¶</a></dt>
-<dd><p>Attempt to evaluate the steady state for the model. The method returns
+<dd><p>Attempts to evaluate the steady state for the model. The method returns
 a value that indicates how close the solution is to the steady state.
 The smaller the value the better. Values less than 1E-6 usually indicate a
 steady state has been found. If necessary the method can be called a
@@ -806,6 +915,26 @@ the steady state selections.</p>
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a numpy array corresponding to the values specified by steadyStateSelections</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="RoadRunner.RoadRunner.getSteadyStateSolver">
+<code class="descclassname">RoadRunner.</code><code class="descname">getSteadyStateSolver</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.getSteadyStateSolver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the steady state solver which is currently being used.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="RoadRunner.RoadRunner.steadyStateSolverExists">
+<code class="descclassname">RoadRunner.</code><code class="descname">steadyStateSolverExists</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.steadyStateSolverExists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks whether a steady state solver exists.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) &#8211; name of a steady state solver</td>
 </tr>
 </tbody>
 </table>
@@ -904,7 +1033,7 @@ species</li>
 <dl class="method">
 <dt id="RoadRunner.RoadRunner.getEigenValueIds">
 <code class="descclassname">RoadRunner.</code><code class="descname">getEigenValueIds</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.getEigenValueIds" title="Permalink to this definition">¶</a></dt>
-<dd><p>returns a list of selection symbols for the eigenvalues of the floating species. The eigen value
+<dd><p>Returns a list of selection symbols for the eigenvalues of the floating species. The eigen value
 selection symbol is <code class="docutils literal"><span class="pre">eigen(XX)</span></code>, where <code class="docutils literal"><span class="pre">XX</span></code> is the floating species name.</p>
 </dd></dl>
 
@@ -1004,9 +1133,8 @@ of floating species and n the number of reactions.</p>
 <dl class="method">
 <dt id="RoadRunner.RoadRunner.getUnscaledParameterElasticity">
 <code class="descclassname">RoadRunner.</code><code class="descname">getUnscaledParameterElasticity</code><span class="sig-paren">(</span><em>reactionId</em>, <em>parameterId</em><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.getUnscaledParameterElasticity" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div>Returns the unscaled elasticity for a named reaction with respect to a
-named parameter</div></blockquote>
+<dd><p>Returns the unscaled elasticity for a named reaction with respect to a
+named parameter</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1088,6 +1216,46 @@ named parameter</div></blockquote>
 </table>
 </dd></dl>
 
+<dl class="method">
+<dt id="RoadRunner.RoadRunner.getDiffStepSize">
+<code class="descclassname">RoadRunner.</code><code class="descname">getDiffStepSize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.getDiffStepSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the differential step size used in routines such as <code class="xref py py-meth docutils literal"><span class="pre">getCC()</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="RoadRunner.RoadRunner.setDiffStepSize">
+<code class="descclassname">RoadRunner.</code><code class="descname">setDiffStepSize</code><span class="sig-paren">(</span><em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.setDiffStepSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the differential step size used in routines such as <code class="xref py py-meth docutils literal"><span class="pre">getCC()</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>val</strong> &#8211; differential step size</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="RoadRunner.RoadRunner.getSteadyStateThreshold">
+<code class="descclassname">RoadRunner.</code><code class="descname">getSteadyStateThreshold</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.getSteadyStateThreshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the threshold used in steady state solver in routines such as <code class="xref py py-meth docutils literal"><span class="pre">getCC()</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="RoadRunner.RoadRunner.setSteadyStateThreshold">
+<code class="descclassname">RoadRunner.</code><code class="descname">setSteadyStateThreshold</code><span class="sig-paren">(</span><em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.setSteadyStateThreshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the threshold used in steady state solver in routines such as <code class="xref py py-meth docutils literal"><span class="pre">getCC()</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>val</strong> &#8211; threshold value</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </div>
 <div class="section" id="stochiometric-analysis">
 <h3>Stochiometric Analysis<a class="headerlink" href="#stochiometric-analysis" title="Permalink to this headline">¶</a></h3>
@@ -1101,7 +1269,7 @@ it was converted via conservation conversion.</p>
 <dl class="method">
 <dt id="RoadRunner.RoadRunner.getReducedStoichiometryMatrix">
 <code class="descclassname">RoadRunner.</code><code class="descname">getReducedStoichiometryMatrix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.getReducedStoichiometryMatrix" title="Permalink to this definition">¶</a></dt>
-<dd><p>get the reduced stochiometry matrix. If conservation conversion is enabled,
+<dd><p>Get the reduced stochiometry matrix. If conservation conversion is enabled,
 this is the matrix that coresponds to the independent species.</p>
 <p>A synonym for getNrMatrix().</p>
 </dd></dl>
@@ -1180,7 +1348,7 @@ The K matrix has the structure, <img class="math" src="_images/math/54bd9cc427b5
 <dl class="method">
 <dt id="RoadRunner.RoadRunner.getFrequencyResponse">
 <code class="descclassname">RoadRunner.</code><code class="descname">getFrequencyResponse</code><span class="sig-paren">(</span><em>startFrequency</em>, <em>numberOfDecades</em>, <em>numberOfPoints</em>, <em>parameterName</em>, <em>variableName</em>, <em>useDB</em>, <em>useHz</em><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.RoadRunner.getFrequencyResponse" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compute the frequency response</p>
+<dd><p>Computes the frequency response.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1206,7 +1374,7 @@ constructor, or  the <code class="xref py py-meth docutils literal"><span class=
 <dl class="attribute">
 <dt id="RoadRunner.LoadSBMLOptions.conservedMoieties">
 <code class="descclassname">LoadSBMLOptions.</code><code class="descname">conservedMoieties</code><em class="property"> bool</em><a class="headerlink" href="#RoadRunner.LoadSBMLOptions.conservedMoieties" title="Permalink to this definition">¶</a></dt>
-<dd><p>perform conservation analysis.</p>
+<dd><p>Performs conservation analysis.</p>
 <p>This causes a re-ordering of the species, so results generated
 with this flag enabled can not be compared index wise to results
 generated otherwise.</p>
@@ -1217,26 +1385,26 @@ which define or alter any floating species, and which have simple constant stioc
 <dl class="attribute">
 <dt id="RoadRunner.LoadSBMLOptions.mutableInitialConditions">
 <code class="descclassname">LoadSBMLOptions.</code><code class="descname">mutableInitialConditions</code><em class="property"> bool</em><a class="headerlink" href="#RoadRunner.LoadSBMLOptions.mutableInitialConditions" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generate accessor functions to allow changing of initial
+<dd><p>Generates accessor functions to allow changing of initial
 conditions.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="RoadRunner.LoadSBMLOptions.noDefaultSelections">
 <code class="descclassname">LoadSBMLOptions.</code><code class="descname">noDefaultSelections</code><em class="property"> bool</em><a class="headerlink" href="#RoadRunner.LoadSBMLOptions.noDefaultSelections" title="Permalink to this definition">¶</a></dt>
-<dd><p>Do not create a default selection list when the model is loaded.</p>
+<dd><p>If True, do not create a default selection list when the model is loaded.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="RoadRunner.LoadSBMLOptions.readOnly">
 <code class="descclassname">LoadSBMLOptions.</code><code class="descname">readOnly</code><em class="property"> bool</em><a class="headerlink" href="#RoadRunner.LoadSBMLOptions.readOnly" title="Permalink to this definition">¶</a></dt>
 <dd><p>Should the model be recompiled?
-The LLVM ModelGenerator maintins a hash table of currently running
+The LLVM ModelGenerator maintains a hash table of currently running
 models. If this flag is NOT set, then the generator will look to see
 if there is already a running instance of the given model and
 use the generated code from that one.</p>
 <p>If only a single instance of a model is run, there is no
-need to cache the models, and this can safetly be enabled,
+need to cache the models, and this can safely be enabled,
 realizing some performance gains.</p>
 </dd></dl>
 
@@ -1325,9 +1493,29 @@ an exception is raised indicating the error, and no harm done.</p>
 <dl class="method">
 <dt id="RoadRunner.ExecutableModel.getFloatingSpeciesIds">
 <code class="descclassname">ExecutableModel.</code><code class="descname">getFloatingSpeciesIds</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.ExecutableModel.getFloatingSpeciesIds" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a list of floating species SBML ids.</p>
+<dd><p>Return a list of all floating species SBML ids.</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">getFloatingSpeciesIds</span><span class="p">()</span>
-<span class="go">[&#39;S1&#39;, &#39;S2&#39;]</span>
+<span class="go">[&#39;S1&#39;, &#39;S2&#39;, &#39;S3&#39;, &#39;S4&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="RoadRunner.ExecutableModel.getDependentFloatingSpeciesIds">
+<code class="descclassname">ExecutableModel.</code><code class="descname">getDependentFloatingSpeciesIds</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.ExecutableModel.getDependentFloatingSpeciesIds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of dependent floating species SBML ids.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">getDependentFloatingSpeciesIds</span><span class="p">()</span>
+<span class="go">[&#39;S4&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="RoadRunner.ExecutableModel.getIndependentFloatingSpeciesIds">
+<code class="descclassname">ExecutableModel.</code><code class="descname">getIndependentFloatingSpeciesIds</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.ExecutableModel.getIndependentFloatingSpeciesIds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of independent floating species SBML ids.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">getIndependentFloatingSpeciesIds</span><span class="p">()</span>
+<span class="go">[&#39;S1&#39;, &#39;S2&#39;, &#39;S3&#39;]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1336,7 +1524,7 @@ an exception is raised indicating the error, and no harm done.</p>
 <dt id="RoadRunner.ExecutableModel.getNumFloatingSpecies">
 <code class="descclassname">ExecutableModel.</code><code class="descname">getNumFloatingSpecies</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.ExecutableModel.getNumFloatingSpecies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the number of floating species in the model.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">getFloatingSpeciesIds</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">getNumFloatingSpecies</span><span class="p">()</span>
 <span class="go">2</span>
 </pre></div>
 </div>
@@ -1814,9 +2002,23 @@ array of all the  values to set.</li>
 <div class="section" id="global-parameters">
 <h3>Global Parameters<a class="headerlink" href="#global-parameters" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
+<dt id="RoadRunner.ExecutableModel.getGlobalParameterIds">
+<code class="descclassname">ExecutableModel.</code><code class="descname">getGlobalParameterIds</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.ExecutableModel.getGlobalParameterIds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of global parameter ids.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a list of global parameter ids.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="RoadRunner.ExecutableModel.getGlobalParameterValues">
 <code class="descclassname">ExecutableModel.</code><code class="descname">getGlobalParameterValues</code><span class="sig-paren">(</span><span class="optional">[</span><em>index</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.ExecutableModel.getGlobalParameterValues" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a vector of global parameter values. The order of species is
+<dd><p>Returns a vector of global parameter values. The order of species is
 given by the order of Ids returned by getGlobalParameterIds()</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1839,7 +2041,7 @@ given by the order of Ids returned by getGlobalParameterIds()</p>
 <dl class="method">
 <dt id="RoadRunner.ExecutableModel.getNumGlobalParameters">
 <code class="descclassname">ExecutableModel.</code><code class="descname">getNumGlobalParameters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.ExecutableModel.getNumGlobalParameters" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the number of global parameters in the model.</p>
+<dd><p>Returns the number of global parameters in the model.</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">getNumGlobalParameters</span><span class="p">()</span>
 <span class="go">5</span>
 </pre></div>
@@ -1849,7 +2051,7 @@ given by the order of Ids returned by getGlobalParameterIds()</p>
 <dl class="method">
 <dt id="RoadRunner.ExecutableModel.setGlobalParameterValues">
 <code class="descclassname">ExecutableModel.</code><code class="descname">setGlobalParameterValues</code><span class="sig-paren">(</span><span class="optional">[</span><em>index</em>, <span class="optional">]</span><em>values</em><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.ExecutableModel.setGlobalParameterValues" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this to set the entire set of global parameters in one call.
+<dd><p>Sets the entire set of global parameters.
 The order of parameters is given by the order of Ids returned by getGlobalParameterIds()</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1924,6 +2126,32 @@ order of reaction rates is given by the order of Ids returned by getReactionIds(
 </table>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">getReactionRates</span><span class="p">()</span>
 <span class="go">array([ 0.14979613,  2.37711263,  2.68498886,  2.41265507,  1.89417737])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="events">
+<h3>Events<a class="headerlink" href="#events" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="RoadRunner.ExecutableModel.getNumEvents">
+<code class="descclassname">ExecutableModel.</code><code class="descname">getNumEvents</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.ExecutableModel.getNumEvents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of events.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">getNumEvents</span><span class="p">()</span>
+<span class="go">1</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="rate-rules">
+<h3>Rate Rules<a class="headerlink" href="#rate-rules" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="RoadRunner.ExecutableModel.getNumRateRules">
+<code class="descclassname">ExecutableModel.</code><code class="descname">getNumRateRules</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.ExecutableModel.getNumRateRules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of rate rules.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">getNumRateRules</span><span class="p">()</span>
+<span class="go">1</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -2214,12 +2442,6 @@ time = 10.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="RoadRunner.ExecutableModel.reset">
-<code class="descclassname">ExecutableModel.</code><code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.ExecutableModel.reset" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reset the floating species concentration to their initial conditions.</p>
-</dd></dl>
-
-<dl class="method">
 <dt id="RoadRunner.ExecutableModel.setTime">
 <code class="descclassname">ExecutableModel.</code><code class="descname">setTime</code><span class="sig-paren">(</span><em>time</em><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.ExecutableModel.setTime" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the model time variable.</p>
@@ -2236,6 +2458,26 @@ time = 10.</p>
 <span class="go">20.0</span>
 </pre></div>
 </div>
+</dd></dl>
+
+<dl class="method">
+<dt id="RoadRunner.ExecutableModel.reset">
+<code class="descclassname">ExecutableModel.</code><code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.ExecutableModel.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets all the floating species concentrations to their initial values.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="RoadRunner.ExecutableModel.resetAll">
+<code class="descclassname">ExecutableModel.</code><code class="descname">resetAll</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.ExecutableModel.resetAll" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets all variables, species, etc. to the CURRENT initial values.
+It also resets all parameter back to the values they had when the model was first loaded</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="RoadRunner.ExecutableModel.resetToOrigin">
+<code class="descclassname">ExecutableModel.</code><code class="descname">resetToOrigin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.ExecutableModel.resetToOrigin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets the model back to the state is was when it was FIRST loaded.
+The scope of reset includes all initial values and parameters, etc.</p>
 </dd></dl>
 
 </div>
@@ -2731,6 +2973,79 @@ target which matches the host.</p>
 </dd></dl>
 
 </div>
+<div class="section" id="miscellaneous-functions">
+<h2>Miscellaneous Functions<a class="headerlink" href="#miscellaneous-functions" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="roadrunner.getCopyrightStr">
+<code class="descclassname">roadrunner.</code><code class="descname">getCopyrightStr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#roadrunner.getCopyrightStr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the copyright string</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="roadrunner.getVersionStr">
+<code class="descclassname">roadrunner.</code><code class="descname">getVersionStr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#roadrunner.getVersionStr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the version string</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="roadrunner.RoadRunner_getExtendedVersionInfo">
+<em class="property">static </em><code class="descclassname">roadrunner.</code><code class="descname">RoadRunner_getExtendedVersionInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#roadrunner.RoadRunner_getExtendedVersionInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="#roadrunner.getVersionStr" title="roadrunner.getVersionStr"><code class="xref py py-func docutils literal"><span class="pre">getVersionStr()</span></code></a> plus info about dependent libs versions.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="roadrunner.RoadRunner_getParamPromotedSBML">
+<em class="property">static </em><code class="descclassname">roadrunner.</code><code class="descname">RoadRunner_getParamPromotedSBML</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#roadrunner.RoadRunner_getParamPromotedSBML" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes an SBML document (in textual form) and changes all of the local parameters
+to be global parameters.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>SBML</strong> (<em>str</em>) &#8211; the contents of an SBML document</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="roadrunner.validateSBML">
+<code class="descclassname">roadrunner.</code><code class="descname">validateSBML</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#roadrunner.validateSBML" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a string, check whether the string is a valid SBML string.
+Raises exception if the string is not a valid SBML string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>SBML</strong> (<em>str</em>) &#8211; the contents of an SBML document</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="roadrunner.listTestModels">
+<code class="descclassname">roadrunner.</code><code class="descname">listTestModels</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#roadrunner.listTestModels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists all the test models.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="roadrunner.loadTestModel">
+<code class="descclassname">roadrunner.</code><code class="descname">loadTestModel</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#roadrunner.loadTestModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a test model given a name.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) &#8211; name of the test model</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
 </div>
 
 
@@ -2754,7 +3069,7 @@ target which matches the host.</p>
 <li><a class="reference internal" href="#selections">Selections</a></li>
 <li><a class="reference internal" href="#model-access">Model Access</a></li>
 <li><a class="reference internal" href="#simulation">Simulation</a></li>
-<li><a class="reference internal" href="#steady-state-sections">Steady State Sections</a></li>
+<li><a class="reference internal" href="#steady-state">Steady State</a></li>
 <li><a class="reference internal" href="#metabolic-control-analysis">Metabolic control analysis</a></li>
 <li><a class="reference internal" href="#stochiometric-analysis">Stochiometric Analysis</a></li>
 <li><a class="reference internal" href="#analysis">Analysis</a></li>
@@ -2768,6 +3083,8 @@ target which matches the host.</p>
 <li><a class="reference internal" href="#compartments">Compartments</a></li>
 <li><a class="reference internal" href="#global-parameters">Global Parameters</a></li>
 <li><a class="reference internal" href="#reactions">Reactions</a></li>
+<li><a class="reference internal" href="#events">Events</a></li>
+<li><a class="reference internal" href="#rate-rules">Rate Rules</a></li>
 <li><a class="reference internal" href="#stoichiometry">Stoichiometry</a></li>
 <li><a class="reference internal" href="#state-vector">State Vector</a></li>
 <li><a class="reference internal" href="#conserved-moieties">Conserved Moieties</a></li>
@@ -2780,6 +3097,7 @@ target which matches the host.</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#jit-compilation">JIT Compilation</a></li>
+<li><a class="reference internal" href="#miscellaneous-functions">Miscellaneous Functions</a></li>
 </ul>
 </li>
 </ul>

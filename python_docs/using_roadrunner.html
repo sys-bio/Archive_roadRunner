@@ -209,23 +209,23 @@ built in <code class="docutils literal"><span class="pre">RoadRunner.plot()</spa
 It is possible to change the simulation result values by changing the selection list.
 For example assume that a model has three species, S1, S2, and S3 but we only want simulate() to
 return time in the first column and S2 in the second column. To specify this we would type:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">rr</span><span class="o">.</span><span class="n">selections</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;time&#39;</span><span class="p">,</span> <span class="s">&#39;S2&#39;</span><span class="p">]</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">rr</span><span class="o">.</span><span class="n">timeCourseSelections</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;time&#39;</span><span class="p">,</span> <span class="s">&#39;S2&#39;</span><span class="p">]</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">simulate</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>In another example let say we wanted to plot a phase plot where S1 is plotted against S2. To do this we
 type the following:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">rr</span><span class="o">.</span><span class="n">selections</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;S1&#39;</span><span class="p">,</span> <span class="s">&#39;S2&#39;</span><span class="p">]</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">rr</span><span class="o">.</span><span class="n">timeCourseSelections</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;S1&#39;</span><span class="p">,</span> <span class="s">&#39;S2&#39;</span><span class="p">]</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Some additional examples include:</p>
 <blockquote>
 <div><p># Select time and two rates of change (dS1/dt and dS2/dt)
-rr.selections = [&#8216;time, &#8216;S1&#8217;&#8216;&#8217;, &#8216;S2&#8217;&#8216;&#8217;]</p>
+rr.timeCourseSelections = [&#8216;time, &#8216;S1&#8217;&#8216;&#8217;, &#8216;S2&#8217;&#8216;&#8217;]</p>
 <p># By default species names yield amounts, concentrations can be obtained
 # using square brackets, e.g.
-rr.selections = [&#8216;time&#8217;, &#8216;[S1]&#8217;, &#8216;[S2]&#8217;]</p>
+rr.timeCourseSelections = [&#8216;time&#8217;, &#8216;[S1]&#8217;, &#8216;[S2]&#8217;]</p>
 </div></blockquote>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
@@ -271,7 +271,7 @@ object instance, and the second is a flag which tells the method to show the plo
 
     <span class="c"># assume result is a standard numpy array</span>
 
-    <span class="n">selections</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">selections</span>
+    <span class="n">selections</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">timeCourseSelections</span>
 
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span> <span class="ow">or</span> <span class="n">result</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">selections</span><span class="p">):</span>
         <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s">&quot;simulation result columns not equal to number of selections,&quot;</span>
