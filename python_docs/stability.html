@@ -60,13 +60,12 @@
 <p><img src="_images/math/2408bf7a5af0847d8d6c3b98dc6dbe839ebdbaad.png" alt="J=\begin{bmatrix} \dfrac{\partial F_1}{\partial S_1} &amp; \cdots &amp; \dfrac{\partial F_1}{\partial S_m} \\
 \vdots &amp; \ddots &amp; \vdots \\ \dfrac{\partial F_n}{\partial S_1} &amp; \cdots &amp; \dfrac{\partial F_n}{\partial S_m}
 \end{bmatrix}"/></p>
-</div><p>where <img class="math" src="_images/math/d07b4c16d04b6739df29c10f32dfc4b946061922.png" alt="F_i"/> is the ith differential equation and <img class="math" src="_images/math/3f1a4e430c239029fe31b52c95bb3278d0bc3d49.png" alt="S_i"/> the ith floating species. From roadRunner it is easy to obtain the Jacobian matrix using
-the command:</p>
+</div><p>where <img class="math" src="_images/math/d07b4c16d04b6739df29c10f32dfc4b946061922.png" alt="F_i"/> is the ith differential equation and <img class="math" src="_images/math/3f1a4e430c239029fe31b52c95bb3278d0bc3d49.png" alt="S_i"/> the ith floating species. From RoadRunner it is easy to obtain the Jacobian matrix using <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getFullJacobian" title="RoadRunner.RoadRunner.getFullJacobian"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getFullJacobian()</span></code></a>, i.e.:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">Jac</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">getFullJacobian</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>which returns the Jacobian matrix in the variable Jac.</p>
-<p>It is possible for full Jacobian to be singular. In these situations one should call instead the related method, <code class="docutils literal"><span class="pre">getReducedJacobian()</span></code>.</p>
+<p>It is possible for full Jacobian to be singular. In these situations one should call the related method, <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getReducedJacobian" title="RoadRunner.RoadRunner.getReducedJacobian"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getReducedJacobian()</span></code></a>.</p>
 </div>
 
 

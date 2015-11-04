@@ -71,10 +71,10 @@ species, <img class="math" src="_images/math/b65434e0533eb4c0ecf4469a1d8a9fb1972
 <p>The call to <code class="docutils literal"><span class="pre">steadyState</span></code> returns a value that represents the sum of squares of the rates of change. Therefore the
 smaller this value the more likely the steady state solution has been found. Often a value less that 10E-6 indicates
 a steady state has been found. After a successful call all the species levels will be at their steady state values.</p>
-<p>Steady state values can be obtained using <code class="docutils literal"><span class="pre">rr.getSteadyStateValues()</span></code> and <code class="docutils literal"><span class="pre">steadyStateSelections</span></code> can be used to
+<p>Steady state values can be obtained using <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getSteadyStateValues" title="RoadRunner.RoadRunner.getSteadyStateValues"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getSteadyStateValues()</span></code></a> and <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.steadyStateSelections" title="RoadRunner.RoadRunner.steadyStateSelections"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.steadyStateSelections()</span></code></a> can be used to
 decide what values to return. For example the following would retrieve a single value:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">rr</span><span class="o">.</span><span class="n">steadyStateSelections</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;S1&#39;</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">rr</span><span class="o">.</span><span class="n">getSteadyStateValues</span> <span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rr</span><span class="o">.</span><span class="n">getSteadyStateValues</span><span class="p">()</span>
 <span class="go">array([ 0.54314239])</span>
 </pre></div>
 </div>

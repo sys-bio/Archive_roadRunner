@@ -490,7 +490,8 @@ If both arguments are zero, then the document is left alone and the original ver
 <dl class="method">
 <dt id="roadrunner.RoadRunner.getValue">
 <code class="descclassname">RoadRunner.</code><code class="descname">getValue</code><span class="sig-paren">(</span><em>sel</em><span class="sig-paren">)</span><a class="headerlink" href="#roadrunner.RoadRunner.getValue" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the value for a given selection.</p>
+<dd><p>Returns the value for a given selection. For more information on accepted selection types
+see <a class="reference internal" href="selecting_values.html#selecting-values"><span>Selecting Values</span></a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -519,7 +520,8 @@ obtained from createSelection</td>
 <dl class="attribute">
 <dt id="RoadRunner.RoadRunner.timeCourseSelections">
 <code class="descclassname">RoadRunner.</code><code class="descname">timeCourseSelections</code><a class="headerlink" href="#RoadRunner.RoadRunner.timeCourseSelections" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get or set the list of current selections used for the time course simulation result columns.</p>
+<dd><p>Get or set the list of current selections used for the time course simulation result columns.
+For more information on accepted selection types, see <a class="reference internal" href="selecting_values.html#selecting-values"><span>Selecting Values</span></a>.</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">rr</span><span class="o">.</span><span class="n">timeCourseSelections</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;time&#39;</span><span class="p">,</span> <span class="s">&#39;S1&#39;</span><span class="p">,</span> <span class="s">&#39;S2&#39;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rr</span><span class="o">.</span><span class="n">timeCourseSelections</span>
 <span class="go">[&#39;time&#39;, &#39;S1&#39;, &#39;S2&#39;]</span>

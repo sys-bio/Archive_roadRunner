@@ -66,49 +66,48 @@ selected in a simulation result and can also be used to directly select model va
 white space.</p>
 <p>Selection Types:</p>
 <dl class="docutils">
-<dt>Time</dt>
+<dt>Time: <code class="docutils literal"><span class="pre">time</span></code></dt>
 <dd>The string <code class="docutils literal"><span class="pre">time</span></code> is interpreted as the current model time.</dd>
 <dt>Identifier</dt>
 <dd>Any continuous sequence of printing characters is treated as an SBML identifier with
-the exception of <code class="docutils literal"><span class="pre">time</span></code>. Some examples are: <code class="docutils literal"><span class="pre">S1</span></code>, <code class="docutils literal"><span class="pre">P1</span></code>, <code class="docutils literal"><span class="pre">J0_Keq1</span></code>,
-<code class="docutils literal"><span class="pre">compartment</span></code>. These have to be a valid SBML identifier. If no SBML identifier is found the
-requested an exception is raised. Note, if the identifier is a chemical species, it is
-interpreted as the species amount.</dd>
-<dt>Concentration</dt>
-<dd>Following generally accepted chemical nomenclature, any continuous sequence of
-characters inside a pair of squared brackets, <code class="docutils literal"><span class="pre">[]</span></code> is interpreted as a concentration. Some
-examples are <code class="docutils literal"><span class="pre">[S1]</span></code>, <code class="docutils literal"><span class="pre">[S2</span> <span class="pre">]</span></code> and so forth. The identifier must be a valid SBML species,
-otherwise an exception is raised.</dd>
-<dt>Rates of Change</dt>
-<dd>These represent the rate of change, <img class="math" src="_images/math/47e98dabc95e999a83ace05db69490657c77fa31.png" alt="\frac{dy}{dt}"/> of a species amount. Rates of change
+the exception of <code class="docutils literal"><span class="pre">time</span></code>, i.e. <code class="docutils literal"><span class="pre">S1</span></code>, <code class="docutils literal"><span class="pre">P1</span></code>, <code class="docutils literal"><span class="pre">J0_Keq1</span></code>, <code class="docutils literal"><span class="pre">compartment</span></code>, etc.
+These have to be valid SBML identifiers. If no SBML identifier is found, an exception is raised.
+Note that if the identifier is a chemical species, it is interpreted as the species amount.</dd>
+<dt>Concentration <span class="classifier-delimiter">:</span> <span class="classifier"><code class="docutils literal"><span class="pre">[]</span></code></span></dt>
+<dd>Following generally accepted chemical nomenclature, any continuous sequence of characters inside
+a pair of squared brackets, <code class="docutils literal"><span class="pre">[]</span></code> is interpreted as a concentration, i.e. <code class="docutils literal"><span class="pre">[S1]</span></code>, <code class="docutils literal"><span class="pre">[S2]</span></code>, etc.
+The identifier must be a valid SBML species, otherwise an exception is raised.</dd>
+<dt>Rates of Change: <code class="docutils literal"><span class="pre">'</span></code></dt>
+<dd>Represents the rate of change, <img class="math" src="_images/math/47e98dabc95e999a83ace05db69490657c77fa31.png" alt="\frac{dy}{dt}"/> of a species amount. Rates of change
 selections follow generally accepted mathematical convention of using the single quote, <code class="docutils literal"><span class="pre">'</span></code>
 to represent a time derivative. A rate of change selection is any identifier followed by a
-single quote. Some examples are <code class="docutils literal"><span class="pre">S1'</span></code>, <code class="docutils literal"><span class="pre">S2'</span></code>, <code class="docutils literal"><span class="pre">MyParameter'</span></code>. A rates of change selection
+single quote, i.e. <code class="docutils literal"><span class="pre">S1'</span></code>, <code class="docutils literal"><span class="pre">S2'</span></code>, <code class="docutils literal"><span class="pre">P1'</span></code>, etc. A rates of change selection
 is also valid for SBML elements which are defined by rate rules.</dd>
-<dt>Elasticity</dt>
-<dd>The form of <code class="docutils literal"><span class="pre">ee(ReactionId,</span> <span class="pre">ParameterId)</span></code> where <code class="docutils literal"><span class="pre">ReactionId</span></code> is a reaction name,
+<dt>Elasticity: <code class="docutils literal"><span class="pre">ee(ReactionId,</span> <span class="pre">ParameterId)</span></code></dt>
+<dd>Represents elasticity slection in the form of <code class="docutils literal"><span class="pre">ee(ReactionId,</span> <span class="pre">ParameterId)</span></code> where <code class="docutils literal"><span class="pre">ReactionId</span></code> is a reaction name
 and <code class="docutils literal"><span class="pre">ParameterId</span></code> is a global parameter id. This selection intentionally has a function form, it
 selects the elasticity control coefficient, <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getEE" title="RoadRunner.RoadRunner.getEE"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getEE()</span></code></a></dd>
-<dt>Unscaled Elasticity</dt>
-<dd>The form of <code class="docutils literal"><span class="pre">uee(ReactionId,</span> <span class="pre">ParameterId)</span></code> where <code class="docutils literal"><span class="pre">ReactionId</span></code> is a reaction name,
-and <code class="docutils literal"><span class="pre">ParameterId</span></code> is a global parameter id. This selection intentionally has a function form, it
+<dt>Unscaled Elasticity: <code class="docutils literal"><span class="pre">uee(ReactionId,</span> <span class="pre">ParameterId)</span></code></dt>
+<dd>Represents unscaled elasticity slection in the form of <code class="docutils literal"><span class="pre">uee(ReactionId,</span> <span class="pre">ParameterId)</span></code> where <code class="docutils literal"><span class="pre">ReactionId</span></code>
+is a reaction name and <code class="docutils literal"><span class="pre">ParameterId</span></code> is a global parameter id. This selection intentionally has a function form, it
 selects the elasticity control coefficient, <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getEE" title="RoadRunner.RoadRunner.getEE"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getEE()</span></code></a></dd>
-<dt>Control</dt>
-<dd>Control coefficient selections have the form of <code class="docutils literal"><span class="pre">cc(Id,</span> <span class="pre">ParameterId)</span></code>. The string <code class="docutils literal"><span class="pre">Id</span></code>
-and <code class="docutils literal"><span class="pre">ParameterId</span></code> must be valid arguments for <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getCC" title="RoadRunner.RoadRunner.getCC"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getCC()</span></code></a> This selection
-intentionally has a function form, it selects the elasticity control coefficient,
-<a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getCC" title="RoadRunner.RoadRunner.getCC"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getCC()</span></code></a></dd>
-<dt>Unscaled Control</dt>
-<dd>A string with the form of <code class="docutils literal"><span class="pre">ucc(Id,</span> <span class="pre">ParameterId)</span></code>. The string <code class="docutils literal"><span class="pre">Id</span></code> and <code class="docutils literal"><span class="pre">ParameterId</span></code> must be
-valid arguments for :meth:<code class="docutils literal"><span class="pre">RoadRunner.getuCC</span></code>
-This selection intentionally has a function form, it
+<dt>Control Coefficient: <code class="docutils literal"><span class="pre">cc(Id,</span> <span class="pre">ParameterId)</span></code></dt>
+<dd>Represents control coefficient selection in the form of <code class="docutils literal"><span class="pre">cc(Id,</span> <span class="pre">ParameterId)</span></code> where <code class="docutils literal"><span class="pre">Id</span></code> is
+a flux or species name and <code class="docutils literal"><span class="pre">ParameterId</span></code> is a global parameter id. The string <code class="docutils literal"><span class="pre">Id</span></code> and <code class="docutils literal"><span class="pre">ParameterId</span></code>
+must be valid arguments     for <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getCC" title="RoadRunner.RoadRunner.getCC"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getCC()</span></code></a>. This selection intentionally has a function form, it
+selects the elasticity control coefficient, <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getCC" title="RoadRunner.RoadRunner.getCC"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getCC()</span></code></a></dd>
+<dt>Unscaled Control Coefficient: <code class="docutils literal"><span class="pre">ucc(Id,</span> <span class="pre">ParameterId)</span></code></dt>
+<dd>Represents unscaled control coefficient selections in the form of <code class="docutils literal"><span class="pre">ucc(Id,</span> <span class="pre">ParameterId)</span></code> where <cite>Id`</cite> is
+a flux or species name and <code class="docutils literal"><span class="pre">ParameterId</span></code> is a global parameter id. The string <code class="docutils literal"><span class="pre">Id</span></code> and <code class="docutils literal"><span class="pre">ParameterId</span></code>
+must be valid arguments for <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getuCC" title="RoadRunner.RoadRunner.getuCC"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getuCC()</span></code></a>. This selection intentionally has a function form, it
 selects the unscaled elasticity control coefficient, <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getuCC" title="RoadRunner.RoadRunner.getuCC"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getuCC()</span></code></a></dd>
-<dt>Eigenvalue</dt>
-<dd>The form of <code class="docutils literal"><span class="pre">eigen(identifier)</span></code>. The eigenvalue of a floating species.</dd>
-<dt>Initial Concentration</dt>
-<dd>An initial concentration specified in the SBML document, for example <code class="docutils literal"><span class="pre">init(S1)</span></code></dd>
+<dt>Eigenvalue: <code class="docutils literal"><span class="pre">eigenReal()</span></code>, <code class="docutils literal"><span class="pre">eigenImag()</span></code></dt>
+<dd>Represents the eigenvalue of a floating species. <code class="docutils literal"><span class="pre">eigenReal(identifier)</span></code> is the real part of eigenvalue while
+<code class="docutils literal"><span class="pre">eigenImag(identifier)</span></code> is the imaginary part of eigenvalue.</dd>
+<dt>Initial Concentration: <code class="docutils literal"><span class="pre">init()</span></code></dt>
+<dd>Represents the initial concentration of an identifier specified in the SBML document, i.e. <code class="docutils literal"><span class="pre">init(S1)</span></code>.</dd>
 <dt>Stoichiometry</dt>
-<dd>The stoichiometric coefficient for a given species and reaction.</dd>
+<dd>Represents the stoichiometric coefficient for a given species and reaction.</dd>
 </dl>
 <div class="section" id="experimenting-with-selections">
 <h3>Experimenting With Selections<a class="headerlink" href="#experimenting-with-selections" title="Permalink to this headline">¶</a></h3>
