@@ -310,6 +310,7 @@ set_property(TARGET ${target}-static
 #======== We need to split up this one to satisfy linking in both windows and posix.
 #=== windows need libsbml-static and libf2c and posix uses sbml-static and f2c
 if(BUILD_LLVM)
+    message(STATUS "roadrunner stat LLVM_LIBRARIES = ${LLVM_LIBRARIES}")
     target_link_libraries(${target}-static
         ${LLVM_LIBRARIES}
         )

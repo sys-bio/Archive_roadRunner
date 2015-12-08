@@ -91,6 +91,7 @@ ModelGeneratorContext::ModelGeneratorContext(std::string const &sbml,
         moietyConverter(0),
         random(0)
 {
+std::cerr << "model gen context ctor\n";
     if(useSymbolCache()) {
         Log(Logger::LOG_INFORMATION) << "Using LLVM symbol/value cache";
     } else {
@@ -144,31 +145,39 @@ ModelGeneratorContext::ModelGeneratorContext(std::string const &sbml,
         {
             doc = ownedDoc;
         }
-
+std::cerr << "init data symbols\n";
         symbols = new LLVMModelDataSymbols(doc->getModel(), options);
 
         modelSymbols = new LLVMModelSymbols(getModel(), *symbols);
-
+std::cerr << "init native target\n";
         // initialize LLVM
         // TODO check result
         InitializeNativeTarget();
 
+std::cerr << "new llvm ctx\n";
         context = new LLVMContext();
         // Make the module, which holds all the code.
         module = new Module("LLVM Module", *context);
 
+std::cerr << "new ir builder\n";
         builder = new IRBuilder<>(*context);
 
+std::cerr << "new engine bldr\n";
         // engine take ownership of module
         EngineBuilder engineBuilder(module);
 
+std::cerr << "set err str\n";
         engineBuilder.setErrorStr(errString);
+std::cerr << "create engine bldr\n";
         executionEngine = engineBuilder.create();
 
+std::cerr << "add global mappings\n";
         addGlobalMappings();
 
+std::cerr << "create lib fcts\n";
         createLibraryFunctions(module);
 
+std::cerr << "ir builder create model data tp\n";
         ModelDataIRBuilder::createModelDataStructType(module, executionEngine, *symbols);
 
         // check if doc has distrib package
@@ -183,6 +192,7 @@ ModelGeneratorContext::ModelGeneratorContext(std::string const &sbml,
         }
 #endif
 
+std::cerr << "call init fct pass mgr\n";
         initFunctionPassManager();
 
     }
@@ -498,7 +508,7 @@ void ModelGeneratorContext::initFunctionPassManager()
             functionPassManager->add(createDeadCodeEliminationPass());
         }
 
-
+std::cerr << "function pass manager do initialization\n";
         functionPassManager->doInitialization();
     }
 }
