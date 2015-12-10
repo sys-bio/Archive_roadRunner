@@ -632,15 +632,12 @@ namespace rr
 			handleCVODEError(err);
 		}
 
-		if (mModel->getNumEvents() > 0)
+		if ((err = CVodeRootInit(mCVODE_Memory, mModel->getNumEvents()+1,
+			cvodeRootFcn)) != CV_SUCCESS)
 		{
-			if ((err = CVodeRootInit(mCVODE_Memory, mModel->getNumEvents(),
-				cvodeRootFcn)) != CV_SUCCESS)
-			{
-				handleCVODEError(err);
-			}
-			Log(Logger::LOG_TRACE) << "CVRootInit executed.....";
+			handleCVODEError(err);
 		}
+		Log(Logger::LOG_TRACE) << "CVRootInit executed.....";
 
 		// only allocate this if we are using stiff solver.
 		// otherwise, CVode will NOT free it if using standard solver.
@@ -846,6 +843,10 @@ namespace rr
 		ExecutableModel *model = cvInstance->mModel;
 
 		double* y = NV_DATA_S(y_vector);
+    gout[model->getNumEvents()] = time >= 50;
+    Log(Logger::LOG_DEBUG) << "cvodeRootFcn";
+    if(time >= 50)
+      Log(Logger::LOG_WARNING) << "cvodeRootFcn time end";
 
 		model->getEventRoots(time, y, gout);
 
@@ -1043,5 +1044,3 @@ namespace rr
 	}
 
 }
-
-
