@@ -94,9 +94,9 @@ namespace rr
         Solver::resetSettings();
 
         // Set default integrator settings.
-        addSetting("relative_tolerance", 1e-6, "Relative Tolerance", "Specifies the scalar relative tolerance (double).", "(double) CVODE calculates a vector of error weights which is used in all error and convergence tests. The weighted RMS norm for the relative tolerance should not become smaller than this value.");
-        addSetting("absolute_tolerance", 1e-15, "Absolute Tolerance", "Specifies the scalar absolute tolerance (double).", "(double) CVODE calculates a vector of error weights which is used in all error and convergence tests. The weighted RMS norm for the absolute tolerance should not become smaller than this value.");
-        addSetting("stiff",              true, "Stiff", "Specifies whether the integrator attempts to solve stiff equations. (bool)", "(bool) Specifies whether the integrator attempts to solve stiff equations. Ensure the integrator can solver stiff differential equations by setting this value to true.");
+        addSetting("relative_tolerance", 5e-1, "Relative Tolerance", "Specifies the scalar relative tolerance (double).", "(double) CVODE calculates a vector of error weights which is used in all error and convergence tests. The weighted RMS norm for the relative tolerance should not become smaller than this value.");
+        addSetting("absolute_tolerance", 5e-1, "Absolute Tolerance", "Specifies the scalar absolute tolerance (double).", "(double) CVODE calculates a vector of error weights which is used in all error and convergence tests. The weighted RMS norm for the absolute tolerance should not become smaller than this value.");
+        addSetting("stiff",              false, "Stiff", "Specifies whether the integrator attempts to solve stiff equations. (bool)", "(bool) Specifies whether the integrator attempts to solve stiff equations. Ensure the integrator can solver stiff differential equations by setting this value to true.");
         addSetting("maximum_bdf_order",  mDefaultMaxBDFOrder, "Maximum BDF Order", "Specifies the maximum order for Backward Differentiation Formula integration. (int)", "(int) Specifies the maximum order for Backward Differentiation Formula integration. This integration method is used for stiff problems. Default value is 5.");
         addSetting("maximum_adams_order",mDefaultMaxAdamsOrder, "Maximum Adams Order", "Specifies the maximum order for Adams-Moulton intergration. (int)", "(int) Specifies the maximum order for Adams-Moulton intergration. This integration method is used for non-stiff problems. Default value is 12.");
         addSetting("maximum_num_steps",  mDefaultMaxNumSteps, "Maximum Number of Steps", "Specifies the maximum number of steps to be taken by the CVODE solver in its attempt to reach tout. (int)", "(int) Maximum number of steps to be taken by the CVODE solver in its attempt to reach tout.");
@@ -203,8 +203,8 @@ namespace rr
 //         Integrator::setValue("absolute_tolerance", Config::getDouble(Config::SIMULATEOPTIONS_ABSOLUTE));
 //         Integrator::setValue("relative_tolerance", Config::getDouble(Config::SIMULATEOPTIONS_RELATIVE));
 
-        CVODEIntegrator::setValue("absolute_tolerance", Config::getDouble(Config::CVODE_MIN_ABSOLUTE));
-        CVODEIntegrator::setValue("relative_tolerance", Config::getDouble(Config::CVODE_MIN_RELATIVE));
+        //CVODEIntegrator::setValue("absolute_tolerance", Config::getDouble(Config::CVODE_MIN_ABSOLUTE));
+        //CVODEIntegrator::setValue("relative_tolerance", Config::getDouble(Config::CVODE_MIN_RELATIVE));
     }
 
 	void CVODEIntegrator::loadSBMLSettings(std::string const& filename)
@@ -243,13 +243,13 @@ namespace rr
 			it = options.find("absolute");
 			if (it != options.end())
 			{
-				CVODEIntegrator::setValue("absolute_tolerance", std::abs(toDouble((*it).second)));
+				//CVODEIntegrator::setValue("absolute_tolerance", std::abs(toDouble((*it).second)));
 			}
 
 			it = options.find("relative");
 			if (it != options.end())
 			{
-				CVODEIntegrator::setValue("relative_tolerance", std::abs(toDouble((*it).second)));
+				//CVODEIntegrator::setValue("relative_tolerance", std::abs(toDouble((*it).second)));
 			}
 		}
 	}
@@ -393,6 +393,9 @@ namespace rr
 		bool varstep = getValueAsBool("variable_step_size");
 		double relTol = getValueAsDouble("relative_tolerance");
 
+    if(varstep)
+      tout = hstep;
+
 		if (getValueAsBool("multiple_steps") || getValueAsBool("variable_step_size"))
 		{
 			itask = CV_ONE_STEP;
@@ -428,7 +431,9 @@ namespace rr
 			mModel->getEventTriggers(eventStatus.size(), 0, eventStatus.size() == 0 ? NULL : &eventStatus[0]);
 
 			// time step
-			int nResult = CVode(mCVODE_Memory, nextTargetEndTime,  mStateVector, &timeEnd, itask);
+      Log(Logger::LOG_DEBUG) << " integrate: t remaining " << abs(50-timeStart);
+      CVodeSetMaxStep(mCVODE_Memory, 0.3*abs(50-timeStart));
+			int nResult = CVode(mCVODE_Memory, 50,  mStateVector, &timeEnd, itask);
 
 			if (nResult == CV_ROOT_RETURN)
 			{
@@ -544,8 +549,8 @@ namespace rr
 		double minAbs = Config::getDouble(Config::CVODE_MIN_ABSOLUTE);
 		double minRel = Config::getDouble(Config::CVODE_MIN_RELATIVE);
 
-		CVODEIntegrator::setValue("absolute_tolerance", std::min(CVODEIntegrator::getValueAsDouble("absolute_tolerance"), minAbs));
-		CVODEIntegrator::setValue("relative_tolerance", std::min(CVODEIntegrator::getValueAsDouble("relative_tolerance"), minRel));
+		//CVODEIntegrator::setValue("absolute_tolerance", std::min(CVODEIntegrator::getValueAsDouble("absolute_tolerance"), minAbs));
+		//CVODEIntegrator::setValue("relative_tolerance", std::min(CVODEIntegrator::getValueAsDouble("relative_tolerance"), minRel));
 
 		Log(Logger::LOG_INFORMATION) << "tweaking CVODE tolerances to abs=" << CVODEIntegrator::getValueAsDouble("absolute_tolerance") << ", rel=" << CVODEIntegrator::getValueAsDouble("relative_tolerance");
 	}
@@ -843,7 +848,7 @@ namespace rr
 		ExecutableModel *model = cvInstance->mModel;
 
 		double* y = NV_DATA_S(y_vector);
-    gout[model->getNumEvents()] = time >= 50;
+    gout[model->getNumEvents()] = (time < 50);
     Log(Logger::LOG_DEBUG) << "cvodeRootFcn";
     if(time >= 50)
       Log(Logger::LOG_WARNING) << "cvodeRootFcn time end";
