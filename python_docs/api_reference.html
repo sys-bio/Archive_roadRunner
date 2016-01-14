@@ -537,7 +537,7 @@ For more information on accepted selection types, see <a class="reference intern
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">roadrunner.SelectionRecord</td>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#roadrunner.SelectionRecord" title="roadrunner.SelectionRecord">roadrunner.SelectionRecord</a></td>
 </tr>
 </tbody>
 </table>
@@ -1362,6 +1362,280 @@ The K matrix has the structure, <img class="math" src="_images/math/54bd9cc427b5
 </dd></dl>
 
 </div>
+</div>
+<div class="section" id="selectionrecord">
+<h2>SelectionRecord<a class="headerlink" href="#selectionrecord" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="roadrunner.SelectionRecord">
+<em class="property">class </em><code class="descclassname">roadrunner.</code><code class="descname">SelectionRecord</code><span class="sig-paren">(</span><em>str</em><span class="sig-paren">)</span><a class="headerlink" href="#roadrunner.SelectionRecord" title="Permalink to this definition">¶</a></dt>
+<dd><p>RoadRunner provides a range of flexible ways of selecting values from
+a simulation. These values can not only be calculated directly via
+RoadRunner.getSelectionValue, but any of these selections can be
+used as columns in the simulate result matrix.</p>
+<p>The SectionRecord.selectionType should be one of the constants listed
+here.</p>
+<p>p1 and p2 may be required along with the attribute to set certain selection types that use one or more arguments.</p>
+<p>Below is the list of attributes which are FOR ADVANCED USERS ONLY. For simplified usage, refer to <a class="reference internal" href="selecting_values.html#selecting-values"><span>Selecting Values</span></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.ALL">
+<code class="descclassname">SelectionRecord.</code><code class="descname">ALL</code><a class="headerlink" href="#roadrunner.SelectionRecord.ALL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.ALL_DEPENDENT">
+<code class="descclassname">SelectionRecord.</code><code class="descname">ALL_DEPENDENT</code><a class="headerlink" href="#roadrunner.SelectionRecord.ALL_DEPENDENT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.ALL_DEPENDENT_AMOUNT">
+<code class="descclassname">SelectionRecord.</code><code class="descname">ALL_DEPENDENT_AMOUNT</code><a class="headerlink" href="#roadrunner.SelectionRecord.ALL_DEPENDENT_AMOUNT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.ALL_DEPENDENT_CONCENTRATION">
+<code class="descclassname">SelectionRecord.</code><code class="descname">ALL_DEPENDENT_CONCENTRATION</code><a class="headerlink" href="#roadrunner.SelectionRecord.ALL_DEPENDENT_CONCENTRATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.ALL_INDEPENDENT">
+<code class="descclassname">SelectionRecord.</code><code class="descname">ALL_INDEPENDENT</code><a class="headerlink" href="#roadrunner.SelectionRecord.ALL_INDEPENDENT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.ALL_INDEPENDENT_AMOUNT">
+<code class="descclassname">SelectionRecord.</code><code class="descname">ALL_INDEPENDENT_AMOUNT</code><a class="headerlink" href="#roadrunner.SelectionRecord.ALL_INDEPENDENT_AMOUNT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.ALL_INDEPENDENT_CONCENTRATION">
+<code class="descclassname">SelectionRecord.</code><code class="descname">ALL_INDEPENDENT_CONCENTRATION</code><a class="headerlink" href="#roadrunner.SelectionRecord.ALL_INDEPENDENT_CONCENTRATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.AMOUNT">
+<code class="descclassname">SelectionRecord.</code><code class="descname">AMOUNT</code><a class="headerlink" href="#roadrunner.SelectionRecord.AMOUNT" title="Permalink to this definition">¶</a></dt>
+<dd><p>species must have either a CONCENTRATION or AMOUNT
+modifer to distinguish it.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.BOUNDARY">
+<code class="descclassname">SelectionRecord.</code><code class="descname">BOUNDARY</code><a class="headerlink" href="#roadrunner.SelectionRecord.BOUNDARY" title="Permalink to this definition">¶</a></dt>
+<dd><p>species must have either a BOUNDARY or FLOATING modifiers.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.BOUNDARY_AMOUNT">
+<code class="descclassname">SelectionRecord.</code><code class="descname">BOUNDARY_AMOUNT</code><a class="headerlink" href="#roadrunner.SelectionRecord.BOUNDARY_AMOUNT" title="Permalink to this definition">¶</a></dt>
+<dd><p>species must have either a BOUNDARY or FLOATING modifiers.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.BOUNDARY_CONCENTRATION">
+<code class="descclassname">SelectionRecord.</code><code class="descname">BOUNDARY_CONCENTRATION</code><a class="headerlink" href="#roadrunner.SelectionRecord.BOUNDARY_CONCENTRATION" title="Permalink to this definition">¶</a></dt>
+<dd><p>species must have either a BOUNDARY or FLOATING modifiers.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord._COMPARTMENT">
+<code class="descclassname">SelectionRecord.</code><code class="descname">_COMPARTMENT</code><a class="headerlink" href="#roadrunner.SelectionRecord._COMPARTMENT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compartments and parameters can be either current or initial values. These values with and underscore, &#8216;_&#8217; are intended to be used with either an CURRENT or INITIAL value modifier.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.COMPARTMENT">
+<code class="descclassname">SelectionRecord.</code><code class="descname">COMPARTMENT</code><a class="headerlink" href="#roadrunner.SelectionRecord.COMPARTMENT" title="Permalink to this definition">¶</a></dt>
+<dd><p>the current compartment value</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.CONCENTRATION">
+<code class="descclassname">SelectionRecord.</code><code class="descname">CONCENTRATION</code><a class="headerlink" href="#roadrunner.SelectionRecord.CONCENTRATION" title="Permalink to this definition">¶</a></dt>
+<dd><p>species must have either a CONCENTRATION or AMOUNT
+modifer to distinguish it.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.CONSREVED_MOIETY">
+<code class="descclassname">SelectionRecord.</code><code class="descname">CONSREVED_MOIETY</code><a class="headerlink" href="#roadrunner.SelectionRecord.CONSREVED_MOIETY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.CONTROL">
+<code class="descclassname">SelectionRecord.</code><code class="descname">CONTROL</code><a class="headerlink" href="#roadrunner.SelectionRecord.CONTROL" title="Permalink to this definition">¶</a></dt>
+<dd><p>scaled control coefficient of designated arguments.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.CURRENT">
+<code class="descclassname">SelectionRecord.</code><code class="descname">CURRENT</code><a class="headerlink" href="#roadrunner.SelectionRecord.CURRENT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.DEPENDENT">
+<code class="descclassname">SelectionRecord.</code><code class="descname">DEPENDENT</code><a class="headerlink" href="#roadrunner.SelectionRecord.DEPENDENT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.EIGENVALUE">
+<code class="descclassname">SelectionRecord.</code><code class="descname">EIGENVALUE</code><a class="headerlink" href="#roadrunner.SelectionRecord.EIGENVALUE" title="Permalink to this definition">¶</a></dt>
+<dd><p>real part of eigenvalue of designated identifier.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.EIGENVALUE_COMPLEX">
+<code class="descclassname">SelectionRecord.</code><code class="descname">EIGENVALUE_COMPLEX</code><a class="headerlink" href="#roadrunner.SelectionRecord.EIGENVALUE_COMPLEX" title="Permalink to this definition">¶</a></dt>
+<dd><p>complex part of eigenvalue of designated identifier.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.ELASTICITY">
+<code class="descclassname">SelectionRecord.</code><code class="descname">ELASTICITY</code><a class="headerlink" href="#roadrunner.SelectionRecord.ELASTICITY" title="Permalink to this definition">¶</a></dt>
+<dd><p>scaled elasticity coefficient of designated arguments.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.ELEMENT">
+<code class="descclassname">SelectionRecord.</code><code class="descname">ELEMENT</code><a class="headerlink" href="#roadrunner.SelectionRecord.ELEMENT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.FLOATING">
+<code class="descclassname">SelectionRecord.</code><code class="descname">FLOATING</code><a class="headerlink" href="#roadrunner.SelectionRecord.FLOATING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.FLOATING_AMOUNT">
+<code class="descclassname">SelectionRecord.</code><code class="descname">FLOATING_AMOUNT</code><a class="headerlink" href="#roadrunner.SelectionRecord.FLOATING_AMOUNT" title="Permalink to this definition">¶</a></dt>
+<dd><p>current amounts.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.FLOATING_AMOUNT_RATE">
+<code class="descclassname">SelectionRecord.</code><code class="descname">FLOATING_AMOUNT_RATE</code><a class="headerlink" href="#roadrunner.SelectionRecord.FLOATING_AMOUNT_RATE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.FLOATING_CONCENTRATION">
+<code class="descclassname">SelectionRecord.</code><code class="descname">FLOATING_CONCENTRATION</code><a class="headerlink" href="#roadrunner.SelectionRecord.FLOATING_CONCENTRATION" title="Permalink to this definition">¶</a></dt>
+<dd><p>current concentrations.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.FLOATING_CONCENTRATION_RATE">
+<code class="descclassname">SelectionRecord.</code><code class="descname">FLOATING_CONCENTRATION_RATE</code><a class="headerlink" href="#roadrunner.SelectionRecord.FLOATING_CONCENTRATION_RATE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.GLOBAL_PARAMETER">
+<code class="descclassname">SelectionRecord.</code><code class="descname">GLOBAL_PARAMETER</code><a class="headerlink" href="#roadrunner.SelectionRecord.GLOBAL_PARAMETER" title="Permalink to this definition">¶</a></dt>
+<dd><p>the current global parameter value</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.INDEPENDENT">
+<code class="descclassname">SelectionRecord.</code><code class="descname">INDEPENDENT</code><a class="headerlink" href="#roadrunner.SelectionRecord.INDEPENDENT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.INITIAL">
+<code class="descclassname">SelectionRecord.</code><code class="descname">INITIAL</code><a class="headerlink" href="#roadrunner.SelectionRecord.INITIAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.INITIAL_FLOATING_AMOUNT">
+<code class="descclassname">SelectionRecord.</code><code class="descname">INITIAL_FLOATING_AMOUNT</code><a class="headerlink" href="#roadrunner.SelectionRecord.INITIAL_FLOATING_AMOUNT" title="Permalink to this definition">¶</a></dt>
+<dd><p>initial amount of designated identifier.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.INITIAL_FLOATING_CONCENTRATION">
+<code class="descclassname">SelectionRecord.</code><code class="descname">INITIAL_FLOATING_CONCENTRATION</code><a class="headerlink" href="#roadrunner.SelectionRecord.INITIAL_FLOATING_CONCENTRATION" title="Permalink to this definition">¶</a></dt>
+<dd><p>initial concentration of designated identifier.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.RATE">
+<code class="descclassname">SelectionRecord.</code><code class="descname">RATE</code><a class="headerlink" href="#roadrunner.SelectionRecord.RATE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.REACTION">
+<code class="descclassname">SelectionRecord.</code><code class="descname">REACTION</code><a class="headerlink" href="#roadrunner.SelectionRecord.REACTION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.REACTION_RATE">
+<code class="descclassname">SelectionRecord.</code><code class="descname">REACTION_RATE</code><a class="headerlink" href="#roadrunner.SelectionRecord.REACTION_RATE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.STOICHIOMETRY">
+<code class="descclassname">SelectionRecord.</code><code class="descname">STOICHIOMETRY</code><a class="headerlink" href="#roadrunner.SelectionRecord.STOICHIOMETRY" title="Permalink to this definition">¶</a></dt>
+<dd><p>stoichiometric coefficient of designated identifier and reaction.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.TIME">
+<code class="descclassname">SelectionRecord.</code><code class="descname">TIME</code><a class="headerlink" href="#roadrunner.SelectionRecord.TIME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.UNKNOWN">
+<code class="descclassname">SelectionRecord.</code><code class="descname">UNKNOWN</code><a class="headerlink" href="#roadrunner.SelectionRecord.UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.UNKNOWN_CONCENTRATION">
+<code class="descclassname">SelectionRecord.</code><code class="descname">UNKNOWN_CONCENTRATION</code><a class="headerlink" href="#roadrunner.SelectionRecord.UNKNOWN_CONCENTRATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.UNKNOWN_ELEMENT">
+<code class="descclassname">SelectionRecord.</code><code class="descname">UNKNOWN_ELEMENT</code><a class="headerlink" href="#roadrunner.SelectionRecord.UNKNOWN_ELEMENT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.UNSCALED">
+<code class="descclassname">SelectionRecord.</code><code class="descname">UNSCALED</code><a class="headerlink" href="#roadrunner.SelectionRecord.UNSCALED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.UNSCALED_CONTROL">
+<code class="descclassname">SelectionRecord.</code><code class="descname">UNSCALED_CONTROL</code><a class="headerlink" href="#roadrunner.SelectionRecord.UNSCALED_CONTROL" title="Permalink to this definition">¶</a></dt>
+<dd><p>unscaled control coefficient of designated arguments.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="roadrunner.SelectionRecord.UNSCALED_ELASTICITY">
+<code class="descclassname">SelectionRecord.</code><code class="descname">UNSCALED_ELASTICITY</code><a class="headerlink" href="#roadrunner.SelectionRecord.UNSCALED_ELASTICITY" title="Permalink to this definition">¶</a></dt>
+<dd><p>unscaled elasticity coefficient of designated arguments.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="RoadRunner.SelectionRecord.index">
+<code class="descclassname">SelectionRecord.</code><code class="descname">index</code><em class="property"> int</em><a class="headerlink" href="#RoadRunner.SelectionRecord.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="RoadRunner.SelectionRecord.p1">
+<code class="descclassname">SelectionRecord.</code><code class="descname">p1</code><em class="property"> str</em><a class="headerlink" href="#RoadRunner.SelectionRecord.p1" title="Permalink to this definition">¶</a></dt>
+<dd><p>first of the arguments</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="RoadRunner.SelectionRecord.p2">
+<code class="descclassname">SelectionRecord.</code><code class="descname">p2</code><em class="property"> str</em><a class="headerlink" href="#RoadRunner.SelectionRecord.p2" title="Permalink to this definition">¶</a></dt>
+<dd><p>second of the arguments</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="RoadRunner.SelectionRecord.selectionType">
+<code class="descclassname">SelectionRecord.</code><code class="descname">selectionType</code><em class="property"> int</em><a class="headerlink" href="#RoadRunner.SelectionRecord.selectionType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 <div class="section" id="sbml-compile-options">
 <h2>SBML Compile Options<a class="headerlink" href="#sbml-compile-options" title="Permalink to this headline">¶</a></h2>
@@ -3051,6 +3325,7 @@ Raises exception if the string is not a valid SBML string.</p>
 <li><a class="reference internal" href="#analysis">Analysis</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#selectionrecord">SelectionRecord</a></li>
 <li><a class="reference internal" href="#sbml-compile-options">SBML Compile Options</a></li>
 <li><a class="reference internal" href="#accessing-the-sbml-model-variables">Accessing the SBML Model Variables</a><ul>
 <li><a class="reference internal" href="#floating-species">Floating Species</a></li>
