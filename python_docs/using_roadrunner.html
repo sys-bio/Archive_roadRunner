@@ -8,7 +8,7 @@
     
     <title>Basic Tutorial &mdash; libRoadRunner 1.4.1 documentation</title>
     
-    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
@@ -28,8 +28,8 @@
     <link rel="next" title="What Is SBML?" href="what_is_sbml.html" />
     <link rel="prev" title="Installing RoadRunner" href="installing_rr.html" /> 
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,15 +44,15 @@
         <li class="right" >
           <a href="installing_rr.html" title="Installing RoadRunner"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">libRoadRunner 1.4.1 documentation</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="introduction.html" accesskey="U">Introduction</a> &raquo;</li> 
+        <li><a href="index.html">libRoadRunner 1.4.1 documentation</a> &raquo;</li>
+          <li><a href="introduction.html" accesskey="U">Introduction</a> &raquo;</li> 
       </ul>
     </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="basic-tutorial">
 <h1>Basic Tutorial<a class="headerlink" href="#basic-tutorial" title="Permalink to this headline">¶</a></h1>
@@ -63,8 +63,8 @@
 <span class="n">rr</span> <span class="o">=</span> <span class="n">roadrunner</span><span class="o">.</span><span class="n">RoadRunner</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>The variable <code class="docutils literal"><span class="pre">rr</span></code> is your reference to roadrunner. Anything you want to do with roadrunner must be
-specified using the variable <code class="docutils literal"><span class="pre">rr</span></code>.</p>
+<p>The variable <tt class="docutils literal"><span class="pre">rr</span></tt> is your reference to roadrunner. Anything you want to do with roadrunner must be
+specified using the variable <tt class="docutils literal"><span class="pre">rr</span></tt>.</p>
 <p>To get the current version of libRoadRunner type the following:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">roadrunner</span><span class="o">.</span><span class="n">__version__</span>
 </pre></div>
@@ -74,15 +74,15 @@ specified using the variable <code class="docutils literal"><span class="pre">rr
 <span id="id1"></span><h2>Loading Models<a class="headerlink" href="#loading-models" title="Permalink to this headline">¶</a></h2>
 <p>RoadRunner reads models using the SBML format. If you have a SBML model stored on your hard drive, it is
 possible to load that model either by giving he document contents or path to the Roadrunner
-constructor, or later by using the method, <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.load" title="RoadRunner.RoadRunner.load"><code class="xref py py-meth docutils literal"><span class="pre">load()</span></code></a>. Let&#8217;s assume you have a model called
-mymodel.xml in <code class="docutils literal"><span class="pre">C:\MyModels</span></code>. To load this model in <strong>Windows</strong> we would use the command:</p>
+constructor, or later by using the method, <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.load" title="RoadRunner.RoadRunner.load"><tt class="xref py py-meth docutils literal"><span class="pre">load()</span></tt></a>. Let&#8217;s assume you have a model called
+mymodel.xml in <tt class="docutils literal"><span class="pre">C:\MyModels</span></tt>. To load this model in <strong>Windows</strong> we would use the command:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">rr</span> <span class="o">=</span> <span class="n">roadrunner</span><span class="o">.</span><span class="n">RoadRunner</span><span class="p">(</span><span class="s">&quot;C:/MyModels/mymodel.xml&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Note, Windows typically used the back slash, &#8216;\&#8217; to indicate a directory separator, however in
 most languages including python, this is the escape character, therefore one can also enter Windows
 paths using the forward slash &#8216;/&#8217; which does not cause issues. If one want to use the backslash,
-these must be typed twice, i.e. <code class="docutils literal"><span class="pre">'C:\\MyModels\\mymodel.xml'</span></code>.</p>
+these must be typed twice, i.e. <tt class="docutils literal"><span class="pre">'C:\\MyModels\\mymodel.xml'</span></tt>.</p>
 <p>On the <strong>Mac or Linux</strong> we might use:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">rr</span> <span class="o">=</span> <span class="n">roadrunner</span><span class="o">.</span><span class="n">RoadRunner</span><span class="p">(</span><span class="s">&quot;/home/MyModels/mymodel.xml&quot;</span><span class="p">)</span>
 </pre></div>
@@ -94,25 +94,25 @@ these must be typed twice, i.e. <code class="docutils literal"><span class="pre"
 <p>If the model was loaded successfully, the RoadRunner object is now ready to use,  otherwise an exception will
 be raised that contains extended information detailing exactly what failed. If any warnings are
 found in the SBML document, these will be displayed in the console error log.</p>
-<p>Additionally, there are a couple models <strong>included with libRoadRunner</strong>. The models  <code class="docutils literal"><span class="pre">feedback.xml</span></code>
-and <code class="docutils literal"><span class="pre">Test_1.xml</span></code> are available in the <code class="docutils literal"><span class="pre">roadrunner.testing</span></code> module. To access these use:</p>
+<p>Additionally, there are a couple models <strong>included with libRoadRunner</strong>. The models  <tt class="docutils literal"><span class="pre">feedback.xml</span></tt>
+and <tt class="docutils literal"><span class="pre">Test_1.xml</span></tt> are available in the <tt class="docutils literal"><span class="pre">roadrunner.testing</span></tt> module. To access these use:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">roadrunner.testing</span> <span class="kn">as</span> <span class="nn">test</span>
 <span class="n">r</span> <span class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">getRoadRunner</span><span class="p">(</span><span class="s">&#39;feedback.xml&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>There are a few additional models in the <code class="docutils literal"><span class="pre">models/</span></code> directory of the distribution, where you installed libRoadRunner.</p>
+<p>There are a few additional models in the <tt class="docutils literal"><span class="pre">models/</span></tt> directory of the distribution, where you installed libRoadRunner.</p>
 </div>
 <div class="section" id="running-simulations">
 <h2>Running Simulations<a class="headerlink" href="#running-simulations" title="Permalink to this headline">¶</a></h2>
 <p>Once a model is successfully loaded we can run a time course simulation. To run a simulation we use the
-<a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.simulate" title="RoadRunner.RoadRunner.simulate"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.simulate()</span></code></a> method:</p>
+<a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.simulate" title="RoadRunner.RoadRunner.simulate"><tt class="xref py py-meth docutils literal"><span class="pre">RoadRunner.simulate()</span></tt></a> method:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">result</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">simulate</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>The output will be in a Python numpy array. The first column will contain time points and the remaining columns will include
 all the floating species amounts/concentrations. In the simulate method we didn&#8217;t specify how long to run the simulation or how many
 points to generate.  By default the starting time is set to zero, ending time to 10 and the number of points to 50.
-There are two ways to set these values. The easiest way is to change the positional arguments in <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.simulate" title="RoadRunner.RoadRunner.simulate"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.simulate()</span></code></a>
+There are two ways to set these values. The easiest way is to change the positional arguments in <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.simulate" title="RoadRunner.RoadRunner.simulate"><tt class="xref py py-meth docutils literal"><span class="pre">RoadRunner.simulate()</span></tt></a>
 in the following manner:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">result</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">simulate</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">101</span><span class="p">)</span>
 </pre></div>
@@ -123,7 +123,7 @@ be out in time intervals of 0.1.</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">result</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="n">reset</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">stiff</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>For more details of the simulate method see <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.simulate" title="RoadRunner.RoadRunner.simulate"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.simulate()</span></code></a>.
+<p>For more details of the simulate method see <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.simulate" title="RoadRunner.RoadRunner.simulate"><tt class="xref py py-meth docutils literal"><span class="pre">RoadRunner.simulate()</span></tt></a>.
 The following table summarizes the various options.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -202,10 +202,10 @@ the following syntax:</p>
 <div class="section" id="selecting-simulation-output">
 <h2>Selecting Simulation Output<a class="headerlink" href="#selecting-simulation-output" title="Permalink to this headline">¶</a></h2>
 <p>RoadRunner supports a range of options for selecting what data a simulation should return. For more
-detailed information on selections, see the <a class="reference internal" href="selecting_values.html#selecting-values"><span>Selecting Values</span></a> section.</p>
+detailed information on selections, see the <a class="reference internal" href="selecting_values.html#selecting-values"><em>Selecting Values</em></a> section.</p>
 <p>The simulate method, by default returns an <a class="reference external" href="http://docs.scipy.org/doc/numpy/user/basics.rec.html">structured array</a>,
 which are arrays that also contain column names. These can be plotted directly using the
-built in <code class="docutils literal"><span class="pre">RoadRunner.plot()</span></code> function, or by adding the <code class="docutils literal"><span class="pre">plot=True</span></code> keyword argument to <code class="docutils literal"><span class="pre">simulate()</span></code>.</p>
+built in <tt class="docutils literal"><span class="pre">RoadRunner.plot()</span></tt> function, or by adding the <tt class="docutils literal"><span class="pre">plot=True</span></tt> keyword argument to <tt class="docutils literal"><span class="pre">simulate()</span></tt>.</p>
 <p>The output selections default to time and the set of floating species.
 It is possible to change the simulation result values by changing the selection list.
 For example assume that a model has three species, S1, S2, and S3 but we only want simulate() to
@@ -235,7 +235,7 @@ rr.timeCourseSelections = [&#8216;time&#8217;, &#8216;[S1]&#8217;, &#8216;[S2]&#
 </div>
 <div class="section" id="plotting-data">
 <span id="id2"></span><h2>Plotting Data<a class="headerlink" href="#plotting-data" title="Permalink to this headline">¶</a></h2>
-<p>RoadRunner has a built in <code class="docutils literal"><span class="pre">RoadRunner.plot()</span></code> method which can perform basic plotting.
+<p>RoadRunner has a built in <tt class="docutils literal"><span class="pre">RoadRunner.plot()</span></tt> method which can perform basic plotting.
 Simply call:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">result</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 <span class="n">rr</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
@@ -257,8 +257,8 @@ remaining columns the y axis, we type:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">pylab</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>One may also override the built in <code class="docutils literal"><span class="pre">plot</span></code> method with a more more capable plotting routine</p>
-<p>Below is a simplified version of the <code class="docutils literal"><span class="pre">RoadRunner.plot()</span></code> method. You may copy and write a
+<p>One may also override the built in <tt class="docutils literal"><span class="pre">plot</span></tt> method with a more more capable plotting routine</p>
+<p>Below is a simplified version of the <tt class="docutils literal"><span class="pre">RoadRunner.plot()</span></tt> method. You may copy and write a
 customized version and even attach it to the RoadRunner object. The first argument is a RoadRunner
 object instance, and the second is a flag which tells the method to show the plot or not:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
@@ -300,17 +300,17 @@ method:</p>
 <span class="n">roadrunner</span><span class="o">.</span><span class="n">RoadRunner</span><span class="o">.</span><span class="n">plot</span> <span class="o">=</span> <span class="n">my_plot</span>
 </pre></div>
 </div>
-<p>Now, whenever the <code class="docutils literal"><span class="pre">RoadRunner.plot</span></code> method is called, your plot function will be the one that is
+<p>Now, whenever the <tt class="docutils literal"><span class="pre">RoadRunner.plot</span></tt> method is called, your plot function will be the one that is
 invoked.</p>
 </div>
 <div class="section" id="changing-initial-conditions">
 <h2>Changing Initial Conditions<a class="headerlink" href="#changing-initial-conditions" title="Permalink to this headline">¶</a></h2>
 <p>There are a number of methods to get and set the initial conditions of a loaded model. In order to
-specify a given initial conditions we use the notation, <code class="docutils literal"><span class="pre">init(X)</span></code>.  The values stored in the
+specify a given initial conditions we use the notation, <tt class="docutils literal"><span class="pre">init(X)</span></tt>.  The values stored in the
 initial conditions are applied to the model whenever it is reset. The list of all initial condition
-symbols can be obtained by the methods, <a class="reference internal" href="api_reference.html#RoadRunner.ExecutableModel.getFloatingSpeciesInitAmountIds" title="RoadRunner.ExecutableModel.getFloatingSpeciesInitAmountIds"><code class="xref py py-meth docutils literal"><span class="pre">getFloatingSpeciesInitAmountIds()</span></code></a>
-and <a class="reference internal" href="api_reference.html#RoadRunner.ExecutableModel.getFloatingSpeciesInitConcentrationIds" title="RoadRunner.ExecutableModel.getFloatingSpeciesInitConcentrationIds"><code class="xref py py-meth docutils literal"><span class="pre">getFloatingSpeciesInitConcentrationIds()</span></code></a> assuming <code class="docutils literal"><span class="pre">r</span></code> is a roadunner
-variable. As with all other selection symbols, the <a class="reference internal" href="api_reference.html#RoadRunner.ExecutableModel.keys" title="RoadRunner.ExecutableModel.keys"><code class="xref py py-meth docutils literal"><span class="pre">keys()</span></code></a> returns all
+symbols can be obtained by the methods, <a class="reference internal" href="api_reference.html#RoadRunner.ExecutableModel.getFloatingSpeciesInitAmountIds" title="RoadRunner.ExecutableModel.getFloatingSpeciesInitAmountIds"><tt class="xref py py-meth docutils literal"><span class="pre">getFloatingSpeciesInitAmountIds()</span></tt></a>
+and <a class="reference internal" href="api_reference.html#RoadRunner.ExecutableModel.getFloatingSpeciesInitConcentrationIds" title="RoadRunner.ExecutableModel.getFloatingSpeciesInitConcentrationIds"><tt class="xref py py-meth docutils literal"><span class="pre">getFloatingSpeciesInitConcentrationIds()</span></tt></a> assuming <tt class="docutils literal"><span class="pre">r</span></tt> is a roadunner
+variable. As with all other selection symbols, the <a class="reference internal" href="api_reference.html#RoadRunner.ExecutableModel.keys" title="RoadRunner.ExecutableModel.keys"><tt class="xref py py-meth docutils literal"><span class="pre">keys()</span></tt></a> returns all
 available selection symbols:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span> <span class="n">r</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
 <span class="go">[ &#39;S1&#39;, &#39;S2&#39;, &#39;[S1]&#39;, &#39;[S2]&#39;, &#39;compartment&#39;, &#39;k1&#39;, &#39;cm0&#39;,</span>
@@ -419,7 +419,7 @@ RoadRunner only has a single steady state solver (NLEQ).</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="index.html">
               <img class="logo" src="_static/libroadrunner_logo_blue_200.png" alt="Logo"/>
@@ -445,14 +445,12 @@ RoadRunner only has a single steady state solver (NLEQ).</p>
   <h4>Next topic</h4>
   <p class="topless"><a href="what_is_sbml.html"
                         title="next chapter">What Is SBML?</a></p>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/using_roadrunner.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/using_roadrunner.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -469,7 +467,7 @@ RoadRunner only has a single steady state solver (NLEQ).</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -484,13 +482,13 @@ RoadRunner only has a single steady state solver (NLEQ).</p>
         <li class="right" >
           <a href="installing_rr.html" title="Installing RoadRunner"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">libRoadRunner 1.4.1 documentation</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="introduction.html" >Introduction</a> &raquo;</li> 
+        <li><a href="index.html">libRoadRunner 1.4.1 documentation</a> &raquo;</li>
+          <li><a href="introduction.html" >Introduction</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
+    <div class="footer">
         &copy; Copyright 2013-2015, Andy Somogyi, Herbert Suaro.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
     </div>
   </body>
 </html>
