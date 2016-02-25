@@ -6,15 +6,15 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Stability Analysis &mdash; libRoadRunner 1.4.1 documentation</title>
+    <title>Stability Analysis &mdash; libRoadRunner 1.5.0 documentation</title>
     
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.4.1',
+        VERSION:     '1.5.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,12 +23,12 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="libRoadRunner 1.4.1 documentation" href="index.html" />
+    <link rel="top" title="libRoadRunner 1.5.0 documentation" href="index.html" />
     <link rel="next" title="Accessing the SBML Model Variables" href="accessing_model.html" />
     <link rel="prev" title="Metabolic Control Analysis" href="metabolic.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -43,14 +43,14 @@
         <li class="right" >
           <a href="metabolic.html" title="Metabolic Control Analysis"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">libRoadRunner 1.4.1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">libRoadRunner 1.5.0 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="stability-analysis">
 <h1>Stability Analysis<a class="headerlink" href="#stability-analysis" title="Permalink to this headline">¶</a></h1>
@@ -60,19 +60,19 @@
 <p><img src="_images/math/2408bf7a5af0847d8d6c3b98dc6dbe839ebdbaad.png" alt="J=\begin{bmatrix} \dfrac{\partial F_1}{\partial S_1} &amp; \cdots &amp; \dfrac{\partial F_1}{\partial S_m} \\
 \vdots &amp; \ddots &amp; \vdots \\ \dfrac{\partial F_n}{\partial S_1} &amp; \cdots &amp; \dfrac{\partial F_n}{\partial S_m}
 \end{bmatrix}"/></p>
-</div><p>where <img class="math" src="_images/math/d07b4c16d04b6739df29c10f32dfc4b946061922.png" alt="F_i"/> is the ith differential equation and <img class="math" src="_images/math/3f1a4e430c239029fe31b52c95bb3278d0bc3d49.png" alt="S_i"/> the ith floating species. From RoadRunner it is easy to obtain the Jacobian matrix using <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getFullJacobian" title="RoadRunner.RoadRunner.getFullJacobian"><tt class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getFullJacobian()</span></tt></a>, i.e.:</p>
+</div><p>where <img class="math" src="_images/math/d07b4c16d04b6739df29c10f32dfc4b946061922.png" alt="F_i"/> is the ith differential equation and <img class="math" src="_images/math/3f1a4e430c239029fe31b52c95bb3278d0bc3d49.png" alt="S_i"/> the ith floating species. From RoadRunner it is easy to obtain the Jacobian matrix using <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getFullJacobian" title="RoadRunner.RoadRunner.getFullJacobian"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getFullJacobian()</span></code></a>, i.e.:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">Jac</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">getFullJacobian</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>which returns the Jacobian matrix in the variable Jac.</p>
-<p>It is possible for full Jacobian to be singular. In these situations one should call the related method, <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getReducedJacobian" title="RoadRunner.RoadRunner.getReducedJacobian"><tt class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getReducedJacobian()</span></tt></a>.</p>
+<p>It is possible for full Jacobian to be singular. In these situations one should call the related method, <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getReducedJacobian" title="RoadRunner.RoadRunner.getReducedJacobian"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getReducedJacobian()</span></code></a>.</p>
 </div>
 
 
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="index.html">
               <img class="logo" src="_static/libroadrunner_logo_blue_200.png" alt="Logo"/>
@@ -83,12 +83,14 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="accessing_model.html"
                         title="next chapter">Accessing the SBML Model Variables</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/stability.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/stability.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -105,7 +107,7 @@
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -120,12 +122,12 @@
         <li class="right" >
           <a href="metabolic.html" title="Metabolic Control Analysis"
              >previous</a> |</li>
-        <li><a href="index.html">libRoadRunner 1.4.1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">libRoadRunner 1.5.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
+    <div class="footer" role="contentinfo">
         &copy; Copyright 2013-2015, Andy Somogyi, Herbert Suaro.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

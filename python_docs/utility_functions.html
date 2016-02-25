@@ -6,15 +6,15 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Utility Functions &mdash; libRoadRunner 1.4.1 documentation</title>
+    <title>Utility Functions &mdash; libRoadRunner 1.5.0 documentation</title>
     
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.4.1',
+        VERSION:     '1.5.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,12 +23,12 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="libRoadRunner 1.4.1 documentation" href="index.html" />
+    <link rel="top" title="libRoadRunner 1.5.0 documentation" href="index.html" />
     <link rel="next" title="RoadRunner API Reference" href="api_reference.html" />
     <link rel="prev" title="Simulation and Integration" href="integration.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -43,21 +43,21 @@
         <li class="right" >
           <a href="integration.html" title="Simulation and Integration"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">libRoadRunner 1.4.1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">libRoadRunner 1.5.0 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="utility-functions">
 <h1>Utility Functions<a class="headerlink" href="#utility-functions" title="Permalink to this headline">¶</a></h1>
 <p>The following methodsprovide basic information about the current roadRunner installation.</p>
 <div class="section" id="information-group">
 <h2>Information Group<a class="headerlink" href="#information-group" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getInfo" title="RoadRunner.RoadRunner.getInfo"><tt class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getInfo()</span></tt></a> returns useful information about libRoadRunner&#8217;s current state:</p>
+<p><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getInfo" title="RoadRunner.RoadRunner.getInfo"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getInfo()</span></code></a> returns useful information about libRoadRunner&#8217;s current state:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">rr</span><span class="o">.</span><span class="n">getInfo</span><span class="p">()</span>
 <span class="go">Model Loaded: false</span>
 <span class="go">ConservationAnalysis: 0</span>
@@ -68,7 +68,7 @@
 <span class="go">Working Directory: C:\dev\eclipse</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="api_reference.html#roadrunner.getVersionStr" title="roadrunner.getVersionStr"><tt class="xref py py-meth docutils literal"><span class="pre">roadrunner.getVersionStr()</span></tt></a> returns specific information Strings based on arguments passed to it.
+<p><a class="reference internal" href="api_reference.html#roadrunner.getVersionStr" title="roadrunner.getVersionStr"><code class="xref py py-meth docutils literal"><span class="pre">roadrunner.getVersionStr()</span></code></a> returns specific information Strings based on arguments passed to it.
 For example to get the libSBML version used, you can:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">roadrunner</span>
 
@@ -85,8 +85,8 @@ For example to get the libSBML version used, you can:</p>
 <span class="go">1.0.0; Compiler: Microsoft Visual Studio 2010; Date: Dec 18 2013, 22:59:30; LibSBML Version: 5.9.0</span>
 </pre></div>
 </div>
-<p>There is also the standard python <tt class="docutils literal"><span class="pre">__version__</span></tt> which is actually set
-when the module is loaded from <tt class="docutils literal"><span class="pre">getVersionStr</span></tt>:</p>
+<p>There is also the standard python <code class="docutils literal"><span class="pre">__version__</span></code> which is actually set
+when the module is loaded from <code class="docutils literal"><span class="pre">getVersionStr</span></code>:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">roadrunner</span><span class="o">.</span><span class="n">__version__</span>
 <span class="go">1.0.0; Compiler: Microsoft Visual Studio 2010; Date: Dec 18 2013, 22:59:30</span>
 </pre></div>
@@ -97,7 +97,7 @@ when the module is loaded from <tt class="docutils literal"><span class="pre">ge
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getInfo" title="RoadRunner.RoadRunner.getInfo"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getInfo</span></tt></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getInfo" title="RoadRunner.RoadRunner.getInfo"><code class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getInfo</span></code></a></td>
 <td></td>
 </tr>
 </tbody>
@@ -109,7 +109,7 @@ when the module is loaded from <tt class="docutils literal"><span class="pre">ge
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="index.html">
               <img class="logo" src="_static/libroadrunner_logo_blue_200.png" alt="Logo"/>
@@ -128,12 +128,14 @@ when the module is loaded from <tt class="docutils literal"><span class="pre">ge
   <h4>Next topic</h4>
   <p class="topless"><a href="api_reference.html"
                         title="next chapter">RoadRunner API Reference</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/utility_functions.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/utility_functions.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -150,7 +152,7 @@ when the module is loaded from <tt class="docutils literal"><span class="pre">ge
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -165,12 +167,12 @@ when the module is loaded from <tt class="docutils literal"><span class="pre">ge
         <li class="right" >
           <a href="integration.html" title="Simulation and Integration"
              >previous</a> |</li>
-        <li><a href="index.html">libRoadRunner 1.4.1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">libRoadRunner 1.5.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
+    <div class="footer" role="contentinfo">
         &copy; Copyright 2013-2015, Andy Somogyi, Herbert Suaro.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

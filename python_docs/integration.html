@@ -6,15 +6,15 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Simulation and Integration &mdash; libRoadRunner 1.4.1 documentation</title>
+    <title>Simulation and Integration &mdash; libRoadRunner 1.5.0 documentation</title>
     
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.4.1',
+        VERSION:     '1.5.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,12 +23,12 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="libRoadRunner 1.4.1 documentation" href="index.html" />
+    <link rel="top" title="libRoadRunner 1.5.0 documentation" href="index.html" />
     <link rel="next" title="Utility Functions" href="utility_functions.html" />
     <link rel="prev" title="Accessing the SBML Model Variables" href="accessing_model.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -43,14 +43,14 @@
         <li class="right" >
           <a href="accessing_model.html" title="Accessing the SBML Model Variables"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">libRoadRunner 1.4.1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">libRoadRunner 1.5.0 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="simulation-and-integration">
 <h1>Simulation and Integration<a class="headerlink" href="#simulation-and-integration" title="Permalink to this headline">¶</a></h1>
@@ -70,7 +70,7 @@ between performance and numeric stability for most systems. However, one may fre
 stiffer systems which require tighter tolerances . Note that specifying very tight tolerances will
 drastically decrease performance.</p>
 <p>Another parameter which is a significant role in numeric stability and performance is the initial
-time step. If no initial time step is provided (initialTimeStep &lt; 0, the default
+time step. If no initial time step is provided (initial time step &lt; 0, the default
 value), the internal integrator (defaults to CVODE) will estimate an initial time step based on
 total time span and and other numeric attributes calculated from the system. If the estimated
 initial time step is too large, then a significant amount of time will be spent by the integrator
@@ -80,13 +80,17 @@ the time step will increase if the function is relatively smooth, however, by th
 has been increased, the simulation time may be over.</p>
 <p>If one encounters exceptions from the integrator, the first thing that one should try is specifying
 an initial time step and tighter absolute and relative tolerances.</p>
-<p>All of the parameters to tune the integration are optional keyword arguments to
-<a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.simulate" title="RoadRunner.RoadRunner.simulate"><tt class="xref py py-meth docutils literal"><span class="pre">RoadRunner.simulate()</span></tt></a>. Setting these values may be performed as:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">r</span><span class="o">=</span><span class="n">roadrunner</span><span class="o">.</span><span class="n">RoadRunner</span><span class="p">(</span><span class="s">&quot;mymodel.xml&quot;</span><span class="p">)</span>
-<span class="n">r</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">absolute</span> <span class="o">=</span> <span class="mf">5e-10</span><span class="p">,</span> <span class="n">initialTimeStep</span> <span class="o">=</span> <span class="mf">0.00001</span> <span class="p">)</span>
-</pre></div>
-</div>
-<p>This will specify the absolute precision and initial time step, and will integrate the system from
+<p>All of the parameters to tune the integration are specified on the integrator object:</p>
+<blockquote>
+<div><p>r=roadrunner.RoadRunner(&#8220;mymodel.xml&#8221;)</p>
+<p># specify absolute and relative tolerances
+r.integrator.absolute_tolerance = 5e-10
+r.integrator.relative_tolerance = 1e-3
+# specify initial time step
+r.integrator.initial_time_step = 0.00001</p>
+<p>r.simulate(0, 10)</p>
+</div></blockquote>
+<p>This will specify the absolute and relative tolerances and initial time step, and will integrate the system from
 time 0 to 10. The internal integrator will take many time steps before it reaches time 10.</p>
 </div>
 </div>
@@ -95,7 +99,7 @@ time 0 to 10. The internal integrator will take many time steps before it reache
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="index.html">
               <img class="logo" src="_static/libroadrunner_logo_blue_200.png" alt="Logo"/>
@@ -114,12 +118,14 @@ time 0 to 10. The internal integrator will take many time steps before it reache
   <h4>Next topic</h4>
   <p class="topless"><a href="utility_functions.html"
                         title="next chapter">Utility Functions</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/integration.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/integration.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -136,7 +142,7 @@ time 0 to 10. The internal integrator will take many time steps before it reache
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -151,12 +157,12 @@ time 0 to 10. The internal integrator will take many time steps before it reache
         <li class="right" >
           <a href="accessing_model.html" title="Accessing the SBML Model Variables"
              >previous</a> |</li>
-        <li><a href="index.html">libRoadRunner 1.4.1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">libRoadRunner 1.5.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
+    <div class="footer" role="contentinfo">
         &copy; Copyright 2013-2015, Andy Somogyi, Herbert Suaro.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>
