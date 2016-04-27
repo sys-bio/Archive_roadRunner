@@ -98,37 +98,37 @@ All the returned types are structured <cite>Numpy</cite> arrays.</p>
 <h2>Example of libRoadRunner in Use<a class="headerlink" href="#example-of-libroadrunner-in-use" title="Permalink to this headline">¶</a></h2>
 <p>Transcript from an Python session to demonstrate libRoadRunner use on this interactive Python console.</p>
 <p><strong>Import</strong> roardrunner and numpy:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">roadrunner</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">roadrunner</span>
 <span class="kn">import</span> <span class="nn">roadrunner.testing</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">n</span>
-<span class="kn">import</span> <span class="nn">numpy.linalg</span> <span class="kn">as</span> <span class="nn">lin</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">n</span>
+<span class="kn">import</span> <span class="nn">numpy.linalg</span> <span class="k">as</span> <span class="nn">lin</span>
 </pre></div>
 </div>
 <p><strong>Load</strong> an SBML model:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">rr</span> <span class="o">=</span> <span class="n">roadrunner</span><span class="o">.</span><span class="n">RoadRunner</span><span class="p">()</span>
-<span class="n">rr</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">roadrunner</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="s">&#39;Test_1.xml&#39;</span><span class="p">))</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rr</span> <span class="o">=</span> <span class="n">roadrunner</span><span class="o">.</span><span class="n">RoadRunner</span><span class="p">()</span>
+<span class="n">rr</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">roadrunner</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="s1">&#39;Test_1.xml&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <dl class="docutils">
 <dt></dt>
-<dd><div class="first last highlight-python"><div class="highlight"><pre><span class="bp">True</span>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="kc">True</span>
 </pre></div>
 </div>
 </dd>
 </dl>
 <p>Get the <strong>model</strong>, the model object has all the accessors sbml elements, names, values:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">m</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">getModel</span><span class="p">()</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">getModel</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Use the built in RR function to get the <strong>Jacobian</strong>, notice this is returned as a native
 numpy matrix, and display it:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">jac</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">getFullJacobian</span><span class="p">()</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">jac</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">getFullJacobian</span><span class="p">()</span>
 <span class="n">jac</span>
 </pre></div>
 </div>
 <dl class="docutils">
 <dt></dt>
-<dd><div class="first last highlight-python"><div class="highlight"><pre><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mf">0.2</span>  <span class="p">,</span>  <span class="mf">0.067</span><span class="p">,</span>  <span class="mf">0.</span>   <span class="p">],</span>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mf">0.2</span>  <span class="p">,</span>  <span class="mf">0.067</span><span class="p">,</span>  <span class="mf">0.</span>   <span class="p">],</span>
        <span class="p">[</span> <span class="mf">0.15</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.467</span><span class="p">,</span>  <span class="mf">0.09</span> <span class="p">],</span>
        <span class="p">[</span> <span class="mf">0.</span>   <span class="p">,</span>  <span class="mf">0.4</span>  <span class="p">,</span> <span class="o">-</span><span class="mf">0.64</span> <span class="p">]])</span>
 </pre></div>
@@ -136,36 +136,36 @@ numpy matrix, and display it:</p>
 </dd>
 </dl>
 <p>Get a vector of <strong>floating species amounts</strong>, and display it:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">amt</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">getFloatingSpeciesAmounts</span><span class="p">()</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">amt</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">getFloatingSpeciesAmounts</span><span class="p">()</span>
 <span class="n">amt</span>
 </pre></div>
 </div>
 <dl class="docutils">
 <dt></dt>
-<dd><div class="first last highlight-python"><div class="highlight"><pre><span class="n">array</span><span class="p">([</span> <span class="mf">0.1</span> <span class="p">,</span>  <span class="mf">0.25</span><span class="p">,</span>  <span class="mf">0.1</span> <span class="p">])</span>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">array</span><span class="p">([</span> <span class="mf">0.1</span> <span class="p">,</span>  <span class="mf">0.25</span><span class="p">,</span>  <span class="mf">0.1</span> <span class="p">])</span>
 </pre></div>
 </div>
 </dd>
 </dl>
 <p>Look at the <strong>floating species ids</strong>:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">m</span><span class="o">.</span><span class="n">getFloatingSpeciesIds</span><span class="p">()</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">getFloatingSpeciesIds</span><span class="p">()</span>
 </pre></div>
 </div>
 <dl class="docutils">
 <dt></dt>
-<dd><div class="first last highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="s">&#39;S1&#39;</span><span class="p">,</span> <span class="s">&#39;S2&#39;</span><span class="p">,</span> <span class="s">&#39;S3&#39;</span><span class="p">]</span>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;S1&#39;</span><span class="p">,</span> <span class="s1">&#39;S2&#39;</span><span class="p">,</span> <span class="s1">&#39;S3&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </dd>
 </dl>
 <p>Numpy has a huge amount of numeric capability, here we calculate
 the <strong>eigensystem from the Jacobian</strong>.:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">lin</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">jac</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">lin</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">jac</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="docutils">
 <dt></dt>
-<dd><div class="first last highlight-python"><div class="highlight"><pre><span class="p">(</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mf">0.15726345</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.38237134</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.76736521</span><span class="p">]),</span>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mf">0.15726345</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.38237134</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.76736521</span><span class="p">]),</span>
  <span class="n">array</span><span class="p">([[</span> <span class="mf">0.77009381</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.19510707</span><span class="p">,</span>  <span class="mf">0.03580588</span><span class="p">],</span>
         <span class="p">[</span> <span class="mf">0.49121122</span><span class="p">,</span>  <span class="mf">0.53107368</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.30320915</span><span class="p">],</span>
         <span class="p">[</span> <span class="mf">0.40702219</span><span class="p">,</span>  <span class="mf">0.82455683</span><span class="p">,</span>  <span class="mf">0.95225109</span><span class="p">]]))</span>
@@ -175,29 +175,29 @@ the <strong>eigensystem from the Jacobian</strong>.:</p>
 </dl>
 <p>Suppose we wanted to calculate the matrix vector product of the <strong>jacobian with the
 floating species amounts</strong>, its a single statement, since we use native types.:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">n</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">jac</span><span class="p">,</span> <span class="n">amt</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">jac</span><span class="p">,</span> <span class="n">amt</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="docutils">
 <dt></dt>
-<dd><div class="first last highlight-python"><div class="highlight"><pre><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mf">0.00325</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.09275</span><span class="p">,</span>  <span class="mf">0.036</span>  <span class="p">])</span>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mf">0.00325</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.09275</span><span class="p">,</span>  <span class="mf">0.036</span>  <span class="p">])</span>
 </pre></div>
 </div>
 </dd>
 </dl>
 <p>Finally, you can of course <strong>simulate over time</strong>. The first column in result is time,
 the rest are whatever is selected. The easies way to plot is to use <code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.plot()</span></code>:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">results</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">simulate</span><span class="p">()</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">simulate</span><span class="p">()</span>
 <span class="n">rr</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="using_roadrunner.html#plotting-data"><span>Plotting Data</span></a></p>
+<p class="last"><a class="reference internal" href="using_roadrunner.html#plotting-data"><span class="std std-ref">Plotting Data</span></a></p>
 </div>
 <p>Using libRoadRunner in <a class="reference external" href="http://ipython.org/">IPython</a> you can <strong>get documentation</strong>
 easily using a <code class="docutils literal"><span class="pre">?</span></code> after the object or method:</p>
-<div class="highlight-python"><div class="highlight"><pre>&gt;&gt;&gt; r.plot?
+<div class="highlight-default"><div class="highlight"><pre><span></span>&gt;&gt;&gt; r.plot?
 
 Type:        instancemethod
 String form: &lt;bound method RoadRunner.plot of &lt;roadrunner.RoadRunner() { this = 0x101c70a00 }&gt;&gt;
@@ -292,9 +292,6 @@ function identically.</p>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -322,7 +319,7 @@ function identically.</p>
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2013-2015, Andy Somogyi, Herbert Suaro.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
     </div>
   </body>
 </html>
