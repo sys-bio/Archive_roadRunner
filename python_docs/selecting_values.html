@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Selecting Values &mdash; libRoadRunner 1.5.0 documentation</title>
+    <title>Selecting Values &mdash; libRoadRunner 1.4.3 documentation</title>
     
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.5.0',
+        VERSION:     '1.4.3',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="libRoadRunner 1.5.0 documentation" href="index.html" />
+    <link rel="top" title="libRoadRunner 1.4.3 documentation" href="index.html" />
     <link rel="next" title="Steady State Analysis" href="steady_state.html" />
     <link rel="prev" title="SBML Read/Write Functions" href="read_write_functions.html" /> 
   </head>
@@ -43,7 +43,7 @@
         <li class="right" >
           <a href="read_write_functions.html" title="SBML Read/Write Functions"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">libRoadRunner 1.5.0 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">libRoadRunner 1.4.3 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -54,8 +54,8 @@
             
   <div class="section" id="selecting-values">
 <span id="id1"></span><h1>Selecting Values<a class="headerlink" href="#selecting-values" title="Permalink to this headline">¶</a></h1>
-<p>RoadRunner support a wide range of options for selecting SBML and derivative values. Selections can
-be used to either retrieve or in many cases, store values. We define SBML values as any element
+<p>RoadRunner supports wide range of options for selecting SBML and derivative values. Selections can
+be used to either retrieve or store values. We define SBML values as any element
 specified in the original SBML document, whereas derivative values are a function of one or more
 SBML values. As these functions typically have no inverse, these are read only selections.</p>
 <p>Selections are used a number of RoadRunner methods. They are used to determine what columns are
@@ -73,8 +73,8 @@ white space.</p>
 the exception of <code class="docutils literal"><span class="pre">time</span></code>, i.e. <code class="docutils literal"><span class="pre">S1</span></code>, <code class="docutils literal"><span class="pre">P1</span></code>, <code class="docutils literal"><span class="pre">J0_Keq1</span></code>, <code class="docutils literal"><span class="pre">compartment</span></code>, etc.
 These have to be valid SBML identifiers. If no SBML identifier is found, an exception is raised.
 Note that if the identifier is a chemical species, it is interpreted as the species amount.</dd>
-<dt>Concentration</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier"><code class="docutils literal"><span class="pre">[]</span></code></span><dd>Following generally accepted chemical nomenclature, any continuous sequence of characters inside
+<dt>Concentration <span class="classifier-delimiter">:</span> <span class="classifier"><code class="docutils literal"><span class="pre">[]</span></code></span></dt>
+<dd>Following generally accepted chemical nomenclature, any continuous sequence of characters inside
 a pair of squared brackets, <code class="docutils literal"><span class="pre">[]</span></code> is interpreted as a concentration, i.e. <code class="docutils literal"><span class="pre">[S1]</span></code>, <code class="docutils literal"><span class="pre">[S2]</span></code>, etc.
 The identifier must be a valid SBML species, otherwise an exception is raised.</dd>
 <dt>Rates of Change: <code class="docutils literal"><span class="pre">'</span></code></dt>
@@ -86,21 +86,21 @@ is also valid for SBML elements which are defined by rate rules.</dd>
 <dt>Elasticity: <code class="docutils literal"><span class="pre">ee(ReactionId,</span> <span class="pre">ParameterId)</span></code></dt>
 <dd>Represents elasticity slection in the form of <code class="docutils literal"><span class="pre">ee(ReactionId,</span> <span class="pre">ParameterId)</span></code> where <code class="docutils literal"><span class="pre">ReactionId</span></code> is a reaction name
 and <code class="docutils literal"><span class="pre">ParameterId</span></code> is a global parameter id. This selection intentionally has a function form, it
-selects the elasticity control coefficient, <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getEE" title="RoadRunner.RoadRunner.getEE"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getEE()</span></code></a></dd>
+selects the elasticity control coefficient, <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getEE" title="RoadRunner.RoadRunner.getEE"><code class="xref py py-meth docutils literal"><span class="pre">getEE()</span></code></a></dd>
 <dt>Unscaled Elasticity: <code class="docutils literal"><span class="pre">uee(ReactionId,</span> <span class="pre">ParameterId)</span></code></dt>
 <dd>Represents unscaled elasticity slection in the form of <code class="docutils literal"><span class="pre">uee(ReactionId,</span> <span class="pre">ParameterId)</span></code> where <code class="docutils literal"><span class="pre">ReactionId</span></code>
 is a reaction name and <code class="docutils literal"><span class="pre">ParameterId</span></code> is a global parameter id. This selection intentionally has a function form, it
-selects the elasticity control coefficient, <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getEE" title="RoadRunner.RoadRunner.getEE"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getEE()</span></code></a></dd>
+selects the elasticity control coefficient, <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getuEE" title="RoadRunner.RoadRunner.getuEE"><code class="xref py py-meth docutils literal"><span class="pre">getuEE()</span></code></a></dd>
 <dt>Control Coefficient: <code class="docutils literal"><span class="pre">cc(Id,</span> <span class="pre">ParameterId)</span></code></dt>
 <dd>Represents control coefficient selection in the form of <code class="docutils literal"><span class="pre">cc(Id,</span> <span class="pre">ParameterId)</span></code> where <code class="docutils literal"><span class="pre">Id</span></code> is
 a flux or species name and <code class="docutils literal"><span class="pre">ParameterId</span></code> is a global parameter id. The string <code class="docutils literal"><span class="pre">Id</span></code> and <code class="docutils literal"><span class="pre">ParameterId</span></code>
-must be valid arguments     for <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getCC" title="RoadRunner.RoadRunner.getCC"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getCC()</span></code></a>. This selection intentionally has a function form, it
-selects the elasticity control coefficient, <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getCC" title="RoadRunner.RoadRunner.getCC"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getCC()</span></code></a></dd>
+must be valid arguments     for <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getCC" title="RoadRunner.RoadRunner.getCC"><code class="xref py py-meth docutils literal"><span class="pre">getCC()</span></code></a>. This selection intentionally has a function form, it
+selects the elasticity control coefficient, <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getCC" title="RoadRunner.RoadRunner.getCC"><code class="xref py py-meth docutils literal"><span class="pre">getCC()</span></code></a></dd>
 <dt>Unscaled Control Coefficient: <code class="docutils literal"><span class="pre">ucc(Id,</span> <span class="pre">ParameterId)</span></code></dt>
 <dd>Represents unscaled control coefficient selections in the form of <code class="docutils literal"><span class="pre">ucc(Id,</span> <span class="pre">ParameterId)</span></code> where <cite>Id`</cite> is
 a flux or species name and <code class="docutils literal"><span class="pre">ParameterId</span></code> is a global parameter id. The string <code class="docutils literal"><span class="pre">Id</span></code> and <code class="docutils literal"><span class="pre">ParameterId</span></code>
-must be valid arguments for <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getuCC" title="RoadRunner.RoadRunner.getuCC"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getuCC()</span></code></a>. This selection intentionally has a function form, it
-selects the unscaled elasticity control coefficient, <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getuCC" title="RoadRunner.RoadRunner.getuCC"><code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getuCC()</span></code></a></dd>
+must be valid arguments for <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getuCC" title="RoadRunner.RoadRunner.getuCC"><code class="xref py py-meth docutils literal"><span class="pre">getuCC()</span></code></a>. This selection intentionally has a function form, it
+selects the unscaled elasticity control coefficient, <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getuCC" title="RoadRunner.RoadRunner.getuCC"><code class="xref py py-meth docutils literal"><span class="pre">getuCC()</span></code></a></dd>
 <dt>Eigenvalue: <code class="docutils literal"><span class="pre">eigenReal()</span></code>, <code class="docutils literal"><span class="pre">eigenImag()</span></code></dt>
 <dd>Represents the eigenvalue of a floating species. <code class="docutils literal"><span class="pre">eigenReal(identifier)</span></code> is the real part of eigenvalue while
 <code class="docutils literal"><span class="pre">eigenImag(identifier)</span></code> is the imaginary part of eigenvalue.</dd>
@@ -111,49 +111,49 @@ selects the unscaled elasticity control coefficient, <a class="reference interna
 </dl>
 <div class="section" id="experimenting-with-selections">
 <h3>Experimenting With Selections<a class="headerlink" href="#experimenting-with-selections" title="Permalink to this headline">¶</a></h3>
-<p>One my try individual selection string using the <code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.getValue()</span></code> method. This
+<p>One might try individual selection string using the <a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.getValue" title="roadrunner.RoadRunner.getValue"><code class="xref py py-meth docutils literal"><span class="pre">getValue()</span></code></a> method. This
 takes a selection string, determines if it is valid, and returns the value it selects. For example:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rr</span><span class="o">.</span><span class="n">getValue</span><span class="p">(</span><span class="s2">&quot;cc(S1, J4_KS4)&quot;</span><span class="p">)</span>
-<span class="go">    -0.42955738179207886</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rr</span><span class="o">.</span><span class="n">getValue</span><span class="p">(</span><span class="s2">&quot;cc(S1, J4_KS4)&quot;</span><span class="p">)</span>
+<span class="go">-0.42955738179207886</span>
 </pre></div>
 </div>
 <p>Even though they are almost always specified by a string, RoadRunner selections are actually
-objects. One can create a selection object directly using <code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.createSelection()</span></code>, and in
-order to see extended information about, simply display it. For example, using IPython:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sel</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">createSelection</span><span class="p">(</span><span class="s2">&quot;cc(S1, J4_KS4)&quot;</span><span class="p">)</span>
+objects. One can create a selection object using <a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.createSelection" title="roadrunner.RoadRunner.createSelection"><code class="xref py py-meth docutils literal"><span class="pre">createSelection()</span></code></a>. In
+order to see extended information about the selection, try:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sel</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">createSelection</span><span class="p">(</span><span class="s2">&quot;cc(S1, J4_KS4)&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sel</span>
-<span class="go">    SelectionRecord({&#39;index&#39; : -1, &#39;p1&#39; : &#39;S1&#39;, &#39;p2&#39; : &#39;J4_KS4&#39;, &#39;selectionType&#39; : CONTROL})</span>
+<span class="go">SelectionRecord({&#39;index&#39; : -1, &#39;p1&#39; : &#39;S1&#39;, &#39;p2&#39; : &#39;J4_KS4&#39;, &#39;selectionType&#39; : CONTROL})</span>
 </pre></div>
 </div>
 <p>We can see that this is a CONTROL record.</p>
 <p>It is also possible to modify the simulation selection list by deleting existing items and adding
-new ones created with <code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.createSelection()</span></code>. If someone has does not want to display
+new ones created with <a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.createSelection" title="roadrunner.RoadRunner.createSelection"><code class="xref py py-meth docutils literal"><span class="pre">createSelection()</span></code></a>. If someone has does not want to display
 the concentration of species <code class="docutils literal"><span class="pre">S2</span></code> and instead wants to display the rate of change of species
-<code class="docutils literal"><span class="pre">S</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rr</span><span class="o">.</span><span class="n">timeCourseSelections</span>
-<span class="go">    [&quot;time&quot;, &quot;[S1]&quot;, &quot;[S2]&quot;, &quot;[S3]&quot;, &quot;[S4]&quot;]</span>
+<code class="docutils literal"><span class="pre">S1</span></code>, try:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rr</span><span class="o">.</span><span class="n">timeCourseSelections</span>
+<span class="go">[&quot;time&quot;, &quot;[S1]&quot;, &quot;[S2]&quot;, &quot;[S3]&quot;, &quot;[S4]&quot;]</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sel</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">createSelection</span><span class="p">(</span><span class="s2">&quot;S1&#39;&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rr</span><span class="o">.</span><span class="n">timeCourseSelections</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">sel</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rr</span><span class="o">.</span><span class="n">timeCourseSelections</span>
-<span class="go">    [&quot;time&quot;, &quot;[S1]&quot;, &quot;S1&#39;&quot;, &quot;[S3]&quot;, &quot;[S4]&quot;]</span>
+<span class="go">[&quot;time&quot;, &quot;[S1]&quot;, &quot;S1&#39;&quot;, &quot;[S3]&quot;, &quot;[S4]&quot;]</span>
 </pre></div>
 </div>
 <p>Even though the selection list intentionally appears as a list of strings, it is actually a list of
 selection objects. So, elements that are inserted or appended to this list must be selection objects
-created by <code class="xref py py-meth docutils literal"><span class="pre">RoadRunner.createSelection()</span></code>.</p>
+created by <a class="reference internal" href="api_reference.html#roadrunner.RoadRunner.createSelection" title="roadrunner.RoadRunner.createSelection"><code class="xref py py-meth docutils literal"><span class="pre">createSelection()</span></code></a>.</p>
 </div>
 <div class="section" id="selecting-simulation-results">
 <h3>Selecting Simulation Results<a class="headerlink" href="#selecting-simulation-results" title="Permalink to this headline">¶</a></h3>
-<p>The columns of the RoadRunner simulation results are determined by the <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.timeCourseSelections" title="RoadRunner.RoadRunner.timeCourseSelections"><code class="xref py py-attr docutils literal"><span class="pre">RoadRunner.timeCourseSelections</span></code></a>
+<p>The columns of the RoadRunner simulation results are determined by the <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.timeCourseSelections" title="RoadRunner.RoadRunner.timeCourseSelections"><code class="xref py py-attr docutils literal"><span class="pre">timeCourseSelections</span></code></a>
 property. This is a list of what values will be displayed in the result, and can be set simply by:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rr</span><span class="o">.</span><span class="n">timeCourseSelections</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;[S1]&#39;</span><span class="p">,</span> <span class="s1">&#39;S1&#39;</span><span class="p">,</span> <span class="s2">&quot;S1&#39;&quot;</span><span class="p">]</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="n">rr</span><span class="o">.</span><span class="n">timeCourseSelections</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;[S1]&#39;</span><span class="p">,</span> <span class="s1">&#39;S1&#39;</span><span class="p">,</span> <span class="s2">&quot;S1&#39;&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>This example selects the columns time, concentration of <code class="docutils literal"><span class="pre">S1</span></code>, amount of <code class="docutils literal"><span class="pre">S1</span></code>, and rate of change
+<p>This example selects the columns <code class="docutils literal"><span class="pre">time</span></code>, concentration of <code class="docutils literal"><span class="pre">S1</span></code>, amount of <code class="docutils literal"><span class="pre">S1</span></code>, and rate of change
 of <code class="docutils literal"><span class="pre">S1</span></code>. One may also have derivative values in the simulation selection, for example, if one
-wanted to plot the elasticity of a particular reaction:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rr</span><span class="o">.</span><span class="n">timeCourseSelections</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;[S1]&#39;</span><span class="p">,</span> <span class="s2">&quot;ee(J1, P1)&quot;</span><span class="p">]</span>
+wanted to plot the elasticity of a particular reaction <code class="docutils literal"><span class="pre">J1</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="n">rr</span><span class="o">.</span><span class="n">timeCourseSelections</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;[S1]&#39;</span><span class="p">,</span> <span class="s2">&quot;ee(J1, P1)&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -220,6 +220,9 @@ wanted to plot the elasticity of a particular reaction:</p>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -241,12 +244,12 @@ wanted to plot the elasticity of a particular reaction:</p>
         <li class="right" >
           <a href="read_write_functions.html" title="SBML Read/Write Functions"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">libRoadRunner 1.5.0 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">libRoadRunner 1.4.3 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015, Andy Somogyi, Herbert Suaro.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+        &copy; Copyright 2013-2016, Andy Somogyi, Herbert Suaro.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
     </div>
   </body>
 </html>

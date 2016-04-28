@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>libRoadRunner User Guide &mdash; libRoadRunner 1.5.0 documentation</title>
+    <title>libRoadRunner User Guide &mdash; libRoadRunner 1.4.3 documentation</title>
     
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.5.0',
+        VERSION:     '1.4.3',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="libRoadRunner 1.5.0 documentation" href="#" />
+    <link rel="top" title="libRoadRunner 1.4.3 documentation" href="#" />
     <link rel="next" title="Introduction" href="introduction.html" /> 
   </head>
   <body role="document">
@@ -39,7 +39,7 @@
         <li class="right" >
           <a href="introduction.html" title="Introduction"
              accesskey="N">next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">libRoadRunner 1.5.0 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="#">libRoadRunner 1.4.3 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -57,18 +57,18 @@ SBML Simulation Engine. This guide will show the most important features
 and provides a complete API reference.</p>
 <p>To get you started here is a very simple script that will load an example SBML model and run a time course
 simulation and plot the results:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">roadrunner</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">roadrunner</span>
 <span class="n">rr</span> <span class="o">=</span> <span class="n">roadrunner</span><span class="o">.</span><span class="n">RoadRunner</span><span class="p">(</span><span class="s2">&quot;mymodel.xml&quot;</span><span class="p">)</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">simulate</span><span class="p">()</span>
 <span class="n">rr</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Looking for a model to start with? We included a couple with libRoadRunner, see <a class="reference internal" href="using_roadrunner.html#loading-models"><span class="std std-ref">Loading Models</span></a>.</p>
+<p>Looking for a model to start with? We included a couple with libRoadRunner, see <a class="reference internal" href="using_roadrunner.html#loading-models"><span>Loading Models</span></a>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The result is a standard numpy array which may be used with any numpy or scipy functions
 or may be plotted using <a class="reference external" href="http://matplotlib.org/">matplotlib</a>
-directly. See <a class="reference internal" href="using_roadrunner.html#plotting-data"><span class="std std-ref">Plotting Data</span></a> for help in plotting.</p>
+directly. See <a class="reference internal" href="using_roadrunner.html#plotting-data"><span>Plotting Data</span></a> for help in plotting.</p>
 </div>
 <p>Now read the tutorials to learn more about the capabilities of RoadRunner.</p>
 <p>Contents:</p>
@@ -156,7 +156,7 @@ directly. See <a class="reference internal" href="using_roadrunner.html#plotting
 <li class="toctree-l3"><a class="reference internal" href="api_reference.html#simulation">Simulation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api_reference.html#steady-state">Steady State</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api_reference.html#metabolic-control-analysis">Metabolic control analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api_reference.html#stochiometric-analysis">Stochiometric Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#stoichiometric-analysis">Stoichiometric Analysis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api_reference.html#analysis">Analysis</a></li>
 </ul>
 </li>
@@ -193,9 +193,9 @@ directly. See <a class="reference internal" href="using_roadrunner.html#plotting
 <div class="section" id="indices-and-tables">
 <h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
-<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+<li><a class="reference internal" href="genindex.html"><span>Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span>Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span>Search Page</span></a></li>
 </ul>
 </div>
 </div>
@@ -236,6 +236,9 @@ directly. See <a class="reference internal" href="using_roadrunner.html#plotting
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -254,12 +257,12 @@ directly. See <a class="reference internal" href="using_roadrunner.html#plotting
         <li class="right" >
           <a href="introduction.html" title="Introduction"
              >next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">libRoadRunner 1.5.0 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="#">libRoadRunner 1.4.3 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015, Andy Somogyi, Herbert Suaro.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+        &copy; Copyright 2013-2016, Andy Somogyi, Herbert Suaro.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
     </div>
   </body>
 </html>

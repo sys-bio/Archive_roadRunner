@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Simulation and Integration &mdash; libRoadRunner 1.5.0 documentation</title>
+    <title>Simulation and Integration &mdash; libRoadRunner 1.4.3 documentation</title>
     
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.5.0',
+        VERSION:     '1.4.3',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="libRoadRunner 1.5.0 documentation" href="index.html" />
+    <link rel="top" title="libRoadRunner 1.4.3 documentation" href="index.html" />
     <link rel="next" title="Utility Functions" href="utility_functions.html" />
     <link rel="prev" title="Accessing the SBML Model Variables" href="accessing_model.html" /> 
   </head>
@@ -43,7 +43,7 @@
         <li class="right" >
           <a href="accessing_model.html" title="Accessing the SBML Model Variables"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">libRoadRunner 1.5.0 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">libRoadRunner 1.4.3 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -59,7 +59,7 @@
 <p>At the highest level, RoadRunner generates and solves ODE (ordinary differential equation) problem
 of the form</p>
 <div class="math">
-<p><span class="math">y(t) = \int_0^t f(t, y) dt</span></p>
+<p><img src="_images/math/8b4493fed31b4c38d768e51f97552b04ad49d76f.png" alt="y(t) = \int_0^t f(t, y) dt"/></p>
 </div><p>where the function :math: f(t) is generated from the SBML document.</p>
 <p>As this is numerically integrated, it is impossible to specify a time step and other integration
 parameters that are ideal for all functions. As a general rule for numeric stability, if you have a
@@ -81,15 +81,19 @@ has been increased, the simulation time may be over.</p>
 <p>If one encounters exceptions from the integrator, the first thing that one should try is specifying
 an initial time step and tighter absolute and relative tolerances.</p>
 <p>All of the parameters to tune the integration are specified on the integrator object:</p>
-<blockquote>
-<div><p>r=roadrunner.RoadRunner(&#8220;mymodel.xml&#8221;)</p>
-<p># specify absolute and relative tolerances
-r.integrator.absolute_tolerance = 5e-10
-r.integrator.relative_tolerance = 1e-3
-# specify initial time step
-r.integrator.initial_time_step = 0.00001</p>
-<p>r.simulate(0, 10)</p>
-</div></blockquote>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="n">r</span><span class="o">=</span><span class="n">roadrunner</span><span class="o">.</span><span class="n">RoadRunner</span><span class="p">(</span><span class="s2">&quot;mymodel.xml&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now specify absolute and relative tolerances</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="n">r</span><span class="o">.</span><span class="n">integrator</span><span class="o">.</span><span class="n">absolute_tolerance</span> <span class="o">=</span> <span class="mf">5e-10</span>
+<span class="gp">&gt;&gt;&gt; </span> <span class="n">r</span><span class="o">.</span><span class="n">integrator</span><span class="o">.</span><span class="n">relative_tolerance</span> <span class="o">=</span> <span class="mf">1e-3</span>
+</pre></div>
+</div>
+<p>and specify initial time step.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="n">r</span><span class="o">.</span><span class="n">integrator</span><span class="o">.</span><span class="n">initial_time_step</span> <span class="o">=</span> <span class="mf">0.00001</span>
+<span class="gp">&gt;&gt;&gt; </span> <span class="n">r</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>This will specify the absolute and relative tolerances and initial time step, and will integrate the system from
 time 0 to 10. The internal integrator will take many time steps before it reaches time 10.</p>
 </div>
@@ -133,6 +137,9 @@ time 0 to 10. The internal integrator will take many time steps before it reache
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -154,12 +161,12 @@ time 0 to 10. The internal integrator will take many time steps before it reache
         <li class="right" >
           <a href="accessing_model.html" title="Accessing the SBML Model Variables"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">libRoadRunner 1.5.0 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">libRoadRunner 1.4.3 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015, Andy Somogyi, Herbert Suaro.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+        &copy; Copyright 2013-2016, Andy Somogyi, Herbert Suaro.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
     </div>
   </body>
 </html>
