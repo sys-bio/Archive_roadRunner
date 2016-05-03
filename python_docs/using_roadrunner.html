@@ -371,14 +371,14 @@ is specified in the call to <a class="reference internal" href="api_reference.ht
 <span class="go"># Intervals will vary according to CVODE step size</span>
 </pre></div>
 </div>
-<p>To use basic 4th-order Runge-Kutta integrator (rk4), call <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.setIntegrator" title="RoadRunner.RoadRunner.setIntegrator"><code class="xref py py-meth docutils literal"><span class="pre">setIntegrator()</span></code></a>:</p>
+<p>To use basic 4th-order Runge-Kutta integrator (&#8216;rk4&#8217;), call <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.setIntegrator" title="RoadRunner.RoadRunner.setIntegrator"><code class="xref py py-meth docutils literal"><span class="pre">setIntegrator()</span></code></a>:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="n">r</span><span class="o">.</span><span class="n">setIntegrator</span><span class="p">(</span><span class="s1">&#39;rk4&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Runge-Kutta always uses a fixed step size, and does not support events.
-The same goes for Runge-Kutta-Fehlberg Method (rkf45) as well as our stochastic integrator (gillespie).</p>
+RoadRunner supports Runge-Kutta-Fehlberg Method (&#8216;rkf45&#8217;) as well as a stochastic integrator based on Gillespie algorithm (&#8216;gilliespie&#8217;).</p>
 <p>Some integrators, such as CVODE, have parameters which can be set by the user.
-To see a list of these settings, use <a class="reference internal" href="api_reference.html#roadrunner.Solver.getSettings" title="roadrunner.Solver.getSettings"><code class="xref py py-meth docutils literal"><span class="pre">getSettings()</span></code></a>:</p>
+To see a list of these settings, use <a class="reference internal" href="api_reference.html#roadrunner.Solver.getSettings" title="roadrunner.Solver.getSettings"><code class="xref py py-meth docutils literal"><span class="pre">getSettings()</span></code></a> on an integrator instance:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="n">r</span><span class="o">.</span><span class="n">getIntegrator</span><span class="p">()</span><span class="o">.</span><span class="n">getSettings</span><span class="p">()</span>
 <span class="go">(&#39;relative_tolerance&#39;,</span>
 <span class="go">&#39;absolute_tolerance&#39;,</span>
@@ -393,7 +393,7 @@ To see a list of these settings, use <a class="reference internal" href="api_ref
 <span class="go">&#39;variable_step_size&#39;)</span>
 </pre></div>
 </div>
-<p>To set a parameter, use one of the two alternative methods:</p>
+<p>To set a parameter, you can use both methods described below:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="n">r</span><span class="o">.</span><span class="n">getIntegrator</span><span class="p">()</span><span class="o">.</span><span class="n">relative_tolerance</span> <span class="o">=</span> <span class="mf">1e-10</span>
 <span class="gp">&gt;&gt;&gt; </span> <span class="n">r</span><span class="o">.</span><span class="n">getIntegrator</span><span class="p">()</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s1">&#39;relative_tolerance&#39;</span><span class="p">,</span> <span class="mf">1e-10</span><span class="p">)</span>
 </pre></div>

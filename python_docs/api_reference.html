@@ -3033,16 +3033,41 @@ array of all the  values to set.</li>
 <dt id="RoadRunner.ExecutableModel.getInfo">
 <code class="descclassname">ExecutableModel.</code><code class="descname">getInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RoadRunner.ExecutableModel.getInfo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get various info about the model.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">getInfo</span><span class="p">()</span>
-<span class="go"> * Calculated Values *</span>
-<span class="go"> FloatingSpeciesAmounts:</span>
-<span class="go"> [0x1.4p+2, 0x1.4p+3]</span>
-<span class="go"> FloatingSpeciesConcentrations:</span>
-<span class="go"> [0x1.4p+2, 0x1.4p+3]</span>
-<span class="go"> FloatingSpeciesInitConcentrations:</span>
-<span class="go"> [0x1p-1, 0x1p+0]</span>
-<span class="go"> Reaction Rates:</span>
-<span class="go"> [0x0p+0]</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">getInfo</span><span class="p">())</span>
+<span class="go">&lt;roadrunner.RoadRunner() {</span>
+<span class="go">&#39;this&#39; : 13DEF5F8</span>
+<span class="go">&#39;modelLoaded&#39; : true</span>
+<span class="go">&#39;modelName&#39; : feedback</span>
+<span class="go">&#39;libSBMLVersion&#39; : LibSBML Version: 5.12.0</span>
+<span class="go">&#39;jacobianStepSize&#39; : 1e-005</span>
+<span class="go">&#39;conservedMoietyAnalysis&#39; : false</span>
+<span class="go">&#39;simulateOptions&#39; :</span>
+<span class="go">&lt; roadrunner.SimulateOptions()</span>
+<span class="go">{</span>
+<span class="go">&#39;this&#39; : 0068A7F0,</span>
+<span class="go">&#39;reset&#39; : 0,</span>
+<span class="go">&#39;structuredResult&#39; : 0,</span>
+<span class="go">&#39;copyResult&#39; : 1,</span>
+<span class="go">&#39;steps&#39; : 50,</span>
+<span class="go">&#39;start&#39; : 0,</span>
+<span class="go">&#39;duration&#39; : 40</span>
+<span class="go">}&gt;,</span>
+<span class="go">&#39;integrator&#39; :</span>
+<span class="go">&lt; roadrunner.Integrator() &gt;</span>
+<span class="go">  name: cvode</span>
+<span class="go">  settings:</span>
+<span class="go">      relative_tolerance: 0.00001</span>
+<span class="go">      absolute_tolerance: 0.0000000001</span>
+<span class="go">                   stiff: true</span>
+<span class="go">       maximum_bdf_order: 5</span>
+<span class="go">     maximum_adams_order: 12</span>
+<span class="go">       maximum_num_steps: 20000</span>
+<span class="go">       maximum_time_step: 0</span>
+<span class="go">          minimum_time_step: 0</span>
+<span class="go">       initial_time_step: 0</span>
+<span class="go">          multiple_steps: false</span>
+<span class="go">      variable_step_size: false</span>
+<span class="go">}&gt;</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -3618,7 +3643,7 @@ target which matches the host.</p>
 <dl class="staticmethod">
 <dt id="roadrunner.RoadRunner_getExtendedVersionInfo">
 <em class="property">static </em><code class="descclassname">roadrunner.</code><code class="descname">RoadRunner_getExtendedVersionInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#roadrunner.RoadRunner_getExtendedVersionInfo" title="Permalink to this definition">¶</a></dt>
-<dd><p><a class="reference internal" href="#roadrunner.getVersionStr" title="roadrunner.getVersionStr"><code class="xref py py-func docutils literal"><span class="pre">getVersionStr()</span></code></a> plus info about dependent libs versions.</p>
+<dd><p><a class="reference internal" href="#roadrunner.getVersionStr" title="roadrunner.getVersionStr"><code class="xref py py-func docutils literal"><span class="pre">getVersionStr()</span></code></a> with infomation about dependent libs versions.</p>
 </dd></dl>
 
 <dl class="staticmethod">

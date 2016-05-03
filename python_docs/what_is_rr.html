@@ -186,27 +186,24 @@ show() method is called.
 <table class="docutils footnote" frame="void" id="id1" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[1]</td><td><p class="first">Most of the time, Numpy array holds a pointer to a block of data owned
+<tr><td class="label">[1]</td><td>Most of the time, Numpy array holds a pointer to a block of data owned
 by RoadRunner. For example, the array returned by <cite>rr.simulate()</cite> has a pointer
 to the results matrix which is owned by the <cite>RoadRunner</cite>, therefore NO COPYING
-is involved. If you have no need for the result, simply ignore it, since it costs</p>
-<blockquote class="last">
-<div>virtually nothing to return it.</div></blockquote>
-</td></tr>
+is involved. If you have no need for the result, simply ignore it, since it costs virtually nothing to return it.</td></tr>
 </tbody>
 </table>
 <table class="docutils footnote" frame="void" id="id2" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
 <tr><td class="label">[2]</td><td><p class="first">Current State of the System Group</p>
-<p>When using the LLVM back end, all model state calculation are automatically
+<p class="last">When using the LLVM back end, all model state calculation are automatically
 performed using a techinque called lazy evaluation. If one sets the concentration
 of a specie, the amount of of that specie is automatically available without
-having to perform any addition operations, similar to any other value in the model.</p>
-<p>If an SBML parameter is defined by an assigment rule or a function and its value
+having to perform any addition operations, similar to any other value in the model.
+If an SBML parameter is defined by an assigment rule or a function and its value
 depends on a number of other values, simply setting to other values automatically
-cause the value of the most dependent variable to be set.</p>
-<p class="last">This is identical how one operates in a spredsheet such as Microsoft Excel. For
+cause the value of the most dependent variable to be set.
+This is identical how one operates in a spredsheet such as Microsoft Excel. For
 example, if one has a cell with an equation that depends on other cell, and those
 other cell depend on other values, setting the value of any upstream cell automatically
 causes that value to cascade down to the terminal cells. The LLVM back end roadruner
