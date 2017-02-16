@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['rk4integrator',['RK4Integrator',['../classrr_1_1_r_k4_integrator.html',1,'rr']]],
-  ['roadrunner',['RoadRunner',['../classrr_1_1_road_runner.html',1,'rr']]],
-  ['roadrunneroptions',['RoadRunnerOptions',['../structrr_1_1_road_runner_options.html',1,'rr']]]
+  ['integratorfactory',['IntegratorFactory',['../classrr_1_1_integrator_factory.html',1,'rr']]],
+  ['integratorregistrar',['IntegratorRegistrar',['../classrr_1_1_integrator_registrar.html',1,'rr']]],
+  ['integratorregistrationmgr',['IntegratorRegistrationMgr',['../classrr_1_1_integrator_registration_mgr.html',1,'rr']]]
 ];

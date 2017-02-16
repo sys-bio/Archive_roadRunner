@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['options',['Options',['../classrr_1_1_simulate_options.html#a4bc2a6d4d8f9da649e8e2a507192c8fa',1,'rr::SimulateOptions::Options()'],['../structrr_1_1_road_runner_options.html#a835c7d4848b4611885e41029261ef2db',1,'rr::RoadRunnerOptions::Options()']]]
+  ['selectiontype',['SelectionType',['../classrr_1_1_selection_record.html#a898963ab24a6ba614913715c981d8394',1,'rr::SelectionRecord']]],
+  ['symbolindextype',['SymbolIndexType',['../classrrllvm_1_1_l_l_v_m_model_data_symbols.html#a9f08fb79670d8c19151880a628a63ced',1,'rrllvm::LLVMModelDataSymbols']]]
 ];

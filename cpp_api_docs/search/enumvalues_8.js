@@ -9,6 +9,7 @@ var searchData=
   ['loadsbmloptions_5foptimize_5fgvn',['LOADSBMLOPTIONS_OPTIMIZE_GVN',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053a413677ed7cc8b08008c9e2d5e453490d',1,'rr::Config']]],
   ['loadsbmloptions_5foptimize_5finstruction_5fcombining',['LOADSBMLOPTIONS_OPTIMIZE_INSTRUCTION_COMBINING',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053a1e2ad37c11aae10f88ed1d1b2aa27266',1,'rr::Config']]],
   ['loadsbmloptions_5foptimize_5finstruction_5fsimplifier',['LOADSBMLOPTIONS_OPTIMIZE_INSTRUCTION_SIMPLIFIER',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053adcb86a4f8afac5df2bc241d336fd1862',1,'rr::Config']]],
+  ['loadsbmloptions_5fpermissive',['LOADSBMLOPTIONS_PERMISSIVE',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053a44487cb13e7c8fc0c850a064c88b22da',1,'rr::Config']]],
   ['loadsbmloptions_5fread_5fonly',['LOADSBMLOPTIONS_READ_ONLY',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053a4fbe11de557045ebc0cd573f15064aae',1,'rr::Config']]],
   ['loadsbmloptions_5frecompile',['LOADSBMLOPTIONS_RECOMPILE',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053aff2d0d4e16f9d40d8998a2387d45964a',1,'rr::Config']]],
   ['loadsbmloptions_5fuse_5fmcjit',['LOADSBMLOPTIONS_USE_MCJIT',['../classrr_1_1_config.html#aed7c550b9e34222675cd152c9154d053afdd1febe10f963a5260a5baead2c94f9',1,'rr::Config']]],

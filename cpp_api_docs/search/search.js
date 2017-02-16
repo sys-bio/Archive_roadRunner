@@ -8,23 +8,29 @@
 var indexSectionsWithContent =
 {
   0: "_abcdefghijklmnoprstuvw~",
-  1: "bcdeilrsv",
-  2: "cdeghilnoprstvw~",
-  3: "acdfijmprsv",
-  4: "eiklmost",
-  5: "_bcdefgilmnoprstuv",
-  6: "dt"
+  1: "abcdefilmrsv",
+  2: "cilnrs",
+  3: "acdefghilmnoprstvw~",
+  4: "acdfijmnoprstv",
+  5: "ain",
+  6: "eklmost",
+  7: "_bcdefgilmnoprstu",
+  8: "cs",
+  9: "dt"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "classes",
-  2: "functions",
-  3: "variables",
-  4: "enums",
-  5: "enumvalues",
-  6: "pages"
+  2: "files",
+  3: "functions",
+  4: "variables",
+  5: "typedefs",
+  6: "enums",
+  7: "enumvalues",
+  8: "related",
+  9: "pages"
 };
 
 function convertToId(search)

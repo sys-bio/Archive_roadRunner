@@ -350,7 +350,11 @@ is specified in the call to <a class="reference internal" href="api_reference.ht
 </pre></div>
 </div>
 <p>Runge-Kutta always uses a fixed step size, and does not support events.
-RoadRunner supports Runge-Kutta-Fehlberg Method (&#8216;rkf45&#8217;) as well as a stochastic integrator based on Gillespie algorithm (&#8216;gilliespie&#8217;).</p>
+RoadRunner supports Runge-Kutta-Fehlberg Method (&#8216;rkf45&#8217;) as well as a stochastic integrator based on Gillespie algorithm (&#8216;gilliespie&#8217;). To get a list of all available integrators, run:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span> <span class="n">r</span><span class="o">.</span><span class="n">integrators</span>
+<span class="go">[&#39;cvode&#39;, &#39;gillespie&#39;, &#39;rk4&#39;, &#39;rk45&#39;]</span>
+</pre></div>
+</div>
 <p>Some integrators, such as CVODE, have parameters which can be set by the user.
 To see a list of these settings, use <a class="reference internal" href="api_reference.html#roadrunner.Solver.getSettings" title="roadrunner.Solver.getSettings"><tt class="xref py py-meth docutils literal"><span class="pre">getSettings()</span></tt></a> on an integrator instance:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span> <span class="n">r</span><span class="o">.</span><span class="n">getIntegrator</span><span class="p">()</span><span class="o">.</span><span class="n">getSettings</span><span class="p">()</span>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['selectiontype',['SelectionType',['../classrr_1_1_selection_record.html#a898963ab24a6ba614913715c981d8394',1,'rr::SelectionRecord']]]
+  ['typeid',['TypeId',['../classrr_1_1_variant.html#a64c7b2189f8d391527919e46a72402a8',1,'rr::Variant']]]
 ];

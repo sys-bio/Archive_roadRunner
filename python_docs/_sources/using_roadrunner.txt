@@ -298,7 +298,10 @@ To use basic 4th-order Runge-Kutta integrator ('rk4'), call :meth:`~RoadRunner.s
   >>>  r.setIntegrator('rk4')
 
 Runge-Kutta always uses a fixed step size, and does not support events.
-RoadRunner supports Runge-Kutta-Fehlberg Method ('rkf45') as well as a stochastic integrator based on Gillespie algorithm ('gilliespie').
+RoadRunner supports Runge-Kutta-Fehlberg Method ('rkf45') as well as a stochastic integrator based on Gillespie algorithm ('gilliespie'). To get a list of all available integrators, run:
+
+  >>>  r.integrators
+  ['cvode', 'gillespie', 'rk4', 'rk45']
 
 Some integrators, such as CVODE, have parameters which can be set by the user.
 To see a list of these settings, use :meth:`~roadrunner.Solver.getSettings()` on an integrator instance:
