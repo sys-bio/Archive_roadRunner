@@ -8,7 +8,7 @@
     
     <title>libRoadRunner User Guide &mdash; libRoadRunner 1.4.3 documentation</title>
     
-    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
@@ -26,8 +26,8 @@
     <link rel="top" title="libRoadRunner 1.4.3 documentation" href="#" />
     <link rel="next" title="Introduction" href="introduction.html" /> 
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,14 +39,14 @@
         <li class="right" >
           <a href="introduction.html" title="Introduction"
              accesskey="N">next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">libRoadRunner 1.4.3 documentation</a> &raquo;</li> 
+        <li><a href="#">libRoadRunner 1.4.3 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="libroadrunner-user-guide">
 <h1>libRoadRunner User Guide<a class="headerlink" href="#libroadrunner-user-guide" title="Permalink to this headline">¶</a></h1>
@@ -57,18 +57,23 @@ SBML Simulation Engine. This guide will show the most important features
 and provides a complete API reference.</p>
 <p>To get you started here is a very simple script that will load an example SBML model and run a time course
 simulation and plot the results:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">roadrunner</span>
-<span class="n">rr</span> <span class="o">=</span> <span class="n">roadrunner</span><span class="o">.</span><span class="n">RoadRunner</span><span class="p">(</span><span class="s2">&quot;mymodel.xml&quot;</span><span class="p">)</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">simulate</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">roadrunner</span>
+
+<span class="c"># load an SBML model</span>
+<span class="n">rr</span> <span class="o">=</span> <span class="n">roadrunner</span><span class="o">.</span><span class="n">RoadRunner</span><span class="p">(</span><span class="s">&quot;mymodel.xml&quot;</span><span class="p">)</span>
+
+<span class="c"># simulate from 0 to 10 time units with 100 output rows</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+
 <span class="n">rr</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Looking for a model to start with? We included a couple with libRoadRunner, see <a class="reference internal" href="using_roadrunner.html#loading-models"><span>Loading Models</span></a>.</p>
+<p>Looking for a model to start with? We included a couple with libRoadRunner, see <a class="reference internal" href="using_roadrunner.html#loading-models"><em>Loading Models</em></a>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The result is a standard numpy array which may be used with any numpy or scipy functions
 or may be plotted using <a class="reference external" href="http://matplotlib.org/">matplotlib</a>
-directly. See <a class="reference internal" href="using_roadrunner.html#plotting-data"><span>Plotting Data</span></a> for help in plotting.</p>
+directly. See <a class="reference internal" href="using_roadrunner.html#plotting-data"><em>Plotting Data</em></a> for help in plotting.</p>
 </div>
 <p>Now read the tutorials to learn more about the capabilities of RoadRunner.</p>
 <p>Contents:</p>
@@ -194,9 +199,9 @@ directly. See <a class="reference internal" href="using_roadrunner.html#plotting
 <div class="section" id="indices-and-tables">
 <h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><a class="reference internal" href="genindex.html"><span>Index</span></a></li>
-<li><a class="reference internal" href="py-modindex.html"><span>Module Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span>Search Page</span></a></li>
+<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
+<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
+<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
 </ul>
 </div>
 </div>
@@ -205,7 +210,7 @@ directly. See <a class="reference internal" href="using_roadrunner.html#plotting
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="#">
               <img class="logo" src="_static/libroadrunner_logo_blue_200.png" alt="Logo"/>
@@ -222,14 +227,12 @@ directly. See <a class="reference internal" href="using_roadrunner.html#plotting
   <h4>Next topic</h4>
   <p class="topless"><a href="introduction.html"
                         title="next chapter">Introduction</a></p>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/index.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -246,7 +249,7 @@ directly. See <a class="reference internal" href="using_roadrunner.html#plotting
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -258,12 +261,12 @@ directly. See <a class="reference internal" href="using_roadrunner.html#plotting
         <li class="right" >
           <a href="introduction.html" title="Introduction"
              >next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">libRoadRunner 1.4.3 documentation</a> &raquo;</li> 
+        <li><a href="#">libRoadRunner 1.4.3 documentation</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
+    <div class="footer">
         &copy; Copyright 2013-2016, Andy Somogyi, Herbert Suaro.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
     </div>
   </body>
 </html>
