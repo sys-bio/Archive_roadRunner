@@ -88,6 +88,7 @@ The following table summarizes the various options.
 start             Starting time for simulation
 end               Ending time for simulation. Setting 'end' will automatically change 'duration'
 points            Number of rows to include in the output matrix
+selections        (Optional) A list of variables to include in the output, e.g. ``['time','A']`` for a model with species ``A``. More below.
 steps             (Optional keyword argument) Number of steps at which the output is sampled where the samples are evenly spaced. Steps = points-1. Steps and points may not both be specified.
 ================  =============
 
