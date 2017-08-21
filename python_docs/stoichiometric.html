@@ -6,9 +6,9 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Stoichiometric Analysis &mdash; libRoadRunner 1.4.3 documentation</title>
+    <title>Stoichiometric Analysis &#8212; libRoadRunner 1.4.3 documentation</title>
     
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
@@ -17,18 +17,20 @@
         VERSION:     '1.4.3',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="libRoadRunner 1.4.3 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Metabolic Control Analysis" href="metabolic.html" />
     <link rel="prev" title="Stochastic Simulation" href="stochastic.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -43,14 +45,14 @@
         <li class="right" >
           <a href="stochastic.html" title="Stochastic Simulation"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">libRoadRunner 1.4.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">libRoadRunner 1.4.3 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="stoichiometric-analysis">
 <h1>Stoichiometric Analysis<a class="headerlink" href="#stoichiometric-analysis" title="Permalink to this headline">¶</a></h1>
@@ -61,7 +63,7 @@
 species <img class="math" src="_images/math/a581f053bbfa5115f42c13094857cdd12a37ec49.png" alt="i"/> produced or consumed in reaction <img class="math" src="_images/math/d32c78b759903e3f4bd4fd2ce0b86358f7500c5d.png" alt="j"/>.  The dynamics of the network are
 described by</p>
 <div class="math">
-<p><img src="_images/math/cf72ce61fc6e1e885d3e2bcd42a5d4f74ae36f6c.png" alt="\frac{d}{dt}\mathbf{s}(t) = \mathbf{N} \mathbf{v}(\mathbf{s}(t),\mathbf{p},t),"/></p>
+<p><img src="_images/math/cc1cae297b074c01fdad40188379441dea7eb238.png" alt="\frac{d}{dt}\mathbf{s}(t) = \mathbf{N} \mathbf{v}(\mathbf{s}(t),\mathbf{p},t),"/></p>
 </div><p>where <img class="math" src="_images/math/b65434e0533eb4c0ecf4469a1d8a9fb197260cc9.png" alt="\mathbf{s}"/> is the vector of species concentrations, <img class="math" src="_images/math/a0c3bc8eb19373111a648a746873c7d6607f85ac.png" alt="\mathbf{p}"/>
 is a vector of time independent parameters, and <img class="math" src="_images/math/ef9270877405055756d345facd044e4ab297f858.png" alt="t"/> is time.</p>
 <p>Each structural conservation, or interchangably, <em>conserved sum</em> (e.g. conserved moiety) in
@@ -73,10 +75,10 @@ rows. The <em>reduced stochiometry matrix</em> <img class="math" src="_images/ma
 <img class="math" src="_images/math/2ede365ad144ab396916ec60458da03860803078.png" alt="r"/> rows of <img class="math" src="_images/math/75e27f04188974063be3230dca208cd495b77ce1.png" alt="N"/>. Finally, <img class="math" src="_images/math/75e27f04188974063be3230dca208cd495b77ce1.png" alt="N"/> may be expressed as a product of the <img class="math" src="_images/math/341bcfc986d84d54cc82b88a4530c9eadacf0d8f.png" alt="m \times r"/>
 <em>link matrix</em> <img class="math" src="_images/math/b480e87495f2ad47330d21c781d71636bf8e443b.png" alt="\mathbf{L}"/> and the <img class="math" src="_images/math/875246b319100c465139fd8ef2d547db31b0c62a.png" alt="r \times n"/> <img class="math" src="_images/math/9313389e4a1aee9b2292a083f96513a3ed448a4f.png" alt="\mathbf{N_R}"/> matrix:</p>
 <div class="math">
-<p><img src="_images/math/f7e56625f6beb244c4dab53cfb4ebe1d94a8bb8a.png" alt="\mathbf{N} = \mathbf{L}\mathbf{N_R}."/></p>
+<p><img src="_images/math/272e4b929238ec9f6030f3c1f0b94fc2e2f4b292.png" alt="\mathbf{N} = \mathbf{L}\mathbf{N_R}."/></p>
 </div><p>The link matrix <img class="math" src="_images/math/b480e87495f2ad47330d21c781d71636bf8e443b.png" alt="\mathbf{L}"/> has the form</p>
 <div class="math">
-<p><img src="_images/math/4d5f6ca41b8e002f2f801a2f45ced08149398d29.png" alt="\mathbf{L} = \left[ \begin{array}{c}
+<p><img src="_images/math/ce63cd64d2ce4899ca7805cb4ff9645ca0c8f574.png" alt="\mathbf{L} = \left[ \begin{array}{c}
                     \mathbf{I}_{r} \\
                     \mathbf{L}_0    \end{array} \right],"/></p>
 </div><p>where <img class="math" src="_images/math/3eb56bbd89702dd379adaaeaf765757b16756549.png" alt="\mathbf{I}_{r}"/> is the <img class="math" src="_images/math/2d492ba4a8c374940e9ccb6bef40f9cae71c7f4d.png" alt="r \times r"/> identity matrix and <img class="math" src="_images/math/644710e888a1235ddec15cb8c6ba509d50374c62.png" alt="\mathbf{L}_0"/> is a <img class="math" src="_images/math/faaad72a316b80fda54e99fb83003ef7e5557482.png" alt="(m-r) \times r"/>
@@ -91,37 +93,37 @@ matrix.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getLinkMatrix" title="RoadRunner.RoadRunner.getLinkMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getLinkMatrix</span></tt></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getLinkMatrix" title="RoadRunner.RoadRunner.getLinkMatrix"><code class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getLinkMatrix</span></code></a></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getNrMatrix" title="RoadRunner.RoadRunner.getNrMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getNrMatrix</span></tt></a></td>
+<tr class="row-even"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getNrMatrix" title="RoadRunner.RoadRunner.getNrMatrix"><code class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getNrMatrix</span></code></a></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getKMatrix" title="RoadRunner.RoadRunner.getKMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getKMatrix</span></tt></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getKMatrix" title="RoadRunner.RoadRunner.getKMatrix"><code class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getKMatrix</span></code></a></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getConservationMatrix" title="RoadRunner.RoadRunner.getConservationMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getConservationMatrix</span></tt></a></td>
+<tr class="row-even"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getConservationMatrix" title="RoadRunner.RoadRunner.getConservationMatrix"><code class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getConservationMatrix</span></code></a></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getL0Matrix" title="RoadRunner.RoadRunner.getL0Matrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getL0Matrix</span></tt></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getL0Matrix" title="RoadRunner.RoadRunner.getL0Matrix"><code class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getL0Matrix</span></code></a></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getFullStoichiometryMatrix" title="RoadRunner.RoadRunner.getFullStoichiometryMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getFullStoichiometryMatrix</span></tt></a></td>
+<tr class="row-even"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getFullStoichiometryMatrix" title="RoadRunner.RoadRunner.getFullStoichiometryMatrix"><code class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getFullStoichiometryMatrix</span></code></a></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getReducedStoichiometryMatrix" title="RoadRunner.RoadRunner.getReducedStoichiometryMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getReducedStoichiometryMatrix</span></tt></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getReducedStoichiometryMatrix" title="RoadRunner.RoadRunner.getReducedStoichiometryMatrix"><code class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getReducedStoichiometryMatrix</span></code></a></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="api_reference.html#RoadRunner.ExecutableModel.getNumConservedMoieties" title="RoadRunner.ExecutableModel.getNumConservedMoieties"><tt class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.getNumConservedMoieties</span></tt></a></td>
+<tr class="row-even"><td><a class="reference internal" href="api_reference.html#RoadRunner.ExecutableModel.getNumConservedMoieties" title="RoadRunner.ExecutableModel.getNumConservedMoieties"><code class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.getNumConservedMoieties</span></code></a></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.ExecutableModel.getConservedMoietyIds" title="RoadRunner.ExecutableModel.getConservedMoietyIds"><tt class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.getConservedMoietyIds</span></tt></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.ExecutableModel.getConservedMoietyIds" title="RoadRunner.ExecutableModel.getConservedMoietyIds"><code class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.getConservedMoietyIds</span></code></a></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="api_reference.html#RoadRunner.ExecutableModel.getConservedMoietyValues" title="RoadRunner.ExecutableModel.getConservedMoietyValues"><tt class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.getConservedMoietyValues</span></tt></a></td>
+<tr class="row-even"><td><a class="reference internal" href="api_reference.html#RoadRunner.ExecutableModel.getConservedMoietyValues" title="RoadRunner.ExecutableModel.getConservedMoietyValues"><code class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.getConservedMoietyValues</span></code></a></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.ExecutableModel.setConservedMoietyValues" title="RoadRunner.ExecutableModel.setConservedMoietyValues"><tt class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.setConservedMoietyValues</span></tt></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.ExecutableModel.setConservedMoietyValues" title="RoadRunner.ExecutableModel.setConservedMoietyValues"><code class="xref py py-obj docutils literal"><span class="pre">ExecutableModel.setConservedMoietyValues</span></code></a></td>
 <td></td>
 </tr>
 </tbody>
@@ -133,7 +135,7 @@ matrix.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="index.html">
               <img class="logo" src="_static/libroadrunner_logo_blue_200.png" alt="Logo"/>
@@ -153,29 +155,28 @@ matrix.</p>
   <h4>Next topic</h4>
   <p class="topless"><a href="metabolic.html"
                         title="next chapter">Metabolic Control Analysis</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/stoichiometric.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/stoichiometric.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -190,12 +191,12 @@ matrix.</p>
         <li class="right" >
           <a href="stochastic.html" title="Stochastic Simulation"
              >previous</a> |</li>
-        <li><a href="index.html">libRoadRunner 1.4.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">libRoadRunner 1.4.3 documentation</a> &#187;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2013-2016, Andy Somogyi, Herbert Suaro.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013-2016, Andy Somogyi, Herbert Suaro.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.
     </div>
   </body>
 </html>

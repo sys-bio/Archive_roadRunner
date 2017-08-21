@@ -6,9 +6,9 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Steady State Analysis &mdash; libRoadRunner 1.4.3 documentation</title>
+    <title>Steady State Analysis &#8212; libRoadRunner 1.4.3 documentation</title>
     
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
@@ -17,18 +17,20 @@
         VERSION:     '1.4.3',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="libRoadRunner 1.4.3 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Stochastic Simulation" href="stochastic.html" />
     <link rel="prev" title="Selecting Values" href="selecting_values.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -43,39 +45,55 @@
         <li class="right" >
           <a href="selecting_values.html" title="Selecting Values"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">libRoadRunner 1.4.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">libRoadRunner 1.4.3 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="steady-state-analysis">
 <h1>Steady State Analysis<a class="headerlink" href="#steady-state-analysis" title="Permalink to this headline">¶</a></h1>
 <p>The dynamics of a biochemical network is described by the system equation</p>
 <div class="math">
-<p><img src="_images/math/cf72ce61fc6e1e885d3e2bcd42a5d4f74ae36f6c.png" alt="\frac{d}{dt}\mathbf{s}(t) = \mathbf{N} \mathbf{v}(\mathbf{s}(t),\mathbf{p},t),"/></p>
+<p><img src="_images/math/cc1cae297b074c01fdad40188379441dea7eb238.png" alt="\frac{d}{dt}\mathbf{s}(t) = \mathbf{N} \mathbf{v}(\mathbf{s}(t),\mathbf{p},t),"/></p>
 </div><p>where <img class="math" src="_images/math/b65434e0533eb4c0ecf4469a1d8a9fb197260cc9.png" alt="\mathbf{s}"/> is the vector of species concentrations, <img class="math" src="_images/math/a0c3bc8eb19373111a648a746873c7d6607f85ac.png" alt="\mathbf{p}"/>
 is a vector of time independent parameters, and <img class="math" src="_images/math/ef9270877405055756d345facd044e4ab297f858.png" alt="t"/> is time. The steady state is the solution to
 the network equations when all the rates of change are zero. That is the concentrations of the floating
 species, <img class="math" src="_images/math/b65434e0533eb4c0ecf4469a1d8a9fb197260cc9.png" alt="\mathbf{s}"/> that satisfy:</p>
 <div class="math">
-<p><img src="_images/math/70aaced4a613c52da21b3d83715a1a93d456884e.png" alt="\mathbf{N} \mathbf{v}(\mathbf{s}(t),\mathbf{p},t) = 0"/></p>
+<p><img src="_images/math/40e31d0c1192d075840952109a7ce36f8f1ae0ce.png" alt="\mathbf{N} \mathbf{v}(\mathbf{s}(t),\mathbf{p},t) = 0"/></p>
 </div><p>The steady state is easily calculated using the steady state method:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">rr</span><span class="o">.</span><span class="n">steadyState</span><span class="p">()</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rr</span><span class="o">.</span><span class="n">steadyState</span><span class="p">()</span>
 <span class="go">1.234567E-9</span>
 </pre></div>
 </div>
-<p>The call to <tt class="docutils literal"><span class="pre">steadyState</span></tt> returns a value that represents the sum of squares of the rates of change. Therefore the
+<p>The call to <code class="docutils literal"><span class="pre">steadyState</span></code> returns a value that represents the sum of squares of the rates of change. Therefore the
 smaller this value the more likely the steady state solution has been found. Often a value less that 10E-6 indicates
 a steady state has been found. After a successful call all the species levels will be at their steady state values.</p>
-<p>Steady state values can be obtained using <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getSteadyStateValues" title="RoadRunner.RoadRunner.getSteadyStateValues"><tt class="xref py py-meth docutils literal"><span class="pre">getSteadyStateValues()</span></tt></a> and <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.steadyStateSelections" title="RoadRunner.RoadRunner.steadyStateSelections"><tt class="xref py py-meth docutils literal"><span class="pre">steadyStateSelections()</span></tt></a> can be used to
+<p>Steady state values can be obtained using <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getSteadyStateValues" title="RoadRunner.RoadRunner.getSteadyStateValues"><code class="xref py py-meth docutils literal"><span class="pre">getSteadyStateValues()</span></code></a> and <a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.steadyStateSelections" title="RoadRunner.RoadRunner.steadyStateSelections"><code class="xref py py-meth docutils literal"><span class="pre">steadyStateSelections()</span></code></a> can be used to
 decide what values to return. For example the following would retrieve a single value:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">rr</span><span class="o">.</span><span class="n">steadyStateSelections</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;S1&#39;</span><span class="p">]</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rr</span><span class="o">.</span><span class="n">steadyStateSelections</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;S1&#39;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rr</span><span class="o">.</span><span class="n">getSteadyStateValues</span><span class="p">()</span>
 <span class="go">array([ 0.54314239])</span>
+</pre></div>
+</div>
+<p>One important element in running steady state analysis is the concept of moiety conservation. If the model in question contains moiety conserved cycles, traditional approach to obtain steady state solution fails as it is impossible to calculate the inverse of Jacobian. In such case, we use a walkaround and split the species in a cycle into groups. To do this in RoadRunner, type:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rr</span><span class="o">.</span><span class="n">conservedMoietyAnalysis</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<p>Currently, RoadRunner only support <code class="docutils literal"><span class="pre">nleq1</span></code> solver for performing steady state analysis. This will be expanded in the future, and we included framework to select different solvers for steady state analysis. To set the solver and see all settings, type:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rr</span><span class="o">.</span><span class="n">setSteadyStateSolver</span><span class="p">(</span><span class="s1">&#39;nleq&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">solver</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">getSteadyStateSolver</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">solver</span><span class="o">.</span><span class="n">settingsPyDictRepr</span><span class="p">()</span>
+<span class="go">&quot;&#39;maximum_iterations&#39;: 100, &#39;minimum_damping&#39;: 1e-16, &#39;relative_tolerance&#39;: 0.0001&quot;</span>
+</pre></div>
+</div>
+<p>To see all available steady state solvers, type:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rr</span><span class="o">.</span><span class="n">getRegisteredSteadyStateSolverNames</span><span class="p">()</span>
+<span class="go">(&#39;nleq&#39;,)</span>
 </pre></div>
 </div>
 <p>The following methods deal with steady state analysis:</p>
@@ -85,13 +103,16 @@ decide what values to return. For example the following would retrieve a single 
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.steadyStateSelections" title="RoadRunner.RoadRunner.steadyStateSelections"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.steadyStateSelections</span></tt></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.steadyStateSelections" title="RoadRunner.RoadRunner.steadyStateSelections"><code class="xref py py-obj docutils literal"><span class="pre">RoadRunner.steadyStateSelections</span></code></a></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.steadyState" title="RoadRunner.RoadRunner.steadyState"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.steadyState</span></tt></a></td>
+<tr class="row-even"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.steadyState" title="RoadRunner.RoadRunner.steadyState"><code class="xref py py-obj docutils literal"><span class="pre">RoadRunner.steadyState</span></code></a></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getSteadyStateValues" title="RoadRunner.RoadRunner.getSteadyStateValues"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getSteadyStateValues</span></tt></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getSteadyStateValues" title="RoadRunner.RoadRunner.getSteadyStateValues"><code class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getSteadyStateValues</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.conservedMoietyAnalysis" title="RoadRunner.RoadRunner.conservedMoietyAnalysis"><code class="xref py py-obj docutils literal"><span class="pre">RoadRunner.conservedMoietyAnalysis</span></code></a></td>
 <td></td>
 </tr>
 </tbody>
@@ -102,7 +123,7 @@ decide what values to return. For example the following would retrieve a single 
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="index.html">
               <img class="logo" src="_static/libroadrunner_logo_blue_200.png" alt="Logo"/>
@@ -113,29 +134,28 @@ decide what values to return. For example the following would retrieve a single 
   <h4>Next topic</h4>
   <p class="topless"><a href="stochastic.html"
                         title="next chapter">Stochastic Simulation</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/steady_state.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/steady_state.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -150,12 +170,12 @@ decide what values to return. For example the following would retrieve a single 
         <li class="right" >
           <a href="selecting_values.html" title="Selecting Values"
              >previous</a> |</li>
-        <li><a href="index.html">libRoadRunner 1.4.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">libRoadRunner 1.4.3 documentation</a> &#187;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2013-2016, Andy Somogyi, Herbert Suaro.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013-2016, Andy Somogyi, Herbert Suaro.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.
     </div>
   </body>
 </html>

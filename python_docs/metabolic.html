@@ -6,9 +6,9 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Metabolic Control Analysis &mdash; libRoadRunner 1.4.3 documentation</title>
+    <title>Metabolic Control Analysis &#8212; libRoadRunner 1.4.3 documentation</title>
     
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
@@ -17,18 +17,20 @@
         VERSION:     '1.4.3',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="libRoadRunner 1.4.3 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Stability Analysis" href="stability.html" />
     <link rel="prev" title="Stoichiometric Analysis" href="stoichiometric.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -43,14 +45,14 @@
         <li class="right" >
           <a href="stoichiometric.html" title="Stoichiometric Analysis"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">libRoadRunner 1.4.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">libRoadRunner 1.4.3 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="metabolic-control-analysis">
 <h1>Metabolic Control Analysis<a class="headerlink" href="#metabolic-control-analysis" title="Permalink to this headline">¶</a></h1>
@@ -60,7 +62,7 @@
 progagate through the network. Two kinds of sensitivity are defined, system and local. The local sensitivities are
 described by the elasticities. These are defined as follows:</p>
 <div class="math">
-<p><img src="_images/math/c0539f7b68fcc3c39227fc4acda7b611dacd2064.png" alt="\varepsilon^v_S = \frac{\partial v}{\partial S} \frac{S}{v} = \frac{\partial \ln v}{\partial \ln S}"/></p>
+<p><img src="_images/math/7647bfa4ede3bcd5b9303bfa29aacf16cbc03b0f.png" alt="\varepsilon^v_S = \frac{\partial v}{\partial S} \frac{S}{v} = \frac{\partial \ln v}{\partial \ln S}"/></p>
 </div><p>Given a reaction rate <img class="math" src="_images/math/91ee790671e6a647c8afc69baa2118effd0dac9d.png" alt="v_i"/>, the elasticity describes how a given effector of the reaction step affects
 the reaction rate. Because the definition is in terms of partial deriviatives, any effector that is perturbed assumes
 that all other potential effectors are unchanged.</p>
@@ -69,16 +71,16 @@ and concentration. The flux control coefficients measures how senstive a given f
 local rate of a reaction step. Often the local rate is perturbed by changing the enzyme concentration at the step.
 In this siutation the flux control coefficicent with respect to enzyme <img class="math" src="_images/math/b027139ad09fca3ca4adfe7d1149b9b2a69dbe3a.png" alt="E_i"/> is defined as follow:</p>
 <div class="math">
-<p><img src="_images/math/ee142a1e38286892b83c2f4f855dc17a2a6c595a.png" alt="C^J_{E_i} = \frac{dJ}{dE_i} \frac{E_1}{J} = \frac{d\ln J}{d\ln E_i}"/></p>
+<p><img src="_images/math/f939d5cc59b46dbd178907dfa886d2217d2838be.png" alt="C^J_{E_i} = \frac{dJ}{dE_i} \frac{E_1}{J} = \frac{d\ln J}{d\ln E_i}"/></p>
 </div><p>Likewise the concentration control coefficient is defined by:</p>
 <div class="math">
-<p><img src="_images/math/d148f355f8447126a33548fe81f2291c39d0f256.png" alt="C^S_{E_i} = \frac{dS}{d E_i} \frac{E_1}{S} = \frac{d\ln S}{d\ln E_i}"/></p>
+<p><img src="_images/math/e67a1c9460ba88eb5dbd91f00f5fd89f1b46c91c.png" alt="C^S_{E_i} = \frac{dS}{d E_i} \frac{E_1}{S} = \frac{d\ln S}{d\ln E_i}"/></p>
 </div><p>where <img class="math" src="_images/math/11a85f3c69ae6702cb1d99d3de451913b8f84c04.png" alt="S"/> is a given species. The response coefficients measure the sensitivity of a flux or species concentration
 to a perturbation in some external effector. These are defined by:</p>
 <div class="math">
-<p><img src="_images/math/f6ea57066e49e86d51d90069277c5d9645c37231.png" alt="R^J_{X} = \frac{dJ}{dX} \frac{X}{J} = \frac{d\ln J}{d\ln X}"/></p>
+<p><img src="_images/math/d096be602bb124693bf1414ee2a2a6b2ab6e07b8.png" alt="R^J_{X} = \frac{dJ}{dX} \frac{X}{J} = \frac{d\ln J}{d\ln X}"/></p>
 </div><div class="math">
-<p><img src="_images/math/6dd6182f623c1557862e169fe7eed14cd7d38092.png" alt="R^S_{X} = \frac{dJ}{dX} \frac{X}{S} = \frac{d\ln S}{d\ln X}"/></p>
+<p><img src="_images/math/11c26c854c21fae78ccb6a27bcece11985835ca8.png" alt="R^S_{X} = \frac{dJ}{dX} \frac{X}{S} = \frac{d\ln S}{d\ln X}"/></p>
 </div><p>where <img class="math" src="_images/math/f026aecf11ec7f6141ab863f260d395f94b10f51.png" alt="X"/> is the external effector.</p>
 </div>
 <div class="section" id="methods">
@@ -91,28 +93,28 @@ to a perturbation in some external effector. These are defined by:</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getUnscaledFluxControlCoefficientMatrix" title="RoadRunner.RoadRunner.getUnscaledFluxControlCoefficientMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getUnscaledFluxControlCoefficientMatrix</span></tt></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getUnscaledFluxControlCoefficientMatrix" title="RoadRunner.RoadRunner.getUnscaledFluxControlCoefficientMatrix"><code class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getUnscaledFluxControlCoefficientMatrix</span></code></a></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getUnscaledConcentrationControlCoefficientMatrix" title="RoadRunner.RoadRunner.getUnscaledConcentrationControlCoefficientMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getUnscaledConcentrationControlCoefficientMatrix</span></tt></a></td>
+<tr class="row-even"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getUnscaledConcentrationControlCoefficientMatrix" title="RoadRunner.RoadRunner.getUnscaledConcentrationControlCoefficientMatrix"><code class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getUnscaledConcentrationControlCoefficientMatrix</span></code></a></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getUnscaledElasticityMatrix" title="RoadRunner.RoadRunner.getUnscaledElasticityMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getUnscaledElasticityMatrix</span></tt></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getUnscaledElasticityMatrix" title="RoadRunner.RoadRunner.getUnscaledElasticityMatrix"><code class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getUnscaledElasticityMatrix</span></code></a></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getUnscaledSpeciesElasticity" title="RoadRunner.RoadRunner.getUnscaledSpeciesElasticity"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getUnscaledSpeciesElasticity</span></tt></a></td>
+<tr class="row-even"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getUnscaledSpeciesElasticity" title="RoadRunner.RoadRunner.getUnscaledSpeciesElasticity"><code class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getUnscaledSpeciesElasticity</span></code></a></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getScaledElasticityMatrix" title="RoadRunner.RoadRunner.getScaledElasticityMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getScaledElasticityMatrix</span></tt></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getScaledElasticityMatrix" title="RoadRunner.RoadRunner.getScaledElasticityMatrix"><code class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getScaledElasticityMatrix</span></code></a></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getScaledFloatingSpeciesElasticity" title="RoadRunner.RoadRunner.getScaledFloatingSpeciesElasticity"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getScaledFloatingSpeciesElasticity</span></tt></a></td>
+<tr class="row-even"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getScaledFloatingSpeciesElasticity" title="RoadRunner.RoadRunner.getScaledFloatingSpeciesElasticity"><code class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getScaledFloatingSpeciesElasticity</span></code></a></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getScaledFluxControlCoefficientMatrix" title="RoadRunner.RoadRunner.getScaledFluxControlCoefficientMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getScaledFluxControlCoefficientMatrix</span></tt></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getScaledFluxControlCoefficientMatrix" title="RoadRunner.RoadRunner.getScaledFluxControlCoefficientMatrix"><code class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getScaledFluxControlCoefficientMatrix</span></code></a></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getScaledConcentrationControlCoefficientMatrix" title="RoadRunner.RoadRunner.getScaledConcentrationControlCoefficientMatrix"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getScaledConcentrationControlCoefficientMatrix</span></tt></a></td>
+<tr class="row-even"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getScaledConcentrationControlCoefficientMatrix" title="RoadRunner.RoadRunner.getScaledConcentrationControlCoefficientMatrix"><code class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getScaledConcentrationControlCoefficientMatrix</span></code></a></td>
 <td></td>
 </tr>
 </tbody>
@@ -124,16 +126,22 @@ to a perturbation in some external effector. These are defined by:</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getuCC" title="RoadRunner.RoadRunner.getuCC"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getuCC</span></tt></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getuCC" title="RoadRunner.RoadRunner.getuCC"><code class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getuCC</span></code></a></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getCC" title="RoadRunner.RoadRunner.getCC"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getCC</span></tt></a></td>
+<tr class="row-even"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getCC" title="RoadRunner.RoadRunner.getCC"><code class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getCC</span></code></a></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getuEE" title="RoadRunner.RoadRunner.getuEE"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getuEE</span></tt></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getDiffStepSize" title="RoadRunner.RoadRunner.getDiffStepSize"><code class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getDiffStepSize</span></code></a></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getEE" title="RoadRunner.RoadRunner.getEE"><tt class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getEE</span></tt></a></td>
+<tr class="row-even"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.setDiffStepSize" title="RoadRunner.RoadRunner.setDiffStepSize"><code class="xref py py-obj docutils literal"><span class="pre">RoadRunner.setDiffStepSize</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getuEE" title="RoadRunner.RoadRunner.getuEE"><code class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getuEE</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api_reference.html#RoadRunner.RoadRunner.getEE" title="RoadRunner.RoadRunner.getEE"><code class="xref py py-obj docutils literal"><span class="pre">RoadRunner.getEE</span></code></a></td>
 <td></td>
 </tr>
 </tbody>
@@ -145,7 +153,7 @@ to a perturbation in some external effector. These are defined by:</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="index.html">
               <img class="logo" src="_static/libroadrunner_logo_blue_200.png" alt="Logo"/>
@@ -165,29 +173,28 @@ to a perturbation in some external effector. These are defined by:</p>
   <h4>Next topic</h4>
   <p class="topless"><a href="stability.html"
                         title="next chapter">Stability Analysis</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/metabolic.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/metabolic.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -202,12 +209,12 @@ to a perturbation in some external effector. These are defined by:</p>
         <li class="right" >
           <a href="stoichiometric.html" title="Stoichiometric Analysis"
              >previous</a> |</li>
-        <li><a href="index.html">libRoadRunner 1.4.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">libRoadRunner 1.4.3 documentation</a> &#187;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2013-2016, Andy Somogyi, Herbert Suaro.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013-2016, Andy Somogyi, Herbert Suaro.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.
     </div>
   </body>
 </html>
