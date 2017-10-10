@@ -1198,6 +1198,25 @@ namespace std { class ostream{}; }
                 if steps < 1:
                     raise ValueError('Number of steps cannot be less than 1')
 
+            # check whether (selections) list is passed for first, second, or third arg
+            from numbers import Number
+            if isinstance(start,list):
+                raise RuntimerError('You passed a list for the start time, expected a number')
+            if isinstance(end,list):
+                raise RuntimerError('You passed a list for the end time, expected a number')
+            if isinstance(points,list):
+                raise RuntimerError('You passed a list for the number of points, expected a number')
+            if not isinstance(start, Number):
+                raise RuntimerError('Wrong type for start time: Expected a number')
+            if not isinstance(end, Number):
+                raise RuntimerError('Wrong type for end time: Expected a number')
+            if not isinstance(points, Number):
+                raise RuntimerError('Wrong type for number of points: Expected a number')
+
+            # in case the user passed a number for selections
+            if not isinstance(points, list):
+                raise RuntimerError('Wrong type for selections: Expected a list')
+
             # end error checking
 
             o = self.__simulateOptions
